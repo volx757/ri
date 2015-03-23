@@ -5,7 +5,12 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    Cart.where(:user_id => current_user.id).first.add_product(params[:id])
+    cart = Cart.find_current(current_user.id)
+    if cart.present?
+      cart.add_product(params[:id])
+    else
+      Cart.create_and_add_product(params[:id], current_user.id)
+    end
     redirect_to '/products'
   end
 

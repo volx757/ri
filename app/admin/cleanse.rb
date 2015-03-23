@@ -1,4 +1,4 @@
-ActiveAdmin.register Juice do
+ActiveAdmin.register Cleanse do
 
   permit_params :name, :description, :price, :image, :product_id
 
@@ -8,10 +8,10 @@ ActiveAdmin.register Juice do
       input :description, label: 'Description'
       li "Created at #{f.object.created_at}" unless f.object.new_record?
       input :price
-      input :product_id
+      input :product_id, label: 'Product ID'
       input :image, :as => :file, :hint => image_tag(f.object.image.url)
     end
-      actions
+    actions
   end
 
 end

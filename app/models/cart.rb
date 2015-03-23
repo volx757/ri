@@ -3,6 +3,8 @@ class Cart < ActiveRecord::Base
   belongs_to :user
   has_many :orders
 
+  attr_accessible :user_id
+
   def add_product(product_id)
     if product_id_list.present?
       product_list = product_id_list + ' ' + product_id
@@ -23,6 +25,10 @@ class Cart < ActiveRecord::Base
       cost += Product.find_by_product_id(p).price
     end
     cost
+  end
+
+  def self.create_and_add_product(product_id, user_id)
+    Cart.create(:user_id => user_id).add_product(product_id)
   end
 
   def self.find_current(user_id)
