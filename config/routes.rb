@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   root :to => "users#new"
   resources :users
   resources :sessions
+  get 'products' => 'products#index', :as => 'products'
 
 end
