@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'cart', to: 'carts#index', as: 'cart'
 
 end
