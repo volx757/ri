@@ -1,0 +1,18 @@
+global: &global
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  min_messages: warning
+  encoding: utf8
+
+development:
+  database: ri_development
+  <<: *global
+
+test: &test
+  database: ri_test<%=ENV['TEST_ENV_NUMBER']%>
+  <<: *global
+
+production:
+  database: ri_production
+  <<: *global
