@@ -2,4 +2,5 @@
     <%= j.name %>
     <%= j.description %>
     <%= image_tag j.image.url(:thumb) %>
+    <%= button_to 'Add To Cart', add_to_cart_product_path(j.product_id), remote: true %>
 <% end %>
