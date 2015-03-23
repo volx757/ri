@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   end
 
   get 'cart', to: 'carts#index', as: 'cart'
+  get 'checkout', to: 'carts#checkout', as: 'checkout'
+  post 'cart', to: 'carts#create_payment', as: 'payment'
 
 end

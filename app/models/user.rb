@@ -29,4 +29,34 @@ class User < ActiveRecord::Base
     end
   end
 
+  def do_deposit_transaction(type, stripe_token)
+    amount = Transaction.amount_for_type(type)
+    coupon = UserCoupon.coupon_for_amount(amount)
+
+    card = save_credit_card(stripe_token)
+    if deposited = deposit(amount, card)
+      subscribe if type == 'subscription'
+      create_coupon(coupon) if coupon
+
+      deposited
+    end
+  end
+
+  def deposit(amount, card)
+    customer = stripe_customer
+
+    Stripe::Charge.create(
+        amount: amount,
+        currency: 'usd',
+        customer: customer.id,
+        card: card.id,
+        description: "Charge for #{email}"
+    )
+
+    customer.account_balance += amount
+    customer.save
+  rescue => e
+    false
+  end
+
 end
