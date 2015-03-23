@@ -9,7 +9,6 @@ gem 'foreman' # Use unicorn locally
 gem 'paperclip' # For attaching files
 gem 'protected_attributes' # For protecting model from mass assignment attacks with attr_accessible
 gem 'activeadmin', github: 'activeadmin', ref: 'c6c43'
-gem 'will_paginate'
 gem 'rmagick'
 gem 'zencoder'
 gem 'honeybadger'

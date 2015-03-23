@@ -286,7 +286,6 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
-    will_paginate (3.0.7)
     zencoder (2.5.1)
       multi_json
 
@@ -331,5 +330,4 @@ DEPENDENCIES
   sendgrid
   uglifier
   unicorn
-  will_paginate
   zencoder

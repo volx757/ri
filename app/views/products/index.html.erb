@@ -1,0 +1,5 @@
+<% Juice.all.each do |j| %>
+    <%= j.name %>
+    <%= j.description %>
+    <%= image_tag j.image.url(:thumb) %>
+<% end %>
