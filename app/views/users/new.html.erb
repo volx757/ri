@@ -1,5 +1,3 @@
-
-
 <h1>Sign Up</h1>
 
 <%= form_for @user do |f| %>
@@ -32,3 +30,6 @@
     <p class="button"><%= f.submit %></p>
 <% end %>
 
+<% if current_user %>
+    <%= link_to 'products', controller: 'products', action: 'index' %>
+<% end %>

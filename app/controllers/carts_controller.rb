@@ -6,7 +6,6 @@ class CartsController < ApplicationController
   end
 
   def checkout
-
   end
 
   def create_payment

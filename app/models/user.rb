@@ -40,12 +40,10 @@ class User < ActiveRecord::Base
                           currency: 'usd')
 
     save_stripe_customer_id(user.id, customer.id)
-
   end
 
   def save_stripe_customer_id(user_id, stripe_id)
     User.find(user_id).update_attribute :stripe_id, stripe_id
   end
-
 
 end
