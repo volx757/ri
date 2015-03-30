@@ -10,8 +10,9 @@ class CartsController < ApplicationController
   end
 
   def create_payment
-    if stripe_token = params[:stripe_token]
-      if current_user.do_deposit_transaction(params[:payment_type], stripe_token)
+
+    if stripe_token = params[:stripeToken]
+      if current_user.do_deposit_transaction(params[:payment_type], stripe_token, current_user)
         flash[:notice] = 'Card charged successfully'
       else
         flash[:alert] = 'Some error happened while charging you, please double check your card details'

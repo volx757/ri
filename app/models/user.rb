@@ -29,35 +29,24 @@ class User < ActiveRecord::Base
     end
   end
 
-  def do_deposit_transaction(type, stripe_token)
-    amount = Transaction.amount_for_type(type)
-    coupon = UserCoupon.coupon_for_amount(amount)
+  def do_deposit_transaction(type, stripe_token, user)
+    Stripe.api_key = "sk_test_2jPsvi0qQfguqpV1SjkQOq84"
 
-    card = save_credit_card(stripe_token)
-    if deposited = deposit(amount, card)
-      subscribe if type == 'subscription'
-      create_coupon(coupon) if coupon
+    customer = Stripe::Customer.create(email: user.email, card: stripe_token)
 
-      deposited
-    end
-    raise 'e'
+
+    Stripe::Charge.create(customer: customer.id,
+                          amount: Cart.where(:user_id => user.id).first.total_cost.to_i,
+                          description: 'purchase',
+                          currency: 'usd')
+
+    save_stripe_customer_id(user.id, customer.id)
+
   end
 
-  def deposit(amount, card)
-    customer = stripe_customer
-
-    Stripe::Charge.create(
-        amount: amount,
-        currency: 'usd',
-        customer: customer.id,
-        card: card.id,
-        description: "Charge for #{email}"
-    )
-
-    customer.account_balance += amount
-    customer.save
-  rescue => e
-    false
+  def save_stripe_customer_id(user_id, stripe_id)
+    User.find(user_id).update_attribute :stripe_id, stripe_id
   end
+
 
 end
