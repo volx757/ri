@@ -40,6 +40,7 @@ class User < ActiveRecord::Base
 
       deposited
     end
+    raise 'e'
   end
 
   def deposit(amount, card)
