@@ -34,9 +34,8 @@ class User < ActiveRecord::Base
 
     customer = Stripe::Customer.create(email: user.email, card: stripe_token)
 
-
     Stripe::Charge.create(customer: customer.id,
-                          amount: Cart.where(:user_id => user.id).first.total_cost.to_i,
+                          amount: Cart.where(:user_id => user.id).first.total_cost.to_i * 100,
                           description: 'purchase',
                           currency: 'usd')
 
