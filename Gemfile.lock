@@ -339,6 +339,7 @@ DEPENDENCIES
   sass-rails
   secure_headers
   sendgrid
+  sprockets
   stripe-rails
   uglifier
   unicorn

@@ -20,6 +20,7 @@ gem 'immigrant'
 gem 'activerecord'
 gem 'bcrypt'
 gem 'stripe-rails'
+gem 'sprockets'
 
 gem 'aws-sdk' # For storing uploaded files on S3
 

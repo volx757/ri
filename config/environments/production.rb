@@ -48,6 +48,8 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
+  config.assets.precompile += ['active_admin.css']
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
