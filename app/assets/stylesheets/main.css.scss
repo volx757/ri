@@ -1,5 +1,36 @@
-html {
+html, body {
   background: white;
-  width: 100%;
   height: 100%;
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+#header-fixed {
+  background: none repeat scroll 0% 0% lightgrey;
+  height: 30px;
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  .button_to {
+    width: 16%;
+    float: right;
+    right: 50px;
+    text-align: left;
+  }
+}
+
+#header-float {
+  position: absolute;
+  height: 50px;
+  background: floralwhite;
+  width: 100%;
+  top: 30px;
+  z-index: 2;
 }

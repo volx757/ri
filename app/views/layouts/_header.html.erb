@@ -1,13 +1,14 @@
-<div class="header fixed">
+<div id="header-fixed">
   <%= link_to 'rijuice@rijuice.rijuice', '/' %>
   <%= link_to '609-mobile-mobile', '/' %>
   <%= button_to 'Login', '/' %>
-
-
 </div>
 
-<div class="header float">
+<div id="header-float" class="stickypanel">
+  <div class="content">
+  <%= link_to image_tag('logo') %>
   <%= link_to 'Home', '/' %>
   <%= link_to 'Purchase', '/products' %>
   <%= link_to 'Contact', '/contact' %>
+  </div>
 </div>
