@@ -1,77 +1,93 @@
 <div id="home-container">
 
+
   <div class="container welcome">
     <%= image_tag 'logo-tri.png' %>
     <h1>WELCOME TO RIJUICE</h1>
+
     <h3>Life begins from within.</h3>
     <%= link_to 'Find Your Juice', '/products', :class => 'button' %>
   </div>
 
+
   <div class="container juice">
     <%= image_tag 'logo-tri.png' %>
     <h2>THE JUICE YOU WANT, WHEN YOU WANT IT</h2>
-    <span>Our products.</span>
+    <span class="little-ital">Our products.</span>
+
     <p>genersal juice intro copy ipsum lorem doler osldlweeajfsafsdgsfgsdar</p>
   </div>
 
+
   <div class="container products">
     <div class="index-product-container">
-      <h4>Pack</h4>
+      <%= render 'product' %>
     </div>
     <div class="index-product-container">
-      <h4>Case</h4>
+      <%= render 'product' %>
     </div>
     <div class="index-product-container">
-      <h4>Cleanse</h4>
+      <%= render 'product' %>
     </div>
 
     <%= link_to 'View All Products', '/products' %>
   </div>
 
+
   <div class="container who-we-are">
     <h2>Who We Are</h2>
+
     <p>Lorem Ipsum Doler some dope shit u never heard</p>
     <%= link_to 'Our Locations', '/', :class => 'button' %>
   </div>
 
+
   <div class="containe whats-inside">
     <h2>What's In Rijuice?</h2>
+
     <h3>Our ingredients</h3>
+
     <div class="index-ingredients leftt">
-        <h2>Farm to bottle as quickly as possible</h2>
+      <h2>Farm to bottle as quickly as possible</h2>
       <hr>
       <p>All of our juices are 100% vegan, gluten free, animal free, all dat good shit.</p>
+
       <p>Lorem Ipsum Doler some dope shit u never heardLorem Ipsum Doler some dope shit u never heard</p>
     </div>
     <div class="index-ingredients right">
-        <%= link_to 'Ingredients Page', '/ingredients' %>
+      <%= link_to 'Ingredients Page', '/ingredients' %>
     </div>
   </div>
+
 
   <div class="container faq">
     <h2>All the answers in one place</h2>
+
     <h3>Frequent Questions</h3>
+
     <div class="index-faq left">
-        <h2>Choose A Category</h2>
-        <hr>
+      <h2>Choose A Category</h2>
+      <hr>
 
     </div>
     <div class="index-faq right">
-        <h2>Juices</h2>
-        <hr>
+      <h2>Juices</h2>
+      <hr>
 
     </div>
   </div>
 
+
   <div class="container contact">
     <div class="index-contact left">
-        <h2>What's on your mind?</h2>
+      <h2>What's on your mind?</h2>
       <hr>
       <p>Still have a question? well fuck you.</p>
     </div>
     <div class="index-contact right">
-        <!-- here will be a form -->
+      <!-- here will be a form -->
     </div>
   </div>
-  <br class="clear" />
+
+
 </div>
