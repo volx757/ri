@@ -1,14 +1,14 @@
 <div id="header-fixed">
   <%= link_to 'rijuice@rijuice.rijuice', '/' %>
   <%= link_to '609-mobile-mobile', '/' %>
-  <%= button_to 'Login', '/' %>
+  <%= link_to 'Login', '/', :class => 'button' %>
 </div>
 
 <div id="header-float" class="stickypanel">
   <div class="content">
-  <%= link_to image_tag('logo') %>
-  <%= link_to 'Home', '/' %>
-  <%= link_to 'Purchase', '/products' %>
-  <%= link_to 'Contact', '/contact' %>
+    <div class="nav-item logo"><%= link_to image_tag('logo-tri.png', :style => 'width: 50px;margin-right: 40%;') %></div>
+    <div class="nav-item"> <%= link_to 'HOME', '/' %> &or;</div>
+    <div class="nav-item"> <%= link_to 'PURCHASE', '/products' %>&or;</div>
+    <div class="nav-item"> <%= link_to 'CONTACT', '/contact' %></div>
   </div>
 </div>

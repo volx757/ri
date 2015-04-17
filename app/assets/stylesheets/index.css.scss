@@ -1,18 +1,77 @@
-#home-container{
+#home-container {
 
-  position: absolute;
+  position: relative;
   top: 80px;
   width: 100%;
+  text-align: center;
 
-  .container{
+  .container {
     position: relative;
     width: 100%;
     min-height: 200px;
     background: green;
   }
 
-  .container.welcome{
-    height: 100vh;
+  .container.welcome {
+    height: 90vh;
+    h1 {
+      position: relative;
+      top: 30px;
+      letter-spacing: 5px;
+    }
+    h3 {
+      position: relative;
+      top: 8px;
+    }
+    img {
+      position: relative;
+      top: 50px;
+      width: 200px;
+    }
+    .button {
+      background: white;
+      color: black;
+      border: none;
+      padding: 9px;
+      top: 30px;
+      position: relative;
+      font-family: Open_Sans;
+      font-weight: 800;
+    }
+  }
+
+  .container.juice {
+    img {
+      width: 50px;
+    }
+  }
+
+  .container.products{
+    .index-product-container {
+      display: inline-block;
+      width: 300px;
+      height: 600px;
+    }
+    a{
+      display: block;
+    }
+  }
+
+
+  .container.who-we-are {
+
+  }
+
+  .container.whats-inside {
+
+  }
+
+  .container.faq {
+
+  }
+
+  .container.contact {
+
   }
 
 }

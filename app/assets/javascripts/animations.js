@@ -1,4 +1,4 @@
-const HEADER_POSITION_TRIGGER = 30
+const HEADER_POSITION_TRIGGER = 30;
 
 var headerFloating = false;
 
@@ -6,16 +6,15 @@ var headerFloating = false;
 
 $(document).ready(function () {
 
-    var fixedHeader = $('#header-fixed');
     var floatHeader = $('#header-float')
 
     $(document).scroll(function () {
-        fixHeaderPosition(floatHeader,fixedHeader);
+        fixHeaderPosition(floatHeader);
     })
 
 });
 
-function fixHeaderPosition(floatHeader, fixedHeader) {
+function fixHeaderPosition(floatHeader) {
 
     if (headerFloating == false) {
         if ($(this).scrollTop() >= floatHeader.position().top) {
