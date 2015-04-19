@@ -70,7 +70,13 @@
   }
 
   .container.faq {
-
+    ul {
+      list-style-type: none;
+    }
+    .index-faq{
+      position: relative;
+      display: inline-block;
+    }
   }
 
   .container.contact {
