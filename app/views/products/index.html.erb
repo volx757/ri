@@ -1,17 +1,49 @@
-<%= link_to 'Cart', controller: 'carts', action: 'index' %>
+<div class="products-container">
 
-<br>
 
-<% Juice.all.each do |j| %>
-    <%= j.name %>
-    <%= j.description %>
-    <%= image_tag j.image.url(:thumb) %>
-    <%= button_to 'Add To Cart', add_to_cart_product_path(j.product_id) %>
-<% end %>
+  <div class="page-header">
+    <h2>Our Products</h2>
 
-<% Cleanse.all.each do |c| %>
-    <%= c.name %>
-    <%= c.description %>
-    <%= image_tag c.image.url(:thumb) %>
-    <%= button_to 'Add To Cart', add_to_cart_product_path(c.product_id) %>
-<% end %>
+  </div>
+
+  <div class="container intro">
+    <h2>Purchase juice intro copy here.</h2>
+    <p>asdjakd asdasf asdas d fd sg sgfh df</p>
+
+  </div>
+
+  <div class="container shop">
+    <ul>
+      <li>Packs</li>
+      <li>Cases</li>
+      <li>Cleanses</li>
+    </ul>
+
+  </div>
+
+  <div class="container outro">
+
+  </div>
+
+
+
+  <%= link_to 'Cart', controller: 'carts', action: 'index' %>
+
+  <br>
+
+  <% Juice.all.each do |j| %>
+      <%= j.name %>
+      <%= j.description %>
+      <%= image_tag j.image.url(:thumb) %>
+      <%= button_to 'Add To Cart', add_to_cart_product_path(j.product_id) %>
+  <% end %>
+
+  <% Cleanse.all.each do |c| %>
+      <%= c.name %>
+      <%= c.description %>
+      <%= image_tag c.image.url(:thumb) %>
+      <%= button_to 'Add To Cart', add_to_cart_product_path(c.product_id) %>
+  <% end %>
+
+
+</div>

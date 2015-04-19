@@ -15,3 +15,4 @@
 //= require_tree .
 //= require carts
 //= require animations
+//= require dynamic_lists
