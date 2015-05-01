@@ -9,7 +9,7 @@
     position: relative;
     width: 100%;
     min-height: 250px;
-    background: green;
+   // background: green;
   }
 
   .container.welcome {
@@ -88,10 +88,39 @@
   .container.faq {
     ul {
       list-style-type: none;
+      li{
+        width: 200px;
+        height: 40px;
+        line-height: 2.5em;
+      }
     }
     .index-faq {
       position: relative;
       display: inline-block;
+      &.left{
+        right: 20%;
+        li{
+          &:hover{
+            background: lightgray;
+          }
+        }
+      }
+      &.right{
+        top: -63px;
+        right: 10%;
+        li{
+          width: 600px;
+          &.question{
+            text-align: left;
+            font-weight: 800;
+          }
+          &.answer{
+            font-size: 14px;
+            text-align: left;
+            line-height: 1.1em;
+          }
+        }
+      }
     }
   }
 

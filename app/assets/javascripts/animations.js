@@ -2,18 +2,6 @@ const HEADER_POSITION_TRIGGER = 30;
 
 var headerFloating = false;
 
-
-
-$(document).ready(function () {
-
-    var floatHeader = $('#header-float')
-
-    $(document).scroll(function () {
-        fixHeaderPosition(floatHeader);
-    })
-
-});
-
 function fixHeaderPosition(floatHeader) {
 
     if (headerFloating == false) {

@@ -16,3 +16,4 @@
 //= require carts
 //= require animations
 //= require dynamic_lists
+//= require main
