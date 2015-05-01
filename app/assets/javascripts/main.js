@@ -1,15 +1,12 @@
 $(document).ready(function () {
 
     var floatHeader = $('#header-float')
-    $(document).scroll(function () {
-        fixHeaderPosition(floatHeader);
-    });
+    $(document).scroll(function () { fixHeaderPosition(floatHeader); });
 
     bindFaqCategories();
     writeFaqQuestions(0);
     initializeFaq();
     bindToggles()
-
 
 
 

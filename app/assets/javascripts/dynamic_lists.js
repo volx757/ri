@@ -1,4 +1,4 @@
-var faqHeaders = ["Juices", "Ordering & Delivery", "Cleanses", "Other"]
+var faqHeaders = ["Juices", "Cleanses", "Ordering & Delivery", "Other"]
 
 var faqQuestions_juice = [ "What kind of juicer do you use?", "What makes your juice different?", "What is the shelf life of your juice?",
         "Where should I store my juice?", "How many calories are in your juices and juice cleanses?", "What if I am pregnant or breastfeeding?",
@@ -59,10 +59,10 @@ function bindFaqCategories() {
             case 'juices' :
                 categoryNum = 0
                 break;
-            case 'orders' :
+            case 'cleanses' :
                 categoryNum = 1
                 break;
-            case 'cleanses' :
+            case 'orders' :
                 categoryNum = 2
                 break;
             case 'other' :
@@ -71,7 +71,11 @@ function bindFaqCategories() {
         }
 
         $('.index-faq .category').html(faqHeaders[categoryNum])
+
         writeFaqQuestions(categoryNum)
+        bindFaqCategories();
+        initializeFaq();
+        bindToggles()
     })
 
 }
@@ -98,7 +102,6 @@ function writeFaqQuestions(categoryNum) {
             questions = faqQuestions_logistics
             answers = faqAnswers_logistics
             break;
-
     }
 
     var qaList = $("#faq-right").find("ul")
