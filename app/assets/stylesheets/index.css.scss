@@ -9,7 +9,7 @@
     position: relative;
     width: 100%;
     min-height: 250px;
-   // background: green;
+    // background: green;
   }
 
   .container.welcome {
@@ -65,7 +65,7 @@
           font-size: 34px;
           font-weight: 100;
         }
-        .button{
+        .button {
           width: 70%;
           margin: 20px auto;
           border: 2px solid;
@@ -88,7 +88,7 @@
   .container.faq {
     ul {
       list-style-type: none;
-      li{
+      li {
         width: 200px;
         height: 40px;
         line-height: 2.5em;
@@ -97,26 +97,36 @@
     .index-faq {
       position: relative;
       display: inline-block;
-      &.left{
-        right: 20%;
-        li{
-          &:hover{
+      text-align: left;
+      &.left {
+        top: -76px;
+        left: -50px;
+        ul {
+          left: -20px;
+          position: relative;
+        }
+        li {
+          &:hover {
             background: lightgray;
           }
         }
       }
-      &.right{
-        top: -63px;
-        right: 10%;
-        li{
-          width: 600px;
-          &.question{
-            text-align: left;
+      &.right {
+        top: 7px;
+        h2{
+          left: 50px;
+          position: relative;
+        }
+        li {
+          width: 820px;
+          &.question {
             font-weight: 800;
+            span{
+              float: right;
+            }
           }
-          &.answer{
+          &.answer {
             font-size: 14px;
-            text-align: left;
             line-height: 1.1em;
           }
         }

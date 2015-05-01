@@ -25,8 +25,7 @@ var faqAnswers_juice = ["Our juice is extracted using a hydraulic cold-press mac
         "Our products are 100% vegan. No animal products are used in any of our products. However, our juices are not certified Kosher.",
         "All of our green juices and shakes contain absorbable proteins [our Carrot.Kale juice has roughly 16 grams of protein]. The food that captures the most sunlight contains the highest levels of readily available protein - therefore dark leafy greens are best. Amino acids are the building blocks of protein and dark leafy green vegetables [full of chlorophyll] are the most natural source of these muscle-building compounds.",
         "Yes! Our juice is definitely healthy to add to children's diets. However, it is warned that children under the age of 2 should not be given juice due to potentially harmful bacteria in unpasteurized juice.  Also, children should not participate in juice cleanses or fasts.",
-        "This always depends on your personal preference and health goals. In order to experience the full benefits of our products, we recommend incorporating juice into your daily diet and doing a juice cleanse at least twice a year.",
-        ""],
+        "This always depends on your personal preference and health goals. In order to experience the full benefits of our products, we recommend incorporating juice into your daily diet and doing a juice cleanse at least twice a year."],
     faqAnswers_cleanse = ["Our standard 1-day juice cleanse includes 6 (16 oz) juices [2-day cleanse: 12 juices; 3-day cleanse: 18 juices]. See each cleanse’s individual product page to find out which juices are included.",
         "Our juices have a shelf-life of 72-96 hours  so a 3 day juice cleanse will be delivered all at once.  Just be sure to refrigerate everything immediately.",
         "We think you will be pleasantly surprised by how much the juice fills you up and provides you with real energy.  The juices provide your body with ample supply of nutrients to get you through your day. We would recommend that you definitely take things a little slower than usual and listen to your body.  It also helps the juicing process if you cut alcohol and nicotine prior-to and during the cleanse to maximize the health benefits you are seeking.  Just start with a 1-day cleanse and see how it goes.  Many people have set out just intending to just try a 1-day cleanse only to find themselves venturing out on a 10-day journey, if not longer.  Everyone is different.",
@@ -80,8 +79,7 @@ function bindFaqCategories() {
 function writeFaqQuestions(categoryNum) {
 
     var questions,
-        answers,
-        numListItems
+        answers
 
     switch (categoryNum) {
         case 0 :
@@ -103,29 +101,90 @@ function writeFaqQuestions(categoryNum) {
 
     }
 
-    $("#faq-right ul").empty()
-
+    var qaList = $("#faq-right").find("ul")
+    qaList.empty()
     var qNum = 1;
 
     for (var i in questions) {
 
-        var li = "<li class='question " + qNum + "'>",
-            li2 = "<li class='answer " + qNum +  "'>",
-            ex_or_col = "<span class='ex_or_col'>"
+        var li = "<li class='question' data-qNum=" + qNum + ">",
+            li2 = "<li class='answer' data-qNum=" + qNum + ">",
+            ex_or_col = "<span class='ex_or_col'>+</span>"
 
-        $("#faq-right ul").append(li.concat(qNum + ". " + questions[i] + ex_or_col), li2.concat(answers[i]))
-
+        qaList.append(li.concat(qNum + ". " + questions[i] + ex_or_col), li2.concat(answers[i]))
         qNum++
 
-        if (qNum > 4){
-            li.hide();
+
+    }
+
+}
+
+function initializeFaq() {
+
+    var currentCategory = $('#faq-right').find('h2').html(),
+        numListItems
+
+    switch (currentCategory) {
+        case 'Juices' :
+            numListItems = faqQuestions_juice.length
+            break;
+        case 'Ordering & Delivery' :
+            numListItems = faqQuestions_logistics.length
+            break;
+        case 'Cleanses' :
+            numListItems = faqQuestions_cleanse.length
+            break;
+        case 'Other' :
+            numListItems = faqQuestions_logistics.length
+            break;
+    }
+
+    for (var i = 1; i < numListItems + 1; i++) {
+        var currentQuestion = $('#faq-right *[data-qNum=' + i + '].question '),
+            currentIcon = $('#faq-right *[data-qNum=' + i + '] span '),
+            currentAnswer = $('#faq-right *[data-qNum=' + i + '].answer ')
+
+        if (i == 1)
+            openListItem(currentQuestion, currentIcon, currentAnswer)
+
+        if (i > 4) {
+            hideListItem(currentQuestion, currentIcon, currentAnswer)
         }
 
-        for (i = 2; i <= qNum; i++){
-            $('#faq-right .answer.' + i).hide()
+        for (var j = 2; j <= i; j++) {
+            closeListItem(currentQuestion, currentIcon, currentAnswer)
         }
 
     }
 
+}
 
+function openListItem(question, icon, answer) {
+    answer.show()
+    icon.empty().append('-')
+}
+
+function closeListItem(question, icon, answer) {
+    answer.hide()
+    icon.empty().append('+')
+}
+
+function showListItem(question, icon, answer) {
+    question.show()
+    answer.show()
+}
+
+function hideListItem(question, icon, answer) {
+    question.hide()
+    answer.hide()
+}
+
+function bindToggles() {
+    $('#faq-right').find('li span').on('click', function () {
+
+
+        $(this).data('category')
+
+        
+    })
 }
