@@ -9,7 +9,6 @@
 }
 
 html, body {
- // background: green;
   width: 100%;
   height: 100%;
 }
@@ -55,6 +54,9 @@ hr {
   height: 600px;
   color: white;
   text-align: center;
+  background: image-url('index/home_prefooter_bg.jpg');
+  background-size: 100% 100%;
+  min-height: 500px;
   .top {
     height: 350px;
     position: relative;
