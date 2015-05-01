@@ -113,9 +113,8 @@ function writeFaqQuestions(categoryNum) {
 
         qaList.append(li.concat(qNum + ". " + questions[i] + ex_or_col), li2.concat(answers[i]))
         qNum++
-
-
     }
+  //  initializeFaq()
 
 }
 
@@ -129,6 +128,9 @@ function initializeFaq() {
             numListItems = faqQuestions_juice.length
             break;
         case 'Ordering & Delivery' :
+            numListItems = faqQuestions_logistics.length
+            break;
+        case "Ordering &amp; Delivery" :
             numListItems = faqQuestions_logistics.length
             break;
         case 'Cleanses' :
@@ -146,22 +148,34 @@ function initializeFaq() {
 
         if (i == 1)
             openListItem(currentQuestion, currentIcon, currentAnswer)
-
         if (i > 4) {
             hideListItem(currentQuestion, currentIcon, currentAnswer)
         }
-
         for (var j = 2; j <= i; j++) {
             closeListItem(currentQuestion, currentIcon, currentAnswer)
         }
-
     }
+
 
 }
 
 function openListItem(question, icon, answer) {
     answer.show()
     icon.empty().append('-')
+}
+
+function closeOtherListItems(question, icon, answer) {
+
+    var keepOpen = answer.data('qnum'),
+        length = $('#faq-right li').length / 2
+
+    for (var i = 0; i < length; i++) {
+        var currentAnswer = $('#faq-right *[data-qNum=' + i + '].answer '),
+            currentQuestion = $('#faq-right *[data-qNum=' + i + '].question ')
+
+        if (i != keepOpen)
+            closeListItem(null, icon, currentAnswer)
+    }
 }
 
 function closeListItem(question, icon, answer) {
@@ -182,9 +196,14 @@ function hideListItem(question, icon, answer) {
 function bindToggles() {
     $('#faq-right').find('li span').on('click', function () {
 
+        var num = $(this).parent().data('qnum') - 1,
+            answer = $('#faq-right').find('.answer:eq( ' + num + ')')
 
-        $(this).data('category')
-
-        
+        if (answer.css('display') == 'none') {
+            openListItem(null, $(this), answer)
+            closeOtherListItems(null, $(this), answer)
+        }
+        else
+            closeListItem(null, $(this), answer)
     })
 }

@@ -8,6 +8,7 @@ $(document).ready(function () {
     bindFaqCategories();
     writeFaqQuestions(0);
     initializeFaq();
+    bindToggles()
 
 
 
