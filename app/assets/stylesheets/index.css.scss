@@ -99,8 +99,8 @@
       display: inline-block;
       text-align: left;
       &.left {
-        top: -76px;
-        left: -50px;
+        left: 100px;
+        float: left;
         ul {
           left: -20px;
           position: relative;

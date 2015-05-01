@@ -7,6 +7,7 @@ $(document).ready(function () {
     writeFaqQuestions(0);
     initializeFaq();
     bindToggles()
+    bindShowAllQuestions()
 
 
 
