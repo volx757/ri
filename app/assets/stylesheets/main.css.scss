@@ -16,6 +16,7 @@ html, body {
 h1 {
   text-align: center;
   font-family: 'Dosis';
+  text-transform: uppercase;
 }
 
 h2 {
@@ -81,6 +82,7 @@ hr {
   text-align: center;
   background-size: 100% 100%;
   min-height: 500px;
+  font-family: Dosis;
   .top {
     height: 350px;
     position: relative;
@@ -94,6 +96,7 @@ hr {
     h2 {
       position: relative;
       text-align: left;
+      font-size: 20px;
     }
     .foot-item {
       padding: 5px;
@@ -110,7 +113,9 @@ hr {
 
   }
   .foot-container.contact {
-
+    div{
+      color: grey;
+    }
   }
   .bottom {
     img {
@@ -119,10 +124,12 @@ hr {
       position: relative;
       left: -400px;
     }
-    h1 {
+    h3 {
       display: inline-block;
       left: -400px;
       position: relative;
+      color: grey;
+      letter-spacing: 2px;
     }
     a {
       display: inline-block;

@@ -5,21 +5,21 @@
       <h2>Links</h2>
 
       <div class="foot-item"><%= link_to 'Home', '/' %></div>
-      <div class="foot-item"><%= link_to 'About Us', '/' %></div>
-      <div class="foot-item"><%= link_to 'Ingredients', '/' %></div>
-      <div class="foot-item"><%= link_to 'FAQ', '/' %></div>
-      <div class="foot-item"><%= link_to 'Products', '/' %></div>
+      <div class="foot-item"><%= link_to 'About Us', '/#whoweare' %></div>
+      <div class="foot-item"><%= link_to 'Ingredients', '/#inside' %></div>
+      <div class="foot-item"><%= link_to 'FAQ', '/#faq' %></div>
+      <div class="foot-item"><%= link_to 'Products', '/products' %></div>
     </div>
 
     <div class="foot-container order">
       <h2>Order Juice</h2>
 
       <div class="foot-item"><span>Packs</span></div>
-      <div class="foot-item"><%= link_to 'Order a Pack', '/products' %></div>
+      <div class="foot-item"><%= link_to 'Build a Pack', '/products' %></div>
       <div class="foot-item"><span>Cases</span></div>
-      <div class="foot-item"><%= link_to 'Order a Case', '/products' %></div>
+      <div class="foot-item"><%= link_to 'Shop Cleanses', '/products' %></div>
       <div class="foot-item"><span>Cleanses</span></div>
-      <div class="foot-item"><%= link_to 'Order a Cleanse', '/products' %></div>
+      <div class="foot-item"><%= link_to 'Low-glycene Cleanses', '/products' %></div>
     </div>
 
     <div class="foot-container insta">
@@ -41,9 +41,9 @@
         contact@rijuice.com
       </div>
       <div class="social">
-        facebook
-        twitter
-        tumblr
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-tumblr"></i>
       </div>
 
     </div>
@@ -53,7 +53,7 @@
 
   <div class="bottom">
     <%= image_tag 'logo-tri.png' %>
-    <h1>Life Begins From Within</h1>
+    <h3>Life Begins From Within</h3>
     <%= link_to 'Find Your Juice', '/products', :class => 'button' %>
   </div>
 
