@@ -37,6 +37,9 @@
       top: 30px;
       position: relative;
       font-weight: 800;
+      &:hover{
+        background: grey;
+      }
     }
   }
 
@@ -81,11 +84,19 @@
           margin: 20px auto;
           border: 2px solid;
         }
+        a {
+          display: block;
+        }
+      }
+      .jump-products{
+        width: 200px;
+        margin: 0 auto;
+        a{
+          display: inline-block;
+        }
       }
     }
-    a {
-      display: block;
-    }
+
   }
 
   .container.who-we-are {
@@ -261,6 +272,9 @@
         .show-more{
           position: relative;
           left: 50px;
+          h3{
+            display: inline-block;
+          }
         }
       }
     }

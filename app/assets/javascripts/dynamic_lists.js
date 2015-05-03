@@ -162,7 +162,6 @@ function initializeFaq() {
     }
 
     faqIsExpanded = false
-    $('#faq-right .show-more').empty().append("+ Show More")
 
 }
 
@@ -273,14 +272,14 @@ function bindShowAllQuestions() {
             })
 
             faqIsExpanded = false
-            $(this).empty().append("+ Show More")
+            $(this).empty().append("<i class='fa fa-plus-circle'></i> <h3>Show More</h3>")
         } else {
             $('#faq-right li').each(function () {
                 showListItem($(this), null, $(this))
             })
 
             faqIsExpanded = true
-            $(this).empty().append("- Show Less")
+            $(this).empty().append("<i class='fa fa-minus-circle'></i> <h3>Show Less</h3>")
         }
 
     })
