@@ -24,11 +24,16 @@ h2 {
 
 h3 {
   font-family: 'Dosis';
+  text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
   color: grey;
+}
+
+p{
+  font-family: Dosis;
 }
 
 hr {
@@ -43,10 +48,25 @@ hr {
   border: 1px solid;
   color: grey;
   padding: 5px;
+  text-transform: uppercase;
+  font-family: 'Dosis';
 }
 
 .little-ital {
   font-style: italic;
+}
+
+.white{
+  color: white;
+}
+
+.grey {
+  color: lightgray;
+}
+
+.wrapper{
+  position: relative;
+  margin: 0 auto;
 }
 
 #footer {
@@ -117,7 +137,7 @@ hr {
   font-family: 'Dosis';
   text-align: center;
   a {
-    left: 200px;
+    left: 250px;
     position: relative;
     margin-right: 40px;
   }

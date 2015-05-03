@@ -1,7 +1,7 @@
 <div id="home-container">
 
 
-  <div class="container welcome">
+  <div class="container welcome white">
     <%= image_tag 'logo-tri.png' %>
     <h1>WELCOME TO RIJUICE</h1>
 
@@ -11,11 +11,15 @@
 
 
   <div class="container juice">
-    <%= image_tag 'logo-tri.png' %>
-    <h2>THE JUICE YOU WANT, WHEN YOU WANT IT</h2>
-    <span class="little-ital">Our products.</span>
+    <div class="wrapper">
+      <%= image_tag 'logo-tri.png' %>
+      <h2>THE JUICE YOU WANT, WHEN YOU WANT IT</h2>
+      <span class="grey">OUR PRODUCTS</span>
 
-    <p>genersal juice intro copy ipsum lorem doler osldlweeajfsafsdgsfgsdar</p>
+      <p style="margin-top: 30px;">Real people need real food.</p>
+
+      <p>Organic, raw, cold-pressed juices and cleanses crafted to raise your vibration.</p>
+    </div>
   </div>
 
 
@@ -34,11 +38,15 @@
   </div>
 
 
-  <div class="container who-we-are">
-    <h2>Who We Are</h2>
+  <div class="container who-we-are white">
+    <div class="wrapper">
+      <h2>Who We Are</h2>
 
-    <p>Lorem Ipsum Doler some dope shit u never heard</p>
-    <%= link_to 'Our Locations', '/', :class => 'button' %>
+      <p>Born in Lancaster, Pennsylvania - we are the county's original cold-pressed juice company. We strive to bring
+        health to our community
+        by sourcing the finest product our local farmers have to offer.</p>
+      <%= link_to 'Our Locations', '/', :class => 'button' %>
+    </div>
   </div>
 
 
@@ -60,8 +68,7 @@
   </div>
 
   <div class="container stats">
-    <h2>Every Week We Source</h2>
-
+    <%= render 'stats' %>
   </div>
 
 

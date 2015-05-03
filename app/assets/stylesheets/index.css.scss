@@ -18,7 +18,7 @@
     h1 {
       position: relative;
       top: 30px;
-      letter-spacing: 5px;
+      letter-spacing: 20px;
     }
     h3 {
       position: relative;
@@ -33,15 +33,25 @@
       background: white;
       color: black;
       border: none;
-      padding: 9px;
+      padding: 10px 30px;
       top: 30px;
       position: relative;
-      font-family: Open_Sans;
       font-weight: 800;
     }
   }
 
   .container.juice {
+    min-height: 350px;
+    .wrapper{
+      top: 50px;
+    }
+    span {
+      font-family: Dosis;
+    }
+    p {
+      color: darkgray;
+      line-height: 0.5em;
+    }
     img {
       width: 50px;
     }
@@ -82,6 +92,17 @@
     background: image-url('index/home_wwa_bg.jpg');
     background-size: 100% 100%;
     min-height: 550px;
+    .wrapper {
+      top: 220px;
+      width: 60%;
+      line-height: 1.5em;
+      a {
+        padding: 10px 50px;
+        background: whitesmoke;
+        top: 40px;
+        position: relative;
+      }
+    }
   }
 
   .container.whats-inside {
@@ -98,7 +119,7 @@
     }
     .index-ingredients {
       display: inline-block;
-      &.left{
+      &.left {
         float: left;
         width: 400px;
         position: relative;
@@ -106,10 +127,10 @@
         text-align: left;
 
       }
-      &.right{
+      &.right {
         text-align: left;
-        ul{
-          .description{
+        ul {
+          .description {
             display: none;
           }
         }
@@ -117,10 +138,25 @@
     }
   }
 
-  .container.stats{
+  .container.stats {
     background: image-url('index/home_stats_bg.jpg');
     background-size: 100% 100%;
     min-height: 500px;
+    .wrapper {
+      width: 80%;
+      top: 100px;
+      .stat {
+        display: inline-block;
+        padding: 30px 30px;
+        width: 120px;
+        .number {
+          font-size: 50px;
+        }
+        .food {
+          font-size: 14px;
+        }
+      }
+    }
   }
 
   .container.faq {
@@ -151,7 +187,7 @@
       }
       &.right {
         top: 7px;
-        h2{
+        h2 {
           left: 50px;
           position: relative;
         }
@@ -159,7 +195,7 @@
           width: 820px;
           &.question {
             font-weight: 800;
-            span{
+            span {
               float: right;
             }
           }
