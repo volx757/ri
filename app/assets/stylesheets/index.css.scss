@@ -42,7 +42,7 @@
 
   .container.juice {
     min-height: 350px;
-    .wrapper{
+    .wrapper {
       top: 50px;
     }
     span {
@@ -110,35 +110,35 @@
     background-size: 100% 100%;
     min-height: 800px;
     font-family: Dosis;
-    span{
+    span {
       right: 40px;
       float: right;
       position: relative;
     }
-    .wrapper{
+    .wrapper {
       top: 50px;
-      h2{
+      h2 {
         margin-top: 0px;
         letter-spacing: 5px;
         font-size: 20px;
       }
-      h3{
+      h3 {
         margin-top: -10px;
         font-size: 14px;
       }
       p {
         line-height: 1.8em;
       }
-      .big{
+      .big {
         margin-top: 40px;
         font-weight: 800;
         letter-spacing: 2px;
       }
-      .small{
+      .small {
 
       }
     }
-    img{
+    img {
       width: 50px;
     }
     ul {
@@ -158,7 +158,7 @@
         width: 400px;
         left: 200px;
         text-align: left;
-        hr{
+        hr {
           width: 70px;
           margin-left: 0;
         }
@@ -168,14 +168,14 @@
         ul {
           .description {
             display: none;
-            height:auto;
+            height: auto;
             line-height: 1.2em;
           }
-          li{
+          li {
             position: relative;
           }
         }
-        hr{
+        hr {
           float: left;
           width: 100%;
         }
@@ -205,6 +205,8 @@
   }
 
   .container.faq {
+    min-height: 500px;
+    padding: 50px 0;
     ul {
       list-style-type: none;
       li {
@@ -225,8 +227,12 @@
           position: relative;
         }
         li {
+          padding-left: 15px;
           &:hover {
             background: lightgray;
+          }
+          span {
+            float: right;
           }
         }
       }
@@ -245,8 +251,9 @@
             }
           }
           &.answer {
+            height: auto;
             font-size: 14px;
-            line-height: 1.1em;
+            line-height: 1.2em;
           }
         }
       }
@@ -254,7 +261,65 @@
   }
 
   .container.contact {
-
+    font-family: Dosis;
+    .index-contact {
+      display: inline-block;
+      text-align: left;
+      hr {
+        margin: 0;
+        width: 80px;
+      }
+      &.left {
+        float: left;
+        left: 100px;
+        position: relative;
+        p {
+          width: 240px;
+        }
+      }
+      &.right {
+        width: 700px;
+        form {
+          top: 30px;
+          position: relative;
+        }
+        .line {
+          height: 50px;
+          .unit {
+            display: inline-block;
+            label {
+              display: block;
+              text-transform: uppercase;
+            }
+            input {
+              border: none;
+              border-bottom: 1px solid grey;
+              line-height: 2em;
+            }
+          }
+          &.one {
+            input {
+              width: 300px;
+            }
+          }
+          &.two {
+            top: 30px;
+            position: relative;
+            input {
+              width: 625px;
+            }
+          }
+        }
+        .button {
+          padding: 7px 50px;
+          position: relative;
+          top: 50px;
+        }
+      }
+    }
+    .pre-footer{
+      background: image-url('index/home_prefooter_bg.jpg');
+      height: 445px;
+    }
   }
-
 }

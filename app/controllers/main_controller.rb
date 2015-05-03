@@ -1,16 +1,15 @@
 class MainController < ApplicationController
 
   def index
-  #  inquiry
-  end
 
+  end
 
   def contact
   end
 
   def inquiry
-    @inquiry = Inquiry.new(inquiry_params)
-
+    @inquiry = Inquiry.new(inquiry_params).save
+    render :nothing => true
   end
 
   private
@@ -18,6 +17,5 @@ class MainController < ApplicationController
   def inquiry_params
     params.permit(:name, :email, :content)
   end
-
 
 end

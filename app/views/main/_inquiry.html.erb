@@ -1,12 +1,22 @@
-<%= form_for @inquiry, url: '/inquiry', remote: true do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<%= form_tag("/inquiry", method: "post", :id => 'inquiry_form', :remote => true) do %>
+    <div class="line one">
+      <div class="unit">
+        <%= label_tag :name %>
+        <%= text_field_tag :name %>
+      </div>
 
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+      <div class="unit" style="left: 20px; position: relative;">
+        <%= label_tag :email %>
+        <%= email_field_tag :email %>
+      </div>
+    </div>
 
-    <%= f.label :content %>
-    <%= f.text_field :content %>
+    <div class="line two">
+      <div class="unit">
+        <%= label_tag :your_question %>
+        <%= text_field_tag :content %>
+      </div>
+    </div>
 
-    <%= f.submit 'Submit' %>
+    <%= submit_tag 'Submit Question', :class => 'button' %>
 <% end %>
