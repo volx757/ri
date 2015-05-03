@@ -212,6 +212,8 @@ function closeOtherListItemsIngredients(question, icon, answer) {
     var keepOpen = answer.data('num'),
         length = $('#ingredients-right li').length / 2
 
+    console.log(keepOpen)
+
     for (var i = 0; i < length; i++) {
         var currentAnswer = $('#ingredients-right *[data-num=' + i + '].description ')
 
@@ -235,33 +237,38 @@ function hideListItem(question, icon, answer) {
     answer.hide(200)
 }
 
-function bindFaqToggles() {
-    $('#faq-right').find('li span').on('click', function () {
 
-        var num = $(this).parent().data('num') - 1,
+function bindFaqToggles() {
+    $('#faq-right').find('.question').on('click', function () {
+
+        var icon = $(this).find('span')
+
+        var num = icon.parent().data('num') - 1,
             answer = $('#faq-right').find('.answer:eq( ' + num + ')')
 
         if (answer.css('display') == 'none') {
-            openListItem(null, $(this), answer)
-            closeOtherListItemsFaq(null, $(this), answer)
+            openListItem(null, icon, answer)
+            closeOtherListItemsFaq(null, icon, answer)
         }
         else
-            closeListItem(null, $(this), answer)
+            closeListItem(null, icon, answer)
     })
 }
 
 function bindIngredientsToggles() {
-    $('#ingredients-right').find('li span').on('click', function () {
+    $('#ingredients-right').find('.flavor').on('click', function () {
 
-        var num = $(this).parent().data('num') - 1,
+        var icon = $(this).find('span')
+
+        var num = icon.parent().data('num') - 1,
             desc = $('#ingredients-right').find('.description:eq( ' + num + ')')
 
         if (desc.css('display') == 'none') {
-            openListItem(null, $(this), desc)
-            closeOtherListItemsIngredients(null, $(this), desc)
+            openListItem(null, icon, desc)
+            closeOtherListItemsIngredients(null, icon, desc)
         }
         else
-            closeListItem(null, $(this), desc)
+            closeListItem(null, icon, desc)
     })
 }
 

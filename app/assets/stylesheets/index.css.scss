@@ -15,7 +15,7 @@
     height: 90vh;
     background: image-url('index/home_header_bg1.jpg');
     background-size: 100% 100%;
-    .wrapper{
+    .wrapper {
       top: 50px;
     }
     h1 {
@@ -27,7 +27,7 @@
     h3 {
       position: relative;
       top: 10px;
-      color:white;
+      color: white;
       font-weight: 100;
       letter-spacing: 2px;
       font-size: 14px;
@@ -58,9 +58,6 @@
     min-height: 350px;
     .wrapper {
       top: 50px;
-    }
-    h2{
-      color:white;
     }
     span {
       font-family: Dosis;
@@ -122,10 +119,10 @@
       top: 250px;
       width: 60%;
       line-height: 1.5em;
-      h2{
+      h2 {
         color: white;
       }
-      p{
+      p {
         color: white;
       }
       a {
@@ -224,10 +221,14 @@
     .wrapper {
       width: 80%;
       top: 100px;
+      h2 {
+        color: white;
+      }
       .stat {
         display: inline-block;
         padding: 30px 30px;
         width: 120px;
+        font-weight: 100;
         .number {
           font-size: 50px;
         }
@@ -250,11 +251,11 @@
         line-height: 2.5em;
       }
     }
-    h2{
+    h2 {
       color: black;
       letter-spacing: 2px;
     }
-    h3{
+    h3 {
       color: #afafaf;
       font-size: 14px;
       font-weight: 100;
@@ -385,7 +386,7 @@
           position: relative;
           top: 50px;
         }
-        .inquiry-successful{
+        .inquiry-successful {
           display: none;
         }
       }

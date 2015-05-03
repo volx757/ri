@@ -1,0 +1,43 @@
+#contact-container{
+
+  .page-header{
+    top: 30px;
+    position: relative;
+    background: black;
+    height: 150px;
+    h2, h3{
+      color: #ffffff;
+      top: 60px;
+      position: relative;
+      font-weight: 100;
+    }
+    h2{
+      float: left;
+      left: 120px;
+      letter-spacing: 2px;
+    }
+    h3{
+      float: right;
+      right: 150px;
+      letter-spacing: 1px;
+      span{
+        font-weight: 800;
+      }
+    }
+  }
+
+  .container{
+    text-align: center;
+  }
+
+  .container.intro{
+    height: 200px;
+    padding-top: 40px;
+    p{
+      width: 50%;
+      margin: 0 auto;
+      line-height: 1.4em;
+    }
+  }
+
+}
