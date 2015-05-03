@@ -93,7 +93,7 @@
     background-size: 100% 100%;
     min-height: 550px;
     .wrapper {
-      top: 220px;
+      top: 250px;
       width: 60%;
       line-height: 1.5em;
       a {
@@ -108,7 +108,39 @@
   .container.whats-inside {
     background: image-url('index/home_flavors_bg.jpg');
     background-size: 100% 100%;
-    min-height: 500px;
+    min-height: 800px;
+    font-family: Dosis;
+    span{
+      right: 40px;
+      float: right;
+      position: relative;
+    }
+    .wrapper{
+      top: 50px;
+      h2{
+        margin-top: 0px;
+        letter-spacing: 5px;
+        font-size: 20px;
+      }
+      h3{
+        margin-top: -10px;
+        font-size: 14px;
+      }
+      p {
+        line-height: 1.8em;
+      }
+      .big{
+        margin-top: 40px;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      .small{
+
+      }
+    }
+    img{
+      width: 50px;
+    }
     ul {
       list-style-type: none;
       li {
@@ -119,20 +151,33 @@
     }
     .index-ingredients {
       display: inline-block;
+      top: 50px;
+      position: relative;
       &.left {
         float: left;
         width: 400px;
-        position: relative;
         left: 200px;
         text-align: left;
-
+        hr{
+          width: 70px;
+          margin-left: 0;
+        }
       }
       &.right {
         text-align: left;
         ul {
           .description {
             display: none;
+            height:auto;
+            line-height: 1.2em;
           }
+          li{
+            position: relative;
+          }
+        }
+        hr{
+          float: left;
+          width: 100%;
         }
       }
     }

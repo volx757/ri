@@ -51,19 +51,24 @@
 
 
   <div class="container whats-inside">
-    <h2>What's In Rijuice?</h2>
+    <div class="wrapper">
+      <%= image_tag 'logo-tri.png' %>
+      <h2>WHAT'S IN RIJUICE?</h2>
 
-    <h3>Our ingredients</h3>
+      <h3 class="grey">OUR VARIETIES</h3>
 
-    <div class="index-ingredients left">
-      <h2>Farm to bottle as quickly as possible</h2>
-      <hr>
-      <p>All of our juices are 100% vegan, gluten free, animal free, all dat good shit.</p>
+      <div class="index-ingredients left">
+        <h2>FARM TO BOTTLE AS QUICKLY AS POSSIBLE.</h2>
+        <hr>
+        <p class="big">ALL OF OUR JUICES ARE 100% VEGAN AND 100% GLUTEN-FREE.</p>
 
-      <p>Lorem Ipsum Doler some dope shit u never heardLorem Ipsum Doler some dope shit u never heard</p>
-    </div>
-    <div class="index-ingredients right">
-      <%= render 'whats_inside' %>
+        <p class="small">Lorem Ipsum Doler some dope shit u never heardLorem Ipsum Doler some dope shit u never heard</p>
+
+        <p class="big" style="margin-top: 130px">LEARN MORE ABOUT THE BENEFITS OF EACH INGREDIENT</p>
+      </div>
+      <div class="index-ingredients right">
+        <%= render 'whats_inside' %>
+      </div>
     </div>
   </div>
 
