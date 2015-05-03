@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
   get "contact" => "main#contact", :as => "contact"
-  get "ingrediens" => "main#ingredients", :as => "ingredients"
 
   resources :users
   resources :sessions
@@ -21,5 +20,6 @@ Rails.application.routes.draw do
   get 'cart', to: 'carts#index', as: 'cart'
   get 'checkout', to: 'carts#checkout', as: 'checkout'
   post 'cart', to: 'carts#create_payment', as: 'payment'
+  post 'inquiry', to: 'main#index', as: 'inquiry'
 
 end

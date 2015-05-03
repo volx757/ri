@@ -47,7 +47,7 @@ var faqAnswers_juice = ["Our juice is extracted using a hydraulic cold-press mac
         "We ask/require that someone be present to receive deliveries always unless otherwise instructed - in which case we hold no responsibility for purchase/quality after completed drop-off.",
         "Our glass bottles are just another way of ensuring the quality of our products as well as advocating a more conscious business practice.  So many juice companies still use plastic for the sake of cost. We are selling juices and cleanses - raw living food - that nourish and detoxify your body. Plastic bottles are notorious for leaching chemicals into beverages and on the planet plastic is a leading cause of pollution. We advocate more conscious styles of living and we never jeopardize quality or the planet for profit.  In order to minimize the pollution of our environment, we try to produce as little waste as possible so please feel free to return our glass bottles or keep them to be repurposed or reused for whatever you like.  Take a picture of how you repurpose them and post to our instagram or Facebook.  We'd love to see what you come up with."]
 
-var isExpanded = false
+var faqIsExpanded = false
 
 function bindFaqCategories() {
 
@@ -76,7 +76,7 @@ function bindFaqCategories() {
         writeFaqQuestions(categoryNum)
         bindFaqCategories();
         initializeFaq();
-        bindToggles()
+        bindFaqToggles()
     })
 
 }
@@ -107,18 +107,17 @@ function writeFaqQuestions(categoryNum) {
 
     var qaList = $("#faq-right").find("ul")
     qaList.empty()
-    var qNum = 1;
+    var num = 1;
 
     for (var i in questions) {
 
-        var li = "<li class='question' data-qNum=" + qNum + ">",
-            li2 = "<li class='answer' data-qNum=" + qNum + ">",
+        var li = "<li class='question' data-num=" + num + ">",
+            li2 = "<li class='answer' data-num=" + num + ">",
             ex_or_col = "<span class='ex_or_col'>+</span>"
 
-        qaList.append(li.concat(qNum + ". " + questions[i] + ex_or_col), li2.concat(answers[i]))
-        qNum++
+        qaList.append(li.concat(num + ". " + questions[i] + ex_or_col), li2.concat(answers[i]))
+        num++
     }
-    //  initializeFaq()
 
 }
 
@@ -146,23 +145,46 @@ function initializeFaq() {
     }
 
     for (var i = 1; i < numListItems + 1; i++) {
-        var currentQuestion = $('#faq-right *[data-qNum=' + i + '].question '),
-            currentIcon = $('#faq-right *[data-qNum=' + i + '] span '),
-            currentAnswer = $('#faq-right *[data-qNum=' + i + '].answer ')
+        var currentQuestion = $('#faq-right *[data-num=' + i + '].question '),
+            currentIcon = $('#faq-right *[data-num=' + i + '] span '),
+            currentAnswer = $('#faq-right *[data-num=' + i + '].answer ')
 
         if (i == 1)
             openListItem(currentQuestion, currentIcon, currentAnswer)
         if (i > 4) {
             hideListItem(currentQuestion, currentIcon, currentAnswer)
         }
+
+        //TODO:fix this shit
         for (var j = 2; j <= i; j++) {
             closeListItem(currentQuestion, currentIcon, currentAnswer)
         }
     }
 
-    isExpanded = false
+    faqIsExpanded = false
     $('#faq-right .show-more').empty().append("+ Show More")
 
+}
+
+function initializeIngredients() {
+
+
+    var numListItems = $('#ingredients-right').find('ul').children().length
+
+    for (var i = 1; i < numListItems + 1; i++) {
+        var currentIcon = $('#ingredients-right *[data-num=' + i + '] span '),
+            currentDesc = $('#ingredients-right *[data-num=' + i + '].description ')
+
+        if (i == 1)
+            openListItem(null, currentIcon, currentDesc)
+
+        //TODO:fix this shit
+        for (var j = 2; j <= i; j++) {
+            closeListItem(null, currentIcon, currentDesc)
+        }
+    }
+
+    bindIngredientsToggles()
 }
 
 function openListItem(question, icon, answer) {
@@ -170,14 +192,26 @@ function openListItem(question, icon, answer) {
     icon.empty().append('-')
 }
 
-function closeOtherListItems(question, icon, answer) {
+function closeOtherListItemsFaq(question, icon, answer) {
 
-    var keepOpen = answer.data('qnum'),
+    var keepOpen = answer.data('num'),
         length = $('#faq-right li').length / 2
 
     for (var i = 0; i < length; i++) {
-        var currentAnswer = $('#faq-right *[data-qNum=' + i + '].answer '),
-            currentQuestion = $('#faq-right *[data-qNum=' + i + '].question ')
+        var currentAnswer = $('#faq-right *[data-num=' + i + '].answer ')
+
+        if (i != keepOpen)
+            closeListItem(null, icon, currentAnswer)
+    }
+}
+
+function closeOtherListItemsIngredients(question, icon, answer) {
+
+    var keepOpen = answer.data('num'),
+        length = $('#ingredients-right li').length / 2
+
+    for (var i = 0; i < length; i++) {
+        var currentAnswer = $('#ingredients-right *[data-num=' + i + '].description ')
 
         if (i != keepOpen)
             closeListItem(null, icon, currentAnswer)
@@ -199,38 +233,53 @@ function hideListItem(question, icon, answer) {
     answer.hide()
 }
 
-function bindToggles() {
+function bindFaqToggles() {
     $('#faq-right').find('li span').on('click', function () {
 
-        var num = $(this).parent().data('qnum') - 1,
+        var num = $(this).parent().data('num') - 1,
             answer = $('#faq-right').find('.answer:eq( ' + num + ')')
 
         if (answer.css('display') == 'none') {
             openListItem(null, $(this), answer)
-            console.log($(this))
-            closeOtherListItems(null, $(this), answer)
+            closeOtherListItemsFaq(null, $(this), answer)
         }
         else
             closeListItem(null, $(this), answer)
     })
 }
 
+function bindIngredientsToggles() {
+    $('#ingredients-right').find('li span').on('click', function () {
+
+        var num = $(this).parent().data('num') - 1,
+            desc = $('#ingredients-right').find('.description:eq( ' + num + ')')
+
+        if (desc.css('display') == 'none') {
+            openListItem(null, $(this), desc)
+            closeOtherListItemsIngredients(null, $(this), desc)
+        }
+        else
+            closeListItem(null, $(this), desc)
+    })
+}
+
+
 function bindShowAllQuestions() {
     $('#faq-right .show-more').on('click', function () {
-        if (isExpanded) {
+        if (faqIsExpanded) {
             $('#faq-right li').each(function () {
-                if ($(this).data('qnum') > 4)
+                if ($(this).data('num') > 4)
                     hideListItem($(this), null, $(this))
             })
 
-            isExpanded = false
+            faqIsExpanded = false
             $(this).empty().append("+ Show More")
         } else {
             $('#faq-right li').each(function () {
                 showListItem($(this), null, $(this))
             })
 
-            isExpanded = true
+            faqIsExpanded = true
             $(this).empty().append("- Show Less")
         }
 

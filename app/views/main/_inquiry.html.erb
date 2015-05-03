@@ -1,0 +1,12 @@
+<%= form_for @inquiry, url: '/inquiry', remote: true do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+
+    <%= f.submit 'Submit' %>
+<% end %>

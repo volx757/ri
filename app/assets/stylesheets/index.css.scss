@@ -88,6 +88,33 @@
     background: image-url('index/home_flavors_bg.jpg');
     background-size: 100% 100%;
     min-height: 500px;
+    ul {
+      list-style-type: none;
+      li {
+        width: 600px;
+        height: 40px;
+        line-height: 2.5em;
+      }
+    }
+    .index-ingredients {
+      display: inline-block;
+      &.left{
+        float: left;
+        width: 400px;
+        position: relative;
+        left: 200px;
+        text-align: left;
+
+      }
+      &.right{
+        text-align: left;
+        ul{
+          .description{
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   .container.stats{
