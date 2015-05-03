@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     var floatHeader = $('#header-float')
     $(document).scroll(function () { fixHeaderPosition(floatHeader); });
+    $('.nav-item').localScroll({duration:300});
 
     bindFaqCategories();
     writeFaqQuestions(0);

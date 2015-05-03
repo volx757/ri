@@ -7,8 +7,17 @@
 <div id="header-float">
   <div class="content">
     <div class="nav-item logo"><%= link_to image_tag('logo-tri.png', :style => 'width: 50px;margin-right: 40%;') %></div>
-    <div class="nav-item"> <%= link_to 'HOME', '/' %> &or;</div>
-    <div class="nav-item"> <%= link_to 'PURCHASE', '/products' %>&or;</div>
-    <div class="nav-item"> <%= link_to 'CONTACT', '/contact' %></div>
+    <div class="nav-item">
+        <a href="#">HOME &#9662;</a>
+        <ul>
+          <li><a href="#juice">JUICE</a></li>
+          <li><a href="#whoweare">WHO WE ARE</a></li>
+          <li><a href="#inside">WHAT'S INSIDE</a></li>
+          <li><a href="#stats">STATS</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="nav-item" style="right:500px"> <%= link_to 'PURCHASE', '/products' %></div>
+    <div class="nav-item" style="right:400px"> <%= link_to 'CONTACT', '/contact' %></div>
   </div>
 </div>

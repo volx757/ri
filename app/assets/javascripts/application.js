@@ -17,3 +17,5 @@
 //= require animations
 //= require dynamic_lists
 //= require main
+//= require lib/jquery.localScroll.min.js
+//= require lib/jquery.scrollTo.min.js
