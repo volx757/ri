@@ -15,30 +15,41 @@
     height: 90vh;
     background: image-url('index/home_header_bg1.jpg');
     background-size: 100% 100%;
+    .wrapper{
+      top: 50px;
+    }
     h1 {
       position: relative;
       top: 30px;
       letter-spacing: 20px;
+      font-weight: 100;
     }
     h3 {
       position: relative;
-      top: 8px;
+      top: 10px;
+      color:white;
+      font-weight: 100;
+      letter-spacing: 2px;
+      font-size: 14px;
     }
     img {
       position: relative;
       top: 50px;
       width: 200px;
+      margin-bottom: 10px;
     }
     .button {
+      letter-spacing: 1px;
+      font-size: 14px;
       background: white;
       color: black;
       border: none;
-      padding: 10px 30px;
-      top: 30px;
+      padding: 10px 40px;
+      top: 40px;
       position: relative;
       font-weight: 800;
-      &:hover{
-        background: grey;
+      &:hover {
+        background: #a4a4a4;
       }
     }
   }
@@ -47,6 +58,9 @@
     min-height: 350px;
     .wrapper {
       top: 50px;
+    }
+    h2{
+      color:white;
     }
     span {
       font-family: Dosis;
@@ -88,11 +102,12 @@
           display: block;
         }
       }
-      .jump-products{
+      .jump-products {
         width: 200px;
         margin: 0 auto;
-        a{
+        a {
           display: inline-block;
+          color: #181818;
         }
       }
     }
@@ -107,6 +122,12 @@
       top: 250px;
       width: 60%;
       line-height: 1.5em;
+      h2{
+        color: white;
+      }
+      p{
+        color: white;
+      }
       a {
         padding: 10px 50px;
         background: whitesmoke;
@@ -220,6 +241,7 @@
   .container.faq {
     min-height: 500px;
     padding: 50px 0;
+    font-family: Dosis;
     ul {
       list-style-type: none;
       li {
@@ -228,15 +250,31 @@
         line-height: 2.5em;
       }
     }
+    h2{
+      color: black;
+      letter-spacing: 2px;
+    }
+    h3{
+      color: #afafaf;
+      font-size: 14px;
+      font-weight: 100;
+    }
     .index-faq {
       position: relative;
       display: inline-block;
       text-align: left;
+      h2 {
+        font-weight: 100;
+      }
       &.left {
         left: 100px;
         float: left;
+        hr {
+          width: 70px;
+          margin: 0;
+        }
         ul {
-          left: -20px;
+          left: -50px;
           position: relative;
         }
         li {
@@ -246,33 +284,45 @@
           }
           span {
             float: right;
+            right: 10px;
+            position: relative;
           }
         }
       }
       &.right {
-        top: 7px;
         h2 {
-          left: 50px;
+          left: 40px;
           position: relative;
+        }
+        hr {
+          width: 70px;
+          margin-left: 40px;
         }
         li {
           width: 820px;
           &.question {
             font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             span {
               float: right;
+            }
+            hr {
+              margin: 0px;
+              width: 100%;
             }
           }
           &.answer {
             height: auto;
             font-size: 14px;
             line-height: 1.2em;
+            padding: 10px 0;
           }
         }
-        .show-more{
+        .show-more {
           position: relative;
           left: 50px;
-          h3{
+          h3 {
             display: inline-block;
           }
         }
@@ -335,9 +385,13 @@
           position: relative;
           top: 50px;
         }
+        .inquiry-successful{
+          display: none;
+        }
       }
     }
-    .pre-footer{
+
+    .pre-footer {
       background: image-url('index/home_prefooter_bg.jpg');
       height: 445px;
     }

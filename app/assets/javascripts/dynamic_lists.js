@@ -115,7 +115,7 @@ function writeFaqQuestions(categoryNum) {
             li2 = "<li class='answer' data-num=" + num + ">",
             ex_or_col = "<span class='ex_or_col'>+</span>"
 
-        qaList.append(li.concat(num + ". " + questions[i] + ex_or_col), li2.concat(answers[i]))
+        qaList.append(li.concat(num + ". " + questions[i] + ex_or_col + '<hr>'), li2.concat(answers[i]))
         num++
     }
 
@@ -163,6 +163,9 @@ function initializeFaq() {
 
     faqIsExpanded = false
 
+    $('#faq-right .show-more').empty()
+    $('#faq-right .show-more').append("<i class='fa fa-plus-circle'></i> <h3>Show More</h3>")
+
 }
 
 function initializeIngredients() {
@@ -187,7 +190,7 @@ function initializeIngredients() {
 }
 
 function openListItem(question, icon, answer) {
-    answer.show()
+    answer.show(200)
     icon.empty().append('-')
 }
 
@@ -218,18 +221,18 @@ function closeOtherListItemsIngredients(question, icon, answer) {
 }
 
 function closeListItem(question, icon, answer) {
-    answer.hide()
+    answer.hide(200)
     icon.empty().append('+')
 }
 
 function showListItem(question, icon, answer) {
-    question.show()
-    answer.show()
+    question.show(200)
+    answer.show(200)
 }
 
 function hideListItem(question, icon, answer) {
-    question.hide()
-    answer.hide()
+    question.hide(200)
+    answer.hide(200)
 }
 
 function bindFaqToggles() {
@@ -274,8 +277,8 @@ function bindShowAllQuestions() {
             faqIsExpanded = false
             $(this).empty().append("<i class='fa fa-plus-circle'></i> <h3>Show More</h3>")
         } else {
-            $('#faq-right li').each(function () {
-                showListItem($(this), null, $(this))
+            $('#faq-right').find('.question').each(function () {
+                $(this).show(200)
             })
 
             faqIsExpanded = true
