@@ -7,14 +7,14 @@
 
       <div class="unit" style="left: 20px; position: relative;">
         <%= label_tag :email %>
-        <%= email_field_tag :email, nil, :placeholder => 'EMAIL'  %>
+        <%= email_field_tag :email, nil, :placeholder => 'EMAIL' %>
       </div>
     </div>
 
     <div class="line two">
       <div class="unit">
         <%= label_tag :your_question %>
-        <%= text_field_tag :content, nil, :placeholder => 'YOUR QUESTION'  %>
+        <%= text_field_tag :content, nil, :placeholder => 'YOUR QUESTION' %>
       </div>
     </div>
 
@@ -26,8 +26,18 @@
 </div>
 
 <script>
-  $('#inquiry_form').on('submit', function(){
+    $('#inquiry_form').on('submit', function () {
+        if ($('#content').val().length < 1) {
+            $('#content').attr('placeholder', 'DO YOU HAVE A QUESTION?')
+            return false;
+        }
 
-  })
+        if ($('#email').val().length < 1) {
+            return false;
+        }
 
+        $(this).fadeOut(300).setTimeout($('.inquiry-successful').fadeIn(300), 300)
+
+
+    })
 </script>
