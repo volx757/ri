@@ -28,6 +28,11 @@
 
   .container{
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    .left-align{
+      text-align: left;
+    }
   }
 
   .container.intro{
@@ -38,6 +43,22 @@
       margin: 0 auto;
       line-height: 1.4em;
     }
+  }
+
+  .container.retail{
+    .img-hold{
+      height: 300px;
+      width: 700px;
+      background: black;
+      float: left;
+    }
+    img{
+      width: 250px;
+      position: relative;
+      left: 320px;
+      top: -300px;
+    }
+
   }
 
 }

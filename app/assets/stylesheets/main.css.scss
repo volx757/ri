@@ -8,7 +8,7 @@
   src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
 }
 
-.transition-all{
+.transition-all {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
 }
@@ -22,12 +22,14 @@ h1 {
   text-align: center;
   font-family: 'Dosis';
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-family: 'Dosis';
   text-transform: uppercase;
   color: #181818;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -41,7 +43,7 @@ a {
   color: grey;
 }
 
-p{
+p {
   font-family: Dosis;
   color: #919191;
 }
@@ -50,11 +52,11 @@ hr {
   width: 90%;
 }
 
-.clearfix{
+.clearfix {
   clear: both;
 }
 
-.small-hr{
+.small-hr {
   width: 10%;
 }
 
@@ -66,8 +68,9 @@ hr {
   font-family: 'Dosis';
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
-  &:hover{
-    background: grey;
+  &:hover {
+    background: black;
+    color: white;
   }
 }
 
@@ -75,7 +78,7 @@ hr {
   font-style: italic;
 }
 
-.white{
+.white {
   color: white;
 }
 
@@ -83,7 +86,7 @@ hr {
   color: #a4a4a4;
 }
 
-.wrapper{
+.wrapper {
   position: relative;
   margin: 0 auto;
 }
@@ -127,7 +130,7 @@ hr {
 
   }
   .foot-container.contact {
-    div{
+    div {
       color: grey;
     }
   }
@@ -140,15 +143,22 @@ hr {
     }
     h3 {
       display: inline-block;
-      left: -400px;
+      left: -380px;
       position: relative;
       color: grey;
       letter-spacing: 2px;
+      top: -16px;
     }
     a {
       display: inline-block;
       position: relative;
       right: -400px;
+    }
+    .button {
+      padding: 5px 40px;
+      padding: 5px 40px;
+      border: 1px solid white;
+      color: white;
     }
   }
 }
@@ -193,28 +203,30 @@ hr {
       top: 3px;
     }
   }
-  ul{
+  ul {
     padding: 0;
     list-style: none;
     background: lightgray;
     position: relative;
-    top:-8px;
+    top: -8px;
   }
-  ul li{
+  ul li {
     width: 100px;
     text-align: left;
     line-height: 21px;
     display: block;
     padding: 10px;
   }
-  a:hover{
+  a:hover {
     color: #fff;
     background: #939393;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
   }
   ul {
     display: none;
   }
-  .nav-item:hover ul{
+  .nav-item:hover ul {
     display: block;
   }
 }
