@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var floatHeader = $('#header-float')
     $(document).scroll(function () {
-        fixHeaderPosition(floatHeader);
+       // fixHeaderPosition(floatHeader);
     });
     $('.nav-item').localScroll({duration: 300});
 

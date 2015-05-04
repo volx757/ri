@@ -1,23 +1,25 @@
-<div id="header-fixed">
-  <%= link_to 'info@rijuice.com', '/' %>
-  <%= link_to '609-mobile-mobile', '/' %>
-  <%= link_to 'Login', '/log_in', :class => 'button' %>
-</div>
+<!--<div id="header-fixed">
+  <%#= link_to 'info@rijuice.com', '/' %>
+  <%#= link_to '609-mobile-mobile', '/' %>
+
+</div>-->
 
 <div id="header-float">
   <div class="content">
     <div class="nav-item logo"><%= image_tag('nav_logo@2x.png', :style => 'width: 150px;margin-right: 40%;') %></div>
     <div class="nav-item">
-        <a href="/">HOME &#9662;</a>
+        <a href="/" class="nav-category">HOME &#9662;</a>
         <ul>
-          <li><a href="#juice">JUICE</a></li>
+          <li style="width: 60px;"><a href="#juice">JUICE</a></li>
           <li><a href="#whoweare">WHO WE ARE</a></li>
           <li><a href="#inside">WHAT'S INSIDE</a></li>
-          <li><a href="#stats">STATS</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li style="width: 60px;"><a href="#stats">STATS</a></li>
+          <li style="width: 60px;"><a href="#faq">FAQ</a></li>
         </ul>
     </div>
-    <div class="nav-item" style="right:500px"> <%= link_to 'PURCHASE', '/products' %></div>
-    <div class="nav-item" style="right:400px"> <%= link_to 'CONTACT', '/contact' %></div>
+    <div class="nav-item" style="right:500px"> <%= link_to 'PURCHASE', '/products', :class => 'nav-category' %></div>
+    <div class="nav-item" style="right:400px"> <%= link_to 'CONTACT', '/contact', :class => 'nav-category'  %></div>
+
+    <%= link_to 'Login', '/log_in', :class => 'button' %>
   </div>
 </div>
