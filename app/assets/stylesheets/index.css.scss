@@ -406,7 +406,7 @@
       li {
         width: 600px;
         height: 40px;
-        line-height: 2.5em;
+
       }
     }
     .index-ingredients {
@@ -426,10 +426,16 @@
       &.right {
         text-align: left;
         ul {
+          .flavor{
+            cursor: pointer;
+            &:hover{
+              background: whitesmoke;
+            }
+          }
           .description {
             display: none;
             height: auto;
-            line-height: 1.2em;
+            line-height: 2.5em;
           }
           li {
             position: relative;
@@ -545,6 +551,10 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
+            cursor: pointer;
+            &:hover{
+              background: whitesmoke;
+            }
             span {
               float: right;
             }

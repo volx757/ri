@@ -76,7 +76,6 @@ function bindFaqCategories() {
         writeFaqQuestions(categoryNum)
         bindFaqCategories();
         initializeFaq();
-        bindFaqToggles()
     })
 
 }
@@ -166,6 +165,8 @@ function initializeFaq() {
     $('#faq-right .show-more').empty()
     $('#faq-right .show-more').append("<i class='fa fa-plus-circle'></i> <h3>Show More</h3>")
 
+    bindFaqToggles()
+
 }
 
 function initializeIngredients() {
@@ -199,7 +200,7 @@ function closeOtherListItemsFaq(question, icon, answer) {
     var keepOpen = answer.data('num'),
         length = $('#faq-right li').length / 2
 
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i < length + 1; i++) {
         var currentAnswer = $('#faq-right *[data-num=' + i + '].answer ')
 
         if (i != keepOpen)
@@ -212,9 +213,7 @@ function closeOtherListItemsIngredients(question, icon, answer) {
     var keepOpen = answer.data('num'),
         length = $('#ingredients-right li').length / 2
 
-    console.log(keepOpen)
-
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i < length + 1; i++) {
         var currentAnswer = $('#ingredients-right *[data-num=' + i + '].description ')
 
         if (i != keepOpen)
@@ -266,9 +265,10 @@ function bindIngredientsToggles() {
         if (desc.css('display') == 'none') {
             openListItem(null, icon, desc)
             closeOtherListItemsIngredients(null, icon, desc)
-        }
-        else
+        } else{
             closeListItem(null, icon, desc)
+        }
+
     })
 }
 

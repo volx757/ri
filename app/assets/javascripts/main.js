@@ -10,7 +10,7 @@ $(document).ready(function () {
     writeFaqQuestions(0);
     initializeFaq();
     initializeIngredients()
-    bindFaqToggles()
+
     bindShowAllQuestions()
 
     writeIndexProducts()
