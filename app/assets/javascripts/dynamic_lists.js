@@ -201,10 +201,11 @@ function closeOtherListItemsFaq(question, icon, answer) {
         length = $('#faq-right li').length / 2
 
     for (var i = 0; i < length + 1; i++) {
-        var currentAnswer = $('#faq-right *[data-num=' + i + '].answer ')
+        var currentAnswer = $('#faq-right *[data-num=' + i + '].answer '),
+            spanIcon = $('#faq-right *[data-num=' + i + '].question span')
 
         if (i != keepOpen)
-            closeListItem(null, icon, currentAnswer)
+            closeListItem(null, spanIcon, currentAnswer)
     }
 }
 
@@ -214,10 +215,12 @@ function closeOtherListItemsIngredients(question, icon, answer) {
         length = $('#ingredients-right li').length / 2
 
     for (var i = 0; i < length + 1; i++) {
-        var currentAnswer = $('#ingredients-right *[data-num=' + i + '].description ')
+        var currentAnswer = $('#ingredients-right *[data-num=' + i + '].description '),
+            spanIcon = $('#ingredients-right *[data-num=' + i + '].flavor span')
 
+        console.log(spanIcon)
         if (i != keepOpen)
-            closeListItem(null, icon, currentAnswer)
+            closeListItem(null, spanIcon, currentAnswer)
     }
 }
 
