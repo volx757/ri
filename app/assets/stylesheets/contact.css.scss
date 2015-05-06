@@ -26,12 +26,33 @@
     }
   }
 
+  .contact-nav{
+    text-align: center;
+    .nav-item {
+      display: inline-block;
+      margin: 0 15px;
+      h2{
+        font-size: 18px;
+      }
+      hr{
+        display: none;
+        width: 105%;
+        margin-left: -4%;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
   .container{
     text-align: center;
     width: 80%;
     margin: 0 auto;
     .left-align{
       text-align: left;
+    }
+    hr{
+      width: 100%;
     }
   }
 
@@ -45,12 +66,36 @@
     }
   }
 
-  .container.retail{
+  .container.retail, .container.pickup{
     .img-hold{
       height: 300px;
-      width: 700px;
+      width: 100%;
       background: black;
       float: left;
+    }
+    .location{
+      width: 200px;
+      text-align: left;
+      display: inline-block;
+      hr{
+        width: 50px;
+        margin-left: 0px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+    }
+    .address, .hours{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color:grey;
+    }
+    p{
+      color: black;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
     }
     img{
       width: 250px;

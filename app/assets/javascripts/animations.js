@@ -20,3 +20,20 @@ function fixHeaderPosition(floatHeader) {
     }
 
 }
+
+
+function setupContactNavUnderline() {
+
+    var nav = $('.contact-nav')
+
+    nav.find('hr').first().show()
+    nav.find('.nav-item').on('click', function () {
+
+        //var clickedNum = $(this).data()['num']
+        nav.find('hr').each(function(){
+            $(this).hide()
+        })
+        $(this).find('hr').show()
+    })
+
+}

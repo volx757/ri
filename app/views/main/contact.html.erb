@@ -21,78 +21,114 @@
   </div>
 
   <a name="locations"></a>
+
+  <div class="contact-nav">
+    <div class="nav-item" data-num="1"><a href="#retail"><h2>Retail locations</h2></a><hr></div>
+    <div class="nav-item" data-num="2"><a href="#pickup"><h2>Pickup locations</h2></a><hr></div>
+    <div class="nav-item" data-num="3"><a href="#messages"><h2>Send a message</h2></a><hr></div>
+  </div>
+
+  <a name="retail"></a>
   <div class="container retail">
     <h2 class="left-align">Retail locations</h2>
     <hr>
     <div class="img-hold"></div>
     <div class="clearfix"></div>
 
-    <%= image_tag('nav_logo@2x.png') %>
-
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <p>At Lancaster central market</p>
+      <hr>
+
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <p>At Lancaster central market</p>
+      <hr>
+
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <p>At Lancaster central market</p>
+      <hr>
+
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
-      <div class="button">VIEW MAP</div>
-    </div>
+      <p>At Lancaster central market</p>
+      <hr>
 
-    <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
   </div>
 
+  <a name="pickup"></a>
   <div class="container pickup">
     <h2 class="left-align">Pickup locations</h2>
     <hr>
 
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <p>At Lancaster central market</p>
+      <hr>
+
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <p>At Lancaster central market</p>
+      <hr>
+
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
     <div class="location">
-      <h3></h3>
-      <div class="address"></div>
-      <div class="hours"></div>
+      <p>At Lancaster central market</p>
+      <hr>
+
+      <div class="address">23 N Market Street <br>blasad 21312</div>
+      <br>
+      <div class="hours">Daily <br>6 213</div>
+      <br>
       <div class="button">VIEW MAP</div>
+      <br>
     </div>
 
   </div>
 
+  <a name="messages"></a>
   <div class="container email">
     <h2 class="left-align">Send a Message</h2>
 
@@ -105,24 +141,43 @@
 
           <div class="unit">
             <%= label_tag :email %>
-            <%= email_field_tag :email, nil, :placeholder => 'EMAIL'  %>
+            <%= email_field_tag :email, nil, :placeholder => 'EMAIL' %>
           </div>
 
           <div class="unit">
             <%= label_tag :subject %>
-            <%= text_field_tag :subject, nil, :placeholder => 'SUBJECT'  %>
+            <%= text_field_tag :subject, nil, :placeholder => 'SUBJECT' %>
           </div>
         </div>
 
         <div class="line two">
           <div class="unit">
             <%= label_tag :your_message %>
-            <%= text_field_tag :content, nil, :placeholder => 'YOUR MESSAGE'  %>
+            <%= text_field_tag :content, nil, :placeholder => 'YOUR MESSAGE' %>
           </div>
         </div>
 
         <%= submit_tag 'Submit Question', :class => 'button' %>
     <% end %>
+
+
+    <div class="location">
+      <p>General Contact Info</p>
+      <hr>
+
+      <div class="address">Rijuice<br>315 E Marion </div>
+      <div class="hours">Lancaster, PA 17602</div>
+      <br>
+      <div class="hours">609-741-7453</div>
+      <br>
+      <div class="hours">info@rijuice.com</div>
+      <br>
+      <div class="social">
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-tumblr"></i>
+      </div>
+    </div>
 
   </div>
 
