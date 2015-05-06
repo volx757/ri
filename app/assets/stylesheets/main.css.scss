@@ -115,7 +115,7 @@ hr {
 
 #footer {
   background-color: #181818;
-  height: 600px;
+  height: 500px;
   color: white;
   text-align: center;
   background-size: 100% 100%;
@@ -143,15 +143,16 @@ hr {
   }
   .foot-container.links {
     left: -50px;
+    top: -30px;
   }
   .foot-container.order {
-    top: 25px;
     left: -50px;
   }
   .foot-container.insta {
-
+    top: -195px;
   }
   .foot-container.contact {
+    top: -55px;
     div {
       color: grey;
     }
@@ -161,7 +162,7 @@ hr {
       width: 50px;
       display: inline-block;
       position: relative;
-      left: -382px;
+      left: -377px;
       border-radius: 25px;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
@@ -264,6 +265,7 @@ hr {
     background: lightgray;
     position: relative;
     top: -6.5px;
+    left: -7px;
   }
   ul li {
     width: 105px;

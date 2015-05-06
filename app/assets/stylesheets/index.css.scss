@@ -198,10 +198,10 @@
       background-color: white;
       color: black;
       &:hover {
-      //  transition-duration: 0.5s;
-      //  transition-timing-function: ease-in;
-      //  box-shadow: 0px 0px 0.3em black inset;
-      //  border-radius: 10px;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in;
+        box-shadow: 0px 0px 0.3em black inset;
+        border-radius: 10px;
       }
     }
   }
@@ -344,22 +344,10 @@
         color: black;
         font-weight: 800;
         &:hover {
-          transition-duration: 0.3s;
+          transition-duration: 0.1s;
           transition-timing-function: ease-in;
-         // box-shadow: 0px 0px 1em black inset;
-          // font-size: 16px;
-          /*  text-shadow: 0 1px 0 #ccc,
-            0 1px 0 #c9c9c9,
-            0 1px 0 #bbb,
-            0 1px 0 #b9b9b9,
-            0 2px 0 #aaa,
-            0 6px 1px rgba(0,0,0,.1),
-            0 0 5px rgba(0,0,0,.1),
-            0 1px 3px rgba(0,0,0,.3),
-            0 3px 5px rgba(0,0,0,.2),
-            0 5px 10px rgba(0,0,0,.25),
-            0 10px 10px rgba(0,0,0,.2),
-            0 20px 20px rgba(0,0,0,.15);*/
+          box-shadow: 0px 0px 0.3em black inset;
+          border-radius: 10px;
         }
       }
     }
@@ -568,8 +556,8 @@
           }
           &.answer {
             height: auto;
-            font-size: 14px;
-            line-height: 1.2em;
+            font-size: 16px;
+            line-height: 1.5em;
             padding: 10px 0;
           }
         }

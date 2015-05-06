@@ -1,7 +1,7 @@
 class MainController < ApplicationController
 
   def index
-
+    @page_title = 'index'
   end
 
   def contact
