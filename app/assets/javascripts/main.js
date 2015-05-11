@@ -14,6 +14,7 @@ $(document).ready(function () {
     bindShowAllQuestions()
 
     writeIndexProducts()
+    activateNightPage();
 
     /*
      Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
@@ -64,5 +65,18 @@ function writeIndexProducts() {
         desc2.append(indexProduct[i]['desc2'])
         desc3.append(indexProduct[i]['desc3'])
     }
+
+}
+
+function activateNightPage() {
+
+    $('#night').on('click',function(){
+        return false;
+
+        $('#night-overlay').animate({
+            opacity: 1,
+            height: "100%"
+        }, 5000)
+    })
 
 }

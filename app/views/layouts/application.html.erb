@@ -25,11 +25,18 @@
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-<%= render 'layouts/header' %>
+
+<% unless request.path == '/night' %>
+    <%= render 'layouts/header' %>
+<% end %>
 
 <%= yield %>
 
-<%= render 'layouts/footer' %>
+
+<% unless request.path == '/night' %>
+    <%= render 'layouts/footer' %>
+<% end %>
+
 
 </body>
 </html>

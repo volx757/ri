@@ -13,6 +13,10 @@ class MainController < ApplicationController
     render :nothing => true
   end
 
+  def night
+  #  render :layout => false
+  end
+
   private
 
   def inquiry_params

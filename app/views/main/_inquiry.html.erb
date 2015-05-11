@@ -26,18 +26,24 @@
 </div>
 
 <script>
-    $('#inquiry_form').on('submit', function () {
-        if ($('#content').val().length < 1) {
-            $('#content').attr('placeholder', 'DO YOU HAVE A QUESTION?')
-            return false;
-        }
+    $('#inquiry_form').on('submit', function (){
 
-        if ($('#email').val().length < 1) {
-            return false;
-        }
+    if ($('#email').val().length < 1) {
+        $('#email').attr('placeholder', 'ENTER YOUR EMAIL ADDRESS')
+        $('#email').css('color','red')
+        return false;
+    }
+    if ($('#content').val().length < 1) {
+        $('#content').attr('placeholder', 'DO YOU HAVE A QUESTION?')
+        $('#content').css('color','red')
+        return false;
+    }
 
-        $(this).fadeOut(300).setTimeout($('.inquiry-successful').fadeIn(300), 300)
+
+    $(this).fadeOut(300).setTimeout($('.inquiry-successful').fadeIn(300), 300)
 
 
     })
+
+
 </script>

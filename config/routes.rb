@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -8,8 +9,9 @@ Rails.application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
-  get "contact" => "main#contact", :as => "contact"
+  match "contact" => "main#contact", :as => "contact", :via => [:get, :post]
   get 'products' => 'main#index'
+  get 'night' => 'main#night', :as => 'night'
 
   resources :users
   resources :sessions
@@ -23,5 +25,6 @@ Rails.application.routes.draw do
   get 'checkout', to: 'carts#checkout', as: 'checkout'
   post 'cart', to: 'carts#create_payment', as: 'payment'
   post 'inquiry', to: 'main#inquiry', as: 'inquiry'
+  post 'contact', to: 'main#contact', as: 'contact_post'
 
 end
