@@ -71,7 +71,7 @@ function writeIndexProducts() {
 function activateNightPage() {
 
     $('#night').on('click',function(){
-        return false;
+        //return false;
 
         $('#night-overlay').animate({
             opacity: 1,

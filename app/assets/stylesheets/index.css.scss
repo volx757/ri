@@ -1,3 +1,7 @@
+$tablet: 1000px;
+$phone: 450px;
+$phoneSmall: 375px;
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -222,6 +226,7 @@
       }
     }
     .shine-green {
+      line-height: 1em;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
       &:hover {
@@ -404,6 +409,21 @@
         width: 400px;
         left: 200px;
         text-align: left;
+
+        @media all and (max-width: $tablet) {
+          left: 0;
+          width: 90%;
+          text-align: center;
+          float: none;
+        }
+        .big{
+          margin-top: 130px;
+          @media all and (max-width: $phone) {
+            margin-top: 30px;
+          }
+
+        }
+
         hr {
           width: 70px;
           margin-left: 0;
@@ -412,6 +432,10 @@
       &.right {
         text-align: left;
         ul {
+          @media all and (max-width: $phone) {
+           padding: 20px;
+          }
+
           .flavor {
             cursor: pointer;
             &:hover {
@@ -425,6 +449,10 @@
           }
           li {
             position: relative;
+            @media all and (max-width: $phone) {
+              width: 100%;
+            }
+
           }
         }
         hr {
@@ -452,6 +480,10 @@
         padding: 30px 30px;
         width: 120px;
         font-weight: 100;
+        @media all and (max-width: $phone) {
+         padding: 0;
+        }
+
         .number {
           font-size: 50px;
           width: 120px;
@@ -502,7 +534,7 @@
       h2 {
         font-weight: 100;
       }
-      #faq-categories li{
+      #faq-categories li {
         cursor: pointer;
       }
       &.left {
@@ -529,6 +561,10 @@
         }
       }
       &.right {
+        @media all and (max-width: $tablet) {
+          width: 90%;
+        }
+
         h2 {
           left: 40px;
           position: relative;
@@ -539,6 +575,9 @@
         }
         li {
           width: 820px;
+          @media all and (max-width: $tablet) {
+            width: 90%;
+          }
           &.question {
             font-weight: 800;
             text-transform: uppercase;
@@ -586,12 +625,19 @@
         float: left;
         left: 100px;
         position: relative;
+        @media all and (max-width: $tablet) {
+          float: none;
+          left: 0;
+        }
         p {
           width: 240px;
         }
       }
       &.right {
         width: 700px;
+        @media all and (max-width: $tablet) {
+          width: 90%;
+        }
         form {
           top: 30px;
           position: relative;

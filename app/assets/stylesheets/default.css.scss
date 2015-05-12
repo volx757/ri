@@ -1,3 +1,7 @@
+$tablet: 1000px;
+$phone: 450px;
+$phoneSmall: 375px;
+
 @font-face {
   font-family: 'Dosis';
   src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
@@ -225,6 +229,9 @@ hr {
   font-family: 'Dosis';
   .content {
     text-align: center;
+    @media screen and (max-width: $tablet) {
+      text-align: none;
+    }
     .nav-item {
       display: inline-block;
       position: absolute;
@@ -243,11 +250,45 @@ hr {
         transition-duration: 0.1s;
         transition-timing-function: ease-in;
       }
+      &.home{
+        //right: 41%;
+        @media screen and (max-width: $tablet) {
+          left: 30%;
+        }
+      }
+      &.purchase{
+        @media screen and (max-width: $tablet) {
+          display: block;
+          left: 45%;
+          right: 0;
+        }
+      }
+      &.contact{
+        @media screen and (max-width: $tablet) {
+          display: block;
+          left: 65%;
+          right: 0;
+        }
+      }
     }
     .nav-item.logo {
       float: left;
       left: 100px;
       top: 6px;
+      @media screen and (max-width: $tablet) {
+        left: 0;
+      }
+      @media screen and (max-width: $phone) {
+        width: 0;
+      }
+      img{
+        width: 150px;
+        margin-right: 40%;
+        @media screen and (max-width: $phone) {
+          width: 100px;
+          margin-top: 8px;
+        }
+      }
     }
     .button {
       float: right;
@@ -265,6 +306,11 @@ hr {
     position: relative;
     top: -6.5px;
     left: -7px;
+    width: 505px;
+    @media screen and (max-width: $tablet) {
+      width: 250px;
+      height: 150px;
+    }
   }
   ul li {
     width: 105px;
