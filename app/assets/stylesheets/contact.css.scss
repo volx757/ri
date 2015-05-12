@@ -77,11 +77,21 @@
       width: 200px;
       text-align: left;
       display: inline-block;
+      margin: 0 3%;
       hr{
         width: 50px;
         margin-left: 0px;
+        margin-bottom: 25px;
         border: none;
         border-bottom: 1px solid black;
+      }
+      .button{
+        border-width: 2px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        width: 120px;
       }
     }
     .address, .hours{
@@ -96,6 +106,7 @@
       text-transform: uppercase;
       font-size: 12px;
       letter-spacing: 1px;
+      margin-top: 35px;
     }
     img{
       width: 250px;
@@ -106,8 +117,19 @@
 
   }
 
+  .container.pickup{
+    span{
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 100;
+      letter-spacing: 0px;
+      text-transform: none;
+      margin-left: 4%;
+    }
+  }
+
   .general-contact{
-    width: 200px;
+    width: 15%;
     text-align: left;
     display: inline-block;
     font-family: Dosis;
@@ -122,13 +144,16 @@
     }
   }
 
+
+
+
 }
 
 #contact-form{
   height: 200px;
   position: relative;
-  top: -60px;
-  left: -70px;
+  left: -80px;
+  top: -30px;
   text-align: left;
   width: 70%;
   display: inline-block;
@@ -149,5 +174,11 @@
       padding-top: 10px;
     }
   }
+  .line.two{
+    .unit{
+      width: 96%;
+    }
+  }
+
 
 }
