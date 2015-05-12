@@ -22,6 +22,7 @@ gem 'bcrypt'
 gem 'stripe-rails'
 gem 'sprockets'
 gem 'font-awesome-rails'
+gem 'instagram'
 
 gem 'aws-sdk' # For storing uploaded files on S3
 

@@ -25,7 +25,13 @@
     <div class="foot-container insta">
       <h2>Instagram Feed</h2>
 
-      <div id="instagram"></div>
+      <div id="instagram">
+        <% @instagram.each do |instagram| %>
+
+            <a href="https://www.instagram.com/rijuicefam" target="_blank"><%= image_tag instagram.images.standard_resolution.url %></a>
+
+        <% end %>
+      </div>
     </div>
 
     <div class="foot-container contact">
