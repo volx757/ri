@@ -23,6 +23,7 @@ gem 'stripe-rails'
 gem 'sprockets'
 gem 'font-awesome-rails'
 gem 'instagram'
+gem 'newrelic_rpm'
 
 gem 'aws-sdk' # For storing uploaded files on S3
 
