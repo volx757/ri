@@ -14,6 +14,7 @@ ActiveAdmin.register Inquiry do
     column :name
     column :email
     column :message
+    column :answered
   end
 
 end 

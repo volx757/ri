@@ -2,7 +2,6 @@ class MainController < ApplicationController
 
   def index
     @page_title = 'index'
-    @instagram = Instagram.user_recent_media("1119078907", {:count => 6})
   end
 
   def contact
