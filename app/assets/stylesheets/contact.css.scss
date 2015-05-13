@@ -1,3 +1,8 @@
+$tablet: 1000px;
+$phoneLarge: 600px;
+$phone: 450px;
+$phoneSmall: 375px;
+
 #contact-container{
 
   .page-header{
@@ -15,11 +20,18 @@
       float: left;
       left: 120px;
       letter-spacing: 2px;
+      @media all and (max-width: $tablet) {
+        left: 20px;
+      }
     }
     h3{
+      margin-top: 24px;
       float: right;
       right: 150px;
       letter-spacing: 1px;
+      @media all and (max-width: $tablet) {
+        right: 50px;
+      }
       span{
         font-weight: 800;
       }
@@ -31,8 +43,14 @@
     .nav-item {
       display: inline-block;
       margin: 0 15px;
+      @media all and (max-width: $phoneLarge) {
+        margin: 0 5px;
+      }
       h2{
         font-size: 18px;
+        @media all and (max-width: $phoneLarge) {
+          font-size :14px;
+        }
       }
       hr{
         display: none;
@@ -63,6 +81,9 @@
       width: 50%;
       margin: 0 auto;
       line-height: 1.4em;
+      @media all and (max-width: $phoneLarge) {
+        width:90%;
+      }
     }
   }
 
@@ -128,6 +149,12 @@
     }
   }
 
+  .container.email{
+    @media all and (max-width: $phoneLarge) {
+     text-align: center;
+    }
+  }
+
   .general-contact{
     width: 15%;
     text-align: left;
@@ -136,6 +163,10 @@
     text-transform: uppercase;
     color:grey;
     padding-bottom: 20px;
+    @media all and (max-width: $phoneLarge) {
+      display: block;
+      width: 100%;
+    }
     hr{
       width: 50px;
       margin-left: 0px;
@@ -155,6 +186,13 @@
   width: 70%;
   display: inline-block;
   font-family: Dosis;
+  @media all and (max-width: $phoneLarge) {
+    display: block;
+    left: 0;
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
   .unit{
     display: inline-block;
     width: 30%;

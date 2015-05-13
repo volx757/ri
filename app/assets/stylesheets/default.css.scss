@@ -1,4 +1,5 @@
 $tablet: 1000px;
+$phoneLarge: 600px;
 $phone: 450px;
 $phoneSmall: 375px;
 
@@ -125,6 +126,14 @@ hr {
   background-size: 100% 100%;
   min-height: 500px;
   font-family: Dosis;
+  @media all and (max-width: $phoneLarge) {
+    height: 1000px;
+  }
+  hr {
+    @media all and (max-width: $phoneLarge) {
+      display: none;
+    }
+  }
   .top {
     height: 350px;
     position: relative;
@@ -135,37 +144,71 @@ hr {
     position: relative;
     width: 20%;
     text-align: left;
+    @media all and (max-width: $phoneLarge) {
+      text-align: center;
+      display: block;
+      width: 95%;
+    }
     h2 {
       position: relative;
       text-align: left;
       font-size: 20px;
       color: white;
+      @media all and (max-width: $phoneLarge) {
+        text-align: center;
+      }
     }
     .foot-item {
       padding: 5px;
+      @media all and (max-width: $phoneLarge) {
+        display: inline-block;
+      }
     }
   }
   .foot-container.links {
     left: -50px;
     top: -30px;
+    @media all and (max-width: $phoneLarge) {
+      left: 0;
+    }
   }
   .foot-container.order {
     left: -50px;
+    @media all and (max-width: $phoneLarge) {
+      left: 0;
+    }
   }
   .foot-container.insta {
     top: -10px;
-    img{
+    @media all and (max-width: $phoneLarge) {
+      width: 65%;
+      position: relative;
+      margin: 0 auto;
+      left: 0;
+    }
+    img {
       width: 80px;
     }
   }
   .foot-container.contact {
     top: -55px;
     left: 5%;
+    @media all and (max-width: $phoneLarge) {
+      left: 0;
+      top: 0;
+    }
     div {
       color: grey;
     }
   }
   .bottom {
+    @media all and (max-width: $phoneLarge) {
+      top: 320px;
+      position: relative;
+      width: 200px;
+      margin: 0 auto;
+    }
+
     img {
       width: 50px;
       display: inline-block;
@@ -174,12 +217,15 @@ hr {
       border-radius: 25px;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
+      @media all and (max-width: $phoneLarge) {
+        left: 0;
+      }
       &:hover {
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
         box-shadow: 0px 0px 1em #FFD700 inset;
       }
-      &:hover + h3{
+      &:hover + h3 {
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
         color: #FFD700;
@@ -194,6 +240,9 @@ hr {
       top: -16px;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
+      @media all and (max-width: $phoneLarge) {
+        left: 0;
+      }
     }
     .button {
       padding: 5px 40px;
@@ -250,20 +299,20 @@ hr {
         transition-duration: 0.1s;
         transition-timing-function: ease-in;
       }
-      &.home{
+      &.home {
         //right: 41%;
         @media screen and (max-width: $tablet) {
           left: 30%;
         }
       }
-      &.purchase{
+      &.purchase {
         @media screen and (max-width: $tablet) {
           display: block;
           left: 45%;
           right: 0;
         }
       }
-      &.contact{
+      &.contact {
         @media screen and (max-width: $tablet) {
           display: block;
           left: 65%;
@@ -281,7 +330,7 @@ hr {
       @media screen and (max-width: $phone) {
         width: 0;
       }
-      img{
+      img {
         width: 150px;
         margin-right: 40%;
         @media screen and (max-width: $phone) {
