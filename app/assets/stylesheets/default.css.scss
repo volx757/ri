@@ -71,6 +71,7 @@ h3 {
   font-family: 'Dosis';
   text-transform: uppercase;
   color: #181818;
+
 }
 
 a {
@@ -260,6 +261,21 @@ hr {
       }
     }
   }
+
+
+}
+
+#footer-foot{
+  width: 100%;
+  position: relative;
+  height: 50px;
+  background: black;
+  line-height: 3.2em;
+  color: grey;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-align: center;
+  font-family: Dosis;
 }
 
 #header-fixed {

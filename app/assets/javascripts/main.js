@@ -1,3 +1,9 @@
+var indexProduct = [
+    {'title': 'Custom Pack', 'price': '$36', 'desc1': '6-pack or 12-pack', 'desc2': '10oz/16oz', 'desc3': 'mix & match flavors'},
+    {'title': 'Cleanses', 'price': '$24', 'desc1': '3-30 juices', 'desc2': '16oz', 'desc3': '1/2 day to 5 day cleanse'},
+    {'title': 'Low-Glycemic Cleanses', 'price': '$54', 'desc1': '3-30 juices', 'desc2': '16oz', 'desc3': '1/2 day to 5 day cleanse'}
+];
+
 $(document).ready(function () {
 
     var floatHeader = $('#header-float')
@@ -15,6 +21,9 @@ $(document).ready(function () {
 
     writeIndexProducts()
     activateNightPage();
+
+    inquiryForm();
+    contactForm();
 
     /*
      Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
@@ -34,12 +43,53 @@ $(document).ready(function () {
      */
 });
 
-var indexProduct = [
-    {'title': 'Custom Pack', 'price': '$36', 'desc1': '6-pack or 12-pack', 'desc2': '10oz/16oz', 'desc3': 'mix & match flavors'},
-    {'title': 'Cleanses', 'price': '$24', 'desc1': '3-30 juices', 'desc2': '16oz', 'desc3': '1/2 day to 5 day cleanse'},
-    {'title': 'Low-Glycemic Cleanses', 'price': '$54', 'desc1': '3-30 juices', 'desc2': '16oz', 'desc3': '1/2 day to 5 day cleanse'}
-];
+function inquiryForm(){
+    $('#inquiry_form').on('submit', function (){
 
+        var email = $('#email'),
+            content = $('#content')
+
+        if (email.val().length < 1) {
+            email.attr('placeholder', 'ENTER YOUR EMAIL ADDRESS')
+            email.css('color','green')
+            return false;
+        }
+        if (content.val().length < 1) {
+            content.attr('placeholder', 'DO YOU HAVE A QUESTION?')
+            content.css('color','green')
+            return false;
+        }
+
+        $(this).fadeOut(500, function(){
+            $('.inquiry-successful').fadeIn();
+        });
+
+    })
+}
+
+function contactForm(){
+    $('#contact-form').on('submit', function (){
+
+        var email = $('#email'),
+            content = $('#content')
+
+        if (email.val().length < 1) {
+            email.attr('placeholder', 'ENTER YOUR EMAIL ADDRESS')
+            email.css('color','green')
+            return false;
+        }
+        if (content.val().length < 1) {
+            content.attr('placeholder', 'GO AHEAD AND WRITE US A MESSAGE..')
+            content.css('color','green')
+            return false;
+        }
+
+        $(this).fadeOut(500, function(){
+            $('.inquiry-successful').fadeIn();
+        });
+
+    })
+}
 
 function writeIndexProducts() {
 
