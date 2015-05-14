@@ -10,6 +10,7 @@ $(document).ready(function () {
     $(document).scroll(function () {
        // fixHeaderPosition(floatHeader);
     });
+
     $('.nav-item').localScroll({duration: 300});
 
     bindFaqCategories();
@@ -24,6 +25,9 @@ $(document).ready(function () {
 
     inquiryForm();
     contactForm();
+
+    handleMobileNav();
+
 
     /*
      Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
@@ -42,6 +46,24 @@ $(document).ready(function () {
      });
      */
 });
+
+function handleMobileNav(){
+    if (isMobile()){
+        $('.nav-item.home .nav-category').removeAttr('href')
+
+        $('.nav-item.home .nav-category').click(function(e) {
+            $(".nav-item.home ul").toggle()
+        });
+
+        $(".nav-item.home li").click(function(e) {
+            $(".nav-item.home ul").hide()
+        });
+    }
+}
+
+function isMobile(){
+    return !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 function inquiryForm(){
     $('#inquiry_form').on('submit', function (){
