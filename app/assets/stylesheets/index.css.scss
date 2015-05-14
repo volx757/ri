@@ -85,18 +85,15 @@ $phoneSmall: 375px;
 }
 
 #home-container {
-
   position: relative;
   top: 50px;
   width: 100%;
   text-align: center;
-
   .container {
     position: relative;
     width: 100%;
     min-height: 250px;
   }
-
   .container.welcome {
     height: 95vh;
     background: image-url('index/home_header_bg1.jpg');
@@ -126,12 +123,12 @@ $phoneSmall: 375px;
       -webkit-animation-delay: 2s;
       -moz-animation-delay: 2s;
       animation-delay: 2s;
-      opacity: 0; /* make things invisible upon start */
-      -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      opacity: 0;
+      -webkit-animation: fadeIn ease-in 1;
       -moz-animation: fadeIn ease-in 1;
       animation: fadeIn ease-in 1;
 
-      -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -webkit-animation-fill-mode: forwards;
       -moz-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
 
@@ -163,12 +160,12 @@ $phoneSmall: 375px;
       -webkit-animation-delay: 2s;
       -moz-animation-delay: 2s;
       animation-delay: 2s;
-      opacity: 0; /* make things invisible upon start */
-      -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      opacity: 0;
+      -webkit-animation: fadeIn ease-in 1;
       -moz-animation: fadeIn ease-in 1;
       animation: fadeIn ease-in 1;
 
-      -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -webkit-animation-fill-mode: forwards;
       -moz-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
 
@@ -270,6 +267,9 @@ $phoneSmall: 375px;
       display: inline-block;
       width: 300px;
       height: 500px;
+      @media screen and (max-width: $phone) {
+        margin: 0 0 10px 0;
+      }
       .index-product {
         text-align: center;
         border: 1px solid #a4a4a4;
@@ -312,7 +312,6 @@ $phoneSmall: 375px;
           display: block;
         }
       }
-
     }
     .jump-products {
       width: 200px;
@@ -334,6 +333,9 @@ $phoneSmall: 375px;
       top: 250px;
       width: 60%;
       line-height: 1.5em;
+      @media all and (max-width: $tablet) {
+        width: 80%;
+      }
       h2 {
         color: white;
       }
@@ -381,14 +383,6 @@ $phoneSmall: 375px;
       p {
         line-height: 1.8em;
       }
-      .big {
-        margin-top: 40px;
-        font-weight: 800;
-        letter-spacing: 2px;
-      }
-      .small {
-
-      }
     }
     img {
       width: 50px;
@@ -398,7 +392,6 @@ $phoneSmall: 375px;
       li {
         width: 600px;
         height: 40px;
-
       }
     }
     .index-ingredients {
@@ -410,33 +403,34 @@ $phoneSmall: 375px;
         width: 400px;
         left: 200px;
         text-align: left;
-
         @media all and (max-width: $tablet) {
           left: 0;
           width: 90%;
           text-align: center;
           float: none;
         }
-        .big{
+        .big {
           margin-top: 130px;
-          @media all and (max-width: $phone) {
+          font-weight: 800;
+          letter-spacing: 2px;
+          @media all and (max-width: $tablet) {
             margin-top: 30px;
           }
-
         }
-
         hr {
           width: 70px;
           margin-left: 0;
+          @media all and (max-width: $tablet) {
+            display: none;
+          }
         }
       }
       &.right {
         text-align: left;
         ul {
           @media all and (max-width: $phone) {
-           padding: 20px;
+            padding: 20px;
           }
-
           .flavor {
             cursor: pointer;
             &:hover {
@@ -447,13 +441,15 @@ $phoneSmall: 375px;
             display: none;
             height: auto;
             line-height: 2.5em;
+            @media all and (max-width: $phone) {
+              line-height: 1.2em;
+            }
           }
           li {
             position: relative;
             @media all and (max-width: $phone) {
               width: 100%;
             }
-
           }
         }
         hr {
@@ -473,6 +469,12 @@ $phoneSmall: 375px;
     .wrapper {
       width: 80%;
       top: 100px;
+      @media all and (max-width: $tablet) {
+        top: 20px;
+      }
+      @media all and (max-width: $phone) {
+        top: 10px;
+      }
       h2 {
         color: white;
       }
@@ -482,20 +484,32 @@ $phoneSmall: 375px;
         width: 120px;
         font-weight: 100;
         @media all and (max-width: $phone) {
-         padding: 0;
+          padding: 0;
         }
-
         .number {
           font-size: 50px;
           width: 120px;
           height: 74px;
           transition-duration: 0.2s;
           transition-timing-function: linear;
+          @media all and (max-width: $tablet) {
+            font-size: 34px;
+            height: 40px;
+          }
+          @media all and (max-width: $phone) {
+            font-size: 30px;
+          }
           &:hover {
             transition-duration: 0.2s;
             transition-timing-function: linear;
             font-size: 58px;
             letter-spacing: 6px;
+            @media all and (max-width: $tablet) {
+              font-size: 38px;
+            }
+            @media all and (max-width: $phone) {
+              font-size: 34px;
+            }
           }
         }
         .food {
@@ -538,9 +552,18 @@ $phoneSmall: 375px;
       #faq-categories li {
         cursor: pointer;
       }
+      ul {
+        @media all and (max-width: $phone) {
+          padding: 0;
+        }
+      }
       &.left {
         left: 100px;
         float: left;
+        @media all and (max-width: $phone) {
+          left: 0;
+          float: none;
+        }
         hr {
           width: 70px;
           margin: 0;
@@ -565,7 +588,6 @@ $phoneSmall: 375px;
         @media all and (max-width: $tablet) {
           width: 90%;
         }
-
         h2 {
           left: 40px;
           position: relative;
@@ -584,6 +606,10 @@ $phoneSmall: 375px;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
+            height: auto;
+            @media all and (max-width: $phone) {
+              line-height: 1.2em;
+            }
             &:hover {
               background: whitesmoke;
             }
@@ -624,7 +650,7 @@ $phoneSmall: 375px;
       }
       &.left {
         float: left;
-        left: 100px;
+        left: 10%;
         position: relative;
         @media all and (max-width: $tablet) {
           float: none;
@@ -645,8 +671,18 @@ $phoneSmall: 375px;
         }
         .line {
           height: 50px;
+          @media all and (max-width: $phoneLarge) {
+            height: auto;
+          }
           .unit {
             display: inline-block;
+            &.two {
+              left: 20px;
+              position: relative;
+              @media all and (max-width: $phoneLarge) {
+                left: 0;
+              }
+            }
             label {
               display: block;
               text-transform: uppercase;
@@ -655,6 +691,9 @@ $phoneSmall: 375px;
               border: none;
               border-bottom: 1px solid grey;
               line-height: 2em;
+            }
+            &.three{
+              width: 100%;
             }
           }
           &.one {
@@ -666,7 +705,7 @@ $phoneSmall: 375px;
             top: 30px;
             position: relative;
             input {
-              width: 625px;
+              width: 90%;
             }
           }
         }
@@ -680,7 +719,6 @@ $phoneSmall: 375px;
         }
       }
     }
-
     .pre-footer {
       background: image-url('index/home_prefooter_bg.jpg');
       height: 445px;

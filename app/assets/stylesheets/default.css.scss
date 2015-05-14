@@ -41,9 +41,16 @@ $phoneSmall: 375px;
 }
 
 html, body {
-  width: auto;
-  overflow-x: hidden;
+  width: 100%;
   height: 100%;
+}
+
+body{
+  overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -183,7 +190,7 @@ hr {
     top: -10px;
 
     @media all and (max-width: 1225px) {
-       width: 25%;
+      width: 25%;
     }
     @media all and (max-width: $phoneLarge) {
       width: 65%;
@@ -214,7 +221,7 @@ hr {
       margin: 0 auto;
     }
     @media all and (max-width: $phoneSmall) {
-     top: 410px;
+      top: 410px;
     }
     img {
       width: 50px;
@@ -285,12 +292,10 @@ hr {
 }
 
 #header-float {
-  //  position: absolute;
   position: fixed;
   height: 50px;
   background: whitesmoke;
   width: 100%;
-  // top: 30px;
   z-index: 2;
   font-family: 'Dosis';
   .content {
@@ -306,6 +311,9 @@ hr {
       font-size: 16px;
       text-align: left;
       padding: 0 10px 10px 10px;
+      @media screen and (max-width: $phone) {
+        top:13px;
+      }
       a {
         padding: 2px 5px;
         border-radius: 2px;
@@ -317,7 +325,6 @@ hr {
         transition-timing-function: ease-in;
       }
       &.home {
-        //right: 41%;
         @media screen and (max-width: $tablet) {
           left: 30%;
         }
@@ -351,9 +358,19 @@ hr {
         width: 150px;
         margin-right: 40%;
         @media screen and (max-width: $phone) {
-          width: 100px;
+          width: 90px;
           margin-top: 8px;
         }
+      }
+    }
+    .nav-item.purchase {
+      @media screen and (max-width: $phone) {
+        left: 47%;
+      }
+    }
+    .nav-item.contact {
+      @media screen and (max-width: $phone) {
+        left: 70%;
       }
     }
     .button {

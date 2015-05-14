@@ -32,6 +32,9 @@ $phoneSmall: 375px;
       @media all and (max-width: $tablet) {
         right: 50px;
       }
+      @media all and (max-width: $phoneLarge) {
+        display: none;
+      }
       span{
         font-weight: 800;
       }
@@ -135,7 +138,6 @@ $phoneSmall: 375px;
       left: 320px;
       top: -300px;
     }
-
   }
 
   .container.pickup{
@@ -151,7 +153,7 @@ $phoneSmall: 375px;
 
   .container.email{
     @media all and (max-width: $phoneLarge) {
-     text-align: center;
+      text-align: center;
     }
   }
 
@@ -174,7 +176,6 @@ $phoneSmall: 375px;
       border-bottom: 1px solid black;
     }
   }
-
 }
 
 #contact-form{
@@ -214,6 +215,4 @@ $phoneSmall: 375px;
       width: 96%;
     }
   }
-
-
 }
