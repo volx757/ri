@@ -1,7 +1,8 @@
 <div id="footer">
 
-  <div class="top">
-    <div class="foot-container links">
+  <table class="top">
+    <tr>
+    <td class="foot-container links">
       <h2>Links</h2>
 
       <div class="foot-item"><%= link_to 'Home', '/' %></div>
@@ -9,9 +10,9 @@
       <div class="foot-item"><%= link_to 'Ingredients', '/#inside' %></div>
       <div class="foot-item"><%= link_to 'FAQ', '/#faq' %></div>
       <div class="foot-item" style="pointer-events:none;opacity: 0.2"><%= link_to 'Products', '/products' %></div>
-    </div>
+    </td>
 
-    <div class="foot-container order">
+    <td class="foot-container order">
       <h2>Order Juice</h2>
 
       <div class="foot-item"><span>Packs</span></div>
@@ -20,9 +21,9 @@
       <div class="foot-item" style="pointer-events:none;opacity: 0.2"><%= link_to 'Shop Cleanses', '/products' %></div>
       <div class="foot-item"><span>Cleanses</span></div>
       <div class="foot-item" style="pointer-events:none;opacity: 0.2"><%= link_to 'Low-glycene Cleanses', '/products' %></div>
-    </div>
+    </td>
 
-    <div class="foot-container insta">
+    <td class="foot-container insta">
       <h2>Instagram Feed</h2>
 
       <div id="instagram">
@@ -32,9 +33,9 @@
 
         <% end %>
       </div>
-    </div>
+    </td>
 
-    <div class="foot-container contact">
+    <td class="foot-container contact">
       <h2>Contact</h2>
 
       <div class="contact">
@@ -53,10 +54,12 @@
         <i class="fa fa-tumblr"></i>
       </div>
 
-    </div>
-  </div>
-
+    </td>
+    </tr>
+  </table>
+  <br>
   <hr>
+
 
   <div class="bottom">
     <a href='/night' id="night" style="cursor:default"><%= image_tag 'footer_logo@2x.png' %>

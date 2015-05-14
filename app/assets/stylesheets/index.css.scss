@@ -1,5 +1,5 @@
 $tablet: 1000px;
-$phoneLarge: 600px;
+$phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
 
@@ -551,6 +551,9 @@ $phoneSmall: 375px;
       }
       #faq-categories li {
         cursor: pointer;
+        @media all and (max-width: $tablet) {
+          display: inline-block;
+        }
       }
       ul {
         @media all and (max-width: $phone) {
@@ -561,7 +564,6 @@ $phoneSmall: 375px;
         left: 100px;
         float: left;
         @media all and (max-width: $phone) {
-          left: 0;
           float: none;
         }
         hr {
@@ -631,6 +633,9 @@ $phoneSmall: 375px;
         .show-more {
           position: relative;
           left: 50px;
+          @media all and (max-width: $phone) {
+            left: 0;
+          }
           h3 {
             display: inline-block;
           }
@@ -676,12 +681,19 @@ $phoneSmall: 375px;
           }
           .unit {
             display: inline-block;
+            width: 45%;
             &.two {
               left: 20px;
               position: relative;
               @media all and (max-width: $phoneLarge) {
                 left: 0;
+                margin-top: 20px;
+                display: block;
+
               }
+            }
+            @media all and (max-width: $phoneLarge) {
+              width: 92%;
             }
             label {
               display: block;
@@ -698,7 +710,7 @@ $phoneSmall: 375px;
           }
           &.one {
             input {
-              width: 300px;
+              width: 98%;
             }
           }
           &.two {

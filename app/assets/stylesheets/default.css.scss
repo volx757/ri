@@ -1,5 +1,5 @@
 $tablet: 1000px;
-$phoneLarge: 600px;
+$phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
 
@@ -146,9 +146,10 @@ hr {
     height: 350px;
     position: relative;
     top: 50px;
+    width: 90%;
+    left: 5%;
   }
   .foot-container {
-    display: inline-block;
     position: relative;
     width: 20%;
     text-align: left;
@@ -174,60 +175,47 @@ hr {
     }
   }
   .foot-container.links {
-    left: -50px;
-    top: -30px;
-    @media all and (max-width: $phoneLarge) {
-      left: 0;
-    }
+
+
   }
   .foot-container.order {
-    left: -50px;
-    @media all and (max-width: $phoneLarge) {
-      left: 0;
-    }
+
   }
   .foot-container.insta {
-    top: -10px;
+
 
     @media all and (max-width: 1225px) {
       width: 25%;
     }
     @media all and (max-width: $phoneLarge) {
-      width: 65%;
-      position: relative;
-      margin: 0 auto;
-      left: 0;
+      width: 100%;
     }
     img {
       width: 80px;
     }
   }
   .foot-container.contact {
-    top: -55px;
-    left: 5%;
-    @media all and (max-width: $phoneLarge) {
-      left: 0;
-      top: 0;
-    }
+
     div {
       color: grey;
     }
   }
   .bottom {
+    text-align: left;
     @media all and (max-width: $phoneLarge) {
-      top: 320px;
+      top: 70px;
       position: relative;
-      width: 200px;
+      width: 400px;
       margin: 0 auto;
     }
-    @media all and (max-width: $phoneSmall) {
-      top: 410px;
+    a{
+      left: 5%;
+      position: relative;
     }
     img {
       width: 50px;
       display: inline-block;
       position: relative;
-      left: -377px;
       border-radius: 25px;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
@@ -247,16 +235,13 @@ hr {
     }
     h3 {
       display: inline-block;
-      left: -365px;
       position: relative;
       color: grey;
       letter-spacing: 2px;
       top: -16px;
+      left: 5px;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
-      @media all and (max-width: $phoneLarge) {
-        left: 0;
-      }
     }
     .button {
       padding: 5px 40px;
@@ -265,12 +250,13 @@ hr {
       width: 150px;
       float: right;
       position: relative;
+      text-align: center;
       top: 10px;
-      right: 72px;
+      right: 5%;
+      margin: 0 auto;
       @media all and (max-width: $phoneLarge) {
         float: none;
-        right: 0;
-        width: auto;
+        width: 150px;
       }
     }
   }
