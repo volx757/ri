@@ -8,8 +8,12 @@ $phoneSmall: 375px;
   .page-header{
     top: 30px;
     position: relative;
-    background: image-url('contact/contact_bg_2.jpg');;
+    background: image-url('contact/contact_bg_2.jpg');
     height: 150px;
+    @media screen and (max-width: 1440px) {
+      background-size: 1440px 100%;
+      background-position: 50% 0;
+    }
     h2, h3{
       color: #ffffff;
       top: 60px;
@@ -66,6 +70,10 @@ $phoneSmall: 375px;
   }
 
   .container{
+    width:100%;
+  }
+
+  .wrapper{
     text-align: center;
     width: 80%;
     margin: 0 auto;
@@ -139,8 +147,18 @@ $phoneSmall: 375px;
       top: -300px;
     }
   }
+  .container.retail {
+    height: 680px;
+  }
 
   .container.pickup{
+    background: image-url('contact/contact_bg_1.jpg');
+    height: 420px;
+    padding-top: 100px;
+    @media screen and (max-width: 1440px) {
+      background-size: 1440px 100%;
+      background-position: 50% 0;
+    }
     span{
       font-size: 14px;
       font-style: italic;
@@ -149,9 +167,22 @@ $phoneSmall: 375px;
       text-transform: none;
       margin-left: 4%;
     }
+    .address, .hours, p, h2, .button{
+      color:white;
+    }
+    hr{
+      border-bottom: 1px solid white;
+    }
+    .location {
+      hr {
+        border-bottom: 1px solid white;
+      }
+    }
   }
 
   .container.email{
+    height: 370px;
+    padding-top: 40px;
     @media all and (max-width: $phoneLarge) {
       text-align: center;
     }
