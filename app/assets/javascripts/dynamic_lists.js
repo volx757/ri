@@ -111,7 +111,7 @@ function writeFaqQuestions(categoryNum) {
     for (var i in questions) {
 
         var li = "<li class='question' data-num=" + num + ">",
-            li2 = "<li class='answer' data-num=" + num + ">",
+            li2 = "<li class='answer force-p' data-num=" + num + ">",
             ex_or_col = "<span class='ex_or_col'>+</span>"
 
         qaList.append(li.concat(num + ". " + questions[i] + ex_or_col + '<hr>'), li2.concat(answers[i]))
