@@ -100,9 +100,7 @@ $phoneSmall: 375px;
     }
     p {
       width: 70%;
-      margin: 0 auto;
-      margin-top: 30px;
-      line-height: 1.4em;
+      margin: 50px auto 0;
       @media all and (max-width: $phoneLarge) {
         width: 90%;
       }
@@ -133,6 +131,10 @@ $phoneSmall: 375px;
         border: none;
         border-bottom: 1px solid black;
       }
+      h3 span{
+        color: grey;
+        font-weight: 100;
+      }
       .button {
         border-width: 2px;
         text-align: center;
@@ -145,8 +147,11 @@ $phoneSmall: 375px;
     .address, .hours {
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       color: grey;
+    }
+    h3{
+      font-weight: 700;
     }
     p {
       color: black;
@@ -192,6 +197,9 @@ $phoneSmall: 375px;
     hr {
       border-bottom: 1px solid white;
     }
+    h3{
+      color: white;
+    }
     .location {
       margin: 0 7%;
       hr {
@@ -202,9 +210,14 @@ $phoneSmall: 375px;
 
   .container.email {
     min-height: 700px;
-    padding-top: 40px;
+    h3{
+      font-weight: 700;
+    }
     @media all and (max-width: $phoneLarge) {
       text-align: center;
+    }
+    .wrapper{
+      margin-top: 100px;
     }
   }
 
@@ -215,7 +228,8 @@ $phoneSmall: 375px;
     font-family: Dosis;
     text-transform: uppercase;
     color: grey;
-    padding-bottom: 20px;
+    top: 42px;
+    position: relative;
     @media all and (max-width: $phoneLarge) {
       display: block;
       width: 100%;
@@ -233,7 +247,6 @@ $phoneSmall: 375px;
   min-height: 200px;
   position: relative;
   left: -80px;
-  top: -30px;
   text-align: left;
   width: 70%;
   display: inline-block;
@@ -244,6 +257,10 @@ $phoneSmall: 375px;
     width: 100%;
     height: auto;
     top: 0;
+  }
+  .button{
+    background: white;
+    padding: 10px 30px;
   }
   .unit {
     display: inline-block;
