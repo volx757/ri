@@ -9,7 +9,7 @@ $phoneSmall: 375px;
     top: 30px;
     position: relative;
     background: image-url('contact/contact_bg_2.jpg');
-    height: 150px;
+    height: 170px;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
@@ -71,7 +71,7 @@ $phoneSmall: 375px;
 
   .map{
     width: 100%;
-    height: 400px;
+    height: 500px;
     background: black;
   }
 
@@ -93,11 +93,15 @@ $phoneSmall: 375px;
   }
 
   .container.intro{
-    min-height: 200px;
+    min-height: 280px;
     padding-top: 40px;
+    .wrapper{
+      margin-top: 40px;
+    }
     p{
-      width: 50%;
+      width: 70%;
       margin: 0 auto;
+      margin-top: 30px;
       line-height: 1.4em;
       @media all and (max-width: $phoneLarge) {
         width:90%;
@@ -106,8 +110,11 @@ $phoneSmall: 375px;
   }
 
   .container.retail, .container.pickup{
+    .wrapper{
+      margin-top: 60px;
+    }
     .img-hold{
-      height: 300px;
+      height: 390px;
       width: 100%;
       background: black;
       float: left;
@@ -157,12 +164,12 @@ $phoneSmall: 375px;
     }
   }
   .container.retail {
-    min-height: 680px;
+    min-height: 1058px;
   }
 
   .container.pickup{
     background: image-url('contact/contact_bg_1.jpg');
-    min-height: 420px;
+    min-height: 645px;
     padding-top: 100px;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
@@ -194,7 +201,7 @@ $phoneSmall: 375px;
   }
 
   .container.email{
-    min-height: 370px;
+    min-height: 700px;
     padding-top: 40px;
     @media all and (max-width: $phoneLarge) {
       text-align: center;
