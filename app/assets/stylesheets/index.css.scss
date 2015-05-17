@@ -97,8 +97,12 @@ $phoneSmall: 375px;
   }
   .container.welcome {
     height: 95vh;
-    background: image-url('index/home_header_bg1.jpg');
+    background: image-url('index/home_bg1.jpg');
     background-size: 100% 100%;
+    @media screen and (max-width: 1440px) {
+      background-size: 1440px 100%;
+      background-position: 50% 0;
+    }
 
     opacity: 0; /* make things invisible upon start */
 
@@ -327,7 +331,7 @@ $phoneSmall: 375px;
   }
 
   .container.who-we-are {
-    background: image-url('index/home_wwa_bg.jpg');
+    background: image-url('index/home_bg3.jpg');
     background-size: 100% 100%;
     min-height: 550px;
     .wrapper {
@@ -462,7 +466,7 @@ $phoneSmall: 375px;
   }
 
   .container.stats {
-    background: image-url('index/home_stats_bg.jpg');
+    background: image-url('index/home_bg2.jpg');
     background-size: 100% 100%;
     min-height: 500px;
     font-family: Dosis;
