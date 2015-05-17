@@ -355,7 +355,7 @@ $phoneSmall: 375px;
       @media all and (max-width: $tablet) {
         width: 80%;
       }
-      h2 {
+      h1 {
         color: white;
       }
       p {
@@ -393,11 +393,6 @@ $phoneSmall: 375px;
     }
     .wrapper {
       top: 50px;
-      h2 {
-        margin-top: 0px;
-        letter-spacing: 5px;
-        font-size: 20px;
-      }
       h3 {
         margin-top: -10px;
         font-size:12px;
@@ -509,7 +504,7 @@ $phoneSmall: 375px;
       @media all and (max-width: $phone) {
         top: 10px;
       }
-      h2 {
+      h1 {
         color: white;
       }
       .stat {
