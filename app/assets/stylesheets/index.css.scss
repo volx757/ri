@@ -388,15 +388,10 @@ $phoneSmall: 375px;
       position: relative;
     }
     .wrapper {
-      top: 50px;
+      top: 150px;
       h3 {
         margin-top: -10px;
-        font-size:12px;
-        font-weight:300;
-        letter-spacing:0.2em;
-        text-transform:uppercase;
         color:#a4a4a4;
-        line-height:21px;
         -webkit-font-smoothing: antialiased;
       }
       p {
@@ -593,6 +588,9 @@ $phoneSmall: 375px;
       }
       &.left {
         float: left;
+        @media all and (max-width: $tablet) {
+          width: 100%;
+        }
         @media all and (max-width: $phone) {
           float: none;
         }
@@ -603,6 +601,15 @@ $phoneSmall: 375px;
         ul {
           left: -50px;
           position: relative;
+          @media all and (max-width: $tablet) {
+            margin: 0 auto;
+            width: 458px;
+            padding: 20px 0;
+          }
+          @media all and (max-width: $phone) {
+            width: 258px;
+            left: -20px;
+          }
         }
         li {
           padding-left: 15px;
@@ -617,19 +624,22 @@ $phoneSmall: 375px;
         }
       }
       &.right {
+        width: 70%;
         @media all and (max-width: $tablet) {
-          width: 90%;
+          width: 100%;
         }
         h2 {
-          left: 40px;
           position: relative;
         }
         hr {
           width: 70px;
-          margin-left: 40px;
+          margin-left: 0;
+        }
+        ul{
+          padding: 0;
         }
         li {
-          width: 820px;
+          width: 100%;
           @media all and (max-width: $tablet) {
             width: 90%;
           }
@@ -661,7 +671,6 @@ $phoneSmall: 375px;
         }
         .show-more {
           position: relative;
-          left: 50px;
           @media all and (max-width: $phone) {
             left: 0;
           }
