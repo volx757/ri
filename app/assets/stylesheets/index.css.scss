@@ -449,7 +449,7 @@ $phoneSmall: 375px;
             cursor: pointer;
             line-height: 3.5em;
             &:hover {
-              background: whitesmoke;
+             // background: lightgray;
             }
           }
           .description {
@@ -465,6 +465,7 @@ $phoneSmall: 375px;
           }
           li {
             position: relative;
+          //  height: 70px;
             @media all and (max-width: $phone) {
               width: 100%;
             }
@@ -648,7 +649,7 @@ $phoneSmall: 375px;
             width: 90%;
           }
           &.question {
-            font-weight: 800;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
