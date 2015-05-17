@@ -165,6 +165,7 @@ hr {
 .wrapper {
   position: relative;
   margin: 0 auto;
+  max-width: 1141px;
 }
 
 #site-wrapper{
@@ -184,6 +185,7 @@ hr {
     height: 1000px;
   }
   hr {
+    width: 100%;
     @media all and (max-width: $phoneLarge) {
       display: none;
     }
@@ -192,8 +194,6 @@ hr {
     height: 350px;
     position: relative;
     top: 50px;
-    width: 90%;
-    left: 5%;
   }
   .foot-container {
     position: relative;
@@ -222,7 +222,6 @@ hr {
   }
   .foot-container.links {
 
-
   }
   .foot-container.order {
 
@@ -241,9 +240,12 @@ hr {
     }
   }
   .foot-container.contact {
-
+    padding-left: 10%;
     div {
       color: grey;
+    }
+    @media all and (max-width: $tablet) {
+      padding-left: 0;
     }
   }
   .bottom {
@@ -255,7 +257,6 @@ hr {
       margin: 0 auto;
     }
     a{
-      left: 5%;
       position: relative;
     }
     img {
@@ -298,7 +299,6 @@ hr {
       position: relative;
       text-align: center;
       top: 10px;
-      right: 5%;
       margin: 0 auto;
       @media all and (max-width: $phoneLarge) {
         float: none;
@@ -394,7 +394,7 @@ hr {
     }
     .nav-item.logo {
       float: left;
-      left: 100px;
+      left: 140px;
       top: 6px;
       @media screen and (max-width: $tablet) {
         left: 0;
