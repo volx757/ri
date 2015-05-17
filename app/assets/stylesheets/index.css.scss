@@ -374,7 +374,7 @@ $phoneSmall: 375px;
   }
 
   .container.whats-inside {
-    background: image-url('index/home_flavors_bg.jpg');
+    background: image-url('index/home_flavors_bg.jpg') no-repeat;
     background-size: 100% 100%;
     min-height: 800px;
     font-family: Dosis;
@@ -389,6 +389,9 @@ $phoneSmall: 375px;
     }
     .wrapper {
       top: 150px;
+      @media screen and (max-width: $tablet) {
+        top: 50px;
+      }
       h3 {
         margin-top: -10px;
         color:#a4a4a4;
