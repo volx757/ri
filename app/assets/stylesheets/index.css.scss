@@ -405,7 +405,7 @@ $phoneSmall: 375px;
       list-style-type: none;
       li {
         width: 600px;
-        height: 40px;
+        height: auto;
       }
     }
     .index-ingredients {
@@ -447,6 +447,7 @@ $phoneSmall: 375px;
           }
           .flavor {
             cursor: pointer;
+            line-height: 3.5em;
             &:hover {
               background: whitesmoke;
             }
@@ -483,14 +484,13 @@ $phoneSmall: 375px;
     min-height: 638px;
     font-family: Dosis;
     letter-spacing: 3px;
-    top: -20px;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
     }
     .wrapper {
       width: 100%;
-      top: 120px;
+      top: 100px;
       max-width: 1300px;
       @media all and (max-width: $tablet) {
         top: 20px;
@@ -556,7 +556,6 @@ $phoneSmall: 375px;
       li {
         width: 200px;
         height: 40px;
-        line-height: 2.5em;
       }
     }
     h2 {
@@ -601,17 +600,19 @@ $phoneSmall: 375px;
         ul {
           left: -50px;
           position: relative;
+          margin-top: 33px;
           @media all and (max-width: $tablet) {
             margin: 0 auto;
-            width: 458px;
+            width: 435px;
             padding: 20px 0;
           }
           @media all and (max-width: $phone) {
-            width: 258px;
+            width: 235px;
             left: -20px;
           }
         }
         li {
+          line-height: 2.5em;
           padding-left: 15px;
           &:hover {
             background: lightgray;
@@ -624,9 +625,11 @@ $phoneSmall: 375px;
         }
       }
       &.right {
-        width: 70%;
+        width: 61%;
+        margin-left: 5%;
         @media all and (max-width: $tablet) {
           width: 100%;
+          margin-left: 0;
         }
         h2 {
           position: relative;
@@ -640,6 +643,7 @@ $phoneSmall: 375px;
         }
         li {
           width: 100%;
+          line-height: 3.5em;
           @media all and (max-width: $tablet) {
             width: 90%;
           }
@@ -650,7 +654,7 @@ $phoneSmall: 375px;
             cursor: pointer;
             height: auto;
             @media all and (max-width: $phone) {
-              line-height: 1.2em;
+              line-height: 2em;
             }
             &:hover {
               background: whitesmoke;
@@ -716,7 +720,7 @@ $phoneSmall: 375px;
         }
       }
       &.right {
-        width: 700px;
+        width: 61%;
         @media all and (max-width: $tablet) {
           width: 90%;
         }
