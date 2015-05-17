@@ -3,9 +3,9 @@ $phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
 
-#contact-container{
+#contact-container {
 
-  .page-header{
+  .page-header {
     top: 30px;
     position: relative;
     background: image-url('contact/contact_bg_2.jpg');
@@ -14,38 +14,38 @@ $phoneSmall: 375px;
       background-size: 1440px 100%;
       background-position: 50% 0;
     }
-    h2, h3{
-      color: #ffffff;
+    h1, h3 {
       top: 60px;
       position: relative;
-      font-weight: 100;
+      color: white;
+      margin-top: 25px;
     }
-    h2{
+    h1 {
       float: left;
       left: 120px;
-      letter-spacing: 2px;
       @media all and (max-width: $tablet) {
         left: 20px;
       }
+      @media all and (max-width: $phoneLarge) {
+        left: 2px;
+      }
     }
-    h3{
-      margin-top: 24px;
+    h3 {
       float: right;
       right: 150px;
-      letter-spacing: 1px;
       @media all and (max-width: $tablet) {
         right: 50px;
       }
       @media all and (max-width: $phoneLarge) {
-        display: none;
+        right: 30px;
       }
-      span{
+      span {
         font-weight: 800;
       }
     }
   }
 
-  .contact-nav{
+  .contact-nav {
     text-align: center;
     .nav-item {
       display: inline-block;
@@ -53,13 +53,13 @@ $phoneSmall: 375px;
       @media all and (max-width: $phoneLarge) {
         margin: 0 5px;
       }
-      h2{
+      h2 {
         font-size: 18px;
         @media all and (max-width: $phoneLarge) {
-          font-size :14px;
+          font-size: 14px;
         }
       }
-      hr{
+      hr {
         display: none;
         width: 105%;
         margin-left: -4%;
@@ -69,71 +69,71 @@ $phoneSmall: 375px;
     }
   }
 
-  .map{
+  .map {
     width: 100%;
     height: 500px;
     background: black;
   }
 
-  .container{
-    width:100%;
+  .container {
+    width: 100%;
     height: auto;
   }
 
-  .wrapper{
+  .wrapper {
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    .left-align{
+    .left-align {
       text-align: left;
     }
-    hr{
+    hr {
       width: 100%;
     }
   }
 
-  .container.intro{
+  .container.intro {
     min-height: 280px;
     padding-top: 40px;
-    .wrapper{
+    .wrapper {
       margin-top: 40px;
     }
-    p{
+    p {
       width: 70%;
       margin: 0 auto;
       margin-top: 30px;
       line-height: 1.4em;
       @media all and (max-width: $phoneLarge) {
-        width:90%;
+        width: 90%;
       }
     }
   }
 
-  .container.retail, .container.pickup{
-    .wrapper{
+  .container.retail, .container.pickup {
+    .wrapper {
       margin-top: 60px;
     }
-    .img-hold{
+    .img-hold {
       height: 390px;
       width: 100%;
       background: black;
       float: left;
     }
-    .location{
+    .location {
       width: 200px;
       text-align: left;
       display: inline-block;
       margin: 0 3%;
       font-family: Dosis;
       font-weight: 800;
-      hr{
+      hr {
         width: 50px;
         margin-left: 0px;
         margin-bottom: 25px;
         border: none;
         border-bottom: 1px solid black;
       }
-      .button{
+      .button {
         border-width: 2px;
         text-align: center;
         font-size: 14px;
@@ -142,13 +142,13 @@ $phoneSmall: 375px;
         width: 120px;
       }
     }
-    .address, .hours{
+    .address, .hours {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color:grey;
+      color: grey;
     }
-    p{
+    p {
       color: black;
       font-weight: 800;
       text-transform: uppercase;
@@ -156,7 +156,7 @@ $phoneSmall: 375px;
       letter-spacing: 1px;
       margin-top: 35px;
     }
-    img{
+    img {
       width: 250px;
       position: relative;
       left: 320px;
@@ -167,7 +167,7 @@ $phoneSmall: 375px;
     min-height: 1058px;
   }
 
-  .container.pickup{
+  .container.pickup {
     background: image-url('contact/contact_bg_1.jpg');
     min-height: 645px;
     padding-top: 100px;
@@ -175,10 +175,10 @@ $phoneSmall: 375px;
       background-size: 1440px 100%;
       background-position: 50% 0;
     }
-    h1{
-      color:white;
+    h1 {
+      color: white;
     }
-    span{
+    span {
       font-size: 14px;
       font-style: italic;
       font-weight: 100;
@@ -186,21 +186,21 @@ $phoneSmall: 375px;
       text-transform: none;
       margin-left: 4%;
     }
-    .address, .hours, p, h2, .button{
-      color:white;
+    .address, .hours, p, h2, .button {
+      color: white;
     }
-    hr{
+    hr {
       border-bottom: 1px solid white;
     }
     .location {
-        margin: 0 7%;
+      margin: 0 7%;
       hr {
         border-bottom: 1px solid white;
       }
     }
   }
 
-  .container.email{
+  .container.email {
     min-height: 700px;
     padding-top: 40px;
     @media all and (max-width: $phoneLarge) {
@@ -208,19 +208,19 @@ $phoneSmall: 375px;
     }
   }
 
-  .general-contact{
+  .general-contact {
     width: 15%;
     text-align: left;
     display: inline-block;
     font-family: Dosis;
     text-transform: uppercase;
-    color:grey;
+    color: grey;
     padding-bottom: 20px;
     @media all and (max-width: $phoneLarge) {
       display: block;
       width: 100%;
     }
-    hr{
+    hr {
       width: 50px;
       margin-left: 0px;
       border: none;
@@ -229,7 +229,7 @@ $phoneSmall: 375px;
   }
 }
 
-#contact-form{
+#contact-form {
   min-height: 200px;
   position: relative;
   left: -80px;
@@ -245,15 +245,15 @@ $phoneSmall: 375px;
     height: auto;
     top: 0;
   }
-  .unit{
+  .unit {
     display: inline-block;
     width: 30%;
     padding: 5px 20px 30px 0px;
-    label{
+    label {
       display: block;
       text-transform: uppercase;
     }
-    input{
+    input {
       width: 100%;
       border: none;
       border-bottom: 1px solid grey;
@@ -261,8 +261,8 @@ $phoneSmall: 375px;
       padding-top: 10px;
     }
   }
-  .line.two{
-    .unit{
+  .line.two {
+    .unit {
       width: 96%;
     }
   }
