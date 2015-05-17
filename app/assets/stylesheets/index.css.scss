@@ -96,8 +96,8 @@ $phoneSmall: 375px;
     min-height: 250px;
   }
   .container.welcome {
-    height: 95vh;
-    background: image-url('index/home_bg1.jpg');
+    height: 800px;
+    background: image-url('index/header_bg.jpg');
     background-size: 100% 100%;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
@@ -117,7 +117,7 @@ $phoneSmall: 375px;
     -moz-animation-duration: 0.5s;
     animation-duration: 0.5s;
     .wrapper {
-      top: 50px;
+      top: 130px;
     }
     h1 {
       line-height:40px;
