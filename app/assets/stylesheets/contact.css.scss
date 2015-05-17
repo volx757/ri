@@ -261,6 +261,10 @@ $phoneSmall: 375px;
   .button{
     background: white;
     padding: 10px 30px;
+    &:hover {
+      background: black;
+      color: white;
+    }
   }
   .unit {
     display: inline-block;

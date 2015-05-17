@@ -464,6 +464,9 @@ $phoneSmall: 375px;
               line-height: 1.2em;
             }
           }
+          .force-p{
+            line-height: 1.8em;
+          }
           li {
             position: relative;
             @media all and (max-width: $phone) {
@@ -492,7 +495,7 @@ $phoneSmall: 375px;
     }
     .wrapper {
       width: 100%;
-      top: 150px;
+      top: 120px;
       max-width: 1300px;
       @media all and (max-width: $tablet) {
         top: 20px;
@@ -550,6 +553,9 @@ $phoneSmall: 375px;
     min-height: 500px;
     padding: 50px 0;
     font-family: Dosis;
+    .wrapper{
+      width: 80%;
+    }
     ul {
       list-style-type: none;
       li {
@@ -586,7 +592,6 @@ $phoneSmall: 375px;
         }
       }
       &.left {
-        left: 100px;
         float: left;
         @media all and (max-width: $phone) {
           float: none;
@@ -650,7 +655,6 @@ $phoneSmall: 375px;
           }
           &.answer {
             height: auto;
-            font-size: 16px;
             line-height: 1.5em;
             padding: 10px 0;
           }
@@ -680,6 +684,10 @@ $phoneSmall: 375px;
 
   .container.contact {
     font-family: Dosis;
+    margin-top: 50px;
+    .wrapper{
+      width: 80%;
+    }
     .index-contact {
       display: inline-block;
       text-align: left;
@@ -689,7 +697,6 @@ $phoneSmall: 375px;
       }
       &.left {
         float: left;
-        left: 10%;
         position: relative;
         @media all and (max-width: $tablet) {
           float: none;
@@ -705,7 +712,7 @@ $phoneSmall: 375px;
           width: 90%;
         }
         form {
-          top: 30px;
+          top: 15px;
           position: relative;
         }
         .line {
