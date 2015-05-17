@@ -37,6 +37,7 @@
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
+<div id="site-wrapper">
 
 <% unless request.path == '/night' %>
     <%= render 'layouts/header' %>
@@ -49,6 +50,7 @@
     <%= render 'layouts/footer' %>
 <% end %>
 
+</div>
 
 </body>
 </html>
