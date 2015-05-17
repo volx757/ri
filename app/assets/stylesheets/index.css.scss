@@ -255,6 +255,13 @@ $phoneSmall: 375px;
       font-family: Dosis;
       position: relative;
       top: -10px;
+      font-size:12pt;
+      font-weight:300;
+      letter-spacing:0.2em;
+      text-transform:uppercase;
+      color:#a4a4a4;
+      line-height:21pt;
+      -webkit-font-smoothing: antialiased;
     }
     p {
       color: darkgray;
@@ -390,7 +397,13 @@ $phoneSmall: 375px;
       }
       h3 {
         margin-top: -10px;
-        font-size: 14px;
+        font-size:12pt;
+        font-weight:300;
+        letter-spacing:0.2em;
+        text-transform:uppercase;
+        color:#a4a4a4;
+        line-height:21pt;
+        -webkit-font-smoothing: antialiased;
       }
       p {
         line-height: 1.8em;
@@ -473,7 +486,7 @@ $phoneSmall: 375px;
   }
 
   .container.stats {
-    background: image-url('index/home_bg2.jpg');
+    background: image-url('index/home_stat_bg.jpg');
     background-size: 100% 100%;
     min-height: 500px;
     font-family: Dosis;
