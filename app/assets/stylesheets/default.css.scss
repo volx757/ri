@@ -48,7 +48,7 @@ html, body {
 body{
   overflow-x: hidden;
   width: auto;
-  max-width: 1440px;
+  max-width: 1700px;
   margin: 0 auto;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
@@ -299,6 +299,7 @@ hr {
   position: fixed;
   height: 50px;
   background: whitesmoke;
+  max-width: 1700px;
   width: 100%;
   z-index: 2;
   font-family: 'Dosis';

@@ -103,7 +103,6 @@ $phoneSmall: 375px;
       background-size: 1440px 100%;
       background-position: 50% 0;
     }
-
     opacity: 0; /* make things invisible upon start */
 
     -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -334,6 +333,10 @@ $phoneSmall: 375px;
     background: image-url('index/home_bg3.jpg');
     background-size: 100% 100%;
     min-height: 550px;
+    @media screen and (max-width: 1440px) {
+      background-size: 1440px 100%;
+      background-position: 50% 0;
+    }
     .wrapper {
       top: 250px;
       width: 60%;
@@ -369,6 +372,10 @@ $phoneSmall: 375px;
     background-size: 100% 100%;
     min-height: 800px;
     font-family: Dosis;
+    @media screen and (max-width: 1440px) {
+      background-size: 1440px 100%;
+      background-position: 50% 0;
+    }
     span {
       right: 40px;
       float: right;
@@ -471,6 +478,10 @@ $phoneSmall: 375px;
     min-height: 500px;
     font-family: Dosis;
     letter-spacing: 3px;
+    @media screen and (max-width: 1440px) {
+      background-size: 1440px 100%;
+      background-position: 50% 0;
+    }
     .wrapper {
       width: 80%;
       top: 100px;
@@ -737,6 +748,10 @@ $phoneSmall: 375px;
     }
     .pre-footer {
       background: image-url('index/home_prefooter_bg.jpg');
+      @media screen and (max-width: 1440px) {
+        background-size: 1440px 100%;
+        background-position: 50% 0;
+      }
       height: 445px;
     }
   }
