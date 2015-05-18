@@ -6,13 +6,10 @@ var indexProduct = [
 
 $(document).ready(function () {
 
-    var floatHeader = $('#header-float')
-
     if (window.pageYOffset >= 30) {
         $('.fa-angle-double-down').css('display','none')
     }
     $(document).scroll(function () {
-       // fixHeaderPosition(floatHeader);
         fadeOutDownArrow()
     });
 
@@ -57,7 +54,6 @@ function activeContactMap(){
     $('.map-cover').on('click',function(){
         $(this).fadeOut(500)
     })
-
 }
 
 function handleMobileNav(){
@@ -119,10 +115,11 @@ function contactForm(){
             return false;
         }
 
-
         $(this).fadeOut(500, function(){
-            $('.contact-successful').fadeIn();
-            $('.contact-successful').css('display','inline-block')
+            var contactSuccessful =  $('.contact-successful')
+
+            contactSuccessful.fadeIn();
+            contactSuccessful.css('display','inline-block')
             $('.general-contact').css('top','0')
         });
 
@@ -135,28 +132,19 @@ function limitTextInput(){
         if (e.which < 0x20) {
             // e.which < 0x20, then it's not a printable character
             // e.which === 0 - Not a character
-            return;     // Do nothing
+            return;
         }
         if (this.value.length == max) {
             e.preventDefault();
         } else if (this.value.length > max) {
-            // Maximum exceeded
             this.value = this.value.substring(0, max);
+
             $('#content').css({'box-shadow' : '0px 0px 0px #444',
                 '-moz-box-shadow' : '0px 0px 0px #444',
                 '-web-kit-boxshadow' : '0px 0px 0px #444'})
         }
     });
 }
-
-
-
-
-
-
-
-
-
 
 function writeIndexProducts() {
 
@@ -165,7 +153,6 @@ function writeIndexProducts() {
     crawler.eq(0).addClass('0')
     crawler.eq(1).addClass('1')
     crawler.eq(2).addClass('2')
-
 
     for (var i = 0; i < 3; i++) {
         crawler = $('.index-product.' + i)
@@ -182,7 +169,6 @@ function writeIndexProducts() {
         desc2.append(indexProduct[i]['desc2'])
         desc3.append(indexProduct[i]['desc3'])
     }
-
 }
 
 function activateNightPage() {
@@ -195,5 +181,4 @@ function activateNightPage() {
             height: "100%"
         }, 5000)
     })
-
 }

@@ -1,4 +1,3 @@
-
 function stripeResponseHandler(status, response) {
 
     if (response.error) {
@@ -12,5 +11,4 @@ function stripeResponseHandler(status, response) {
         $('.submit').attr("disabled", false);
         form.get(0).submit();
     }
-
 }

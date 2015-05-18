@@ -51,7 +51,7 @@ var faqIsExpanded = false
 
 function bindFaqCategories() {
 
-    $('#faq-categories li').on('click', function () {
+    $('#faq-categories').find('li').on('click', function () {
 
         var category = $(this).data('category')
         var categoryNum;
@@ -106,7 +106,7 @@ function writeFaqQuestions(categoryNum) {
 
     var qaList = $("#faq-right").find("ul")
     qaList.empty()
-    var num = 1;
+    var num = 1
 
     for (var i in questions) {
 
@@ -171,12 +171,11 @@ function initializeFaq() {
 
 function initializeIngredients() {
 
-
     var numListItems = $('#ingredients-right').find('ul').children().length
 
     for (var i = 1; i < numListItems + 1; i++) {
-        var currentIcon = $('#ingredients-right *[data-num=' + i + '] span '),
-            currentDesc = $('#ingredients-right *[data-num=' + i + '].description ')
+        var currentIcon = $('#ingredients-right ').find('*[data-num=' + i + '] span '),
+            currentDesc = $('#ingredients-right').find('*[data-num=' + i + '].description ')
 
         if (i == 1)
             openListItem(null, currentIcon, currentDesc)
@@ -198,11 +197,12 @@ function openListItem(question, icon, answer) {
 function closeOtherListItemsFaq(question, icon, answer) {
 
     var keepOpen = answer.data('num'),
-        length = $('#faq-right li').length / 2
+        faqRight = $('#faq-right'),
+        length = faqRight.find('li').length / 2
 
     for (var i = 0; i < length + 1; i++) {
-        var currentAnswer = $('#faq-right *[data-num=' + i + '].answer '),
-            spanIcon = $('#faq-right *[data-num=' + i + '].question span')
+        var currentAnswer = faqRight.find('*[data-num=' + i + '].answer '),
+            spanIcon = faqRight.find('*[data-num=' + i + '].question span')
 
         if (i != keepOpen)
             closeListItem(null, spanIcon, currentAnswer)
@@ -212,11 +212,12 @@ function closeOtherListItemsFaq(question, icon, answer) {
 function closeOtherListItemsIngredients(question, icon, answer) {
 
     var keepOpen = answer.data('num'),
-        length = $('#ingredients-right li').length / 2
+        ingredientsRight = $('#ingredients-right'),
+        length = ingredientsRight.find('li').length / 2
 
     for (var i = 0; i < length + 1; i++) {
-        var currentAnswer = $('#ingredients-right *[data-num=' + i + '].description '),
-            spanIcon = $('#ingredients-right *[data-num=' + i + '].flavor span')
+        var currentAnswer = ingredientsRight.find('*[data-num=' + i + '].description '),
+            spanIcon = ingredientsRight.find('*[data-num=' + i + '].flavor span')
 
         console.log(spanIcon)
         if (i != keepOpen)
@@ -238,7 +239,6 @@ function hideListItem(question, icon, answer) {
     question.hide(200)
     answer.hide(200)
 }
-
 
 function bindFaqToggles() {
     $('#faq-right').find('.question').on('click', function () {
@@ -268,18 +268,18 @@ function bindIngredientsToggles() {
         if (desc.css('display') == 'none') {
             openListItem(null, icon, desc)
             closeOtherListItemsIngredients(null, icon, desc)
-        } else{
+        } else {
             closeListItem(null, icon, desc)
         }
 
     })
 }
 
-
 function bindShowAllQuestions() {
-    $('#faq-right .show-more').on('click', function () {
+
+    $('#faq-right ').find('.show-more').on('click', function () {
         if (faqIsExpanded) {
-            $('#faq-right li').each(function () {
+            $('#faq-right').find('li').each(function () {
                 if ($(this).data('num') > 4)
                     hideListItem($(this), null, $(this))
             })
