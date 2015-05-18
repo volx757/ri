@@ -3,15 +3,15 @@ $phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
 
-//@font-face {
-//  font-family: 'Dosis';
-//  src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
-//}
-//
-//@font-face {
-//  font-family: 'Open_Sans';
-//  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
-//}
+@font-face {
+  font-family: 'Dosis';
+  src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+  font-family: 'Open_Sans';
+  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
 
 .transition-all {
   transition-duration: 0.15s;
@@ -19,26 +19,19 @@ $phoneSmall: 375px;
 }
 
 .store-closed-order {
+  width: 85%;
+  background: black;
+  color: white;
   &::after {
-    content: 'Order'
-  }
-  &:hover {
-    width: 85%;
-    &::after {
-      content: 'Store Coming Soon'
-    }
+    content: 'Store Coming Soon'
   }
 }
 
 .store-closed-find {
+  width: 230px;
+  background: black;
   &::after {
-    content: 'Find Your Juice'
-  }
-  &:hover {
-    width: 230px;
-    &::after {
-      content: 'Store Coming Soon'
-    }
+    content: 'Store Coming Soon'
   }
 }
 
@@ -169,6 +162,147 @@ hr {
 
 #site-wrapper {
   box-shadow: 0px 0px 10px #ccc;
+}
+
+#header-fixed {
+  background: none repeat scroll 0% 0% lightgrey;
+  height: 30px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  font-family: 'Dosis';
+  text-align: center;
+  a {
+    left: 250px;
+    position: relative;
+    margin-right: 40px;
+  }
+}
+
+#header-float {
+  position: fixed;
+  height: 50px;
+  background: whitesmoke;
+  max-width: 1700px;
+  width: 100%;
+  z-index: 3;
+  font-family: 'Dosis';
+  .content {
+    text-align: center;
+    @media screen and (max-width: $tablet) {
+      text-align: none;
+    }
+    .nav-item {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      margin-right: 40px;
+      font-size: 16px;
+      text-align: left;
+      padding: 0 10px 10px 10px;
+      @media screen and (max-width: $phone) {
+        top: 13px;
+      }
+      a {
+        padding: 2px 5px;
+        border-radius: 2px;
+      }
+      .nav-category:hover {
+        color: #fff;
+        background: #939393;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in;
+      }
+      &.home {
+        @media screen and (max-width: $tablet) {
+          left: 30%;
+        }
+      }
+      &.purchase {
+        @media screen and (max-width: $tablet) {
+          display: block;
+          left: 45%;
+          right: 0;
+        }
+      }
+      &.contact {
+        @media screen and (max-width: $tablet) {
+          display: block;
+          left: 65%;
+          right: 0;
+        }
+      }
+    }
+    .nav-item.logo {
+      float: left;
+      left: 140px;
+      top: 6px;
+      @media screen and (max-width: $tablet) {
+        left: 0;
+      }
+      @media screen and (max-width: $phone) {
+        width: 0;
+      }
+      img {
+        width: 150px;
+        margin-right: 40%;
+        @media screen and (max-width: $phone) {
+          width: 90px;
+          margin-top: 8px;
+        }
+      }
+    }
+    .nav-item.purchase {
+      @media screen and (max-width: $phone) {
+        left: 47%;
+      }
+    }
+    .nav-item.contact {
+      @media screen and (max-width: $phone) {
+        left: 70%;
+      }
+    }
+    .button {
+      float: right;
+      margin-top: 5px;
+      right: 100px;
+      position: relative;
+      padding: 5px 20px;
+    }
+  }
+  ul {
+    height: 50px;
+    padding: 0;
+    list-style: none;
+    background: lightgray;
+    position: relative;
+    top: -6.5px;
+    left: -7px;
+    width: 505px;
+    @media screen and (max-width: $tablet) {
+      width: 250px;
+      height: 150px;
+    }
+  }
+  ul li {
+    width: 105px;
+    text-align: left;
+    line-height: 30px;
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 0px 0px 0em black inset;
+    a:hover {
+      box-shadow: 0px 30px 0.011em black inset;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in;
+    }
+  }
+  ul {
+    display: none;
+  }
+  .nav-item:hover ul {
+    display: block;
+  }
 }
 
 #footer {
@@ -346,146 +480,5 @@ hr {
   font-family: Dosis;
   @media all and (max-width: $phoneLarge) {
     font-size: 12px;
-  }
-}
-
-#header-fixed {
-  background: none repeat scroll 0% 0% lightgrey;
-  height: 30px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  font-family: 'Dosis';
-  text-align: center;
-  a {
-    left: 250px;
-    position: relative;
-    margin-right: 40px;
-  }
-}
-
-#header-float {
-  position: fixed;
-  height: 50px;
-  background: whitesmoke;
-  max-width: 1700px;
-  width: 100%;
-  z-index: 3;
-  font-family: 'Dosis';
-  .content {
-    text-align: center;
-    @media screen and (max-width: $tablet) {
-      text-align: none;
-    }
-    .nav-item {
-      display: inline-block;
-      position: absolute;
-      top: 20px;
-      margin-right: 40px;
-      font-size: 16px;
-      text-align: left;
-      padding: 0 10px 10px 10px;
-      @media screen and (max-width: $phone) {
-        top: 13px;
-      }
-      a {
-        padding: 2px 5px;
-        border-radius: 2px;
-      }
-      .nav-category:hover {
-        color: #fff;
-        background: #939393;
-        transition-duration: 0.1s;
-        transition-timing-function: ease-in;
-      }
-      &.home {
-        @media screen and (max-width: $tablet) {
-          left: 30%;
-        }
-      }
-      &.purchase {
-        @media screen and (max-width: $tablet) {
-          display: block;
-          left: 45%;
-          right: 0;
-        }
-      }
-      &.contact {
-        @media screen and (max-width: $tablet) {
-          display: block;
-          left: 65%;
-          right: 0;
-        }
-      }
-    }
-    .nav-item.logo {
-      float: left;
-      left: 140px;
-      top: 6px;
-      @media screen and (max-width: $tablet) {
-        left: 0;
-      }
-      @media screen and (max-width: $phone) {
-        width: 0;
-      }
-      img {
-        width: 150px;
-        margin-right: 40%;
-        @media screen and (max-width: $phone) {
-          width: 90px;
-          margin-top: 8px;
-        }
-      }
-    }
-    .nav-item.purchase {
-      @media screen and (max-width: $phone) {
-        left: 47%;
-      }
-    }
-    .nav-item.contact {
-      @media screen and (max-width: $phone) {
-        left: 70%;
-      }
-    }
-    .button {
-      float: right;
-      margin-top: 5px;
-      right: 100px;
-      position: relative;
-      padding: 5px 20px;
-    }
-  }
-  ul {
-    height: 50px;
-    padding: 0;
-    list-style: none;
-    background: lightgray;
-    position: relative;
-    top: -6.5px;
-    left: -7px;
-    width: 505px;
-    @media screen and (max-width: $tablet) {
-      width: 250px;
-      height: 150px;
-    }
-  }
-  ul li {
-    width: 105px;
-    text-align: left;
-    line-height: 30px;
-    display: inline-block;
-    padding: 10px;
-    box-shadow: 0px 0px 0em black inset;
-    a:hover {
-      box-shadow: 0px 30px 0.011em black inset;
-      transition-duration: 0.2s;
-      transition-timing-function: ease-in;
-    }
-  }
-  ul {
-    display: none;
-  }
-  .nav-item:hover ul {
-    display: block;
   }
 }

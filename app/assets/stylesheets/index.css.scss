@@ -126,11 +126,13 @@ $phoneSmall: 375px;
       font-size: 36px;
       letter-spacing: 0.5em;
       font-weight: 400;
+      opacity: 0;
+
       -webkit-font-smoothing: antialiased;
       -webkit-animation-delay: 2s;
       -moz-animation-delay: 2s;
       animation-delay: 2s;
-      opacity: 0;
+
       -webkit-animation: fadeIn ease-in 1;
       -moz-animation: fadeIn ease-in 1;
       animation: fadeIn ease-in 1;
@@ -155,11 +157,9 @@ $phoneSmall: 375px;
       0 5px 10px rgba(0, 0, 0, .25),
       0 10px 10px rgba(0, 0, 0, .2),
       0 20px 20px rgba(0, 0, 0, .15);
-
       @media screen and (max-width: $phoneLarge) {
         letter-spacing: 0.2em;
       }
-
     }
     h3 {
       position: relative;
@@ -288,7 +288,6 @@ $phoneSmall: 375px;
     @media screen and (max-width: $phoneLarge) {
       min-height: 1580px;
     }
-
     .index-product-container {
       margin: 20px 20px;
       display: inline-block;
@@ -401,7 +400,6 @@ $phoneSmall: 375px;
     @media screen and (max-width: $phoneLarge) {
       min-height: 950px;
     }
-
     span {
       right: 40px;
       float: right;
@@ -514,7 +512,6 @@ $phoneSmall: 375px;
       background-position: 50% 0;
 
     }
-
     .wrapper {
       width: 100%;
       top: 100px;
@@ -540,7 +537,6 @@ $phoneSmall: 375px;
         @media all and (max-width: $phone) {
           padding: 10px;
         }
-
         .number {
           font-size: 50px;
           width: 120px;
@@ -559,18 +555,6 @@ $phoneSmall: 375px;
             transition-timing-function: linear;
             font-size: 58px;
             letter-spacing: 6px;
-           /* & + .food {
-              transition-duration: 0.2s;
-              transition-timing-function: linear;
-              font-size: 20px;
-              letter-spacing: 6px;
-              @media all and (max-width: $tablet) {
-                font-size: 18px;
-              }
-              @media all and (max-width: $phone) {
-                font-size: 16px;
-              }
-            }*/
             @media all and (max-width: $tablet) {
               font-size: 38px;
             }
@@ -579,7 +563,6 @@ $phoneSmall: 375px;
             }
           }
         }
-
       }
       .food {
         font-size: 14px;

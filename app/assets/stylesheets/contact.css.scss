@@ -99,7 +99,6 @@ $phoneSmall: 375px;
       box-shadow: 0px 0px 3em #FFD700 inset;
       opacity: 0.4;
     }
-
   }
 
   .container {
@@ -138,7 +137,6 @@ $phoneSmall: 375px;
     .wrapper {
       margin-top: 160px;
     }
-
     .img-hold {
       top: 20px;
       position: relative;
@@ -200,6 +198,7 @@ $phoneSmall: 375px;
       top: -300px;
     }
   }
+
   .container.retail {
     min-height: 918px;
     @media all and (max-width: 1340px) {
@@ -230,17 +229,12 @@ $phoneSmall: 375px;
     @media all and (max-width: $tablet) {
       min-height: 1145px;
     }
-
     .wrapper {
       margin-top: 80px;
       @media all and (max-width: $tablet) {
         margin-top: 0px;
       }
     }
-
-
-
-
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
@@ -271,7 +265,6 @@ $phoneSmall: 375px;
         width: 150px;
         margin: 0px 4%;
       }
-
       hr {
         border-bottom: 1px solid white;
       }
@@ -290,7 +283,7 @@ $phoneSmall: 375px;
     .wrapper {
       margin-top: 100px;
     }
-    .contact-successful{
+    .contact-successful {
       display: none;
       min-height: 200px;
       position: relative;
