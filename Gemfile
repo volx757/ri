@@ -11,7 +11,6 @@ gem 'protected_attributes' # For protecting model from mass assignment attacks w
 gem 'activeadmin', github: 'activeadmin', ref: 'c6c43'
 gem 'rmagick'
 gem 'zencoder'
-gem 'honeybadger'
 gem 'heroku-api'
 gem 'roo'
 gem 'secure_headers'
