@@ -121,7 +121,9 @@ function contactForm(){
 
 
         $(this).fadeOut(500, function(){
-            $('.inquiry-successful').fadeIn();
+            $('.contact-successful').fadeIn();
+            $('.contact-successful').css('display','inline-block')
+            $('.general-contact').css('top','0')
         });
 
     })

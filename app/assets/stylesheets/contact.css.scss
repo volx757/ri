@@ -202,6 +202,9 @@ $phoneSmall: 375px;
   }
   .container.retail {
     min-height: 918px;
+    @media all and (max-width: 1340px) {
+      min-height: 1240px;;
+    }
     @media all and (max-width: $tablet) {
       min-height: 1218px;
     }
@@ -221,18 +224,21 @@ $phoneSmall: 375px;
     background: image-url('contact/contact_bg_1.jpg');
     min-height: 645px;
     padding-top: 100px;
+    @media all and (max-width: 1340px) {
+      min-height: 845px;;
+    }
+    @media all and (max-width: $tablet) {
+      min-height: 1145px;
+    }
+
     .wrapper {
       margin-top: 80px;
       @media all and (max-width: $tablet) {
         margin-top: 0px;
       }
     }
-    @media all and (max-width: $tablet) {
-      min-height: 800px;
-    }
-    @media all and (max-width: $phone) {
-      min-height: 1150px;
-    }
+
+
 
 
     @media screen and (max-width: 1440px) {
@@ -284,6 +290,14 @@ $phoneSmall: 375px;
     .wrapper {
       margin-top: 100px;
     }
+    .contact-successful{
+      display: none;
+      min-height: 200px;
+      position: relative;
+      left: -80px;
+      text-align: left;
+      width: 70%;
+    }
   }
 
   .general-contact {
@@ -293,7 +307,7 @@ $phoneSmall: 375px;
     font-family: Dosis;
     text-transform: uppercase;
     color: grey;
-    top: -285px;
+    top: -243px;
     position: relative;
     @media all and (max-width: $tablet) {
       top: -235px;
