@@ -427,7 +427,7 @@ $phoneSmall: 375px;
     ul {
       list-style-type: none;
       li {
-        width: 600px;
+        width: 100%;
         height: auto;
       }
     }
@@ -497,7 +497,7 @@ $phoneSmall: 375px;
         }
         hr {
           float: left;
-          width: 100%;
+          width: 95%;
         }
       }
     }
@@ -650,7 +650,6 @@ $phoneSmall: 375px;
           margin-top: 33px;
           @media all and (max-width: $tablet) {
             left: 0;
-            margin: 0 auto;
             width: 435px;
             padding: 20px 0;
           }
@@ -760,7 +759,7 @@ $phoneSmall: 375px;
         float: left;
         position: relative;
         @media all and (max-width: $tablet) {
-          float: none;
+
           left: 0;
         }
         p {
@@ -770,7 +769,7 @@ $phoneSmall: 375px;
       &.right {
         width: 61%;
         @media all and (max-width: $tablet) {
-          width: 90%;
+          width: 100%;
         }
         form {
           top: 15px;
