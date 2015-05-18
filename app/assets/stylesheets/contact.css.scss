@@ -77,7 +77,7 @@ $phoneSmall: 375px;
     position: relative;
   }
 
-  .map-cover{
+  .map-cover {
     width: 100%;
     height: 500px;
     background: black;
@@ -93,7 +93,7 @@ $phoneSmall: 375px;
     }
     transition-duration: 0.35s;
     transition-timing-function: ease-in;
-    &:hover{
+    &:hover {
       transition-duration: 0.35s;
       transition-timing-function: ease-in;
       box-shadow: 0px 0px 3em #FFD700 inset;
@@ -138,6 +138,7 @@ $phoneSmall: 375px;
     .wrapper {
       margin-top: 160px;
     }
+
     .img-hold {
       top: 20px;
       position: relative;
@@ -162,7 +163,7 @@ $phoneSmall: 375px;
         border: none;
         border-bottom: 1px solid black;
       }
-      h3 span{
+      h3 span {
         color: grey;
         font-weight: 100;
       }
@@ -181,7 +182,7 @@ $phoneSmall: 375px;
       letter-spacing: 2px;
       color: grey;
     }
-    h3{
+    h3 {
       font-weight: 700;
     }
     p {
@@ -201,15 +202,39 @@ $phoneSmall: 375px;
   }
   .container.retail {
     min-height: 918px;
+    @media all and (max-width: $tablet) {
+      min-height: 1218px;
+    }
+    @media all and (max-width: $phone) {
+      min-height: 1868px;
+    }
+
+    .location {
+      @media all and (max-width: $tablet) {
+        width: 150px;
+      }
+
+    }
   }
 
   .container.pickup {
     background: image-url('contact/contact_bg_1.jpg');
     min-height: 645px;
     padding-top: 100px;
-    .wrapper{
+    .wrapper {
       margin-top: 80px;
+      @media all and (max-width: $tablet) {
+        margin-top: 0px;
+      }
     }
+    @media all and (max-width: $tablet) {
+      min-height: 800px;
+    }
+    @media all and (max-width: $phone) {
+      min-height: 1150px;
+    }
+
+
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
@@ -231,11 +256,16 @@ $phoneSmall: 375px;
     hr {
       border-bottom: 1px solid white;
     }
-    h3{
+    h3 {
       color: white;
     }
     .location {
       margin: 0 7%;
+      @media all and (max-width: $phoneLarge) {
+        width: 150px;
+        margin: 0px 4%;
+      }
+
       hr {
         border-bottom: 1px solid white;
       }
@@ -244,13 +274,14 @@ $phoneSmall: 375px;
 
   .container.email {
     min-height: 700px;
-    h3{
+    h3 {
       font-weight: 700;
     }
     @media all and (max-width: $phoneLarge) {
       text-align: center;
+      min-height: 830px;
     }
-    .wrapper{
+    .wrapper {
       margin-top: 100px;
     }
   }
@@ -262,16 +293,15 @@ $phoneSmall: 375px;
     font-family: Dosis;
     text-transform: uppercase;
     color: grey;
-    top: -165px;
+    top: -285px;
     position: relative;
     @media all and (max-width: $tablet) {
-      text-align: center;
       top: -235px;
     }
     @media all and (max-width: $phoneLarge) {
       display: block;
       width: 100%;
-
+      top: 0px;
     }
     hr {
       width: 50px;
@@ -297,7 +327,7 @@ $phoneSmall: 375px;
     height: auto;
     top: 0;
   }
-  .button{
+  .button {
     background: white;
     padding: 10px 30px;
     &:hover {
@@ -307,13 +337,13 @@ $phoneSmall: 375px;
   }
   .unit {
     display: inline-block;
-    width: 30%;
+    width: 33%;
     padding: 5px 20px 30px 0px;
     label {
       display: block;
       text-transform: uppercase;
     }
-    textarea{
+    textarea {
       line-height: 1.5em;
       resize: none;
     }
@@ -325,6 +355,9 @@ $phoneSmall: 375px;
       padding-top: 10px;
     }
   }
+  .line.one .unit.subject {
+    width: 70%;
+  }
   .line.two {
     .unit {
       width: 96%;
@@ -332,6 +365,6 @@ $phoneSmall: 375px;
   }
 }
 
-#content{
+#content {
   width: 100%;
 }

@@ -42,24 +42,24 @@ $phoneSmall: 375px;
   }
 }
 
-.force-p{
+.force-p {
   color: #919191;
   font-family: 'Open Sans', sans-serif;
-  font-size:14px;
-  font-weight:400;
-  letter-spacing:0em;
-  text-transform:none;
-  line-height:21px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 21px;
   -webkit-font-smoothing: antialiased;
 }
 
 html, body {
   width: 100%;
   height: auto;
-  background-color:#fff;
+  background-color: #fff;
 }
 
-body{
+body {
   overflow-x: hidden;
   width: auto;
   max-width: 1700px;
@@ -84,21 +84,20 @@ h2 {
   font-family: 'Dosis';
   text-transform: uppercase;
   color: #181818;
-  font-size:18px;
-  font-weight:400;
-  letter-spacing:0.2em;
-  line-height:21px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 21px;
   -webkit-font-smoothing: antialiased;
 }
-
 
 h3 {
   font-family: 'Dosis';
   text-transform: uppercase;
   color: #181818;
-  font-size:14px;
-  font-weight:500;
-  letter-spacing:0.18em;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   line-height: 18px;
   -webkit-font-smoothing: antialiased;
 }
@@ -111,11 +110,11 @@ a {
 p {
   color: #919191;
   font-family: 'Open Sans', sans-serif;
-  font-size:14px;
-  font-weight:400;
-  letter-spacing:0em;
-  text-transform:none;
-  line-height:21px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 21px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -136,11 +135,11 @@ hr {
   padding: 10px;
   text-transform: uppercase;
   font-family: 'Dosis', sans-serif;
-  font-size:14px;
-  font-weight:400;
-  letter-spacing:0.2em;
-  color:#181818;
-  line-height:18px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #181818;
+  line-height: 18px;
   -webkit-font-smoothing: antialiased;
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
@@ -168,7 +167,7 @@ hr {
   max-width: 1141px;
 }
 
-#site-wrapper{
+#site-wrapper {
   box-shadow: 0px 0px 10px #ccc;
 }
 
@@ -184,7 +183,7 @@ hr {
   @media all and (max-width: $phoneLarge) {
     height: 1000px;
   }
-  .wrapper{
+  .wrapper {
     width: 87%;
   }
   hr {
@@ -224,14 +223,27 @@ hr {
     }
   }
   .foot-container.links {
-
+    top: -15px;
+    margin: 0 auto;
+    @media all and (max-width: $tablet) {
+      top: -57px;
+    }
+    @media all and (max-width: $phoneLarge) {
+      top: 0;
+    }
   }
   .foot-container.order {
-
+    margin: 0 auto;
+    @media all and (max-width: $tablet) {
+      top: -42px;
+    }
+    @media all and (max-width: $phoneLarge) {
+      top: 0;
+    }
   }
   .foot-container.insta {
-
-
+    top: -8px;
+    margin: 0 auto;
     @media all and (max-width: 1225px) {
       width: 25%;
     }
@@ -243,7 +255,15 @@ hr {
     }
   }
   .foot-container.contact {
+    top: -30px;
     padding-left: 10%;
+    margin: 0 auto;
+    @media all and (max-width: $tablet) {
+      top: -73px;
+    }
+    @media all and (max-width: $phoneLarge) {
+      top: 0;
+    }
     div {
       color: grey;
     }
@@ -256,10 +276,11 @@ hr {
     @media all and (max-width: $phoneLarge) {
       top: 70px;
       position: relative;
-      width: 400px;
+      width: 100%;
       margin: 0 auto;
+      text-align: center;
     }
-    a{
+    a {
       position: relative;
     }
     img {
@@ -310,10 +331,9 @@ hr {
     }
   }
 
-
 }
 
-#footer-foot{
+#footer-foot {
   width: 100%;
   position: relative;
   height: 40px;
@@ -324,6 +344,9 @@ hr {
   font-size: 14px;
   text-align: center;
   font-family: Dosis;
+  @media all and (max-width: $phoneLarge) {
+    font-size: 12px;
+  }
 }
 
 #header-fixed {
@@ -363,7 +386,7 @@ hr {
       text-align: left;
       padding: 0 10px 10px 10px;
       @media screen and (max-width: $phone) {
-        top:13px;
+        top: 13px;
       }
       a {
         padding: 2px 5px;

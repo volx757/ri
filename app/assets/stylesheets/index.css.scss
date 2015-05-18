@@ -120,7 +120,7 @@ $phoneSmall: 375px;
       top: 125px;
     }
     h1 {
-      line-height:40px;
+      line-height: 40px;
       color: white;
       position: relative;
       font-size: 36px;
@@ -184,7 +184,7 @@ $phoneSmall: 375px;
       -moz-animation-duration: 3.2s;
       animation-duration: 3.2s;
     }
-    i{
+    i {
       font-size: 56px;
       position: relative;
       top: 200px;
@@ -266,12 +266,12 @@ $phoneSmall: 375px;
       font-family: Dosis;
       position: relative;
       top: -10px;
-      font-size:12px;
-      font-weight:300;
-      letter-spacing:0.2em;
-      text-transform:uppercase;
-      color:#a4a4a4;
-      line-height:21px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #a4a4a4;
+      line-height: 21px;
       -webkit-font-smoothing: antialiased;
     }
     p {
@@ -414,7 +414,7 @@ $phoneSmall: 375px;
       }
       h3 {
         margin-top: -10px;
-        color:#a4a4a4;
+        color: #a4a4a4;
         -webkit-font-smoothing: antialiased;
       }
       p {
@@ -473,7 +473,7 @@ $phoneSmall: 375px;
             cursor: pointer;
             line-height: 3.5em;
             &:hover {
-             // background: lightgray;
+              // background: lightgray;
             }
           }
           .description {
@@ -484,12 +484,12 @@ $phoneSmall: 375px;
               line-height: 1.2em;
             }
           }
-          .force-p{
+          .force-p {
             line-height: 1.8em;
           }
           li {
             position: relative;
-          //  height: 70px;
+            //  height: 70px;
             @media all and (max-width: $phone) {
               width: 100%;
             }
@@ -538,7 +538,7 @@ $phoneSmall: 375px;
 
         }
         @media all and (max-width: $phone) {
-          padding: 0;
+          padding: 10px;
         }
 
         .number {
@@ -559,6 +559,18 @@ $phoneSmall: 375px;
             transition-timing-function: linear;
             font-size: 58px;
             letter-spacing: 6px;
+           /* & + .food {
+              transition-duration: 0.2s;
+              transition-timing-function: linear;
+              font-size: 20px;
+              letter-spacing: 6px;
+              @media all and (max-width: $tablet) {
+                font-size: 18px;
+              }
+              @media all and (max-width: $phone) {
+                font-size: 16px;
+              }
+            }*/
             @media all and (max-width: $tablet) {
               font-size: 38px;
             }
@@ -567,11 +579,14 @@ $phoneSmall: 375px;
             }
           }
         }
-        .food {
-          font-size: 14px;
-          width: 140px;
-          margin-left: -10px;
-        }
+
+      }
+      .food {
+        font-size: 14px;
+        width: 140px;
+        margin-left: -10px;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
       }
     }
   }
@@ -580,7 +595,7 @@ $phoneSmall: 375px;
     min-height: 500px;
     padding: 50px 0;
     font-family: Dosis;
-    .wrapper{
+    .wrapper {
       width: 80%;
     }
     ul {
@@ -671,7 +686,7 @@ $phoneSmall: 375px;
           width: 70px;
           margin-left: 0;
         }
-        ul{
+        ul {
           padding: 0;
         }
         li {
@@ -714,12 +729,12 @@ $phoneSmall: 375px;
           h3 {
             display: inline-block;
             font-family: 'Dosis', sans-serif;
-            font-size:14px;
-            font-weight:700;
-            letter-spacing:0.2em;
-            text-transform:uppercase;
-            color:#181818;
-            line-height:18px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #181818;
+            line-height: 18px;
             -webkit-font-smoothing: antialiased;
             padding: 0 15px;
           }
@@ -731,7 +746,7 @@ $phoneSmall: 375px;
   .container.contact {
     font-family: Dosis;
     margin-top: 50px;
-    .wrapper{
+    .wrapper {
       width: 80%;
     }
     .index-contact {
