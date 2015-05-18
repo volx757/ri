@@ -7,8 +7,13 @@ var indexProduct = [
 $(document).ready(function () {
 
     var floatHeader = $('#header-float')
+
+    if (window.pageYOffset >= 30) {
+        $('.fa-angle-double-down').css('display','none')
+    }
     $(document).scroll(function () {
        // fixHeaderPosition(floatHeader);
+        fadeOutDownArrow()
     });
 
     $('.nav-item').localScroll({duration: 300});
@@ -27,7 +32,7 @@ $(document).ready(function () {
     contactForm();
 
     handleMobileNav();
-
+    limitTextInput();
 
     /*
      Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
@@ -106,12 +111,42 @@ function contactForm(){
             return false;
         }
 
+
         $(this).fadeOut(500, function(){
             $('.inquiry-successful').fadeIn();
         });
 
     })
 }
+
+function limitTextInput(){
+    var max = 800;
+    $('#content').keypress(function(e) {
+        if (e.which < 0x20) {
+            // e.which < 0x20, then it's not a printable character
+            // e.which === 0 - Not a character
+            return;     // Do nothing
+        }
+        if (this.value.length == max) {
+            e.preventDefault();
+        } else if (this.value.length > max) {
+            // Maximum exceeded
+            this.value = this.value.substring(0, max);
+            $('#content').css({'box-shadow' : '0px 0px 0px #444',
+                '-moz-box-shadow' : '0px 0px 0px #444',
+                '-web-kit-boxshadow' : '0px 0px 0px #444'})
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
 
 function writeIndexProducts() {
 
@@ -143,7 +178,7 @@ function writeIndexProducts() {
 function activateNightPage() {
 
     $('#night').on('click',function(){
-        return false;
+      //  return false;
 
         $('#night-overlay').animate({
             opacity: 1,

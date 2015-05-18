@@ -21,6 +21,13 @@ function fixHeaderPosition(floatHeader) {
 
 }
 
+function fadeOutDownArrow(){
+    var arrow = $('.fa-angle-double-down')
+    if ($(window).scrollTop() >= 30) {
+        arrow.fadeOut(500)
+    }
+}
+
 
 function setupContactNavUnderline() {
 
