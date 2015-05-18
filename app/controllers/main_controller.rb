@@ -14,7 +14,7 @@ class MainController < ApplicationController
   end
 
   def night
-    #render :layout => false
+
   end
 
   private

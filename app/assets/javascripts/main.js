@@ -33,6 +33,7 @@ $(document).ready(function () {
 
     handleMobileNav();
     limitTextInput();
+    activeContactMap();
 
     /*
      Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
@@ -51,6 +52,13 @@ $(document).ready(function () {
      });
      */
 });
+
+function activeContactMap(){
+    $('.map-cover').on('click',function(){
+        $(this).fadeOut(300)
+    })
+
+}
 
 function handleMobileNav(){
     if (isMobile()){

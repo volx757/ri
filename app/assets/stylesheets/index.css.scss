@@ -464,6 +464,7 @@ $phoneSmall: 375px;
       }
       &.right {
         text-align: left;
+        top: 30px;
         ul {
           @media all and (max-width: $phone) {
             padding: 20px;

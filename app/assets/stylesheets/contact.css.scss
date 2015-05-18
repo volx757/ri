@@ -77,6 +77,24 @@ $phoneSmall: 375px;
     position: relative;
   }
 
+  .map-cover{
+    width: 100%;
+    height: 500px;
+    background: black;
+    z-index: 3;
+    position: absolute;
+    top: 589px;
+    opacity: 0.1;
+    @media all and (max-width: $phoneLarge) {
+      top: 583px;
+    }
+    @media all and (max-width: $phone) {
+      top: 627px;
+    }
+
+
+  }
+
   .container {
     width: 100%;
     height: auto;
