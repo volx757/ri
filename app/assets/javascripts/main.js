@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 function activeContactMap(){
     $('.map-cover').on('click',function(){
-        $(this).fadeOut(300)
+        $(this).fadeOut(500)
     })
 
 }

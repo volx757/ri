@@ -184,6 +184,9 @@ hr {
   @media all and (max-width: $phoneLarge) {
     height: 1000px;
   }
+  .wrapper{
+    width: 87%;
+  }
   hr {
     width: 100%;
     @media all and (max-width: $phoneLarge) {
