@@ -103,6 +103,9 @@ $phoneSmall: 375px;
       background-size: 1440px 100%;
       background-position: 50% 0;
     }
+    @media screen and (max-width: $phoneLarge) {
+      top: -110px
+    }
     opacity: 0; /* make things invisible upon start */
 
     -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -125,10 +128,7 @@ $phoneSmall: 375px;
         left: 47.5%;
       }
       @media screen and (max-width: $phoneLarge) {
-        left: 45%;
-      }
-      @media screen and (max-width: $phone) {
-        left: 44.5%;
+        display: none;
       }
     }
     h1 {

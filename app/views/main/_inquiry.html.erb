@@ -14,7 +14,7 @@
     <div class="line two">
       <div class="unit three">
         <%= label_tag :your_question %>
-        <%= text_field_tag :content, nil %>
+        <%= text_area_tag :content, nil, :cols => '106', :rows => '2' %>
       </div>
     </div>
 
@@ -24,3 +24,16 @@
 <div class="inquiry-successful">
   <h2>We've received your question!</h2>
 </div>
+
+<script>
+  $(document).ready(function(){
+      if ($(window).width() < 1000) {
+          $('textarea').first().attr('rows', 4);
+          $('input.button').css('top','80px')
+      }
+
+  })
+
+
+
+</script>
