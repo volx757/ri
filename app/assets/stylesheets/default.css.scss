@@ -219,17 +219,31 @@ hr {
         }
       }
       &.purchase {
+        right:33%;
+        @media screen and (max-width: 1200px) {
+          right:31%;
+        }
         @media screen and (max-width: $tablet) {
           display: block;
           left: 45%;
           right: 0;
         }
+        @media screen and (max-width: $phoneLarge) {
+          top:15px
+        }
       }
       &.contact {
+        right:26%;
+        @media screen and (max-width: 1200px) {
+          right:24%;
+        }
         @media screen and (max-width: $tablet) {
           display: block;
           left: 65%;
           right: 0;
+        }
+        @media screen and (max-width: $phoneLarge) {
+          top:15px
         }
       }
     }
