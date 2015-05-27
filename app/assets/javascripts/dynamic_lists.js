@@ -5,7 +5,7 @@ var faqQuestions_juice = [ "What kind of juicer do you use?", "What makes your j
         "What if I have a medical condition or take prescription medication?", "What if I have a gluten allergy?", "Is the juice vegan and/or Kosher?",
         "Can I give the juice to my child?", "How much juice should I drink?"],
     faqQuestions_cleanse = ["Where do I get my protein while cleansing?", "How many juices come in each cleanse?",
-        "I signed up for a 3-day cleanse. Do you deliver the cleanse each morning or all at once?", "I have never cleansed before. How do I know if I can handle a cleanse?",
+        "Are three day cleanses delivered each morning or all at once?", "I have never cleansed before. How do I know if I can handle a cleanse?",
         "How many days should I cleanse?", "Can I have any other beverages besides the juice while cleansing?", "What are detox symptoms? Does everyone get them?",
         "Can I do a cleanse even though I have a busy schedule?", "Can I exercise while cleansing?", "How much weight am I going to lose?",
         "I haven’t gone to the bathroom at all. Is that normal?", "Can I do a cleanse and eat food too?", "How often should I do a cleanse?"],

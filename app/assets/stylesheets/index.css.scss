@@ -119,6 +119,18 @@ $phoneSmall: 375px;
     .wrapper {
       top: 125px;
     }
+    i{
+      left: 48.5%;
+      @media screen and (max-width: $tablet) {
+        left: 47.5%;
+      }
+      @media screen and (max-width: $phoneLarge) {
+        left: 45%;
+      }
+      @media screen and (max-width: $phone) {
+        left: 44.5%;
+      }
+    }
     h1 {
       line-height: 40px;
       color: white;
@@ -463,6 +475,10 @@ $phoneSmall: 375px;
       &.right {
         text-align: left;
         top: 30px;
+        width: 61%;
+        @media all and (max-width: $tablet) {
+          width: 80%;
+        }
         ul {
           @media all and (max-width: $phone) {
             padding: 20px;
@@ -517,7 +533,7 @@ $phoneSmall: 375px;
       top: 100px;
       max-width: 1300px;
       @media all and (max-width: $tablet) {
-        top: 20px;
+        top: 90px;
       }
       @media all and (max-width: $phone) {
         top: 10px;
@@ -708,6 +724,9 @@ $phoneSmall: 375px;
           @media all and (max-width: $phone) {
             left: 0;
           }
+          i, h3{
+            cursor: pointer;
+          }
           h3 {
             display: inline-block;
             font-family: 'Dosis', sans-serif;
@@ -786,6 +805,12 @@ $phoneSmall: 375px;
               border: none;
               border-bottom: 1px solid grey;
               line-height: 2em;
+              @media all and (max-width: $phoneLarge) {
+               font-size: 14px;
+              }
+              @media all and (max-width: $phoneSmall) {
+                font-size: 12px;
+              }
             }
             &.three {
               width: 100%;
