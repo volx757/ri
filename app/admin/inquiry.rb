@@ -17,4 +17,4 @@ ActiveAdmin.register Inquiry do
     column :answered
   end
 
-end 
+end
