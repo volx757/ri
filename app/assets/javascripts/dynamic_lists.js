@@ -12,7 +12,8 @@ var faqQuestions_juice = [ "What kind of juicer do you use?", "What makes your j
     faqQuestions_logistics = ["How do I order my juice?", "When is the cutoff time to place an order for delivery or pickup?",
         "What juices should I order? What do you recommend?", "Is there a minimum I have to order to be eligible for delivery or pick-up?",
         "Can I pre-order juices for pickup?", "Can I order my juice to a different address than my house?",
-        "What if I am not there when my juice is delivered?", "Why use glass bottles instead of plastic?"]
+        "What if I am not there when my juice is delivered?"],
+    faqQuestions_other = ["Why use glass bottles instead of plastic?"]
 
 var faqAnswers_juice = ["Our juice is extracted using a hydraulic cold-press machine.  This form of extraction is the optimal method of juicing.  With our hydraulic press we are able to exert thousands of pounds of pressure on produce very slowly and without generating any heat. This is ideal in that it helps to maintain the cellular structure of the plants and fruits being juiced.  The result is raw living juice in its purest form - all the enzymes and nutrients still intact - providing the highest density of nutrition to any consumer.",
         "Most juice in grocery stores are pasteurized to reduce pathogens, either through flash-pasteurization, a process that heats the juice to extremely high temperatures, or a more recently introduced method called high-pressure processing (HPP), which uses high pressure to achieve the same end.  Many of the big corporate companies use these methods as they allow for a longer shelf-life, which makes them the most cost efficient and creates larger profits.  Our juices are not pasteurized in any way.  We believe raw juice is supposed to be a local movement.  Farm to bottle as quickly as possible.  We can do that here in Lancaster, Pennsylvania.",
@@ -23,10 +24,10 @@ var faqAnswers_juice = ["Our juice is extracted using a hydraulic cold-press mac
         "Please consult your healthcare professional if you have a medical condition or take prescription medicine before drinking our products. Our juices nourish your body and enhance your overall health and well-being by fighting disease.  Raw juicing is 100% an excellent addition to alternative and homeopathic forms of healing.  However, by no means are our products to be used to treat, prevent diagnose, or cure ailments exclusively.",
         "All of our juices are 100% gluten-free.",
         "Our products are 100% vegan. No animal products are used in any of our products. However, our juices are not certified Kosher.",
-        "All of our green juices and shakes contain absorbable proteins [our Carrot.Kale juice has roughly 16 grams of protein]. The food that captures the most sunlight contains the highest levels of readily available protein - therefore dark leafy greens are best. Amino acids are the building blocks of protein and dark leafy green vegetables [full of chlorophyll] are the most natural source of these muscle-building compounds.",
         "Yes! Our juice is definitely healthy to add to children's diets. However, it is warned that children under the age of 2 should not be given juice due to potentially harmful bacteria in unpasteurized juice.  Also, children should not participate in juice cleanses or fasts.",
         "This always depends on your personal preference and health goals. In order to experience the full benefits of our products, we recommend incorporating juice into your daily diet and doing a juice cleanse at least twice a year."],
-    faqAnswers_cleanse = ["Our standard 1-day juice cleanse includes 6 (16 oz) juices [2-day cleanse: 12 juices; 3-day cleanse: 18 juices]. See each cleanse’s individual product page to find out which juices are included.",
+    faqAnswers_cleanse = [ "All of our green juices and shakes contain absorbable proteins [our Carrot.Kale juice has roughly 16 grams of protein]. The food that captures the most sunlight contains the highest levels of readily available protein - therefore dark leafy greens are best. Amino acids are the building blocks of protein and dark leafy green vegetables [full of chlorophyll] are the most natural source of these muscle-building compounds.",
+        "Our standard 1-day juice cleanse includes 6 (16 oz) juices [2-day cleanse: 12 juices; 3-day cleanse: 18 juices]. See each cleanse’s individual product page to find out which juices are included.",
         "Our juices have a shelf-life of 72-96 hours  so a 3 day juice cleanse will be delivered all at once.  Just be sure to refrigerate everything immediately.",
         "We think you will be pleasantly surprised by how much the juice fills you up and provides you with real energy.  The juices provide your body with ample supply of nutrients to get you through your day. We would recommend that you definitely take things a little slower than usual and listen to your body.  It also helps the juicing process if you cut alcohol and nicotine prior-to and during the cleanse to maximize the health benefits you are seeking.  Just start with a 1-day cleanse and see how it goes.  Many people have set out just intending to just try a 1-day cleanse only to find themselves venturing out on a 10-day journey, if not longer.  Everyone is different.",
         "This is a very subjective question.  As mentioned above we recommend you just test the waters out with a 1-Day cleanse.  Our cleanse packages stop at the 3-day package and if you would like to continue you'll have to place a new order.",
@@ -44,8 +45,9 @@ var faqAnswers_juice = ["Our juice is extracted using a hydraulic cold-press mac
         "Yes. Our minimum order for delivery is 6 juices (or shakes or combination) in addition to the delivery charge.  We also require that a reservation for pick-up have a minimum of 3 juices (or shakes or combination).",
         "Yes. You can pre-order online or in the store.  Orders are to be placed 48 hours in advance of pick-up date.",
         "Yes. We gladly deliver to your home, work, friend's home or gym. Just be sure to give us the correct delivery address.",
-        "We ask/require that someone be present to receive deliveries always unless otherwise instructed - in which case we hold no responsibility for purchase/quality after completed drop-off.",
-        "Our glass bottles are just another way of ensuring the quality of our products as well as advocating a more conscious business practice.  So many juice companies still use plastic for the sake of cost. We are selling juices and cleanses - raw living food - that nourish and detoxify your body. Plastic bottles are notorious for leaching chemicals into beverages and on the planet plastic is a leading cause of pollution. We advocate more conscious styles of living and we never jeopardize quality or the planet for profit.  In order to minimize the pollution of our environment, we try to produce as little waste as possible so please feel free to return our glass bottles or keep them to be repurposed or reused for whatever you like.  Take a picture of how you repurpose them and post to our instagram or Facebook.  We'd love to see what you come up with."]
+        "We ask/require that someone be present to receive deliveries always unless otherwise instructed - in which case we hold no responsibility for purchase/quality after completed drop-off."],
+    faqAnswers_other = ["Our glass bottles are just another way of ensuring the quality of our products as well as advocating a more conscious business practice.  So many juice companies still use plastic for the sake of cost. We are selling juices and cleanses - raw living food - that nourish and detoxify your body. Plastic bottles are notorious for leaching chemicals into beverages and on the planet plastic is a leading cause of pollution. We advocate more conscious styles of living and we never jeopardize quality or the planet for profit.  In order to minimize the pollution of our environment, we try to produce as little waste as possible so please feel free to return our glass bottles or keep them to be repurposed or reused for whatever you like.  Take a picture of how you repurpose them and post to our instagram or Facebook.  We'd love to see what you come up with."]
+
 
 var faqIsExpanded = false
 
@@ -99,8 +101,8 @@ function writeFaqQuestions(categoryNum) {
             answers = faqAnswers_logistics
             break;
         case 3 :
-            questions = faqQuestions_logistics
-            answers = faqAnswers_logistics
+            questions = faqQuestions_other
+            answers = faqAnswers_other
             break;
     }
 
@@ -139,7 +141,7 @@ function initializeFaq() {
             numListItems = faqQuestions_cleanse.length
             break;
         case 'Other' :
-            numListItems = faqQuestions_logistics.length
+            numListItems = faqQuestions_other.length
             break;
     }
 
