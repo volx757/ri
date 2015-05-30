@@ -13,7 +13,7 @@ ActiveAdmin.register Inquiry do
     column :id
     column :name
     column :email
-    column :message
+    column :content
     column :answered
   end
 
