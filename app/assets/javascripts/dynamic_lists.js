@@ -48,7 +48,6 @@ var faqAnswers_juice = ["Our juice is extracted using a hydraulic cold-press mac
         "We ask/require that someone be present to receive deliveries always unless otherwise instructed - in which case we hold no responsibility for purchase/quality after completed drop-off."],
     faqAnswers_other = ["Our glass bottles are just another way of ensuring the quality of our products as well as advocating a more conscious business practice.  So many juice companies still use plastic for the sake of cost. We are selling juices and cleanses - raw living food - that nourish and detoxify your body. Plastic bottles are notorious for leaching chemicals into beverages and on the planet plastic is a leading cause of pollution. We advocate more conscious styles of living and we never jeopardize quality or the planet for profit.  In order to minimize the pollution of our environment, we try to produce as little waste as possible so please feel free to return our glass bottles or keep them to be repurposed or reused for whatever you like.  Take a picture of how you repurpose them and post to our instagram or Facebook.  We'd love to see what you come up with."]
 
-
 var faqIsExpanded = false
 
 function bindFaqCategories() {

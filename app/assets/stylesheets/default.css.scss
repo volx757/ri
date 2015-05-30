@@ -5,12 +5,12 @@ $phoneSmall: 375px;
 
 @font-face {
   font-family: 'Dosis';
-  src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+  src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Open_Sans';
-  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
 }
 
 .transition-all {
@@ -224,13 +224,11 @@ hr {
           top: 13px;
           left: 31%;
         }
-
-
       }
       &.purchase {
-        right:33%;
+        right: 33%;
         @media screen and (max-width: 1200px) {
-          right:31%;
+          right: 31%;
         }
         @media screen and (max-width: $tablet) {
           display: block;
@@ -238,13 +236,13 @@ hr {
           right: 0;
         }
         @media screen and (max-width: $phoneLarge) {
-          top:15px
+          top: 15px
         }
       }
       &.contact {
-        right:26%;
+        right: 26%;
         @media screen and (max-width: 1200px) {
-          right:24%;
+          right: 24%;
         }
         @media screen and (max-width: $tablet) {
           display: block;
@@ -252,7 +250,7 @@ hr {
           right: 0;
         }
         @media screen and (max-width: $phoneLarge) {
-          top:15px
+          top: 15px
         }
       }
     }

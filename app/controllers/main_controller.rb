@@ -14,7 +14,6 @@ class MainController < ApplicationController
   end
 
   def night
-
   end
 
   private

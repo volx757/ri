@@ -106,7 +106,7 @@ $phoneSmall: 375px;
     @media screen and (max-width: $phoneLarge) {
       top: -110px
     }
-    opacity: 0; /* make things invisible upon start */
+    opacity: 0;
 
     -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation: fadeIn ease-in 1;
@@ -200,7 +200,6 @@ $phoneSmall: 375px;
       @media screen and (max-width: $phoneLarge) {
         top: 15px;
       }
-
     }
     i {
       font-size: 56px;
@@ -220,7 +219,6 @@ $phoneSmall: 375px;
         width: 250px;
         top: 25px;
       }
-
       &:hover {
         transition-duration: 0.5s;
         transition-timing-function: ease-in;
@@ -415,7 +413,6 @@ $phoneSmall: 375px;
     @media screen and (max-width: $phone) {
       min-height: 1800px;
     }
-
     span {
       right: 40px;
       float: right;
@@ -496,8 +493,6 @@ $phoneSmall: 375px;
             @media all and (max-width: $phone) {
               font-size: 0.9em;
             }
-
-
             &:hover {
               // background: lightgray;
             }
@@ -515,11 +510,9 @@ $phoneSmall: 375px;
             @media all and (max-width: $phone) {
               font-size: 0.8em;
             }
-
           }
           li {
             position: relative;
-            //  height: 70px;
             @media all and (max-width: $phone) {
               width: 100%;
             }
@@ -542,7 +535,6 @@ $phoneSmall: 375px;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
-
     }
     .wrapper {
       width: 100%;
@@ -564,7 +556,6 @@ $phoneSmall: 375px;
         font-weight: 100;
         @media screen and (max-width: 1270px) {
           padding: 28px;
-
         }
         @media all and (max-width: $phone) {
           padding: 10px;
@@ -777,7 +768,6 @@ $phoneSmall: 375px;
         float: left;
         position: relative;
         @media all and (max-width: $tablet) {
-
           left: 0;
         }
         p {
