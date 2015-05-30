@@ -412,13 +412,10 @@ $phoneSmall: 375px;
       background-position: 50% 0;
     }
     @media screen and (max-width: $tablet) {
-      min-height: 1100px;
+      min-height: 1000px;
     }
     @media screen and (max-width: $phoneLarge) {
       min-height: 1300px;
-    }
-    @media screen and (max-width: $phone) {
-      min-height: 1480px;
     }
     .ex_or_col {
       right: 20px;
@@ -483,7 +480,7 @@ $phoneSmall: 375px;
       &.right {
         text-align: left;
         top: 30px;
-        width: 61%;
+        width: 60%;
         @media all and (max-width: $tablet) {
           width: 80%;
           top: 50px;
