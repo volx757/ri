@@ -278,7 +278,7 @@ function bindIngredientsToggles() {
 
 function bindShowAllQuestions() {
 
-    $('#faq-right ').find('.show-more').on('click', function () {
+    $('#faq-right').find('.show-more').on('click', function () {
         if (faqIsExpanded) {
             $('#faq-right').find('li').each(function () {
                 if ($(this).data('num') > 4)
