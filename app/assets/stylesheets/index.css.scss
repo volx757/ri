@@ -97,7 +97,7 @@ $phoneSmall: 375px;
   }
   .container.welcome {
     height: 800px;
-    background: image-url('index/header_bg.jpg');
+    background: image-url('Rijuice_Landing_Photo.jpg');
     background-size: 100% 100%;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
@@ -238,18 +238,6 @@ $phoneSmall: 375px;
     min-height: 350px;
     .wrapper {
       top: 50px;
-    }
-    .shine {
-      font-style: normal;
-      transition-duration: 0.2s;
-      transition-timing-function: ease-in;
-      &:hover {
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in;
-        color: gold;
-        font-style: italic;
-        font-size: 16px;
-      }
     }
     .shine-green {
       line-height: 1em;
@@ -403,15 +391,19 @@ $phoneSmall: 375px;
   .container.whats-inside {
     background: image-url('index/home_flavors_bg.jpg') no-repeat;
     background-size: 100% 100%;
-    min-height: 800px;
+    min-height: 1200px;
     font-family: Dosis;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
     }
     @media screen and (max-width: $phoneLarge) {
-      min-height: 950px;
+      min-height: 1480px;
     }
+    @media screen and (max-width: $phone) {
+      min-height: 1800px;
+    }
+
     span {
       right: 40px;
       float: right;
@@ -486,6 +478,14 @@ $phoneSmall: 375px;
           .flavor {
             cursor: pointer;
             line-height: 3.5em;
+            @media all and (max-width: $tablet) {
+              line-height: 2.5em;
+            }
+            @media all and (max-width: $phone) {
+              font-size: 0.9em;
+            }
+
+
             &:hover {
               // background: lightgray;
             }
@@ -500,6 +500,10 @@ $phoneSmall: 375px;
           }
           .force-p {
             line-height: 1.8em;
+            @media all and (max-width: $phone) {
+              font-size: 0.8em;
+            }
+
           }
           li {
             position: relative;
@@ -511,7 +515,7 @@ $phoneSmall: 375px;
         }
         hr {
           float: left;
-          width: 95%;
+          width: 97%;
         }
       }
     }

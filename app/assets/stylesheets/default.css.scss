@@ -215,8 +215,16 @@ hr {
       }
       &.home {
         @media screen and (max-width: $tablet) {
-          left: 30%;
+          left: 32%;
         }
+        @media screen and (max-width: $phoneLarge) {
+          top: 15px;
+        }
+        @media screen and (max-width: $phoneSmall) {
+          left: 31%;
+        }
+
+
       }
       &.purchase {
         right:33%;

@@ -317,6 +317,15 @@ $phoneSmall: 375px;
       border-bottom: 1px solid black;
     }
   }
+  .social {
+    @media all and (max-width: $phoneLarge) {
+      margin-bottom: 15px;
+    }
+    .fa{
+      margin-right: 10px;
+    }
+  }
+
 }
 
 #contact-form {
