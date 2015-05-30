@@ -78,7 +78,10 @@ $phoneSmall: 375px;
   }
 
   .map-cover {
-    width: 100%;
+    width:1700px;
+    @media all and (max-width: 1700px) {
+      width: 100%;
+    }
     height: 500px;
     background: black;
     z-index: 2;
