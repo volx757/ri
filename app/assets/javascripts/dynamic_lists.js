@@ -175,7 +175,7 @@ function initializeIngredients() {
     var numListItems = $('#ingredients-right').find('ul').children().length
 
     for (var i = 1; i < numListItems + 1; i++) {
-        var currentIcon = $('#ingredients-right ').find('*[data-num=' + i + '] span '),
+        var currentIcon = $('#ingredients-right ').find('*[data-num=' + i + '] .ex_or_col '),
             currentDesc = $('#ingredients-right').find('*[data-num=' + i + '].description ')
 
         if (i == 1)
@@ -218,7 +218,7 @@ function closeOtherListItemsIngredients(question, icon, answer) {
 
     for (var i = 0; i < length + 1; i++) {
         var currentAnswer = ingredientsRight.find('*[data-num=' + i + '].description '),
-            spanIcon = ingredientsRight.find('*[data-num=' + i + '].flavor span')
+            spanIcon = ingredientsRight.find('*[data-num=' + i + '].flavor .ex_or_col')
 
         console.log(spanIcon)
         if (i != keepOpen)
@@ -261,7 +261,7 @@ function bindFaqToggles() {
 function bindIngredientsToggles() {
     $('#ingredients-right').find('.flavor').on('click', function () {
 
-        var icon = $(this).find('span')
+        var icon = $(this).find('.ex_or_col')
 
         var num = icon.parent().data('num') - 1,
             desc = $('#ingredients-right').find('.description:eq( ' + num + ')')
