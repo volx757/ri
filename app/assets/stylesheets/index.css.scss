@@ -486,9 +486,6 @@ $phoneSmall: 375px;
           top: 50px;
           position: relative;
         }
-        @media all and (max-width: $phone) {
-         // width: 90%;
-        }
         ul {
           @media all and (max-width: $phone) {
             padding: 20px;
