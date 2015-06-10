@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
+
     cart = Cart.find_current(current_user.id)
     if cart.present?
       cart.add_product(params[:id])

@@ -1,49 +1,76 @@
-<div id="products-container">
+<div id="product-container">
 
+<div class="page-header">
+  <h1>PRODUCTS</h1>
 
-  <div class="page-header">
-    <h2>Our Products</h2>
+  <h3>PURCHASE / INDEX<span></span></h3>
+</div>
+
+<div class="container intro">
+  <div class="wrapper">
+    <h1>PURCHASE JUICE INTRO COPY HERE</h1>
+
+    <p>We like to think of our juice as a gateway to new experiences. Whether you're a customer, friend, or just want
+      to
+      say hi, we always love hearing from you. Just fill out our message form or stop in during business hours.</p>
+  </div>
+</div>
+
+<div class="contact-nav">
+  <div class="nav-item" data-num="1"><a href="#all"><h2>ALL</h2></a>
+    <hr>
+  </div>
+  <div class="nav-item" data-num="2"><a href="#packs"><h2>PACKS</h2></a>
+    <hr>
+  </div>
+  <div class="nav-item" data-num="3"><a href="#cleanses"><h2>CLEANSES</h2></a>
+    <hr>
+  </div>
+</div>
+
+<a name="all"></a>
+  <% if current_user.cart != nil %>
+  <a href="/cart">CART</a>
+      <%end%>
+
+<div class="container pack">
+  <div class="wrapper">
+        <h2>BUILD A PACK</h2>
+         <h3>INVIGORATING FOR THE HEART</h3>
+
+    <p>copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd
+    copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd
+    copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd</p>
+
+    <h3>Select pack size</h3>
+    <div class="button">6-PACK</div><div class="button">12-PACK</div>
+
+    <% Juice.all.each do |j| %>
+        <%= j.name %>
+        <%= j.description %>
+        <%= image_tag j.image.url(:thumb) %>
+        <%= button_to 'Add To Cart', add_to_cart_product_path(j.product_id) %>
+    <% end %>
 
   </div>
+</div>
 
-  <div class="container intro">
-    <h2>Purchase juice intro copy here.</h2>
-    <p>asdjakd asdasf asdas d fd sg sgfh df</p>
+<a name="packs"></a>
 
-  </div>
-
-  <div class="container shop">
-    <ul>
-      <li>Packs</li>
-      <li>Cases</li>
-      <li>Cleanses</li>
-    </ul>
+<div class="container pack">
+  <div class="wrapper">
 
   </div>
+</div>
 
-  <div class="container outro">
+<a name="cleanses"></a>
+
+<div class="container cleanses">
+  <div class="wrapper">
+
 
   </div>
-
-
-
-  <%= link_to 'Cart', controller: 'carts', action: 'index' %>
-
-  <br>
-
-  <% Juice.all.each do |j| %>
-      <%= j.name %>
-      <%= j.description %>
-      <%= image_tag j.image.url(:thumb) %>
-      <%= button_to 'Add To Cart', add_to_cart_product_path(j.product_id) %>
-  <% end %>
-
-  <% Cleanse.all.each do |c| %>
-      <%= c.name %>
-      <%= c.description %>
-      <%= image_tag c.image.url(:thumb) %>
-      <%= button_to 'Add To Cart', add_to_cart_product_path(c.product_id) %>
-  <% end %>
+</div>
 
 
 </div>

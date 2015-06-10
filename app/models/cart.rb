@@ -1,7 +1,6 @@
 class Cart < ActiveRecord::Base
 
   belongs_to :user
-  has_many :orders
 
   attr_accessible :user_id
 
@@ -33,6 +32,10 @@ class Cart < ActiveRecord::Base
 
   def self.find_current(user_id)
     where(:user_id => user_id).first
+  end
+
+  def parse_product_list
+    product_id_list.split(' ')
   end
 
 end

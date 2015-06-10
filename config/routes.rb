@@ -10,16 +10,16 @@ Rails.application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
   match "contact" => "main#contact", :as => "contact", :via => [:get, :post]
-  get 'products' => 'main#index'
+  get 'products' => 'products#index'
   get 'night' => 'main#night', :as => 'night'
 
   resources :users
   resources :sessions
-  #resources :products do
-  #  member do
-  #    post :add_to_cart
-  #  end
-  #end
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
 
   get 'cart', to: 'carts#index', as: 'cart'
   get 'checkout', to: 'carts#checkout', as: 'checkout'

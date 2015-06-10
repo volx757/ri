@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require carts
 //= require animations
 //= require dynamic_lists
 //= require main

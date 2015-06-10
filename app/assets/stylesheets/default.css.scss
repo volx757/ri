@@ -3,6 +3,10 @@ $phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
 
+.push-shit{position: relative;
+  top: 100px;
+  margin-bottom: 100px;}
+
 @font-face {
   font-family: 'Dosis';
   src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');

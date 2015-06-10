@@ -1,6 +1,8 @@
-<%= javascript_include_tag "https://js.stripe.com/v2/" %>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<%= javascript_include_tag "carts" %>
 
-<%= form_tag cart_path, :id => 'card-details' do %>
+
+<%= form_tag cart_path, :id => 'card-details', :class=>'push-shit' do %>
     <div class="payment-errors"></div>
 
 
@@ -28,7 +30,6 @@
       <label for="payment-type">Payment Type:</label>
       <select id="payment-type" name="payment_type">
         <option value="deposit">$20 Deposit</option>
-        <option value="subscription">Monthly subscription, $9.97</option>
       </select>
     </div>
 

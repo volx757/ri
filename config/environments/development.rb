@@ -36,7 +36,7 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
-  config.assets.precompile += ['active_admin.css']
+  config.assets.precompile += ['active_admin.css carts.js']
 
 
   # Raises error for missing translations
