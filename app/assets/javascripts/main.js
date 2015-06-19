@@ -118,10 +118,10 @@ function limitTextInput(){
             // e.which === 0 - Not a character
             return;
         }
-        if (this.value.length == max) {
+        if ($(this).value.length == max) {
             e.preventDefault();
-        } else if (this.value.length > max) {
-            this.value = this.value.substring(0, max);
+        } else if ($(this).value.length > max) {
+            $(this).value = $(this).value.substring(0, max);
 
             $('#content').css({'box-shadow' : '0px 0px 0px #444',
                 '-moz-box-shadow' : '0px 0px 0px #444',

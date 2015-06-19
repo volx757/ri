@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   match "contact" => "main#contact", :as => "contact", :via => [:get, :post]
   get 'products' => 'products#index'
+  post 'products' => 'products#add_to_cart'
   get 'night' => 'main#night', :as => 'night'
 
   resources :users

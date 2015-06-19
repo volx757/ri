@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
 
@@ -16,18 +16,33 @@ $(document).ready(function(){
     });
 
 
-
-
-
 })
+
 
 function processPackOrder() {
 
     var juice_ids = []
 
-    $('select').each(function(){
+    $('select').each(function () {
         juice_ids.push($(this).find(":selected").data('id'))
     })
+    console.log(juice_ids)
+
+    $.ajax({
+        type: "POST",
+        url: '/products',
+        data: 'p=' + juice_ids,
+        error: function() {
+            alert('error')
+        },
+        success: function(data) {
+           alert(data);
+        }
+    });
+
+
+
+
 }
 
 function stripeResponseHandler(status, response) {
