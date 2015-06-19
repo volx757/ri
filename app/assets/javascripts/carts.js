@@ -14,7 +14,21 @@ $(document).ready(function(){
         }, stripeResponseHandler);
 
     });
+
+
+
+
+
 })
+
+function processPackOrder() {
+
+    var juice_ids = []
+
+    $('select').each(function(){
+        juice_ids.push($(this).find(":selected").data('id'))
+    })
+}
 
 function stripeResponseHandler(status, response) {
 

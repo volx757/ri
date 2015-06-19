@@ -29,11 +29,11 @@
       <h2>Instagram Feed</h2>
 
       <div id="instagram">
-        <%# @instagram.each do |instagram| %>
+        <% @instagram.each do |instagram| %>
 
-           <a href="https://www.instagram.com/rijuicefam" target="_blank"><%#= image_tag instagram.images.standard_resolution.url %></a>
+           <a href="https://www.instagram.com/rijuicefam" target="_blank"><%= image_tag instagram.images.standard_resolution.url %></a>
 
-        <% #end %>
+        <% end %>
       </div>
     </td>
 

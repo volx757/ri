@@ -1,76 +1,45 @@
 <div id="product-container">
 
-<div class="page-header">
-  <h1>PRODUCTS</h1>
+  <div class="page-header">
+    <h1>PRODUCTS</h1>
 
-  <h3>PURCHASE / INDEX<span></span></h3>
-</div>
-
-<div class="container intro">
-  <div class="wrapper">
-    <h1>PURCHASE JUICE INTRO COPY HERE</h1>
-
-    <p>We like to think of our juice as a gateway to new experiences. Whether you're a customer, friend, or just want
-      to
-      say hi, we always love hearing from you. Just fill out our message form or stop in during business hours.</p>
+    <h3>PURCHASE / INDEX<span></span></h3>
   </div>
-</div>
 
-<div class="contact-nav">
-  <div class="nav-item" data-num="1"><a href="#all"><h2>ALL</h2></a>
-    <hr>
-  </div>
-  <div class="nav-item" data-num="2"><a href="#packs"><h2>PACKS</h2></a>
-    <hr>
-  </div>
-  <div class="nav-item" data-num="3"><a href="#cleanses"><h2>CLEANSES</h2></a>
-    <hr>
-  </div>
-</div>
+  <div class="container intro">
+    <div class="wrapper">
+      <h1>PURCHASE JUICE INTRO COPY HERE</h1>
 
-<a name="all"></a>
+      <p>We like to think of our juice as a gateway to new experiences. Whether you're a customer, friend, or just want
+        to
+        say hi, we always love hearing from you. Just fill out our message form or stop in during business hours.</p>
+    </div>
+  </div>
+
+  <div class="product-nav">
+    <div class="nav-item" data-num="1"><a href="#packs"><h2>PACKS</h2></a>
+      <hr>
+    </div>
+    <div class="nav-item" data-num="2"><a href="#cleanses"><h2>CLEANSES</h2></a>
+      <hr>
+    </div>
+  </div>
+
+
   <% if current_user.cart != nil %>
-  <a href="/cart">CART</a>
-      <%end%>
+      <a href="/cart">CART</a>
+  <% end %>
+  <a name="packs"></a>
 
-<div class="container pack">
-  <div class="wrapper">
-        <h2>BUILD A PACK</h2>
-         <h3>INVIGORATING FOR THE HEART</h3>
+  <%= render 'build_a_pack' %>
 
-    <p>copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd
-    copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd
-    copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd</p>
+  <a name="cleanses"></a>
 
-    <h3>Select pack size</h3>
-    <div class="button">6-PACK</div><div class="button">12-PACK</div>
+  <div class="container cleanses">
+    <div class="wrapper">
 
-    <% Juice.all.each do |j| %>
-        <%= j.name %>
-        <%= j.description %>
-        <%= image_tag j.image.url(:thumb) %>
-        <%= button_to 'Add To Cart', add_to_cart_product_path(j.product_id) %>
-    <% end %>
 
+    </div>
   </div>
-</div>
-
-<a name="packs"></a>
-
-<div class="container pack">
-  <div class="wrapper">
-
-  </div>
-</div>
-
-<a name="cleanses"></a>
-
-<div class="container cleanses">
-  <div class="wrapper">
-
-
-  </div>
-</div>
-
 
 </div>

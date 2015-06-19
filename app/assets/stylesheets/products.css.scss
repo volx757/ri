@@ -45,7 +45,7 @@ $phoneSmall: 375px;
     }
   }
 
-  .contact-nav {
+  .product-nav {
     text-align: center;
     .nav-item {
       display: inline-block;
@@ -69,13 +69,6 @@ $phoneSmall: 375px;
     }
   }
 
-
-
-  .container {
-    width: 100%;
-    height: auto;
-  }
-
   .wrapper {
     text-align: center;
     width: 80%;
@@ -88,162 +81,21 @@ $phoneSmall: 375px;
     }
   }
 
-  .container.intro {
-    min-height: 280px;
-    padding-top: 40px;
-    .wrapper {
-      margin-top: 40px;
-    }
-    p {
-      width: 70%;
-      margin: 50px auto 0;
-      @media all and (max-width: $phoneLarge) {
-        width: 90%;
+  .container {
+    width: 100%;
+    height: auto;
+
+    &.pack {
+      .wrapper {
+        width: 40%;
+        text-align: left;
+        margin: 0;
+        left: 50%;
+        hr {
+          width: 100%;
+        }
       }
     }
   }
-
-  .container.retail, .container.pickup {
-    .wrapper {
-      margin-top: 160px;
-    }
-    .img-hold {
-      top: 20px;
-      position: relative;
-      max-height: 390px;
-      width: 100%;
-      float: left;
-      img{
-        width: 100%;
-        height: 100%;
-        left:0;
-        top:0;
-      }
-    }
-    .location {
-      width: 200px;
-      text-align: left;
-      display: inline-block;
-      margin: 0 3%;
-      font-family: Dosis;
-      font-weight: 800;
-      top: 50px;
-      position: relative;
-      hr {
-        width: 50px;
-        margin-left: 0px;
-        margin-bottom: 25px;
-        border: none;
-        border-bottom: 1px solid black;
-      }
-      h3 span {
-        color: grey;
-        font-weight: 100;
-      }
-      .button {
-        border-width: 2px;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        width: 120px;
-      }
-    }
-    .address, .hours {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: grey;
-    }
-    h3 {
-      font-weight: 700;
-    }
-    p {
-      color: black;
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 1px;
-      margin-top: 35px;
-    }
-    img {
-      width: 250px;
-      position: relative;
-      left: 320px;
-      top: -300px;
-    }
-  }
-
-  .container.retail {
-    min-height: 918px;
-    @media all and (max-width: 1340px) {
-      min-height: 1240px;;
-    }
-    @media all and (max-width: $tablet) {
-      min-height: 1218px;
-    }
-    @media all and (max-width: $phone) {
-      min-height: 1918px;
-    }
-    .location {
-      @media all and (max-width: $tablet) {
-        width: 150px;
-      }
-    }
-  }
-
-  .container.pickup {
-    background: image-url('contact/contact_bg_1.jpg');
-    min-height: 645px;
-    @media all and (max-width: 1340px) {
-      min-height: 845px;;
-    }
-    @media all and (max-width: $phone) {
-      min-height: 1245px;
-    }
-    .wrapper {
-      margin-top: 80px;
-      padding-top: 100px;
-      @media all and (max-width: $tablet) {
-        margin-top: 0px;
-      }
-    }
-    @media screen and (max-width: 1440px) {
-      background-size: 1440px 100%;
-      background-position: 50% 0;
-    }
-    h1 {
-      color: white;
-    }
-    span {
-      font-size: 14px;
-      font-style: italic;
-      font-weight: 100;
-      letter-spacing: 0px;
-      text-transform: none;
-      margin-left: 4%;
-    }
-    .address, .hours, p, h2, .button {
-      color: white;
-    }
-    hr {
-      border-bottom: 1px solid white;
-    }
-    h3 {
-      color: white;
-    }
-    .location {
-      margin: 0 7%;
-      @media all and (max-width: $phoneLarge) {
-        width: 150px;
-        margin: 0px 4%;
-      }
-      hr {
-        border-bottom: 1px solid white;
-      }
-    }
-  }
-
-
 
 }

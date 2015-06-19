@@ -18,3 +18,4 @@
 //= require main
 //= require lib/jquery.localScroll.min.js
 //= require lib/jquery.scrollTo.min.js
+//= require lib/dropkick.min.js

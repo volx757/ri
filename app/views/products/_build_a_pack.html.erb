@@ -1,0 +1,68 @@
+<div class="container pack">
+  <div class="wrapper">
+    <h2>BUILD A PACK</h2>
+
+    <h3>INVIGORATING FOR THE HEART</h3>
+
+    <p>copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd
+      copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd
+      copy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypcopy coypd</p>
+
+    <h3>Select pack size</h3>
+
+    <div class="button">6-PACK</div>
+    <div class="button">12-PACK</div>
+
+
+    <div class="bottle-select">
+      <h3>Bottle One</h3>
+
+      <select data-num="1">
+        <% Juice.all.each do |j| %>
+            <option data-id="<%= j.id %>"><%= j.name %></option>
+        <% end %>
+      </select>
+
+      <select data-num="2">
+        <% Juice.all.each do |j| %>
+            <option data-id="<%= j.id %>"><%= j.name %></option>
+        <% end %>
+      </select>
+
+      <select data-num="3">
+        <% Juice.all.each do |j| %>
+            <option data-id="<%= j.id %>"><%= j.name %></option>
+        <% end %>
+      </select>
+
+      <select data-num="4">
+        <% Juice.all.each do |j| %>
+            <option data-id="<%= j.id %>"><%= j.name %></option>
+        <% end %>
+      </select>
+
+      <select data-num="5">
+        <% Juice.all.each do |j| %>
+            <option data-id="<%= j.id %>"><%= j.name %></option>
+        <% end %>
+      </select>
+
+      <select data-num="6">
+        <% Juice.all.each do |j| %>
+            <option data-id="<%= j.id %>"><%= j.name %></option>
+        <% end %>
+      </select>
+
+    </div>
+
+
+    <div class="button" onclick="processPackOrder()">Add To Cart</div>
+
+
+
+  </div>
+</div>
+
+<script>
+    $('select').dropkick();
+</script>

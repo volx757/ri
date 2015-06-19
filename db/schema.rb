@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150512044504) do
+ActiveRecord::Schema.define(version: 20150619004016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,6 +118,24 @@ ActiveRecord::Schema.define(version: 20150512044504) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "product_id"
+  end
+
+  create_table "packs", force: true do |t|
+    t.integer  "quantity"
+    t.integer  "juice_one_id"
+    t.integer  "juice_two_id"
+    t.integer  "juice_three_id"
+    t.integer  "juice_four_id"
+    t.integer  "juice_five_id"
+    t.integer  "juice_six_id"
+    t.integer  "juice_seven_id"
+    t.integer  "juice_eight_id"
+    t.integer  "juice_nine_id"
+    t.integer  "juice_ten_id"
+    t.integer  "juice_eleven_id"
+    t.integer  "juice_twelve_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
