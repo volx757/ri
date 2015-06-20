@@ -1,14 +1,16 @@
-
 <div id="cart-container">
   <div class="thing push-shit">
-Total Cost:
-<%= @cart.total_cost %>
+    Total Cost:
+    <%= @cart.total_cost%>
+<br>
+    <% @cart.line_items.each do |l| %>
+        <% product =  @cart.find_product(l.product_id) %>
+        <%= product.name %>
+        <%= product.price %>
+        <br>
+    <% end %>
 
-    <% @cart.parse_product_list.each do |p| %>
-        <%= Product.where(:product_id => p)%>
-        <%end%>
 
-
-<%= link_to 'Checkout', action: 'checkout'%></div>
+    <%= link_to 'Checkout', action: 'checkout' %></div>
 
 </div>

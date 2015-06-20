@@ -2,10 +2,17 @@ class Cart < ActiveRecord::Base
 
   belongs_to :user
   has_many :line_items
+  has_one :payment
+
+  scope :active, where(:active => true)
 
 
   attr_accessible :user_id, :guest_id, :active, :type
 
+
+  def deactivate
+    update_attribute :active, false
+  end
 
   def add_product(product_id)
     create_line_item(product_id)
@@ -21,12 +28,16 @@ class Cart < ActiveRecord::Base
     cost
   end
 
+  def find_product(id)
+    Product.find(id)
+  end
+
   def self.create_and_add_product(product_id, user_id)
     Cart.create(:user_id => user_id, :active => true).add_product(product_id)
   end
 
   def self.find_current(user_id)
-    where(:user_id => user_id).first
+    where(:user_id => user_id, :active => true).first
   end
 
   def self.find_guest(guest_id)

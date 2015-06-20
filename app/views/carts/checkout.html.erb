@@ -27,10 +27,9 @@
     </div>
 
     <div>
-      <label for="payment-type">Payment Type:</label>
-      <select id="payment-type" name="payment_type">
-        <option value="deposit">$20 Deposit</option>
-      </select>
+      <label for="payment-total">Total:</label>
+      <label><%= @cart.total_cost %></label>
+      <%= hidden_field_tag :total_cost, @cart.total_cost %>
     </div>
 
     <div>

@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
 
   has_many :carts
+  has_many :payments
 
   scope :guests, -> { where(type: 'Guest') }
   #delegate :guests
@@ -20,8 +21,6 @@ class User < ActiveRecord::Base
   def self.types
     %w(Guest)
   end
-
-
 
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -39,14 +38,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  def do_deposit_transaction(type, stripe_token, user)
+  def do_deposit_transaction(amount, stripe_token, user)
     Stripe.api_key = "sk_test_2jPsvi0qQfguqpV1SjkQOq84"
 
     customer = Stripe::Customer.create(email: user.email, card: stripe_token)
 
     begin
       charge = Stripe::Charge.create(customer: customer.id,
-                                     amount: Cart.where(:user_id => user.id).first.total_cost.to_i * 100,
+                                     amount: amount.to_i * 100,
                                      description: 'purchase',
                                      currency: 'usd')
     rescue Stripe::CardError => e
