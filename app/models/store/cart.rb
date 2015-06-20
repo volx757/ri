@@ -1,16 +1,14 @@
 class Cart < ActiveRecord::Base
 
   belongs_to :user
+  has_many :line_items
 
-  attr_accessible :user_id
+
+  attr_accessible :user_id, :guest_id, :active, :type
+
 
   def add_product(product_id)
-    if product_id_list.present?
-      product_list = product_id_list + ' ' + product_id
-    else
-      product_list = product_id
-    end
-    update_attribute :product_id_list, product_list
+    create_line_item(product_id)
   end
 
   def update_total_cost
@@ -18,24 +16,27 @@ class Cart < ActiveRecord::Base
   end
 
   def total_cost
-    cost = 0.0
-    products = product_id_list.split(' ').map(&:to_i)
-    products.each do |p|
-      cost += Product.find_by_product_id(p).price
-    end
+    cost = 0
+    line_items.each { |l| cost += l.price }
     cost
   end
 
   def self.create_and_add_product(product_id, user_id)
-    Cart.create(:user_id => user_id).add_product(product_id)
+    Cart.create(:user_id => user_id, :active => true).add_product(product_id)
   end
 
   def self.find_current(user_id)
     where(:user_id => user_id).first
   end
 
-  def parse_product_list
-    product_id_list.split(' ')
+  def self.find_guest(guest_id)
+    where(:guest_id => guest_id).first
+  end
+
+
+  def create_line_item(product_id)
+    price = Product.find(product_id).price
+    LineItem.create(:product_id => product_id, :cart_id => id, :price => price)
   end
 
 end

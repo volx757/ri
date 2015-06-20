@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
 
-  attr_accessible :email, :password, :password_confirmation, :address
+  attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state, :zip, :card_number,
+                  :card_expiry, :card_ccv
 
   attr_accessor :password
+
   before_save :encrypt_password
 
   validates_confirmation_of :password
@@ -10,8 +12,16 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
 
-  has_many :orders
-  has_one :cart
+  has_many :carts
+
+  scope :guests, -> { where(type: 'Guest') }
+  #delegate :guests
+
+  def self.types
+    %w(Guest)
+  end
+
+
 
   def self.authenticate(email, password)
     user = find_by_email(email)
