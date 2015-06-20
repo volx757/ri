@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
+#reset_session
     session[:guest_id] = Time.now.to_i.to_s unless session[:user_id].present?
   end
 

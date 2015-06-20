@@ -2,38 +2,15 @@
 <%= javascript_include_tag "carts" %>
 
 
-<%= form_tag cart_path, :id => 'card-details', :class=>'push-shit' do %>
-    <div class="payment-errors"></div>
 
+<div class="form step-1">
+<%= render 'address_form' unless logged_in? %>
+</div>
 
-    <div>
-      <label for="card-number">Card Number:</label>
-      <%= text_field_tag :card_number, nil, name: nil, :placeholder => "Card Number", :data => {:stripe => 'number' }%>
-    </div>
+<div class="form step-2"  style="display: none">
+  <%= render 'pass_form' unless logged_in? %>
+</div>
 
-    <div>
-      <label for="card-exp-month">Card Expiry Month:</label>
-      <%= text_field_tag :card_exp_month, nil, name: nil, :placeholder => "Card Exp Month", :data => {:stripe => 'exp_month' }%>
-    </div>
-
-    <div>
-      <label for="card-exp-year">Card Expiry Year:</label>
-      <%= text_field_tag :card_exp_year, nil, name: nil, :placeholder => "CardExp Year", :data => {:stripe => 'exp_year' }%>
-    </div>
-
-    <div>
-      <label for="card-cvc">CVC:</label>
-      <%= text_field_tag :card_cvc, nil, name: nil, :placeholder => "Cvc", :data => {:stripe => 'cvc' }%>
-    </div>
-
-    <div>
-      <label for="payment-total">Total:</label>
-      <label><%= @cart.total_cost %></label>
-      <%= hidden_field_tag :total_cost, @cart.total_cost %>
-    </div>
-
-    <div>
-      <input type="submit" value="Pay Now"/>
-    </div>
-<% end %>
-
+<div class="form step-3" style="display: none">
+<%= render 'payment_form' %>
+</div>

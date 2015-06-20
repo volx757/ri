@@ -28,6 +28,10 @@
     <div class="nav-item purchase"> <%= link_to 'PURCHASE', '/products', :class => 'nav-category' %></div>
     <div class="nav-item contact"> <%= link_to 'CONTACT', '/contact', :class => 'nav-category' %></div>
 
-    <%= link_to 'Login', '/log_in', :class => 'button' %>
+    <% if logged_in? %>
+        <%= link_to 'Logout', '/log_out', :class => 'button' %>
+    <% else %>
+        <%= link_to 'Login', '/log_in', :class => 'button' %>
+    <% end %>
   </div>
 </div>

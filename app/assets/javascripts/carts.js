@@ -15,6 +15,10 @@ $(document).ready(function () {
 
     });
 
+    $('#guest-checkout').on('click', function(){
+        $('#form-1').fadeOut(200)
+        $('#form-2').fadeIn(200)
+    })
 
 })
 

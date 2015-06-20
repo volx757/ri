@@ -6,6 +6,7 @@ class CartsController < ApplicationController
   end
 
   def checkout
+    @user = current_user unless logged_in?
     @cart = Cart.find_current(current_user.id)
   end
 
