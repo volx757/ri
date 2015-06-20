@@ -15,6 +15,10 @@ $(document).ready(function () {
 
     });
 
+    $('#guest-checkout').on('click', function(){
+        $('#form-1').fadeOut(200)
+        $('#form-2').fadeIn(200)
+    })
 
     $('form.edit_guest').submit(function() {
         var valuesToSubmit = $(this).serialize();
@@ -29,28 +33,12 @@ $(document).ready(function () {
         }).error(function(){
             alert(valuesToSubmit)
         });
-        advanceToFormTwo()
         return false; // prevents normal behaviour
     });
 
-
-
 })
 
-function advanceToFormTwo(){
-    $('#form-step-1').fadeOut(200)
-    $('#form-step-2').fadeIn(200)
-}
-
 function validateFormOne(){
-
-}
-
-function validateFormTwo(){
-
-}
-
-function validateFormThree(){
 
 }
 
@@ -95,3 +83,4 @@ function stripeResponseHandler(status, response) {
         form.get(0).submit();
     }
 }
+;

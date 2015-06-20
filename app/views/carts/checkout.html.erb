@@ -1,16 +1,15 @@
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<%= javascript_include_tag "carts" %>
+<!--<script type="text/javascript" src="https://js.stripe.com/v2/"></script>-->
 
 
 
-<div class="form step-1">
-<%= render 'address_form' unless logged_in? %>
+<div id="form-step-1">
+  <%= render 'address_form' unless logged_in? %>
 </div>
 
-<div class="form step-2"  style="display: none">
+<div id="form-step-2" style="display: none">
   <%= render 'pass_form' unless logged_in? %>
 </div>
 
-<div class="form step-3" style="display: none">
-<%= render 'payment_form' %>
+<div id="form-step-3" style="display: none">
+  <%= render 'payment_form' %>
 </div>

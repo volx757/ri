@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post 'products' => 'products#add_to_cart'
   get 'night' => 'main#night', :as => 'night'
 
-  patch 'users' => 'users#create'
+  patch 'users' => 'users#update_guest'
 
   resources :users
   resources :sessions

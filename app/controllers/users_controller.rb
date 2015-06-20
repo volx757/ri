@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
         redirect_to '/checkout', :notice => "Signed up!"
       else
-        render "new"
+        redirect_to '/checkout', :notice => 'errors'
       end
     else
       @user = User.new(params[:user])
@@ -27,9 +27,15 @@ class UsersController < ApplicationController
         render "new"
       end
     end
+  end
 
+  def update_guest
+    guest = Guest.find(current_user.id)
+    guest_params = params[:guest]
+    guest.update_attributes(:email => guest_params[:email], :address => guest_params[:address], :address_two => guest_params[:address_two],
+                            :city => guest_params[:city], :state => guest_params[:state], :zip => guest_params[:zip])
 
-
+    render :nothing => true
   end
 
 end

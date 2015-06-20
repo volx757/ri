@@ -1,7 +1,7 @@
 class Cart < ActiveRecord::Base
 
   belongs_to :user
-  has_many :line_items
+  has_many :line_items, dependent: :destroy
   has_one :payment
 
   scope :active, where(:active => true)
