@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
 
   has_many :carts
-  has_many :payments
+  has_many :invoices
 
   scope :guests, -> { where(type: 'Guest') }
   #delegate :guests

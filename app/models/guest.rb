@@ -1,7 +1,7 @@
 class Guest < User
+
   attr_accessible :type
-
-
+  
   def cart
     carts.last
   end

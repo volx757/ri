@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
 
+  has_many :line_items
+
   PACK_PRODUCT_ID = 6
 
   attr_accessible :name, :description, :price, :image, :type

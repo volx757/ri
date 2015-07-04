@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704030109) do
+ActiveRecord::Schema.define(version: 20150704034235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,28 +58,6 @@ ActiveRecord::Schema.define(version: 20150704030109) do
     t.boolean  "active"
   end
 
-  create_table "cleanses", force: true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.decimal  "price"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "product_id"
-  end
-
-  create_table "credit_cards", force: true do |t|
-    t.string   "name"
-    t.string   "number"
-    t.string   "date"
-    t.string   "ccv"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "guests", force: true do |t|
     t.string   "email"
     t.string   "address"
@@ -103,19 +81,6 @@ ActiveRecord::Schema.define(version: 20150704030109) do
     t.text     "products"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "juices", force: true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.decimal  "price"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "product_id"
   end
 
   create_table "line_items", force: true do |t|
@@ -155,18 +120,6 @@ ActiveRecord::Schema.define(version: 20150704030109) do
 
   create_table "packs", force: true do |t|
     t.integer  "quantity"
-    t.integer  "juice_one_id"
-    t.integer  "juice_two_id"
-    t.integer  "juice_three_id"
-    t.integer  "juice_four_id"
-    t.integer  "juice_five_id"
-    t.integer  "juice_six_id"
-    t.integer  "juice_seven_id"
-    t.integer  "juice_eight_id"
-    t.integer  "juice_nine_id"
-    t.integer  "juice_ten_id"
-    t.integer  "juice_eleven_id"
-    t.integer  "juice_twelve_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "customer_id"
@@ -178,6 +131,10 @@ ActiveRecord::Schema.define(version: 20150704030109) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "number"
+    t.string   "date"
+    t.string   "ccv"
   end
 
   create_table "payments", force: true do |t|
@@ -199,6 +156,7 @@ ActiveRecord::Schema.define(version: 20150704030109) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "pack_id"
   end
 
   create_table "users", force: true do |t|

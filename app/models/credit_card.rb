@@ -1,5 +1,5 @@
 class CreditCard < PaymentMethod
 
-  attr_accessible :type
+  attr_accessible :name, :number, :date, :ccv
 
 end
