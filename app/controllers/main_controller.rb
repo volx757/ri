@@ -5,11 +5,11 @@ class MainController < ApplicationController
   end
 
   def contact
-    @message = Message.new(contact_params).save
+    @message = Message.new(contact_params).save!
   end
 
   def inquiry
-    @inquiry = Inquiry.new(inquiry_params).save
+    @inquiry = Inquiry.new(inquiry_params).save!
     render :nothing => true
   end
 
