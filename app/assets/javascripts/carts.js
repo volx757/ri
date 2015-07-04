@@ -17,18 +17,24 @@ $(document).ready(function () {
 
 
     $('form.edit_guest').submit(function() {
+        if (!validateFormOne())
+            return false
         var valuesToSubmit = $(this).serialize();
+
         $.ajax({
             type: "POST",
             url: $(this).attr('action'), //sumbits it to the given url of the form
             data: valuesToSubmit,
             dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
         }).success(function(json){
+
             alert(json)
-            console.log("success", json);
         }).error(function(){
-            alert(valuesToSubmit)
-        });
+
+            alert('s')
+
+
+        })
         advanceToFormTwo()
         return false; // prevents normal behaviour
     });
@@ -44,14 +50,21 @@ function advanceToFormTwo(){
 
 function validateFormOne(){
 
+    //if invalid return false
+
+    return true
 }
 
 function validateFormTwo(){
+    //if invalid return false
 
+    return true
 }
 
 function validateFormThree(){
+    //if invalid return false
 
+    return true
 }
 
 
@@ -69,7 +82,7 @@ function processPackOrder() {
         url: '/products',
         data: 'p=' + juice_ids,
         error: function() {
-            alert('error')
+            alert('errsdsor')
         },
         success: function(data) {
            alert(data);

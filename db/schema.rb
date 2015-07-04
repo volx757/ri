@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150620203304) do
+ActiveRecord::Schema.define(version: 20150704030109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,15 @@ ActiveRecord::Schema.define(version: 20150620203304) do
     t.integer  "product_id"
   end
 
+  create_table "credit_cards", force: true do |t|
+    t.string   "name"
+    t.string   "number"
+    t.string   "date"
+    t.string   "ccv"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "guests", force: true do |t|
     t.string   "email"
     t.string   "address"
@@ -85,6 +94,15 @@ ActiveRecord::Schema.define(version: 20150620203304) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "answered"
+  end
+
+  create_table "invoices", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "cart_id"
+    t.string   "date"
+    t.text     "products"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "juices", force: true do |t|
@@ -155,6 +173,13 @@ ActiveRecord::Schema.define(version: 20150620203304) do
     t.integer  "cart_id"
   end
 
+  create_table "payment_methods", force: true do |t|
+    t.integer  "user_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "payments", force: true do |t|
     t.integer  "customer_id"
     t.integer  "cart_id"
@@ -188,9 +213,6 @@ ActiveRecord::Schema.define(version: 20150620203304) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.string   "card_number"
-    t.string   "card_expiry"
-    t.string   "card_ccv"
     t.string   "type"
   end
 

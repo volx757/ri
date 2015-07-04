@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
 
-  attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state, :zip, :card_number,
-                  :card_expiry, :card_ccv
+  attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state
 
   attr_accessor :password
 
   before_save :encrypt_password
+
+  has_secure_password
 
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
