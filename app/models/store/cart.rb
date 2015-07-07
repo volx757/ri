@@ -12,6 +12,7 @@ class Cart < ActiveRecord::Base
 
 
   def deactivate
+    create_invoice
     update_attribute :active, false
   end
 
@@ -35,10 +36,16 @@ class Cart < ActiveRecord::Base
 
 
 
+
   def self.find_guest(guest_id)
     where(:guest_id => guest_id).first
   end
 
+  private
+
+  def create_invoice
+    Invoice.create!(:cart_id => id, :user_id => user.id)
+  end
 
   def create_line_item(product_id)
     price = Product.find(product_id).price

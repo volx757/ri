@@ -8,40 +8,38 @@ Rails.application.routes.draw do
   get 'home' => 'main#index'
   get 'products' => 'products#index'
 
-  # session management
+  # sessions
   get 'log_in' => 'sessions#new', :as => 'log_in'
   post 'create' => 'sessions#create'
   get 'log_out' => 'sessions#destroy', :as => 'log_out'
   post 'destroy' => 'sessions#destroy'
 
-
-
-
-
-
-
-  get "sign_up" => "users#new", :as => "sign_up"
-  match "contact" => "main#contact", :as => "contact", :via => [:get, :post]
-
+  # carts
+  get 'cart', to: 'carts#index', as: 'cart'
+  get 'checkout', to: 'carts#checkout', as: 'checkout'
+  get 'receipt' => 'carts#receipt'
+  post 'cart', to: 'carts#create_payment', as: 'payment'
   post 'products' => 'products#add_to_cart'
 
 
+
+  get 'sign_up' => 'users#new', :as => 'sign_up'
+  match 'contact' => 'main#contact', :as => 'contact', :via => [:get, :post]
+
+  post 'inquiry', to: 'main#inquiry', as: 'inquiry'
+  post 'contact', to: 'main#contact', as: 'contact_post'
+
   get 'night' => 'main#night', :as => 'night'
 
-  patch 'users' => 'users#update_guest'
+  #patch 'users' => 'users#update_guest'
 
   resources :users
   #resources :sessions
-  resources :products do
-    member do
-      post :add_to_cart
-    end
-  end
+ # resources :products do
+ #   member do
+ #     post :add_to_cart
+ #   end
+ # end
 
-  get 'cart', to: 'carts#index', as: 'cart'
-  get 'checkout', to: 'carts#checkout', as: 'checkout'
-  post 'cart', to: 'carts#create_payment', as: 'payment'
-  post 'inquiry', to: 'main#inquiry', as: 'inquiry'
-  post 'contact', to: 'main#contact', as: 'contact_post'
 
 end

@@ -1,4 +1,4 @@
-<% if false #current_user.is_guest? %>
+<% unless current_user %>
     <div class="guest-sign-up push-shit">
       <p>You can continue checkout as a guest, but we recommend you take a moment to sign up so you won't have to enter
         the details every time.</p>
