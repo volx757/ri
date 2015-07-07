@@ -23,9 +23,9 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: $(this).attr('action'), //sumbits it to the given url of the form
+            url: $(this).attr('action'),
             data: valuesToSubmit,
-            dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+            dataType: "JSON"
         }).success(function(json){
 
             alert(json)
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         })
         advanceToFormTwo()
-        return false; // prevents normal behaviour
+        return false;
     });
 
 
@@ -88,8 +88,6 @@ function processPackOrder() {
            alert(data);
         }
     });
-
-
 
 
 }

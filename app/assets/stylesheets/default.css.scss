@@ -191,10 +191,11 @@ hr {
   width: 100%;
   z-index: 3;
   font-family: 'Dosis';
+  display: none;
   .content {
     text-align: center;
     @media screen and (max-width: $tablet) {
-      text-align: none;
+     // text-align: none;
     }
     .nav-item {
       display: inline-block;

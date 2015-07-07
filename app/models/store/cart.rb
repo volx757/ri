@@ -6,8 +6,9 @@ class Cart < ActiveRecord::Base
 
   scope :active, where(:active => true)
 
+  attr_accessible :user_id, :guest_id, :active, :purchased_at, :total_cost
 
-  attr_accessible :user_id, :guest_id, :active, :type
+  validates_presence_of :user_id, :active
 
 
   def deactivate
@@ -32,13 +33,7 @@ class Cart < ActiveRecord::Base
     Product.find(id)
   end
 
-  def self.create_and_add_product(product_id, user_id)
-    Cart.create(:user_id => user_id, :active => true).add_product(product_id)
-  end
 
-  def self.find_current(user_id)
-    where(:user_id => user_id, :active => true).first
-  end
 
   def self.find_guest(guest_id)
     where(:guest_id => guest_id).first
