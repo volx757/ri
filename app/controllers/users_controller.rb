@@ -14,4 +14,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_guest
+    Guest.find(params[:guest][:id]).write(params[:guest])
+    render :nothing => true
+  end
+
 end

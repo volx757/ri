@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def is_guest?
+    session_id.present?
+  end
+
   def active_cart
     carts.where(:active => true).last
   end

@@ -1,4 +1,4 @@
-<% unless current_user %>
+<% if guest? %>
     <div class="guest-sign-up push-shit">
       <p>You can continue checkout as a guest, but we recommend you take a moment to sign up so you won't have to enter
         the details every time.</p>
@@ -19,6 +19,7 @@
           </ul>
         </div>
     <% end %>
+    <%= f.hidden_field :id, :value => @user.id %>
     <p>
       <%= f.label :email %><br />
       <%= f.text_field :email %>

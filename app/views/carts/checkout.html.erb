@@ -1,13 +1,13 @@
 <!--<script type="text/javascript" src="https://js.stripe.com/v2/"></script>-->
 
 <div id="form-step-1">
-  <%= render 'address_form' unless logged_in? %>
+  <%= render 'address_form' if guest? %>
 </div>
 
-<div id="form-step-2" <% unless logged_in? %>style="display: none"<% end %>>
-  <%= render 'pass_form' unless logged_in? %>
+<div id="form-step-2" <% if guest? %>style="display: none"<% end %>>
+  <%= render 'pass_form' if guest? %>
 </div>
 
-<div id="form-step-3" <% unless logged_in? %>style="display: none"<% end %>>
+<div id="form-step-3" <% if guest? %>style="display: none"<% end %>>
   <%= render 'payment_form' %>
 </div>

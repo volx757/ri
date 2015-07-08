@@ -8,7 +8,6 @@ class Invoice < ActiveRecord::Base
   attr_accessible :user_id, :cart_id, :products
 
 
-
   def write_products_text
     update_attribute :products, products_text
   end
@@ -17,9 +16,10 @@ class Invoice < ActiveRecord::Base
 
   def products_text
     text = ''
-    text += total_cost.to_s + '\n'
+    text += cart.total_cost.to_s + '\n'
     cart.line_items.each do |l|
       text += l.product.name + ' ' + l.price.to_s
+      text += '\n'
     end
     text
   end

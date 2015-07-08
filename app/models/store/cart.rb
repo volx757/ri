@@ -3,7 +3,6 @@ class Cart < ActiveRecord::Base
   belongs_to :user
   has_many :line_items, dependent: :destroy
 
-
   scope :active, where(:active => true)
 
   attr_accessible :user_id, :guest_id, :active, :purchased_at, :total_cost
@@ -35,16 +34,10 @@ class Cart < ActiveRecord::Base
   end
 
 
-
-
-  def self.find_guest(guest_id)
-    where(:guest_id => guest_id).first
-  end
-
   private
 
   def create_invoice
-    Invoice.create!(:cart_id => id, :user_id => user.id)
+    Invoice.create!(:cart_id => id, :user_id => user.id, :date => DateTime.now.strftime("%Y/%m/%d %H:%M:%S"))
   end
 
   def create_line_item(product_id)

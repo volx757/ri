@@ -22,16 +22,16 @@ $(document).ready(function () {
         var valuesToSubmit = $(this).serialize();
 
         $.ajax({
-            type: "POST",
+            type: "PATCH",
             url: $(this).attr('action'),
             data: valuesToSubmit,
-            dataType: "JSON"
+            dataType: "text"
         }).success(function(json){
 
-            alert(json)
-        }).error(function(){
+           // alert(json)
+        }).error(function(error, string){
 
-            alert('s')
+            alert(string)
 
 
         })
@@ -39,13 +39,20 @@ $(document).ready(function () {
         return false;
     });
 
-
+    $('#guest-checkout').on('click', advanceToFormThree)
 
 })
+
+
 
 function advanceToFormTwo(){
     $('#form-step-1').fadeOut(200)
     $('#form-step-2').fadeIn(200)
+}
+
+function advanceToFormThree(){
+    $('#form-step-2').fadeOut(200)
+    $('#form-step-3').fadeIn(200)
 }
 
 function validateFormOne(){

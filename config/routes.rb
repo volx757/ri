@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   post 'products' => 'products#add_to_cart'
 
 
+  patch 'update_guest', to: 'users#update_guest'
 
   get 'sign_up' => 'users#new', :as => 'sign_up'
   match 'contact' => 'main#contact', :as => 'contact', :via => [:get, :post]
