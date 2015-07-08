@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
 
   def index
-
   end
 
   def add_to_cart
@@ -11,13 +10,13 @@ class ProductsController < ApplicationController
     create_cart unless current_user.active_cart
 
     product_id = Product.process(params[:p])
-
     cart = current_user.active_cart
     cart.add_product(product_id)
 
     redirect_to '/products'
 
   end
+
 
   private
 
@@ -32,4 +31,3 @@ class ProductsController < ApplicationController
   end
 
 end
-

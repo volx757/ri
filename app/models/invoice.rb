@@ -5,12 +5,13 @@ class Invoice < ActiveRecord::Base
   belongs_to :user
   belongs_to :cart
 
-  attr_accessible :user_id, :cart_id, :products
+  attr_accessible :user_id, :cart_id, :products, :address_one, :address_two, :city, :state, :zip
 
 
   def write_products_text
     update_attribute :products, products_text
   end
+
 
   private
 
