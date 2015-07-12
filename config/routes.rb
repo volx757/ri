@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   get 'products' => 'products#index'
 
   # sessions
-  get 'log_in' => 'sessions#new', :as => 'log_in'
-  post 'create' => 'sessions#create'
-  get 'log_out' => 'sessions#destroy', :as => 'log_out'
-  post 'destroy' => 'sessions#destroy'
+ # get 'log_in' => 'sessions#new', :as => 'log_in'
+  post 'login' => 'sessions#create'
+  get 'login' => 'sessions#gon'
+  post 'log_out' => 'sessions#destroy', :as => 'log_out'
+  #post 'destroy' => 'sessions#destroy'
 
   # carts
   get 'cart', to: 'carts#index', as: 'cart'

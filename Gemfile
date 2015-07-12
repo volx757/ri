@@ -28,6 +28,7 @@ gem 'mail'
 gem 'sendgrid'
 gem 'premailer-rails'
 gem 'nokogiri'
+gem 'gon'
 
 group :production do
   gem 'rails_12factor'

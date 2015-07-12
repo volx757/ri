@@ -24,8 +24,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def is_guest?
-    session_id.present?
+  def is_guest?(session_id)
+    !session_id.present?
   end
 
   def active_cart

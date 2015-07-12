@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  #force_ssl
   before_filter :instagram
 
   protect_from_forgery with: :exception
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def guest?
-    current_user.is_guest?
+    current_user.is_guest?(session[:user_id])
   end
 
 
