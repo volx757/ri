@@ -114,8 +114,8 @@ body {
   }
   .container.welcome {
     height: 100%;
-   // -webkit-filter: grayscale(90%);
-   // filter: grayscale(90%);
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
     @media screen and (max-width: 1440px) {
       background-size: 1440px 100%;
       background-position: 50% 0;
@@ -190,7 +190,7 @@ body {
       &:hover {
         transition-duration: 0.2s;
         transition-timing-function: ease-in;
-        box-shadow: 0px 0px 3em #FFD700 inset;
+        box-shadow: 0px 0px 3em silver inset;
       }
     }
   }
