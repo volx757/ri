@@ -243,7 +243,10 @@ body {
           color: #FFD700
         }
         &:hover ~ #span-sur {
-          display: inline-block;
+          @media screen and (max-width: $tablet) {
+            display: inline-block;
+          }
+
         }
       }
       span {
