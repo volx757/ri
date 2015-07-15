@@ -143,7 +143,7 @@ body {
 
     h3 {
       position: relative;
-      color: white;
+      color: silver;
       font-weight: 100;
       letter-spacing: 2px;
       font-size: 14px;
@@ -172,7 +172,11 @@ body {
         color: #FFD700;
       }
     }
-
+h2{
+  color: silver;
+  font-size: 18px;
+  font-weight: 800;
+}
     img {
       position: relative;
       width: 300px;
@@ -200,7 +204,7 @@ body {
   position: absolute;
   pointer-events: none;
   background: black;
-  opacity: 0.6;
+  opacity: 0.1;
   top:0;
   z-index: 100;
 }
