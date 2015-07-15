@@ -45,14 +45,14 @@
 
 <div id="site-wrapper">
 
-<% unless request.path == '/night' || '/' %>
+<% unless request.path == '/night'%>
     <%= render 'layouts/header' %>
 <% end %>
 
 <%= yield %>
 
 
-<% unless request.path == '/night' || '/' %>
+<% unless request.path == '/night' %>
     <%= render 'layouts/footer' %>
 <% end %>
 

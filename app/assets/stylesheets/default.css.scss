@@ -504,7 +504,7 @@ hr {
   opacity: 0.9;
   background: #F5F5F5;
   top: 10px;
-  height:200px;
+  height:60px;
   p {
     display: inline-block;
   }
@@ -516,6 +516,10 @@ hr {
     right: 100px;
     position: relative;
     padding: 5px 20px;
+  }
+  #logthefuckin{
+    right: 0;
+    width: 112px;
   }
   form {
     display: inline-block;
@@ -531,7 +535,4 @@ hr {
   }
 }
 
-#logthefuckin{
-  top: 0 !important;
-  width: 100px;
-}
+
