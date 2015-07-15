@@ -242,17 +242,30 @@ body {
         &:hover {
           color: #FFD700
         }
-        &:hover ~ span {
+        &:hover ~ #span-sur {
           display: inline-block;
         }
       }
       span {
-        display: none;
-        position: relative;
-        top: -40px;
-        left: 70px;
+        &:hover {
+          color: silver;
+          display: block;
+        }
       }
     }
   }
 
+}
+
+#span-sur {
+  display: none;
+  position: relative;
+  top: -60px;
+  left: 60px;
+  width: 115px;
+  height: 50px;
+  line-height: 3em;
+  &:hover {
+    display: block;
+  }
 }
