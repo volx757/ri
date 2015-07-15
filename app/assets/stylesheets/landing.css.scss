@@ -185,7 +185,7 @@ body {
       transition-timing-function: ease-in;
       @media screen and (max-width: $phoneLarge) {
         width: 250px;
-        top: 25px;
+        //top: 25px;
       }
       &:hover {
         transition-duration: 0.2s;
@@ -213,12 +213,17 @@ body {
   width: 60px;
   height: 400px;
   border-radius: 5px;
-  height: 215px;
+  height: 315px;
   background: white none repeat scroll 0% 0%;
   z-index: 200;
   opacity: 0.2;
   top: 100px;
   left: 20px;
+  @media screen and (max-width: $phoneLarge) {
+    top: 450px;
+    left: 80px;
+  }
+
   &:hover {
     opacity: 0.7;
   }
@@ -237,6 +242,15 @@ body {
         &:hover {
           color: #FFD700
         }
+        &:hover ~ span {
+          display: inline-block;
+        }
+      }
+      span {
+        display: none;
+        position: relative;
+        top: -40px;
+        left: 70px;
       }
     }
   }
