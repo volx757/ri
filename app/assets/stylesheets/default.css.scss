@@ -3,9 +3,11 @@ $phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
 
-.push-shit{position: relative;
+.push-shit {
+  position: relative;
   top: 100px;
-  margin-bottom: 100px;}
+  margin-bottom: 100px;
+}
 
 @font-face {
   font-family: 'Dosis';
@@ -109,7 +111,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-transform: none;
   line-height: 21px;
   -webkit-font-smoothing: antialiased;
@@ -179,7 +181,7 @@ hr {
   .content {
     text-align: center;
     @media screen and (max-width: $tablet) {
-     // text-align: none;
+      // text-align: none;
     }
     .nav-item {
       display: inline-block;
@@ -493,13 +495,43 @@ hr {
   }
 }
 
-#login-container{
+#login-container {
   position: relative;
-  top: -215px;
+  display: none;
   width: 100%;
   text-align: center;
   overflow-x: hidden;
-  margin-bottom: 100px;
-
+  opacity: 0.9;
+  background: #F5F5F5;
+  top: 10px;
+  height:200px;
+  p {
+    display: inline-block;
+  }
+  .button {
+    display: inline-block;
+    width: 46px;
+    float: right;
+    top: 10px;
+    right: 100px;
+    position: relative;
+    padding: 5px 20px;
+  }
+  form {
+    display: inline-block;
+  }
+  label{
+    margin-right:2px;
+  }
+  input {
+    margin-right: 20px;
+  }
+  .login{
+    width: 100px;
+  }
 }
 
+#logthefuckin{
+  top: 0 !important;
+  width: 100px;
+}

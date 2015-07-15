@@ -3,45 +3,34 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root to: 'main#index'
+  root to: 'main#landing'
+  #root to: 'main#index'
 
-  get 'home' => 'main#index'
-  get 'products' => 'products#index'
-
-  # sessions
- # get 'log_in' => 'sessions#new', :as => 'log_in'
-  post 'login' => 'sessions#create'
-  get 'login' => 'sessions#gon'
-  post 'log_out' => 'sessions#destroy', :as => 'log_out'
-  #post 'destroy' => 'sessions#destroy'
-
-  # carts
-  get 'cart', to: 'carts#index', as: 'cart'
-  get 'checkout', to: 'carts#checkout', as: 'checkout'
-  get 'receipt' => 'carts#receipt'
-  post 'cart', to: 'carts#create_payment', as: 'payment'
-  post 'products' => 'products#add_to_cart'
-
-
-  patch 'update_guest', to: 'users#update_guest'
-
-  get 'sign_up' => 'users#new', :as => 'sign_up'
-  match 'contact' => 'main#contact', :as => 'contact', :via => [:get, :post]
-
-  post 'inquiry', to: 'main#inquiry', as: 'inquiry'
-  post 'contact', to: 'main#contact', as: 'contact_post'
-
-  get 'night' => 'main#night', :as => 'night'
-
-  #patch 'users' => 'users#update_guest'
-
-  resources :users
-  #resources :sessions
- # resources :products do
- #   member do
- #     post :add_to_cart
- #   end
- # end
-
+  #get 'home' => 'main#index'
+  #get 'products' => 'products#index'
+#
+  ## sessions
+  #post 'login' => 'sessions#create'
+  #get 'login' => 'sessions#gon'
+  #post 'log_out' => 'sessions#destroy', :as => 'log_out'
+#
+  ## carts
+  #get 'cart', to: 'carts#index', as: 'cart'
+  #get 'checkout', to: 'carts#checkout', as: 'checkout'
+  #get 'receipt' => 'carts#receipt'
+  #post 'cart', to: 'carts#create_payment', as: 'payment'
+  #post 'products' => 'products#add_to_cart'
+#
+  #patch 'update_guest', to: 'users#update_guest'
+#
+  #get 'sign_up' => 'users#new', :as => 'sign_up'
+  #match 'contact' => 'main#contact', :as => 'contact', :via => [:get, :post]
+#
+  #post 'inquiry', to: 'main#inquiry', as: 'inquiry'
+  #post 'contact', to: 'main#contact', as: 'contact_post'
+#
+  #get 'night' => 'main#night', :as => 'night'
+#
+  #resources :users
 
 end

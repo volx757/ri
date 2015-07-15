@@ -1,0 +1,56 @@
+<%= stylesheet_link_tag 'landing' %>
+
+<div id="landing-container" class="transition-all">
+
+  <div id="social-container" class="transition-all">
+    <div class="icons">
+      <a href="http://facebook.com/rijuicefam" target="_blank"><i class="fa fa-facebook-official"></i></a>
+      <a href="http://instagram.com/rijuicefam" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="http://rijuice.tumblr.com" target="_blank"><i class="fa fa-tumblr"></i></a>
+    </div>
+  </div>
+
+  <div class="container welcome">
+    <div class="wrapper">
+      <%= image_tag 'header_logo@2x.png' %>
+      <h1 style="font-size: 3em;">RIJUICE</h1>
+
+      <h3>Life begins from within.</h3>
+    </div>
+
+    <h2>Coming Soon</h2>
+  </div>
+
+  <div id="throwing-fucking-shade"></div>
+
+</div>
+
+<!--TODO: make js to kill footer and header-->
+
+<script>
+    var runner = 89,
+            opaqer = 0.6,
+            timer;
+
+    $('#landing-container').on('mousemove', function () {
+        clearInterval(timer);
+
+        timer = setTimeout(function () {
+
+            $('.welcome').css('filter', 'grayscale(' + 100 + '%)')
+            $('.welcome').css('-webkit-filter', 'grayscale(' + 100 + '%)')
+            $('#throwing-fucking-shade').css('opacity', '0.6')
+            runner = 89
+            opaqer = 0.6;
+        }, 500);
+
+        runner -= 7;
+        opaqer -= 0.05
+
+        $('.welcome').css('filter', 'grayscale(' + runner + '%)')
+        $('.welcome').css('-webkit-filter', 'grayscale(' + runner + '%)')
+        $('#throwing-fucking-shade').css('opacity', opaqer)
+    })
+
+
+</script>

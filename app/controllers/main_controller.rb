@@ -1,5 +1,8 @@
 class MainController < ApplicationController
 
+  def landing
+  end
+
   def index
     @page_title = 'index'
   end

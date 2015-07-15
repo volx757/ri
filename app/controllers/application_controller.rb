@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  #force_ssl
+
   before_filter :instagram
 
   protect_from_forgery with: :exception

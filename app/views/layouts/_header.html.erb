@@ -23,9 +23,10 @@
     <div class="nav-item contact"> <%= link_to 'CONTACT', '/contact', :class => 'nav-category' %></div>
 
     <% if logged_in? %>
-        <div class="button" id="logout-button">Logout</div>
+        <div class="button session" id="logout-button">Logout</div>
     <% else %>
         <div class="button" id="login-button">Login</div>
     <% end %>
   </div>
+  <%= render 'sessions/login' %>
 </div>

@@ -19,7 +19,7 @@ var indexProduct = [
 $(document).ready(function () {
 
     if (window.pageYOffset >= 30) {
-        $('.fa-angle-double-down').css('display', 'none')
+        $('.fa-angle-double-down').hide()
     }
     $(document).scroll(function () {
         fadeOutDownArrow()
@@ -187,13 +187,7 @@ function initLoginForm() {
     bindLoginButton()
 
     $('#hide-login').on('click', function () {
-        $('#login-container').animate({
-            top: "-=270"
-        }, 200, function () {
-            $('#home-container').animate({
-                top: "-=250"
-            }, 100);
-        });
+        $('#login-container').fadeOut(200)
         bindLoginButton()
     })
 
@@ -201,20 +195,14 @@ function initLoginForm() {
         $.post( "log_out", function( data ) {
 
         });
-        alert( gon.logged_in)
+        alert( gon.logged_in )
     })
 
 }
 
-function bindLoginButton(){
+function bindLoginButton() {
     $('#login-button').on('click', function () {
-        $('#home-container').animate({
-            top: "+=250"
-        }, 200, function () {
-            $('#login-container').animate({
-                top: "+=270"
-            }, 100);
-        });
+        $('#login-container').fadeIn(300)
         $('#login-button').off('click')
     })
 }
