@@ -183,14 +183,14 @@ body {
       border-radius: 160px;
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
+      box-shadow: 0px 0px 3em silver inset;
       @media screen and (max-width: $phoneLarge) {
         width: 250px;
-        //top: 25px;
       }
       &:hover {
-        transition-duration: 0.2s;
-        transition-timing-function: ease-in;
-        box-shadow: 0px 0px 3em silver inset;
+       // transition-duration: 0.2s;
+       // transition-timing-function: ease-in;
+       // box-shadow: 0px 0px 3em silver inset;
       }
     }
   }
