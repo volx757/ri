@@ -206,6 +206,9 @@ body {
   opacity: 0.1;
   top: 0;
   z-index: 100;
+  @media screen and (max-width: $phoneLarge) {
+    height:830px;
+  }
 }
 
 #social-container {
