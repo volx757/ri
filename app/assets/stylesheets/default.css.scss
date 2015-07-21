@@ -341,7 +341,7 @@ hr {
       }
     }
     &.failed {
-      left: 70%;
+      left: 60%;
       top: 50px;
     }
   }
@@ -562,6 +562,14 @@ hr {
   }
   .login {
     width: 100px;
+  }
+  #hide-login{
+    width: 75px;
+    right: -72px;
+  }
+  #register-button{
+    right: 305px;
+    width: 130px;
   }
 }
 

@@ -11,8 +11,11 @@
         <%= password_field_tag :password %>
       </p>
 
-      <%= submit_tag 'Validate', :class => 'button', :id => 'logthefuckin', :onclick => 'clearFlashNotice()' %>
+      <%= submit_tag 'Log In', :class => 'button', :id => 'logthefuckin', :onclick => 'clearFlashNotice()' %>
   <% end %>
+
+  <a href="/sign_up"><div class="button" id="register-button">Not A Member?</div></a>
+
 
   <div class="button" id="hide-login">Hide</div>
 

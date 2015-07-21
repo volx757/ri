@@ -193,6 +193,19 @@ function initLoginForm() {
     })
 
     bindLogoutButton()
+
+    $('#logthefuckin').on('click', function(){
+        if ($('#email').val() < 1){
+            alert('You must enter your email')
+            return false
+        }
+
+        if ($('#password').val() < 1){
+            alert('You must enter your password')
+            return false
+        }
+
+    })
 }
 
 function bindLogoutButton(){
