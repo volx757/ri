@@ -1,45 +1,107 @@
-<%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-        <div class="error_messages">
-          <h2>Form is invalid</h2>
-          <ul>
-            <% for message in @user.errors.full_messages %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
+<div class="container signup">
+
+  <h1>Plug In</h1>
+
+  <div class="island-form one">
+
+    <h2>Build Your Login</h2>
+
+    <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+            <div class="error_messages">
+              <h2>Form is invalid</h2>
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <p>
+          <%= f.label :email %><br/>
+          <%= f.text_field :email, :width =>'50', :height => '50' %>
+        </p>
+
+        <p>
+          <%= f.label :password %><br/>
+          <%= f.password_field :password %>
+        </p>
+
+        <p>
+          <%= f.label :password_confirmation %><br/>
+          <%= f.password_field :password_confirmation %>
+        </p>
+
+        <p class="button"><%= f.submit 'SUBMIT' %></p>
     <% end %>
-    <p>
-      <%= f.label :email %><br />
-      <%= f.text_field :email %>
-    </p>
-    <p>
-      <%= f.label :address %><br />
-      <%= f.text_field :address %>
-    </p>
-    <p>
-      <%= f.label :address_two %><br />
-      <%= f.text_field :address_two %>
-    </p>
-    <p>
-      <%= f.label :city %><br />
-      <%= f.text_field :city %>
-    </p>
-    <p>
-      <%= f.label :state %><br />
-      <%= f.text_field :state %>
-    </p>
-    <p>
-      <%= f.label :zip %><br />
-      <%= f.text_field :zip %>
-    </p>
-    <p>
-      <%= f.label :password %><br />
-      <%= f.password_field :password %>
-    </p>
-    <p>
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation %>
-    </p>
-    <p class="button"><%= f.submit %></p>
-<% end %>
+  </div>
+
+  <div class="island-form two">
+
+    <h2>Where Should We Deliver To?</h2>
+
+    <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+            <div class="error_messages">
+              <h2>Form is invalid</h2>
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <p>
+          <%= f.label :email %><br/>
+          <%= f.text_field :email, :width =>'50', :height => '50' %>
+        </p>
+
+        <p>
+          <%= f.label :password %><br/>
+          <%= f.password_field :password %>
+        </p>
+
+        <p>
+          <%= f.label :password_confirmation %><br/>
+          <%= f.password_field :password_confirmation %>
+        </p>
+
+        <p class="button"><%= f.submit 'SUBMIT' %></p>
+    <% end %>
+  </div>
+
+  <div class="island-form three">
+
+    <h2>Credit Card, Bitch</h2>
+
+    <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+            <div class="error_messages">
+              <h2>Form is invalid</h2>
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <p>
+          <%= f.label :email %><br/>
+          <%= f.text_field :email, :width =>'50', :height => '50' %>
+        </p>
+
+        <p>
+          <%= f.label :password %><br/>
+          <%= f.password_field :password %>
+        </p>
+
+        <p>
+          <%= f.label :password_confirmation %><br/>
+          <%= f.password_field :password_confirmation %>
+        </p>
+
+        <p class="button"><%= f.submit 'SUBMIT' %></p>
+    <% end %>
+  </div>
+
+</div>

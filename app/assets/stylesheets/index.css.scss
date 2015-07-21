@@ -388,11 +388,11 @@ $phoneSmall: 375px;
   }
 
   .container.whats-inside {
-    background: image-url('index/home_flavors_bg.jpg') no-repeat;
-    background-size: 100% 850px;
+   // background: image-url('index/home_flavors_bg.jpg') no-repeat;
+   // background-size: 100% 850px;
     min-height: 1120px;
     font-family: Dosis;
-    background-color: #F7F7F7;
+   // background-color: #F7F7F7;
     @media screen and (max-width: 1440px) {
       background-size: 1440px 850px;
       background-position: 50% 0;

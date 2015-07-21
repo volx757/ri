@@ -1,22 +1,14 @@
 var indexProduct = [
     {
-        'title': 'Custom Pack',
-        'price': '$36',
-        'desc1': '6-pack or 12-pack',
-        'desc2': '10oz/16oz',
-        'desc3': 'mix & match flavors'
-    },
-    {'title': 'Cleanses', 'price': '$24', 'desc1': '3-30 juices', 'desc2': '16oz', 'desc3': '1/2 day to 5 day cleanse'},
-    {
-        'title': 'Low-Glycemic Cleanses',
-        'price': '$54',
-        'desc1': '3-30 juices',
-        'desc2': '16oz',
-        'desc3': '1/2 day to 5 day cleanse'
+        'title': 'Build A Pack',
+        'price': '$96',
+        'desc1': '12-pack or 24-pack',
+        'desc2': '10oz/16oz'
     }
 ];
 
-var hasScrolled = false;
+var hasScrolled = false,
+    loginShowing = false;
 
 $(document).ready(function () {
 
@@ -149,27 +141,15 @@ function limitTextInput() {
 
 function writeIndexProducts() {
 
-    var crawler = $('.index-product')
+        var title = $('.index-product').find('h4'),
+            price = $('.index-product').find('.price'),
+            desc1 = $('.index-product').find('.desc1'),
+            desc2 = $('.index-product').find('.desc2')
 
-    crawler.eq(0).addClass('0')
-    crawler.eq(1).addClass('1')
-    crawler.eq(2).addClass('2')
-
-    for (var i = 0; i < 3; i++) {
-        crawler = $('.index-product.' + i)
-
-        var title = crawler.find('h4'),
-            price = crawler.find('.price'),
-            desc1 = crawler.find('.desc1'),
-            desc2 = crawler.find('.desc2'),
-            desc3 = crawler.find('.desc3');
-
-        title.append(indexProduct[i]['title'])
-        price.append(indexProduct[i]['price'])
-        desc1.append(indexProduct[i]['desc1'])
-        desc2.append(indexProduct[i]['desc2'])
-        desc3.append(indexProduct[i]['desc3'])
-    }
+        title.append(indexProduct[0]['title'])
+        price.append(indexProduct[0]['price'])
+        desc1.append(indexProduct[0]['desc1'])
+        desc2.append(indexProduct[0]['desc2'])
 }
 
 function activateNightPage() {
@@ -188,21 +168,15 @@ function initLoginForm() {
 
     bindLoginButton()
 
-    $('#hide-login').on('click', function () {
-        $('#login-container').fadeOut(200)
-        bindLoginButton()
-        $('.login-notice').remove()
-    })
-
     bindLogoutButton()
 
-    $('#logthefuckin').on('click', function(){
-        if ($('#email').val() < 1){
+    $('#logthefuckin').on('click', function () {
+        if ($('#email').val() < 1) {
             alert('You must enter your email')
             return false
         }
 
-        if ($('#password').val() < 1){
+        if ($('#password').val() < 1) {
             alert('You must enter your password')
             return false
         }
@@ -210,9 +184,22 @@ function initLoginForm() {
     })
 }
 
-function bindLogoutButton(){
-    $('#logout-button').on('click', function(){
-        $.post( "log_out", function( data ) {
+function bindLoginButton() {
+    $('#login-button').on('click', function () {
+        if (loginShowing) {
+            $('#login-container').fadeOut(200)
+            $('.login-notice').remove()
+            loginShowing = false
+        } else if (!loginShowing) {
+            $('#login-container').fadeIn(300)
+            loginShowing = true
+        }
+    })
+}
+
+function bindLogoutButton() {
+    $('#logout-button').on('click', function () {
+        $.post("log_out", function (data) {
             $('#logout-button').fadeOut(200).remove()
 
             $('#header-float .content').append(' <div class="button" id="login-button">Login</div>')
@@ -221,18 +208,12 @@ function bindLogoutButton(){
     })
 }
 
-function bindLoginButton() {
-    $('#login-button').on('click', function () {
-        $('#login-container').fadeIn(300)
-        $('#login-button').off('click')
-    })
-}
 
 function landingAnimation() {
-    $(window).scroll(function(){
-      //  if(hasScrolled){
-            $('.welcome h3').css('animation', '1.4s ease-in 0s normal forwards 1 running fadeIn')
-            hasScrolled = true
-      //  }
+    $(window).scroll(function () {
+        //  if(hasScrolled){
+        $('.welcome h3').css('animation', '1.4s ease-in 0s normal forwards 1 running fadeIn')
+        hasScrolled = true
+        //  }
     })
 }

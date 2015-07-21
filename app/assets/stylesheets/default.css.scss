@@ -178,6 +178,7 @@ hr {
   width: 100%;
   z-index: 3;
   font-family: 'Dosis';
+  top: 0px;
   .content {
     text-align: center;
     .nav-item {
@@ -296,7 +297,7 @@ hr {
     }
   }
   ul li {
-   // width: 105px;
+    // width: 105px;
     text-align: left;
     line-height: 30px;
     display: inline-block;
@@ -323,7 +324,7 @@ hr {
     &.success {
       display: none;
       width: 100%;
-      font-size: 2em;
+      font-size: 1.4em;
       font-weight: 800;
       text-transform: uppercase;
       top: 50px;
@@ -334,7 +335,6 @@ hr {
       opacity: 0.75;
       &:hover {
         opacity: 0.97;
-        box-shadow: 4px 4px 0.6em gold inset;
         transition-duration: 0.2s;
         transition-timing-function: ease-in;
       }
@@ -547,11 +547,13 @@ hr {
     padding: 5px 20px;
   }
   #logthefuckin {
-    right: 0;
     width: 112px;
   }
   form {
     display: inline-block;
+    width: 820px;
+    position: relative;
+    left: 8%;
   }
   label {
     margin-right: 2px;
@@ -562,13 +564,48 @@ hr {
   .login {
     width: 100px;
   }
-  #hide-login{
+  #hide-login {
     width: 75px;
     right: -82px;
   }
-  #register-button{
-    right: 305px;
-    width: 130px;
+  #register-button {
+    right: 90px;
+    width: 74px;
+  }
+}
+
+.container.signup {
+  top: 50px;
+  position: relative;
+  margin-bottom: 50px;
+  .island-form {
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 5px;
+    width: 15%;
+    margin-top: 120px;
+    margin-bottom: 140px;
+    display: inline-block;
+    margin-left: 7%;
+    &.one{
+
+    }
+    form {
+      label {
+        text-transform: uppercase;
+      }
+      .button {
+        input {
+          width: 70px;
+          background: transparent none repeat scroll 0% 0%;
+          border: medium none;
+        }
+      }
+    }
+    h2 {
+      font-weight: 800;
+      font-size: 1.3em;
+    }
   }
 }
 
