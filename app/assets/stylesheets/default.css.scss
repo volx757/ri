@@ -140,7 +140,7 @@ hr {
   color: #181818;
   line-height: 18px;
   -webkit-font-smoothing: antialiased;
-  transition-duration: 0.15s;
+  transition-duration: 0.1s;
   transition-timing-function: ease-in;
   &:hover {
     background: black;
@@ -180,9 +180,6 @@ hr {
   font-family: 'Dosis';
   .content {
     text-align: center;
-    @media screen and (max-width: $tablet) {
-      // text-align: none;
-    }
     .nav-item {
       display: inline-block;
       position: absolute;
@@ -191,6 +188,8 @@ hr {
       font-size: 16px;
       text-align: left;
       padding: 0 10px 10px 10px;
+      font-weight: 800;
+      line-height: 0.6em;
       @media screen and (max-width: $phone) {
         top: 13px;
       }
@@ -231,7 +230,7 @@ hr {
         }
       }
       &.contact {
-        right: 26%;
+        right: 22%;
         @media screen and (max-width: 1200px) {
           right: 24%;
         }
@@ -247,7 +246,7 @@ hr {
     }
     .nav-item.logo {
       float: left;
-      left: 140px;
+      left: 50px;
       top: 6px;
       @media screen and (max-width: $tablet) {
         left: 0;
@@ -277,7 +276,7 @@ hr {
     .button {
       float: right;
       margin-top: 10px;
-      right: 100px;
+      right: 90px;
       position: relative;
       padding: 5px 20px;
     }
@@ -288,7 +287,7 @@ hr {
     list-style: none;
     background: lightgray;
     position: relative;
-    top: -6.5px;
+    top: 4.5px;
     left: -7px;
     width: 505px;
     @media screen and (max-width: $tablet) {
@@ -297,7 +296,7 @@ hr {
     }
   }
   ul li {
-    width: 105px;
+   // width: 105px;
     text-align: left;
     line-height: 30px;
     display: inline-block;
@@ -565,7 +564,7 @@ hr {
   }
   #hide-login{
     width: 75px;
-    right: -72px;
+    right: -82px;
   }
   #register-button{
     right: 305px;

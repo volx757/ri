@@ -10,38 +10,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="google-site-verification" content="xZmLJMQx9eASTTl5wGiTpq0vRyDvQFBWwWB9sJV8pOY"/>
 
-  <%= include_gon(:init => true) %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js" %>
 
-
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-
 
   <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-
-<!--
-<div id="user_nav">
-  <% if current_user %>
-      Logged in as <%#= current_user.email %>.
-      <%#= link_to "Log out", log_out_path %>
-  <% else %>
-      <%#= link_to "Sign up", sign_up_path %> or
-      <%#= link_to "log in", log_in_path %>
-  <% end %>
-</div>
--->
-
-<% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
-
 
 <div id="site-wrapper">
 
@@ -50,7 +30,6 @@
 <% end %>
 
 <%= yield %>
-
 
 <% unless request.path == '/night' %>
     <%= render 'layouts/footer' %>

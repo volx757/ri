@@ -16,10 +16,12 @@ var indexProduct = [
     }
 ];
 
+var hasScrolled = false;
+
 $(document).ready(function () {
 
     if (window.pageYOffset >= 30) {
-        $('.fa-angle-double-down').hide()
+        $('.fa-angle-down').hide()
     }
     $(document).scroll(function () {
         fadeOutDownArrow()
@@ -44,7 +46,7 @@ $(document).ready(function () {
     limitTextInput();
     activeContactMap();
     initLoginForm()
-
+    landingAnimation()
 });
 
 function activeContactMap() {
@@ -223,5 +225,14 @@ function bindLoginButton() {
     $('#login-button').on('click', function () {
         $('#login-container').fadeIn(300)
         $('#login-button').off('click')
+    })
+}
+
+function landingAnimation() {
+    $(window).scroll(function(){
+      //  if(hasScrolled){
+            $('.welcome h3').css('animation', '1.4s ease-in 0s normal forwards 1 running fadeIn')
+            hasScrolled = true
+      //  }
     })
 }

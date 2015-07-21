@@ -1,5 +1,5 @@
 function fadeOutDownArrow(){
-    var arrow = $('.fa-angle-double-down')
+    var arrow = $('.fa-angle-down')
 
     if ($(window).scrollTop() >= 30) {
         arrow.fadeOut(500)
