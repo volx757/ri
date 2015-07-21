@@ -189,15 +189,21 @@ function initLoginForm() {
     $('#hide-login').on('click', function () {
         $('#login-container').fadeOut(200)
         bindLoginButton()
+        $('.login-notice').remove()
     })
 
+    bindLogoutButton()
+}
+
+function bindLogoutButton(){
     $('#logout-button').on('click', function(){
         $.post( "log_out", function( data ) {
+            $('#logout-button').fadeOut(200).remove()
 
+            $('#header-float .content').append(' <div class="button" id="login-button">Login</div>')
+            bindLoginButton()
         });
-        alert( gon.logged_in )
     })
-
 }
 
 function bindLoginButton() {

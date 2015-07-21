@@ -1,7 +1,5 @@
 <div id="login-container">
 
-
-
   <%= form_tag 'login', :remote => true do %>
       <p>
         <%= label_tag :email %>
@@ -13,9 +11,15 @@
         <%= password_field_tag :password %>
       </p>
 
-      <%= submit_tag 'Validate', :class => 'button', :id => 'logthefuckin' %>
+      <%= submit_tag 'Validate', :class => 'button', :id => 'logthefuckin', :onclick => 'clearFlashNotice()' %>
   <% end %>
 
   <div class="button" id="hide-login">Hide</div>
 
 </div>
+
+<script>
+  function clearFlashNotice(){
+      $('.login-notice').remove()
+  }
+</script>

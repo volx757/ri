@@ -5,10 +5,15 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       @logged_in = session[:user_id].present?
+      respond_to do |format|
+        format.js { flash.now[:notice] = "Logged In (click to close)" }
+      end
     else
-      flash.now.alert = 'invalid email or password'
+      respond_to do |format|
+        format.js { flash.now[:notice] = "Invalid email or password" }
+      end
     end
-    render :nothing => true
+
   end
 
   def destroy
