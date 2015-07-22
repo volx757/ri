@@ -1,0 +1,3 @@
+notification('clear')
+$('#notification-box').append("<div class='login-notice'><%= flash[:notice].to_json.chomp('"').reverse.chomp('"').reverse %></div>");
+notification('notify')

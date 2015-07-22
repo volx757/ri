@@ -1,14 +1,4 @@
-var indexProduct = [
-    {
-        'title': 'Build A Pack',
-        'price': '$96',
-        'desc1': '12-pack or 24-pack',
-        'desc2': '10oz/16oz'
-    }
-];
-
-var hasScrolled = false,
-    loginShowing = false;
+var hasScrolled = false;
 
 $(document).ready(function () {
 
@@ -28,8 +18,7 @@ $(document).ready(function () {
     setupContactNavUnderline()
     bindShowAllQuestions()
 
-    writeIndexProducts()
-    activateNightPage();
+//    activateNightPage();
 
     inquiryForm();
     contactForm();
@@ -139,19 +128,6 @@ function limitTextInput() {
     });
 }
 
-function writeIndexProducts() {
-
-        var title = $('.index-product').find('h4'),
-            price = $('.index-product').find('.price'),
-            desc1 = $('.index-product').find('.desc1'),
-            desc2 = $('.index-product').find('.desc2')
-
-        title.append(indexProduct[0]['title'])
-        price.append(indexProduct[0]['price'])
-        desc1.append(indexProduct[0]['desc1'])
-        desc2.append(indexProduct[0]['desc2'])
-}
-
 function activateNightPage() {
 
     $('#night').on('click', function () {
@@ -164,56 +140,11 @@ function activateNightPage() {
     })
 }
 
-function initLoginForm() {
-
-    bindLoginButton()
-
-    bindLogoutButton()
-
-    $('#logthefuckin').on('click', function () {
-        if ($('#email').val() < 1) {
-            alert('You must enter your email')
-            return false
-        }
-
-        if ($('#password').val() < 1) {
-            alert('You must enter your password')
-            return false
-        }
-
-    })
-}
-
-function bindLoginButton() {
-    $('#login-button').on('click', function () {
-        if (loginShowing) {
-            $('#login-container').fadeOut(200)
-            $('.login-notice').remove()
-            loginShowing = false
-        } else if (!loginShowing) {
-            $('#login-container').fadeIn(300)
-            loginShowing = true
-        }
-    })
-}
-
-function bindLogoutButton() {
-    $('#logout-button').on('click', function () {
-        $.post("log_out", function (data) {
-            $('#logout-button').fadeOut(200).remove()
-
-            $('#header-float .content').append(' <div class="button" id="login-button">Login</div>')
-            bindLoginButton()
-        });
-    })
-}
-
-
 function landingAnimation() {
     $(window).scroll(function () {
-        //  if(hasScrolled){
-        $('.welcome h3').css('animation', '1.4s ease-in 0s normal forwards 1 running fadeIn')
-        hasScrolled = true
-        //  }
+        if (!hasScrolled) {
+            $('.welcome h3').css('animation', '1.4s ease-in 0s normal forwards 1 running fadeIn')
+            hasScrolled = true
+        }
     })
 }

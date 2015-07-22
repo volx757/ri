@@ -1,20 +1,18 @@
-$('#header-float').append("<div class='login-notice'><%= flash[:notice].to_json.chomp('"').reverse.chomp('"').reverse %></div>");
+$('#notification-box').append("<div class='login-notice'><%= flash[:notice].to_json.chomp('"').reverse.chomp('"').reverse %></div>");
+notification('notify')
+
 <% if logged_in? %>
-    $('.login-notice').addClass('success')
 $('#login-container').fadeOut(200)
-$('.login-notice').fadeIn(200)
 $('#login-button').fadeOut(200).remove()
 
 $('#header-float .content').append('<div class="button session" id="logout-button">Logout</div>')
+
 bindLogoutButton()
-$('.login-notice').on('click', function(){
-    $(this).fadeOut(200)
-})
+
 
 $('#password').val('')
 $('#email').val('')
 
 <% else %>
-$('.login-notice').addClass('failed')
     $('#password').val('')
 <% end %>

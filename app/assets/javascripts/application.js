@@ -12,11 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require lib/jquery.localScroll.min.js
-//= require lib/jquery.scrollTo.min.js
-//= require lib/dropkick.min.js
+//= require lib/jquery.localScroll.min
+//= require lib/jquery.scrollTo.min
+//= require lib/dropkick.min
 //= require animations
 //= require dynamic_lists
-//= require main
+//= require sessions
+//= require notifications
 //= require carts
-
+//= require main

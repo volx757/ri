@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       @logged_in = session[:user_id].present?
       respond_to do |format|
-        format.js { flash.now[:notice] = "Logged In (click to close)" }
+        format.js { flash.now[:notice] = "Logged In" }
       end
     else
       respond_to do |format|
@@ -19,12 +19,9 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     @logged_in = false
-    render :nothing => true
-  end
-
-  def gon
-    gon.watch.logged_in = session[:user_id].present?
-    render :nothing => true
+    respond_to do |format|
+      format.js { flash.now[:notice] = "Logged Out" }
+    end
   end
 
 end

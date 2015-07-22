@@ -2,106 +2,13 @@
 
   <h1>Plug In</h1>
 
-  <div class="island-form one">
-
-    <h2>Build Your Login</h2>
-
-    <%= form_for @user do |f| %>
-        <% if @user.errors.any? %>
-            <div class="error_messages">
-              <h2>Form is invalid</h2>
-              <ul>
-                <% for message in @user.errors.full_messages %>
-                    <li><%= message %></li>
-                <% end %>
-              </ul>
-            </div>
-        <% end %>
-        <p>
-          <%= f.label :email %><br/>
-          <%= f.text_field :email, :width =>'50', :height => '50' %>
-        </p>
-
-        <p>
-          <%= f.label :password %><br/>
-          <%= f.password_field :password %>
-        </p>
-
-        <p>
-          <%= f.label :password_confirmation %><br/>
-          <%= f.password_field :password_confirmation %>
-        </p>
-
-        <p class="button"><%= f.submit 'SUBMIT' %></p>
-    <% end %>
-  </div>
-
-  <div class="island-form two">
-
-    <h2>Where Should We Deliver To?</h2>
-
-    <%= form_for @user do |f| %>
-        <% if @user.errors.any? %>
-            <div class="error_messages">
-              <h2>Form is invalid</h2>
-              <ul>
-                <% for message in @user.errors.full_messages %>
-                    <li><%= message %></li>
-                <% end %>
-              </ul>
-            </div>
-        <% end %>
-        <p>
-          <%= f.label :email %><br/>
-          <%= f.text_field :email, :width =>'50', :height => '50' %>
-        </p>
-
-        <p>
-          <%= f.label :password %><br/>
-          <%= f.password_field :password %>
-        </p>
-
-        <p>
-          <%= f.label :password_confirmation %><br/>
-          <%= f.password_field :password_confirmation %>
-        </p>
-
-        <p class="button"><%= f.submit 'SUBMIT' %></p>
-    <% end %>
-  </div>
-
-  <div class="island-form three">
-
-    <h2>Credit Card, Bitch</h2>
-
-    <%= form_for @user do |f| %>
-        <% if @user.errors.any? %>
-            <div class="error_messages">
-              <h2>Form is invalid</h2>
-              <ul>
-                <% for message in @user.errors.full_messages %>
-                    <li><%= message %></li>
-                <% end %>
-              </ul>
-            </div>
-        <% end %>
-        <p>
-          <%= f.label :email %><br/>
-          <%= f.text_field :email, :width =>'50', :height => '50' %>
-        </p>
-
-        <p>
-          <%= f.label :password %><br/>
-          <%= f.password_field :password %>
-        </p>
-
-        <p>
-          <%= f.label :password_confirmation %><br/>
-          <%= f.password_field :password_confirmation %>
-        </p>
-
-        <p class="button"><%= f.submit 'SUBMIT' %></p>
-    <% end %>
+  <div class="island-lord">
+    <%= render 'signup' %>
   </div>
 
 </div>
+
+<script>
+  if ($(window).scrollTop() == 0)
+    $("html, body").animate({ scrollTop: "50px" }, 900);
+</script>
