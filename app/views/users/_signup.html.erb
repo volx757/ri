@@ -2,7 +2,7 @@
 
   <h2>Build Your Login</h2>
 
-  <%= form_for @user do |f| %>
+  <%= form_for '/sign_up', :remote => true do |f| %>
       <% if @user.errors.any? %>
           <div class="error_messages">
             <h2>Form is invalid</h2>
@@ -32,11 +32,12 @@
   <% end %>
 </div>
 
+
 <div class="island-form two">
 
   <h2>Where Should We Deliver To?</h2>
 
-  <%= form_for @user do |f| %>
+  <%= form_for '/add_contact', :remote => true do |f| %>
       <% if @user.errors.any? %>
           <div class="error_messages">
             <h2>Form is invalid</h2>
@@ -81,11 +82,12 @@
   <% end %>
 </div>
 
+
 <div class="island-form three">
 
   <h2>Credit Card, Bitch</h2>
 
-  <%= form_for @user do |f| %>
+  <%= form_for '/add_payment' do |f| %>
       <% if @user.errors.any? %>
           <div class="error_messages">
             <h2>Form is invalid</h2>

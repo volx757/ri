@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#gon'
   post 'log_out' => 'sessions#destroy', :as => 'log_out'
 
+  #users
+  get 'register' => 'users#new', :as => 'register'
+  post 'sign_up' => 'users#create', :as => 'sign_up'
+
   # carts
   get 'cart', to: 'carts#index', as: 'cart'
   get 'checkout', to: 'carts#checkout', as: 'checkout'
@@ -23,14 +27,10 @@ Rails.application.routes.draw do
 
   patch 'update_guest', to: 'users#update_guest'
 
-  get 'sign_up' => 'users#new', :as => 'sign_up'
   match 'contact' => 'main#contact', :as => 'contact', :via => [:get, :post]
-
   post 'inquiry', to: 'main#inquiry', as: 'inquiry'
   post 'contact', to: 'main#contact', as: 'contact_post'
 
   get 'night' => 'main#night', :as => 'night'
-
-  resources :users
 
 end

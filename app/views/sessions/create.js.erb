@@ -2,17 +2,7 @@ $('#notification-box').append("<div class='login-notice'><%= flash[:notice].to_j
 notification('notify')
 
 <% if logged_in? %>
-$('#login-container').fadeOut(200)
-$('#login-button').fadeOut(200).remove()
-
-$('#header-float .content').append('<div class="button session" id="logout-button">Logout</div>')
-
-bindLogoutButton()
-
-
-$('#password').val('')
-$('#email').val('')
-
+    loginComplete()
 <% else %>
     $('#password').val('')
 <% end %>

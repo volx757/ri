@@ -12,7 +12,6 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create, unless: 'self.class == Guest'
   validates_presence_of :email, unless: 'self.class == Guest'
   validates_uniqueness_of :email, unless: 'self.class == Guest'
-  validates_presence_of :phone
 
 
   def self.authenticate(email, password)
