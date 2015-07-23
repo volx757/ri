@@ -24,21 +24,13 @@ $phoneSmall: 375px;
   transition-timing-function: ease-in;
 }
 
-.store-closed-order {
-  width: 85%;
-  background: black;
-  color: white;
-  &::after {
-    content: 'Store Coming Soon'
-  }
+.transition-slow{
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
 }
 
-.store-closed-find {
-  width: 230px;
-  background: black;
-  &::after {
-    content: 'Store Coming Soon'
-  }
+.half-opaque{
+  opacity: 0.5;
 }
 
 .force-p {
@@ -140,7 +132,7 @@ hr {
   color: #181818;
   line-height: 18px;
   -webkit-font-smoothing: antialiased;
-  transition-duration: 0.1s;
+  transition-duration: 0.07s;
   transition-timing-function: ease-in;
   &:hover {
     background: black;
@@ -501,8 +493,11 @@ hr {
   width: 100%;
   text-align: center;
   overflow-x: hidden;
-  opacity: 0.9;
-  background: #F5F5F5;
+  opacity: 0.98;
+  background: linear-gradient(270deg, white, silver);
+  background: -webkit-linear-gradient(270deg, white, silver);
+  background: -o-linear-gradient(270deg, white, silver);
+  background: -moz-linear-gradient(270deg, white, silver);
   top: 10px;
   height: 60px;
   p {
@@ -546,9 +541,6 @@ hr {
 }
 
 .container.signup {
-  top: 50px;
-  position: relative;
-  margin-bottom: 50px;
   .island-lord{
     text-align: center;
   }
@@ -556,10 +548,10 @@ hr {
     border: 1px solid black;
     padding: 50px;
     border-radius: 5px;
-    width: 15%;
+    width: 65%;
     display: block;
     position: relative;
-    margin: 120px auto 140px;
+    margin: 0 auto 140px;
     &.one{
 
     }
@@ -568,6 +560,7 @@ hr {
         text-transform: uppercase;
       }
       .button {
+        width: 70px;
         input {
           width: 70px;
           background: transparent none repeat scroll 0% 0%;
@@ -606,8 +599,12 @@ hr {
   z-index: 100;
   width: 100%;
   .signup{
-    margin: 0 auto;
-    width: 70%;
-    background: white;
+    margin: 60px auto 50px;
+    width: 50%;
+    background: silver;
+    top: 50px;
+    position: relative;
+    padding-top: 40px;
+    border-radius: 10px;
   }
 }

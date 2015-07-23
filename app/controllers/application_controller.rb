@@ -18,9 +18,11 @@ class ApplicationController < ActionController::Base
     current_user.is_guest?(session[:user_id])
   end
 
-
   def instagram
     @instagram = Instagram.user_recent_media('1119078907', {:count => 6})
   end
 
+  def js
+    render 'layouts/js', :layout => false
+  end
 end

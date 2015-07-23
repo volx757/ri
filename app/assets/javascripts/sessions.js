@@ -1,11 +1,9 @@
 var loginShowing = false
 
 function initLoginForm() {
-
     bindLoginButton()
     bindLogoutButton()
     setupForm()
-    buildProfileStepOne()
 }
 
 function bindLoginButton() {
@@ -48,12 +46,14 @@ function setupForm() {
 
     $('#logthefuckin').on('click', function () {
         if ($('#email').val() < 1) {
-            alert('You must enter your email')
+            $('#notification-box').append("<div class='login-notice'>You must enter an email.</div>");
+            notification('notify')
             return false
         }
 
         if ($('#password').val() < 1) {
-            alert('You must enter your password')
+            $('#notification-box').append("<div class='login-notice'>You must enter your password.</div>");
+            notification('notify')
             return false
         }
 
@@ -71,45 +71,70 @@ function loginComplete(){
     $('#email').val('')
 }
 
+function resetLogin(){
+    $('#login-container').fadeOut(200)
+    $('#login-button').html('Login')
+    loginShowing = false
+}
+
+function initSignupForm(){
+    buildProfileStepOne()
+    $('#signup-box').on('click', function(){
+        hideSignupForm()
+    })
+}
+
 function showSignupForm(){
+    lockScroll()
     if (didStartSignup){
-        $('#site-wrapper').css('opacity', '0.4')
-        $('#login-container').fadeOut(200)
-        $('#login-button').html('Login')
-        loginShowing = false
-        $('#signup-box').fadeIn(200)
-        $('#signup-box').on('click', function(){
-            $('#signup-box').fadeOut(200)
-            $('#site-wrapper').css('opacity', '1')
-        })
-        $('.signup').click(function(event){
-            event.stopPropagation();
-        });
+        $('#site-wrapper').addClass('half-opaque')
+        resetLogin()
+        $('#signup-box').fadeIn(1000)
     } else{
+        didStartSignup = true
         $.ajax({
             type: "GET",
             url: '/register'
         });
     }
 
+    $('.signup').click(function(event){
+        event.stopPropagation();
+    });
+}
+
+function hideSignupForm(){
+    $('#signup-box').fadeOut(200)
+    unlockScroll()
+    $('#site-wrapper').removeClass('half-opaque')
+}
+
+function clearSignupForm(){
+    var signupBox =  $('#signup-box')
+    signupBox.fadeOut(200)
+    signupBox.empty()
+    hideSignupForm()
 }
 
 function buildProfileStepOne() {
     $('.island-form.one form').submit(function(e){
         e.preventDefault()
 
-        var email = $('#_sign_up_email').val(),
-            pass = $('#_sign_up_password').val(),
-            pass_conf = $('#_sign_up_password_confirmation').val()
+        var email = $('#user_email').val(),
+            pass = $('#user_password').val(),
+            pass_conf = $('#user_password_confirmation').val()
 
         if (email == '') {
-            alert('you must put an email')
+            $('#notification-box').append("<div class='login-notice'>You must enter an email.</div>");
+            notification('notify')
             return false;
         } else if (pass == '' || pass_conf == '') {
-            alert('you must put a password and confirmaton')
+            $('#notification-box').append("<div class='login-notice'>you must put a password and confirmaton</div>");
+            notification('notify')
             return false;
         } else if (pass != pass_conf) {
-            alert('password and confirmation must match')
+            $('#notification-box').append("<div class='login-notice'>password and confirmation must match</div>");
+            notification('notify')
             return false;
         }
 
@@ -119,20 +144,16 @@ function buildProfileStepOne() {
             password_confirmation: pass_conf
         }
 
-        console.log(user)
-
         $.ajax({
             type: "POST",
             url: '/sign_up',
             data: user,
             error: function(data) {
-
-              //  var obj = jQuery.parseJSON( data );
-
-              //  alert(obj.error_message)
+                var obj = jQuery.parseJSON( data );
+                alert(obj.error_message)
             },
             success: function(data) {
-              //  alert(data);
+
             }
         });
 

@@ -35,4 +35,6 @@ Rails.application.routes.draw do
 
   get 'night' => 'main#night', :as => 'night'
 
+  get 'js' => 'application#js'
+
 end

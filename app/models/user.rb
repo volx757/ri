@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
-  before_save :encrypt_password
+  before_create :encrypt_password
+  after_create :set_getters
 
   has_many :carts
   has_many :invoices
@@ -50,6 +51,12 @@ class User < ActiveRecord::Base
 
 
   private
+
+  def set_getters
+    self.has_contact_info = false
+    self.has_credit_info = false
+    self.save!
+  end
 
   def encrypt_password
     if password.present?

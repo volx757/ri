@@ -28,6 +28,7 @@ $(document).ready(function () {
     limitTextInput();
     activeContactMap();
     initLoginForm()
+    initSignupForm()
     landingAnimation()
 });
 
@@ -148,4 +149,12 @@ function landingAnimation() {
             hasScrolled = true
         }
     })
+}
+
+function lockScroll(){
+    $('body').css('overflow', 'hidden')
+}
+
+function unlockScroll(){
+    $('body').css('overflow', 'inherit')
 }

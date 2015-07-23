@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <title>ri</title>
   <meta name="description" content="Rijuice">
@@ -8,7 +9,10 @@
 
   <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="google-site-verification" content="xZmLJMQx9eASTTl5wGiTpq0vRyDvQFBWwWB9sJV8pOY"/>
+
+  <noscript>
+    <meta http-equiv="refresh" content="2;url=http://localhost:3000/js">
+  </noscript>
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
@@ -27,19 +31,18 @@
 
 <div id="signup-box"></div>
 
-<div id="site-wrapper">
+<div id="site-wrapper" class="transition-slow">
 
-<% unless request.path == '/night'%>
-    <%= render 'layouts/header' %>
-<% end %>
+  <% unless request.path == '/night' %>
+      <%= render 'layouts/header' %>
+  <% end %>
 
-<%= yield %>
+  <%= yield %>
 
-<% unless request.path == '/night' %>
-    <%= render 'layouts/footer' %>
-<% end %>
+  <% unless request.path == '/night' %>
+      <%= render 'layouts/footer' %>
+  <% end %>
 
 </div>
-
 </body>
 </html>

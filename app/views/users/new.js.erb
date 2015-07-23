@@ -1,15 +1,2 @@
 $("#signup-box").html("<%= j render partial: 'signup', locals: { user: @user } %>");
-$('#site-wrapper').css('opacity', '0.4')
-$('#login-container').fadeOut(200)
-$('#login-button').html('Login')
-loginShowing = false
-didStartSignup = true
-$("#signup-box").fadeIn(300)
-$('#signup-box').on('click', function(){
-    $('#signup-box').fadeOut(200)
-    $('#site-wrapper').css('opacity', '1')
-
-})
-$('.signup').click(function(event){
-    event.stopPropagation();
-});
+showSignupForm()
