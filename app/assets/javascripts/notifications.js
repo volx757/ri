@@ -31,7 +31,7 @@ function notification(event) {
     function setSelfDestruct() {
         notificationSelfDestruct = setTimeout(function () {
             clear()
-        }, 2200)
+        }, 5000)
     }
 
 }

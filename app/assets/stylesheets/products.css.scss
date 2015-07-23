@@ -4,9 +4,10 @@ $phone: 450px;
 $phoneSmall: 375px;
 
 #product-container, #cart-container {
+  top: 30px;
+  position: relative;
 
   .page-header {
-    top: 30px;
     position: relative;
     background: image-url('contact/contact_bg_2.jpg');
     height: 170px;
@@ -84,7 +85,8 @@ $phoneSmall: 375px;
   .container {
     width: 100%;
     height: auto;
-
+    position: relative;
+    margin-bottom: 50px;
     &.pack {
       .wrapper {
         width: 40%;

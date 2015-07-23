@@ -24,8 +24,8 @@ $phoneSmall: 375px;
   transition-timing-function: ease-in;
 }
 
-.transition-slow{
-  transition-duration: 0.8s;
+.transition-med{
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 
@@ -578,18 +578,25 @@ hr {
 #notification-box{
   display: none;
   position: fixed;
-  top: 100px;
-  left: 100px;
-  width: 200px;
-  height: 140px;
+  top: 125px;
+  left: 80px;
+  width: 280px;
+  height: 100px;
   z-index: 900;
   background: silver;
-  opacity: 0.8;
+  opacity: 0.9;
+  border-radius: 5px;
+  padding: 13px;
+  text-transform: uppercase;
   .login-notice {
     display: inline-block;
     position: fixed;
-    line-height: 3em;
-    color: red;
+    line-height: 1.2em;
+    color:  black;
+    font-weight: 800;
+    width: 280px;
+    font-family: "Open Sans",sans-serif;
+    
   }
 }
 

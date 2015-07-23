@@ -10,24 +10,24 @@ function bindLoginButton() {
 
     $('#login-button').on('click', function () {
         if (loginShowing) {
-            fadeContainerOut()
+            hideLoginContainer()
         } else if (!loginShowing) {
-            fadeContainerIn()
+            showLoginContainer()
         }
     })
+}
 
-    function fadeContainerIn() {
-        $('#login-container').fadeIn(300)
-        $('#login-button').html('Hide')
-        $('#email').focus()
-        loginShowing = true
-    }
+function hideLoginContainer() {
+    $('#login-container').fadeOut(200)
+    $('#login-button').html('Login')
+    loginShowing = false
+}
 
-    function fadeContainerOut() {
-        $('#login-container').fadeOut(200)
-        $('#login-button').html('Login')
-        loginShowing = false
-    }
+function showLoginContainer() {
+    $('#login-container').fadeIn(300)
+    $('#login-button').html('Hide')
+    $('#email').focus()
+    loginShowing = true
 }
 
 function bindLogoutButton() {
@@ -60,7 +60,7 @@ function setupForm() {
     })
 }
 
-function loginComplete(){
+function loginComplete() {
     $('#login-container').fadeOut(200)
     $('#login-button').fadeOut(200).remove()
 
@@ -71,53 +71,55 @@ function loginComplete(){
     $('#email').val('')
 }
 
-function resetLogin(){
+function resetLogin() {
     $('#login-container').fadeOut(200)
     $('#login-button').html('Login')
     loginShowing = false
 }
 
-function initSignupForm(){
+function initSignupForm() {
     buildProfileStepOne()
-    $('#signup-box').on('click', function(){
+    $('#signup-box').on('click', function () {
         hideSignupForm()
     })
 }
 
-function showSignupForm(){
+function showSignupForm() {
     lockScroll()
-    if (didStartSignup){
+    if (didStartSignup) {
         $('#site-wrapper').addClass('half-opaque')
         resetLogin()
         $('#signup-box').fadeIn(1000)
-    } else{
+    } else {
+        $('#register-button').html('loading...')
         didStartSignup = true
         $.ajax({
             type: "GET",
             url: '/register'
-        });
+        })
     }
 
-    $('.signup').click(function(event){
+    $('.signup').click(function (event) {
         event.stopPropagation();
     });
 }
 
-function hideSignupForm(){
-    $('#signup-box').fadeOut(200)
+function hideSignupForm() {
+    $('#register-button').html('Join Us')
+    $('#signup-box').fadeOut(100)
     unlockScroll()
     $('#site-wrapper').removeClass('half-opaque')
 }
 
-function clearSignupForm(){
-    var signupBox =  $('#signup-box')
+function clearSignupForm() {
+    var signupBox = $('#signup-box')
     signupBox.fadeOut(200)
     signupBox.empty()
     hideSignupForm()
 }
 
 function buildProfileStepOne() {
-    $('.island-form.one form').submit(function(e){
+    $('.island-form.one form').submit(function (e) {
         e.preventDefault()
 
         var email = $('#user_email').val(),
@@ -138,25 +140,17 @@ function buildProfileStepOne() {
             return false;
         }
 
-        var user  = {
-            email: email,
-            password: pass,
-            password_confirmation: pass_conf
-        }
-
         $.ajax({
             type: "POST",
             url: '/sign_up',
-            data: user,
-            error: function(data) {
-                var obj = jQuery.parseJSON( data );
-                alert(obj.error_message)
+            data: {
+                email: email,
+                password: pass,
+                password_confirmation: pass_conf
             },
-            success: function(data) {
-
+            error: function (data) {
+                alert('submission unsuccessful')
             }
         });
-
-        return false;
     })
 }
