@@ -599,3 +599,15 @@ hr {
     color: red;
   }
 }
+
+#signup-box{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  .signup{
+    margin: 0 auto;
+    width: 70%;
+    background: white;
+  }
+}

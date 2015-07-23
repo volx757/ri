@@ -71,13 +71,36 @@ function loginComplete(){
     $('#email').val('')
 }
 
+function showSignupForm(){
+    if (didStartSignup){
+        $('#site-wrapper').css('opacity', '0.4')
+        $('#login-container').fadeOut(200)
+        $('#login-button').html('Login')
+        loginShowing = false
+        $('#signup-box').fadeIn(200)
+        $('#signup-box').on('click', function(){
+            $('#signup-box').fadeOut(200)
+            $('#site-wrapper').css('opacity', '1')
+        })
+        $('.signup').click(function(event){
+            event.stopPropagation();
+        });
+    } else{
+        $.ajax({
+            type: "GET",
+            url: '/register'
+        });
+    }
+
+}
+
 function buildProfileStepOne() {
     $('.island-form.one form').submit(function(e){
         e.preventDefault()
 
-        var email = $('#user_email').val(),
-            pass = $('#user_password').val(),
-            pass_conf = $('#user_password_confirmation').val()
+        var email = $('#_sign_up_email').val(),
+            pass = $('#_sign_up_password').val(),
+            pass_conf = $('#_sign_up_password_confirmation').val()
 
         if (email == '') {
             alert('you must put an email')
@@ -90,25 +113,26 @@ function buildProfileStepOne() {
             return false;
         }
 
+        var user  = {
+            email: email,
+            password: pass,
+            password_confirmation: pass_conf
+        }
+
+        console.log(user)
+
         $.ajax({
             type: "POST",
             url: '/sign_up',
-            data: {
-                user:{
-                    email: email,
-                    password: pass,
-                    password_confirmation: pass_conf
-                }
-            },
-            dataType: "json",
+            data: user,
             error: function(data) {
 
-                var obj = jQuery.parseJSON( data );
+              //  var obj = jQuery.parseJSON( data );
 
-                alert(obj.error_message)
+              //  alert(obj.error_message)
             },
             success: function(data) {
-                alert(data);
+              //  alert(data);
             }
         });
 

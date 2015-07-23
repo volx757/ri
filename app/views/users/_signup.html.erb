@@ -1,8 +1,10 @@
+<div class="container signup">
+<a name="island-form-one"></a>
 <div class="island-form one">
 
-  <h2>Build Your Login</h2>
+  <h2>Sign Up</h2>
 
-  <%= form_for '/sign_up', :remote => true do |f| %>
+  <%= form_for @user, url: { action: 'create' }, :remote => true do |f| %>
       <% if @user.errors.any? %>
           <div class="error_messages">
             <h2>Form is invalid</h2>
@@ -14,30 +16,27 @@
           </div>
       <% end %>
       <p>
-        <%= f.label :email %><br/>
-        <%= f.text_field :email, :width =>'50', :height => '50' %>
+        <%= f.text_field :email, :placeholder => 'email', :width =>'50', :height => '50' %>
       </p>
 
       <p>
-        <%= f.label :password %><br/>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, :placeholder => 'password' %>
       </p>
 
       <p>
-        <%= f.label :password_confirmation %><br/>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, :placeholder => 'password confirmation' %>
       </p>
 
       <p class="button"><%= f.submit 'SUBMIT' %></p>
   <% end %>
 </div>
 
-
+<a name="island-form-two"></a>
 <div class="island-form two">
 
-  <h2>Where Should We Deliver To?</h2>
+  <h2>Where Should We Reach You?</h2>
 
-  <%= form_for '/add_contact', :remote => true do |f| %>
+  <%= form_for  @user, url: { action: 'add_contact' }, :remote => true do |f| %>
       <% if @user.errors.any? %>
           <div class="error_messages">
             <h2>Form is invalid</h2>
@@ -82,12 +81,12 @@
   <% end %>
 </div>
 
-
+<a name="island-form-three"></a>
 <div class="island-form three">
 
-  <h2>Credit Card, Bitch</h2>
+  <h2>Credit Card</h2>
 
-  <%= form_for '/add_payment' do |f| %>
+  <%= form_for  @user, url: { action: 'add_credit' }, :remote => true do |f| %>
       <% if @user.errors.any? %>
           <div class="error_messages">
             <h2>Form is invalid</h2>
@@ -120,4 +119,5 @@
 
 
 <% end %>
+</div>
 </div>

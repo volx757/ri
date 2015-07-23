@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :carts
   has_many :invoices
 
-  attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state, :phone
+  attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state, :phone, :has_contact_info, :has_credit_info
   attr_accessor :password
 
   validates_confirmation_of :password, unless: 'self.class == Guest'

@@ -1,4 +1,5 @@
-var hasScrolled = false;
+var hasScrolled = false,
+    didStartSignup = false;
 
 $(document).ready(function () {
 

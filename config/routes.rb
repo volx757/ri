@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   #users
   get 'register' => 'users#new', :as => 'register'
   post 'sign_up' => 'users#create', :as => 'sign_up'
+  post 'add_contact' => 'users#add_contact', :as => 'add_contact'
+  post 'add_credit' => 'users#add_credit', :as => 'add_credit'
 
   # carts
   get 'cart', to: 'carts#index', as: 'cart'
