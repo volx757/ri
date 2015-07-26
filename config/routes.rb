@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+
   #root to: 'main#landing'
   root to: 'main#index'
+  get 'js' => 'application#js'
+  #get 'night' => 'main#night', :as => 'night'
 
   get 'home' => 'main#index'
   get 'products' => 'products#index'
@@ -27,14 +30,10 @@ Rails.application.routes.draw do
   post 'cart', to: 'carts#create_payment', as: 'payment'
   post 'products' => 'products#add_to_cart'
 
-  patch 'update_guest', to: 'users#update_guest'
 
   match 'contact' => 'main#contact', :as => 'contact', :via => [:get, :post]
   post 'inquiry', to: 'main#inquiry', as: 'inquiry'
   post 'contact', to: 'main#contact', as: 'contact_post'
 
-  get 'night' => 'main#night', :as => 'night'
-
-  get 'js' => 'application#js'
 
 end

@@ -49,6 +49,21 @@ class User < ActiveRecord::Base
     save_stripe_customer_id(user.id, customer.id)
   end
 
+  def add_contact_info(params)
+    self.address_one = params[:address_one]
+    self.address_two = params[:address_two]
+    self.city = params[:city]
+    self.state = params[:state]
+    self.zip = params[:zip]
+    self.phone = params[:phone]
+  end
+
+  def add_credit_info(params)
+    self.address_one = params[:card_number]
+    self.address_two = params[:card_exp_month]
+    self.city = params[:card_exp_year]
+    self.state = params[:card_cvc]
+  end
 
   private
 

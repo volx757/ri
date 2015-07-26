@@ -2,7 +2,7 @@
 <a name="island-form-one"></a>
 <div class="island-form one">
 
-  <h2>Sign Up</h2>
+  <h2>Create An Account</h2>
 
   <%= form_for @user, url: { action: 'create' }, :remote => true do |f| %>
       <% if @user.errors.any? %>
@@ -16,20 +16,21 @@
           </div>
       <% end %>
       <p>
-        <%= f.text_field :email, :placeholder => 'email', :width =>'50', :height => '50' %>
+        <%= f.text_field :email, :placeholder => 'Email', :width =>'50', :height => '50' %>
       </p>
 
       <p>
-        <%= f.password_field :password, :placeholder => 'password' %>
+        <%= f.password_field :password, :placeholder => 'Password' %>
       </p>
 
       <p>
-        <%= f.password_field :password_confirmation, :placeholder => 'password confirmation' %>
+        <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
       </p>
 
       <p class="button"><%= f.submit 'SUBMIT' %></p>
   <% end %>
 </div>
+
 
 <a name="island-form-two"></a>
 <div class="island-form two">
@@ -48,33 +49,27 @@
           </div>
       <% end %>
       <p>
-        <%= f.label :address_one %><br/>
-        <%= f.text_field :address_one, :width =>'50', :height => '50' %>
+        <%= f.text_field :address_one, :width =>'50', :height => '50', :placeholder => 'Address One' %>
       </p>
 
       <p>
-        <%= f.label :address_two %><br/>
-        <%= f.text_field :address_two %>
+        <%= f.text_field :address_two, :placeholder => 'Address Two' %>
       </p>
 
       <p>
-        <%= f.label :city %><br/>
-        <%= f.text_field :city %>
+        <%= f.text_field :city, :placeholder => 'City' %>
       </p>
 
       <p>
-        <%= f.label :state %><br/>
-        <%= f.text_field :state %>
+        <%= f.text_field :state, :placeholder => 'State' %>
       </p>
 
       <p>
-        <%= f.label :zip %><br/>
-        <%= f.text_field :zip %>
+        <%= f.text_field :zip, :placeholder => 'Zip' %>
       </p>
 
       <p>
-        <%= f.label :phone %><br/>
-        <%= f.text_field :phone %>
+        <%= f.text_field :phone, :placeholder => 'Phone' %>
       </p>
 
       <p class="button"><%= f.submit 'SUBMIT' %></p>
@@ -97,27 +92,23 @@
             </ul>
           </div>
       <% end %>
-      <div>
-        <label for="card-number">Card Number:</label>
+      <p>
         <%= text_field_tag :card_number, nil, name: nil, :placeholder => "Card Number", :data => {:stripe => 'number'} %>
-      </div>
+      </p>
 
-      <div>
-        <label for="card-exp-month">Card Expiry Month:</label>
+      <p>
         <%= text_field_tag :card_exp_month, nil, name: nil, :placeholder => "Card Exp Month", :data => {:stripe => 'exp_month'} %>
-      </div>
+      </p>
 
-      <div>
-        <label for="card-exp-year">Card Expiry Year:</label>
+      <p>
         <%= text_field_tag :card_exp_year, nil, name: nil, :placeholder => "CardExp Year", :data => {:stripe => 'exp_year'} %>
-      </div>
+      </p>
 
-      <div>
-        <label for="card-cvc">CVC:</label>
+      <p>
         <%= text_field_tag :card_cvc, nil, name: nil, :placeholder => "Cvc", :data => {:stripe => 'cvc'} %>
-      </div>
+      </p>
 
-
+      <p class="button"><%= f.submit 'SUBMIT' %></p>
 <% end %>
 </div>
 </div>

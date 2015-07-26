@@ -24,12 +24,12 @@ $phoneSmall: 375px;
   transition-timing-function: ease-in;
 }
 
-.transition-med{
+.transition-med {
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 
-.half-opaque{
+.half-opaque {
   opacity: 0.5;
 }
 
@@ -541,7 +541,7 @@ hr {
 }
 
 .container.signup {
-  .island-lord{
+  .island-lord {
     text-align: center;
   }
   .island-form {
@@ -552,19 +552,40 @@ hr {
     display: block;
     position: relative;
     margin: 0 auto 140px;
-    &.one{
+    text-align: center;
+    &.one {
 
     }
+    h2 {
+      font-size: 2em;
+      margin-top: -15px;
+    }
     form {
+      padding: 5px;
       label {
         text-transform: uppercase;
       }
-      .button {
-        width: 70px;
+      p {
         input {
-          width: 70px;
+
+          width: 70%;
+          line-height: 1.2em;
+          font-size: 1.4em;
+
+        }
+      }
+      .button {
+        width: 130px;
+        margin: 0 auto;
+        padding: 4px;
+        padding-top: 8px;
+        top: 10px;
+        position: relative;
+        input {
+          width: 90px;
           background: transparent none repeat scroll 0% 0%;
           border: medium none;
+
         }
       }
     }
@@ -575,7 +596,7 @@ hr {
   }
 }
 
-#notification-box{
+#notification-box {
   display: none;
   position: fixed;
   top: 125px;
@@ -592,26 +613,27 @@ hr {
     display: inline-block;
     position: fixed;
     line-height: 1.2em;
-    color:  black;
+    color: black;
     font-weight: 800;
     width: 280px;
-    font-family: "Open Sans",sans-serif;
-    
+    font-family: "Open Sans", sans-serif;
+
   }
 }
 
-#signup-box{
+#signup-box {
   display: none;
   position: fixed;
   z-index: 100;
   width: 100%;
-  .signup{
+  .signup {
     margin: 60px auto 50px;
-    width: 50%;
-    background: silver;
+    width: 45%;
+    background: #F5F5F5;
     top: 50px;
     position: relative;
     padding-top: 40px;
     border-radius: 10px;
+    height: 1350px;
   }
 }
