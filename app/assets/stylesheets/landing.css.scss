@@ -245,9 +245,15 @@ body {
     border: none;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier;
+    h3{
+      position: relative;
+      top: 100px;
+      font-size: 1.2em;
+      line-height: 1.2em;
+    }
     form{
       position: relative;
-      top: 200px;
+      top: 113px;
       input{
         padding: 10px;
         font-size: 20px;

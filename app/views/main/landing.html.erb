@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'landing' %>
+<%= javascript_include_tag 'landing' %>
 
 <div id="landing-container" class="transition-all">
 
@@ -23,80 +24,30 @@
   <div class="slide-container">
     <h2 class="button">Join the Newsletter</h2>
 
+
+
     <div id="signupform">
-      <%= form_for @user, url: '/landing',remote: true do |f| %>
+      <h3>Sign up for more information, promotions, and events!</h3>
+      <%= form_for @user, url: '/landing', remote: true do |f| %>
           <%= f.text_field :email, :placeholder => 'EMAIL' %>
-          <%= f.submit 'SUBMIT', :class => 'button'  %>
+          <%= f.submit 'SUBMIT', :class => 'button' %>
       <% end %>
 
       <div class="success">
         Successfully Signed Up!
       </div>
     </div>
-
-
   </div>
 
   <div class="container welcome">
-
     <div class="wrapper">
       <%= image_tag 'header_logo@2x.png' %>
       <h1 style="font-size: 3em;">RIJUICE</h1>
 
       <h3>Life begins from within.</h3>
     </div>
-
-
   </div>
 
   <div id="throwing-fucking-shade"></div>
 
 </div>
-
-<script>
-    var clicked = false
-    $('#landing-container h2').on('click', function () {
-        if (clicked) {
-            $('#signupform').removeClass('push-signup-down')
-            $(this).removeClass("invert-button");
-            clicked = false
-        } else {
-            $('#signupform').addClass('push-signup-down')
-            $(this).addClass("invert-button");
-            clicked = true
-        }
-    })
-    contactRequest()
-
-    function contactRequest() {
-        $('#new_user').on('submit', function () {
-
-            var email = $('#user_email')
-
-            if (email.val().length < 1) {
-                email.attr('placeholder', 'ENTER YOUR EMAIL')
-                email.css('color', 'red')
-                return false;
-            }
-
-
-            $(this).fadeOut(500, function () {
-                $('.success').fadeIn();
-                $('#landing-container h2').on('click', function () {
-                    $('#signupform').removeClass('push-signup-down')
-                    $(this).removeClass("invert-button");
-                    $(this).off()
-
-                })
-
-                setTimeout(function(){
-                    $('#signupform').removeClass('push-signup-down')
-                    $(this).removeClass("invert-button");
-                    $('#landing-container h2').off()
-                }, 2000)
-            });
-
-        })
-    }
-
-</script>
