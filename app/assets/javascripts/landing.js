@@ -31,6 +31,17 @@ $(document).ready(function(){
                 return false;
             }
 
+            $.ajax({
+                type: "POST",
+                url: '/landing_post',
+                data: 'p=' + juice_ids,
+                error: function() {
+                    alert('errsdsor')
+                },
+                success: function(data) {
+                    alert(data);
+                }
+            });
 
             $(this).fadeOut(500, function () {
                 $('.success').fadeIn();
