@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #ActiveAdmin.routes(self)
 
   root to: 'main#landing'
+  post 'landing', to: 'main#landing_post'
   #root to: 'main#index'
 
   #get 'home' => 'main#index'

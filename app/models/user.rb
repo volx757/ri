@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  before_save :encrypt_password
+ # before_save :encrypt_password
 
   has_many :carts
   has_many :invoices
@@ -8,11 +8,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state, :phone
   attr_accessor :password
 
-  validates_confirmation_of :password, unless: 'self.class == Guest'
-  validates_presence_of :password, :on => :create, unless: 'self.class == Guest'
+ # validates_confirmation_of :password, unless: 'self.class == Guest'
+ # validates_presence_of :password, :on => :create, unless: 'self.class == Guest'
   validates_presence_of :email, unless: 'self.class == Guest'
   validates_uniqueness_of :email, unless: 'self.class == Guest'
-  validates_presence_of :phone
+ # validates_presence_of :phone
 
 
   def self.authenticate(email, password)

@@ -1,6 +1,13 @@
 class MainController < ApplicationController
 
   def landing
+    @user = User.new
+  end
+
+  def landing_post
+    puts params
+    @user = User.create!(:email => params[:user][:email])
+    render :nothing => true
   end
 
   def index
