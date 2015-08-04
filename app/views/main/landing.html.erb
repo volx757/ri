@@ -27,7 +27,7 @@
 
 
     <div id="signupform">
-      <h3>Sign up for more information, promotions, and events!</h3>
+      <h3>Sign up for more information, promotions, and events</h3>
       <%= form_for @user, url: '/landing', remote: true do |f| %>
           <%= f.text_field :email, :placeholder => 'EMAIL' %>
           <%= f.submit 'SUBMIT', :class => 'button' %>
