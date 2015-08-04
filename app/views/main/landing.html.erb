@@ -26,7 +26,7 @@
     <div id="signupform">
       <%= form_for @user, url: '/landing',remote: true do |f| %>
           <%= f.text_field :email, :placeholder => 'EMAIL' %>
-          <%= f.submit :class => 'button'  %>
+          <%= f.submit 'SUBMIT', :class => 'button'  %>
       <% end %>
 
       <div class="success">
