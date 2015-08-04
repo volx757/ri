@@ -156,6 +156,9 @@ body {
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0px);
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
     width: 302px;
     padding: 0 10px;
     top: 45px;
@@ -173,12 +176,9 @@ body {
     }
   }
   #signupform{
-    margin-left: 1.5px;
-    width: 285px;
+    width: 286px;
     height: 400px;
     position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0px);
     background: silver;
     top: -400px;
     padding: 9px;
@@ -189,12 +189,19 @@ body {
     border: none;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier;
+    @media screen and (max-width: $phoneLarge) {
+      width: 100%;
+      padding: 0;
+    }
     h3{
       position: relative;
       top: 100px;
       font-size: 1.2em;
       line-height: 1.2em;
       padding: 2px;
+      @media screen and (max-width: $phoneLarge) {
+       padding: 0 40px;
+      }
     }
     form{
       position: relative;
