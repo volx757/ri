@@ -1,69 +1,78 @@
 var clicked = false
-$(document).ready(function(){
 
-    $('#landing-container h2').on('click', function () {
-        if (clicked) {
-            $('#signupform').removeClass('push-signup-down')
-            $(this).removeClass("invert-button");
-            clicked = false
-        } else {
-            $('#signupform').addClass('push-signup-down')
-            $(this).addClass("invert-button");
-            clicked = true
-        }
-    })
-    contactRequest()
+$(document).ready(function () {
 
-    function contactRequest() {
-        $('#new_user').on('submit', function () {
-            var email = $('#user_email')
+    bindSlideButton()
+    setupContactRequest()
+
+    function setupContactRequest() {
+        $('#new_user').on('submit', function (e) {
+            e.preventDefault()
+
+            var email = $('#email'),
+                error = $('#error-box')
+
+            email.focus(function () {
+                $(this).css('color', 'black')
+            })
 
             if (email.val().length < 1) {
-                email.attr('placeholder', 'ENTER YOUR EMAIL')
-                email.css('color', 'red')
+                error.html('ENTER YOUR EMAIL').hide().css('color', 'red').fadeIn(200)
                 return false;
             }
 
-            if (!validateEmail(email.val())){
-                email.val('')
-                email.attr('placeholder', 'INVALID EMAIL')
-                email.css('color', 'red')
+            if (!validateEmail(email.val())) {
+                error.html('EMAIL IS INVALID').hide().css('color', 'red').fadeIn(200)
                 return false;
             }
 
             $.ajax({
                 type: "POST",
-                url: '/landing_post',
-                data: 'p=' + juice_ids,
-                error: function() {
-                    alert('errsdsor')
+                url: '/landing',
+                data: 'email=' + email.val(),
+                error: function (response) {
+                    console.log(response.responseText);
+                    var responseLength = response.responseText.length
+                    error.html(response.responseText.slice(2, responseLength - 2)).hide().css('color', 'red').fadeIn(200)
                 },
-                success: function(data) {
-                    alert(data);
+                success: function (data) {
+                    console.log(data)
+                    error.html('SUCCESS!').hide().css('color', 'green').fadeIn(200)
+
+                    $('#landing-container').find('h2').on('click', function () {
+                        $('#signupform').removeClass('push-signup-down')
+                        $(this).removeClass("invert-button");
+                        $(this).off()
+
+
+                        setTimeout(function () {
+                            $('#signupform').removeClass('push-signup-down')
+                            $(this).removeClass("invert-button");
+                            $('#landing-container').find('h2').off()
+                        }, 5000)
+                    });
                 }
             });
-
-            $(this).fadeOut(500, function () {
-                $('.success').fadeIn();
-                $('#landing-container h2').on('click', function () {
-                    $('#signupform').removeClass('push-signup-down')
-                    $(this).removeClass("invert-button");
-                    $(this).off()
-
-                })
-
-                setTimeout(function () {
-                    $('#signupform').removeClass('push-signup-down')
-                    $(this).removeClass("invert-button");
-                    $('#landing-container h2').off()
-                }, 2000)
-            });
-        })
+        });
 
         function validateEmail(email) {
             var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
             return re.test(email);
         }
     }
-})
 
+    function bindSlideButton() {
+        $('#landing-container').find('h2').on('click', function () {
+            if (clicked) {
+                $('#signupform').removeClass('push-signup-down')
+                $(this).removeClass("invert-button");
+                clicked = false
+            } else {
+                $('#signupform').addClass('push-signup-down')
+                $(this).addClass("invert-button");
+                clicked = true
+            }
+        })
+    }
+
+});

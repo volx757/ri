@@ -1,5 +1,3 @@
-<%= javascript_include_tag 'landing' %>
-
 <div id="landing-container" class="transition-all">
 
   <div id="social-container" class="transition-all">
@@ -25,14 +23,11 @@
 
     <div id="signupform">
       <h3>Sign up for information, promotions, and events</h3>
-      <%= form_for @user, url: '/landing', remote: true do |f| %>
-          <%= f.text_field :email, :placeholder => 'EMAIL' %>
-          <%= f.submit 'SUBMIT', :class => 'button' %>
+      <p id="error-box">Enter Your Email</p>
+      <%= form_tag '/landing', remote: true, id: 'new_user',data: {type: 'text'} do %>
+          <%= text_field_tag :email, nil, placeholder: 'EMAIL' %>
+          <%= submit_tag 'SUBMIT', :class => 'button' %>
       <% end %>
-
-      <div class="success">
-        Successfully Signed Up!
-      </div>
     </div>
   </div>
 

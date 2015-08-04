@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  #devise_for :admin_users, ActiveAdmin::Devise.config
-  #ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
   root to: 'main#landing'
   post 'landing', to: 'main#landing_post'
@@ -30,7 +30,6 @@ Rails.application.routes.draw do
   #post 'inquiry', to: 'main#inquiry', as: 'inquiry'
   #post 'contact', to: 'main#contact', as: 'contact_post'
 #
-  #get 'night' => 'main#night', :as => 'night'
 #
   #resources :users
 

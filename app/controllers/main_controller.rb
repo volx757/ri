@@ -1,13 +1,19 @@
 class MainController < ApplicationController
 
   def landing
-    @user = User.new
   end
 
   def landing_post
-    puts params
-    @user = User.create!(:email => params[:user][:email])
-    render :nothing => true
+    @user = User.new(:email => params[:email])
+    respond_to do |format|
+      if @user.save
+        format.json { render json: true }
+      else
+        puts @user.errors.full_messages
+        format.json { render json: @user.errors.full_messages.to_json, status: :unprocessable_entity }
+      end
+    end
+
   end
 
   def index
@@ -21,9 +27,6 @@ class MainController < ApplicationController
   def inquiry
     @inquiry = Inquiry.new(inquiry_params).save!
     render :nothing => true
-  end
-
-  def night
   end
 
   private
