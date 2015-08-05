@@ -108,8 +108,8 @@ body {
         color: #FFD700;
       }
     }
-    h1{
-      color:white;
+    h1 {
+      color: white;
     }
     img {
       position: relative;
@@ -121,10 +121,10 @@ body {
       @media screen and (max-width: $phoneLarge) {
         width: 250px;
       }
-      &:hover {
-        transition-duration: 0.2s;
+      &.gold-shadow {
+        transition-duration: 3s;
         transition-timing-function: ease-in;
-        box-shadow: 0px 0px 3em gold inset;
+        box-shadow: 0 0 3em gold inset;
       }
     }
   }
@@ -146,13 +146,13 @@ body {
       color: white;
     }
   }
-  .invert-button{
+  .invert-button {
     color: gold;
     background: black;
   }
-  .slide-container{
-    overflow:hidden;
-    height:420px;
+  .slide-container {
+    overflow: hidden;
+    height: 420px;
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0px);
@@ -167,7 +167,7 @@ body {
       top: 0;
     }
   }
-  #signupform{
+  #signupform {
     width: 286px;
     height: 440px;
     position: fixed;
@@ -175,7 +175,7 @@ body {
     top: -420px;
     padding: 9px;
     text-transform: uppercase;
-    font-family: "Dosis",sans-serif;
+    font-family: "Dosis", sans-serif;
     z-index: -1;
     opacity: 0.95;
     border: none;
@@ -185,11 +185,20 @@ body {
     background: -o-linear-gradient(#FFFFA9, #C0C0C0);
     background: -moz-linear-gradient(#FFFFA9, #C0C0C0);
     background: linear-gradient(#FFFFA9, #C0C0C0);
+    &.op-out{
+      -webkit-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+      -moz-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+      -o-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+      -ms-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+      transition: opacity 4s ease-in-out;
+
+      opacity: 0.6;
+    }
     @media screen and (max-width: $phoneLarge) {
       width: 100%;
       padding: 0;
     }
-    h3{
+    h3 {
       position: relative;
       top: 100px;
       font-weight: 800;
@@ -197,18 +206,21 @@ body {
       line-height: 1.2em;
       padding: 5px;
       @media screen and (max-width: $phoneLarge) {
-       padding: 0 40px;
+        padding: 0 50px !important;
       }
     }
-    form{
+    form {
       position: relative;
       top: 100px;
-      input{
+      input {
         padding: 10px;
         font-size: 20px;
         border: none;
+        display: block;
+        position: relative;
+        margin: 0 auto;
       }
-      .button{
+      .button {
         position: relative;
         top: 10px;
         width: 220px;
@@ -218,7 +230,7 @@ body {
     }
 
   }
-  .push-signup-down{
+  .push-signup-down {
     top: -35px !important;
   }
 
@@ -298,21 +310,23 @@ body {
   }
 }
 
-#error-box{
+#error-box {
   position: relative;
   top: 100px;
   line-height: 1em;
-  color: #D8D8BC;
+  color: #DADAB8;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
-.text-shadow{
-  -webkit-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
-  -moz-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
-  -o-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
-  -ms-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition:text-shadow 4s ease-in-out;
+.text-shadow {
+  -webkit-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -moz-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -o-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -ms-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: text-shadow 4s ease-in-out;
 
-  text-shadow:10px 10px 2px gold;
+  text-shadow: 10px 10px 2px gold;
+
+
 }

@@ -49,31 +49,37 @@ $(document).ready(function () {
                 url: '/landing',
                 data: 'email=' + email.val(),
                 error: function (response) {
-                    console.log(response.responseText);
+                    // console.log(response.responseText);
                     var responseLength = response.responseText.length
                     error.html(response.responseText.slice(2, responseLength - 2)).hide().css('color', 'red').fadeIn(200)
                 },
                 success: function (data) {
-                    console.log(data)
+                    // console.log(data)
+                    var formBox = $('#signupform')
+
                     error.css('display', 'none')
-                    $('#signupform').find('h3').html('WELCOME TO THE FAM').hide().css({
+                    $('input').css('display', 'none')
+
+                    formBox.find('h3').html('WELCOME TO THE FAM').hide().css({
                         color: 'black',
                         fontWeight: '800',
                         fontSize: '2.2em',
                         padding: '0',
-                        height: '99px'
-                    }).fadeIn(200).addClass('text-shadow')
+                        height: '99px',
+                        margin: '25px 0 0 0'
+                    }).fadeIn(1200).addClass('text-shadow')
+
+                    formBox.addClass('op-out')
+                    $('.welcome img').addClass('gold-shadow')
 
                     $('#landing-container').find('h2, #signupform').on('click', function () {
-                        $('#signupform').removeClass('push-signup-down')
-                        $(this).removeClass("invert-button");
-                        $(this).off()
+                        formBox.removeClass('op-out').removeClass('push-signup-down')
+                        $('#landing-container').find('h2').removeClass("invert-button").off();
                     });
 
                     setTimeout(function () {
-                        $('#signupform').removeClass('push-signup-down')
-                        $(this).removeClass("invert-button");
-                        $('#landing-container').find('h2').off()
+                        formBox.removeClass('op-out').removeClass('push-signup-down')
+                        $('#landing-container').find('h2').removeClass("invert-button").off();
                     }, 4000)
                 }
             });
