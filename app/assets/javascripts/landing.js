@@ -47,9 +47,8 @@ $(document).ready(function () {
                 url: '/landing',
                 data: 'email=' + email.val(),
                 error: function (response) {
-                    // console.log(response.responseText);
-                    var responseLength = response.responseText.length
-                    error.html(response.responseText.slice(2, responseLength - 2)).hide().css('color', 'red').fadeIn(200)
+                    //console.log(response.responseText);
+                    error.html(response.responseText).hide().css('color', 'red').fadeIn(200)
                 },
                 success: function (data) {
                     // console.log(data)

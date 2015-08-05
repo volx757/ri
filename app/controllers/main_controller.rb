@@ -9,7 +9,9 @@ class MainController < ApplicationController
       if @contact.save
         format.json { render json: true }
       else
-        format.json { render json: @contact.errors.full_messages.to_json, status: :unprocessable_entity }
+        puts @contact.errors.full_messages
+        msg = 'This email is already registered.'
+        format.json { render json: msg, status: :unprocessable_entity }
       end
     end
   end
