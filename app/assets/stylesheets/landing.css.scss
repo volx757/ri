@@ -79,7 +79,7 @@ body {
     }
     h3 {
       position: relative;
-      color: silver;
+      color: white;
       font-weight: 100;
       letter-spacing: 2px;
       font-size: 14px;
@@ -231,8 +231,12 @@ body {
   top: 100px;
   left: 20px;
   @media screen and (max-width: $phoneLarge) {
-    top: 450px;
-    left: 80px;
+    top: 550px;
+    height: 60px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
   }
 
   &:hover {
@@ -246,6 +250,11 @@ body {
       width: 100%;
       height: 100%;
       position: relative;
+      @media screen and (max-width: $phoneLarge) {
+        width: 40px;
+        display: inline-block;
+      }
+
       i {
         font-size: 2em;
         display: block;
