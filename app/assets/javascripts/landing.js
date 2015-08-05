@@ -5,6 +5,7 @@ $(document).ready(function () {
 
     bindSlideButton()
     setupContactRequest()
+    mobileScrollLevy()
 
     function setupContactRequest() {
         $('#new_user').on('submit', function (e) {
@@ -103,6 +104,24 @@ $(document).ready(function () {
                 clicked = true
             }
         })
+    }
+
+    function mobileScrollLevy(){
+        if (isMobile()){
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop()
+                if (scroll >= 99){
+                    $('#social-container').css('z-index', '1')
+                } else{
+                    $('#social-container').css('z-index', '200')
+                }
+            })
+        }
+
+
+        function isMobile() {
+            return !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
     }
 
 });
