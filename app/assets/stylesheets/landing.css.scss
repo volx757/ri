@@ -181,6 +181,10 @@ body {
     border: none;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier;
+    background: -webkit-linear-gradient(#FFFFA9, #C0C0C0);
+    background: -o-linear-gradient(#FFFFA9, #C0C0C0);
+    background: -moz-linear-gradient(#FFFFA9, #C0C0C0);
+    background: linear-gradient(#FFFFA9, #C0C0C0);
     @media screen and (max-width: $phoneLarge) {
       width: 100%;
       padding: 0;
@@ -190,7 +194,7 @@ body {
       top: 100px;
       font-size: 1.2em;
       line-height: 1.2em;
-      padding: 2px;
+      padding: 5px;
       @media screen and (max-width: $phoneLarge) {
        padding: 0 40px;
       }
@@ -297,7 +301,17 @@ body {
   position: relative;
   top: 100px;
   line-height: 1em;
-  color: #C0C0C0;
+  color: #D8D8BC;
   font-size: 1.2em;
   margin-bottom: 10px;
+}
+
+.text-shadow{
+  -webkit-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -moz-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -o-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -ms-transition:text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition:text-shadow 4s ease-in-out;
+
+  text-shadow:10px 10px 2px gold;
 }

@@ -37,20 +37,26 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     console.log(data)
-                    error.html('SUCCESS!').hide().css('color', 'green').fadeIn(200)
+                    error.css('display', 'none')
+                    $('#signupform').find('h3').html('WELCOME TO THE CLUB').hide().css({
+                        color: 'black',
+                        fontWeight: '800',
+                        fontSize: '2.2em',
+                        padding: '0',
+                        height: '99px'
+                    }).fadeIn(200).addClass('text-shadow')
 
-                    $('#landing-container').find('h2').on('click', function () {
+                    $('#landing-container').find('h2, #signupform').on('click', function () {
                         $('#signupform').removeClass('push-signup-down')
                         $(this).removeClass("invert-button");
                         $(this).off()
-
-
-                        setTimeout(function () {
-                            $('#signupform').removeClass('push-signup-down')
-                            $(this).removeClass("invert-button");
-                            $('#landing-container').find('h2').off()
-                        }, 5000)
                     });
+
+                    setTimeout(function () {
+                        $('#signupform').removeClass('push-signup-down')
+                        $(this).removeClass("invert-button");
+                        $('#landing-container').find('h2').off()
+                    }, 4000)
                 }
             });
         });
