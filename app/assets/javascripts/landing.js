@@ -1,11 +1,12 @@
 var clicked = false,
-    longEmail = 0;
+    longEmail = 0,
+    formShowing = false;
 
 $(document).ready(function () {
 
     bindSlideButton()
     setupContactRequest()
-    mobileScrollLevy()
+   // mobileScrollLevy()
 
     function setupContactRequest() {
         $('#new_user').on('submit', function (e) {
@@ -74,12 +75,14 @@ $(document).ready(function () {
                         formBox.removeClass('op-out').removeClass('push-signup-down')
                         $('#landing-container').find('h2').removeClass("invert-button").off();
                         $('.slide-container .button').css('cursor', 'default')
+                        formShowing = false
                     });
 
                     setTimeout(function () {
                         formBox.removeClass('op-out').removeClass('push-signup-down')
                         $('#landing-container').find('h2').removeClass("invert-button").off();
                         $('.slide-container .button').css('cursor', 'default')
+                        formShowing = false
                     }, 4000)
                 }
             });
@@ -98,10 +101,12 @@ $(document).ready(function () {
                 $('#signupform').removeClass('push-signup-down')
                 $(this).removeClass("invert-button");
                 clicked = false
+                formShowing = false
             } else {
                 $('#signupform').addClass('push-signup-down')
                 $(this).addClass("invert-button");
                 clicked = true
+                formShowing = true
             }
         })
     }
@@ -109,12 +114,7 @@ $(document).ready(function () {
     function mobileScrollLevy(){
         if (isMobile()){
             $(window).scroll(function(){
-                var scroll = $(window).scrollTop()
-                if (scroll >= 99){
-                    $('#social-container').css('z-index', '1')
-                } else{
-                    $('#social-container').css('z-index', '200')
-                }
+               console.log($('#social-container').position().top)
             })
         }
 
