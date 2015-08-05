@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 
   #before_filter :instagram
 
+
   protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?, :guest?, :is_mobile?
@@ -24,7 +25,6 @@ class ApplicationController < ActionController::Base
         true :
         false
   end
-
 
   def instagram
     @instagram = Instagram.user_recent_media('1119078907', {:count => 6})
