@@ -12,7 +12,6 @@ class MainController < ApplicationController
         format.json { render json: @contact.errors.full_messages.to_json, status: :unprocessable_entity }
       end
     end
-
   end
 
   def index
