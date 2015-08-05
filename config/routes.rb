@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 #
   ## sessions
   #post 'login' => 'sessions#create'
-  #get 'login' => 'sessions#gon'
   #post 'log_out' => 'sessions#destroy', :as => 'log_out'
 #
   ## carts

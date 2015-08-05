@@ -195,7 +195,6 @@ function initLoginForm() {
         $.post( "log_out", function( data ) {
 
         });
-        alert( gon.logged_in )
     })
 
 }

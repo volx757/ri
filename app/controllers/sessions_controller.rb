@@ -17,10 +17,6 @@ class SessionsController < ApplicationController
     render :nothing => true
   end
 
-  def gon
-    gon.watch.logged_in = session[:user_id].present?
-    render :nothing => true
-  end
 
 end
 
