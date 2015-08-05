@@ -73,11 +73,13 @@ $(document).ready(function () {
                     $('#landing-container').find('h2, #signupform').on('click', function () {
                         formBox.removeClass('op-out').removeClass('push-signup-down')
                         $('#landing-container').find('h2').removeClass("invert-button").off();
+                        $('.slide-container .button').css('cursor','default')
                     });
 
                     setTimeout(function () {
                         formBox.removeClass('op-out').removeClass('push-signup-down')
                         $('#landing-container').find('h2').removeClass("invert-button").off();
+                        $('.slide-container .button').css('cursor','default')
                     }, 4000)
                 }
             });
