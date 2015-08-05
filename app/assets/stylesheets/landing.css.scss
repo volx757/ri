@@ -152,7 +152,7 @@ body {
   }
   .slide-container{
     overflow:hidden;
-    height:400px;
+    height:420px;
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0px);
@@ -161,7 +161,6 @@ body {
     -webkit-transform: translate(-50%, 0px);
     width: 302px;
     padding: 0 10px;
-    top: 45px;
     z-index: 10;
     @media screen and (max-width: $phoneLarge) {
       width: 100%;
@@ -170,10 +169,10 @@ body {
   }
   #signupform{
     width: 286px;
-    height: 400px;
+    height: 440px;
     position: fixed;
     background: silver;
-    top: -400px;
+    top: -420px;
     padding: 9px;
     text-transform: uppercase;
     font-family: "Dosis",sans-serif;
