@@ -8,8 +8,6 @@ $(document).ready(function () {
 
     function setupContactRequest() {
         $('#new_user').on('submit', function (e) {
-            e.preventDefault()
-
             var email = $('#email'),
                 error = $('#error-box')
 
@@ -83,6 +81,7 @@ $(document).ready(function () {
                     }, 4000)
                 }
             });
+            return false;
         });
 
         function validateEmail(email) {
