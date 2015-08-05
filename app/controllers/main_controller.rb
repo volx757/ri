@@ -4,13 +4,12 @@ class MainController < ApplicationController
   end
 
   def landing_post
-    @user = User.new(:email => params[:email])
+    @contact = Contact.new(:email => params[:email])
     respond_to do |format|
-      if @user.save
+      if @contact.save
         format.json { render json: true }
       else
-        puts @user.errors.full_messages
-        format.json { render json: @user.errors.full_messages.to_json, status: :unprocessable_entity }
+        format.json { render json: @contact.errors.full_messages.to_json, status: :unprocessable_entity }
       end
     end
 
