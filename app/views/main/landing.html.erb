@@ -27,7 +27,7 @@
       <h3>Sign up for information, promotions, and events</h3>
       <p id="error-box">Enter Your Email</p>
       <%= form_tag '/landing', remote: true, id: 'new_user',data: {type: 'text'} do %>
-          <%= text_field_tag :email, nil, placeholder: 'EMAIL', title: 'email' %>
+          <%= email_field_tag :email, nil, placeholder: 'EMAIL', title: 'email' %>
           <%= submit_tag 'SUBMIT', :class => 'button' %>
       <% end %>
     </div>
