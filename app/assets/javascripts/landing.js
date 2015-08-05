@@ -1,4 +1,5 @@
-var clicked = false
+var clicked = false,
+    longEmail = 0;
 
 $(document).ready(function () {
 
@@ -20,6 +21,23 @@ $(document).ready(function () {
                 error.html('ENTER YOUR EMAIL').hide().css('color', 'red').fadeIn(200)
                 return false;
             }
+            if (email.val().length > 250) {
+                var msg = 'THAT EMAIL IS LONG...'
+                if (longEmail == 0) {
+                    msg = 'THAT EMAIL IS LONG...'
+                    longEmail++
+                } else if (longEmail == 1) {
+                    msg = 'TOO LONG...'
+                    longEmail++
+                } else if (longEmail == 2) {
+                    msg = 'YOU EMAIL US.'
+                    longEmail++
+                } else if (longEmail > 2) {
+                    return false;
+                }
+                error.html(msg).hide().css('color', 'red').fadeIn(200)
+                return false;
+            }
 
             if (!validateEmail(email.val())) {
                 error.html('EMAIL IS INVALID').hide().css('color', 'red').fadeIn(200)
@@ -38,7 +56,7 @@ $(document).ready(function () {
                 success: function (data) {
                     console.log(data)
                     error.css('display', 'none')
-                    $('#signupform').find('h3').html('WELCOME TO THE CLUB').hide().css({
+                    $('#signupform').find('h3').html('WELCOME TO THE FAM').hide().css({
                         color: 'black',
                         fontWeight: '800',
                         fontSize: '2.2em',
