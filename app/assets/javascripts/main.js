@@ -19,8 +19,6 @@ $(document).ready(function () {
     setupContactNavUnderline()
     bindShowAllQuestions()
 
-//    activateNightPage();
-
     inquiryForm();
     contactForm();
 

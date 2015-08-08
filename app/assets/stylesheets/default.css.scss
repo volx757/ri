@@ -1,7 +1,4 @@
-$tablet: 1000px;
-$phoneLarge: 650px;
-$phone: 450px;
-$phoneSmall: 375px;
+@import 'variables';
 
 .push-shit {
   position: relative;
@@ -9,15 +6,6 @@ $phoneSmall: 375px;
   margin-bottom: 100px;
 }
 
-@font-face {
-  font-family: 'Dosis';
-  src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Open_Sans';
-  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
-}
 
 .transition-all {
   transition-duration: 0.15s;
@@ -150,10 +138,6 @@ hr {
 
 .grey {
   color: #a4a4a4;
-}
-
-.nopoint {
-  pointer-events: none;
 }
 
 .wrapper {
@@ -598,50 +582,46 @@ hr {
       font-size: 1.3em;
     }
   }
-  #logthefuckin {
-    top: 0 !important;
-    width: 100px;
-  }
+}
 
-  #notification-box {
-    display: none;
+#notification-box {
+  display: none;
+  position: fixed;
+  top: 125px;
+  left: 80px;
+  width: 280px;
+  height: 100px;
+  z-index: 900;
+  background: silver;
+  opacity: 0.9;
+  border-radius: 5px;
+  padding: 13px;
+  text-transform: uppercase;
+  .login-notice {
+    display: inline-block;
     position: fixed;
-    top: 125px;
-    left: 80px;
+    line-height: 1.2em;
+    color: black;
+    font-weight: 800;
     width: 280px;
-    height: 100px;
-    z-index: 900;
-    background: silver;
-    opacity: 0.9;
-    border-radius: 5px;
-    padding: 13px;
-    text-transform: uppercase;
-    .login-notice {
-      display: inline-block;
-      position: fixed;
-      line-height: 1.2em;
-      color: black;
-      font-weight: 800;
-      width: 280px;
-      font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 
-    }
   }
+}
 
-  #signup-box {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    .signup {
-      margin: 60px auto 50px;
-      width: 45%;
-      background: #F5F5F5;
-      top: 50px;
-      position: relative;
-      padding-top: 40px;
-      border-radius: 10px;
-      height: 1350px;
-    }
+#signup-box {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  .signup {
+    margin: 60px auto 50px;
+    width: 45%;
+    background: #F5F5F5;
+    top: 50px;
+    position: relative;
+    padding-top: 40px;
+    border-radius: 10px;
+    height: 1350px;
   }
 }

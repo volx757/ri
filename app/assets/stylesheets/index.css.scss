@@ -1,88 +1,4 @@
-$tablet: 1000px;
-$phoneLarge: 650px;
-$phone: 450px;
-$phoneSmall: 375px;
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes colorIn {
-  from {
-    background-color: gold;
-  }
-  to {
-    background-color: white;
-  }
-}
-
-@-moz-keyframes colorIn {
-  from {
-    background-color: gold;
-  }
-  to {
-    background-color: white;
-  }
-}
-
-@keyframes colorIn {
-  from {
-    background-color: gold;
-  }
-  to {
-    background-color: white;
-  }
-}
+@import 'variables';
 
 #home-container {
   width: 100%;
@@ -106,11 +22,11 @@ $phoneSmall: 375px;
     }
     opacity: 0;
 
-    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -webkit-animation: fadeIn ease-in 1;
     -moz-animation: fadeIn ease-in 1;
     animation: fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 

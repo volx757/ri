@@ -2,3 +2,108 @@ $tablet: 1000px;
 $phoneLarge: 650px;
 $phone: 450px;
 $phoneSmall: 375px;
+
+/* Responsive mixins */
+@mixin respond-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin respond-max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes colorIn {
+  from {
+    background-color: gold;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@-moz-keyframes colorIn {
+  from {
+    background-color: gold;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes colorIn {
+  from {
+    background-color: gold;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+
+@font-face {
+  font-family: 'Dosis';
+  src: font-url('Dosis/Dosis-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open_Sans';
+  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}

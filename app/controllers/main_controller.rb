@@ -1,23 +1,5 @@
 class MainController < ApplicationController
 
-
-
-  def landing
-  end
-
-  def landing_post
-    @contact = Contact.new(:email => params[:email])
-    respond_to do |format|
-      if @contact.save
-        format.json { render json: true }
-      else
-        puts @contact.errors.full_messages
-        msg = 'This email is already registered.'
-        format.json { render json: msg, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def index
     @page_title = 'index'
   end
