@@ -25,7 +25,7 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  # config.assets.debug = true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -45,4 +45,5 @@ Rails.application.configure do
   config.stripe.secret_key = 'sk_test_2jPsvi0qQfguqpV1SjkQOq84'
   config.stripe.publishable_key = 'pk_test_BcvYOHT22B1zZQfF1VONpaHE'
   config.stripe.eager_load = ['user']
+
 end

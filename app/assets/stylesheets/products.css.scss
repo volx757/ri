@@ -82,9 +82,14 @@ $phoneSmall: 375px;
   margin: 0 auto;
   border: 1px solid black;
   padding: 50px;
+  .button{
+    cursor: pointer;
+  }
   .box {
     text-align: center;
+    border: 1px solid silver;
     &.sizes{
+      padding: 5px;
       .button {
         display: inline-block;
         width: 40%;
@@ -93,8 +98,16 @@ $phoneSmall: 375px;
       }
     }
 
-    .juices{
+    &.juices{
 
+      .juice-detail{
+        float: left;
+        width: 300px;
+        margin: 5px;
+        .quantity{
+
+        }
+      }
     }
   }
 }

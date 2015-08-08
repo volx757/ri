@@ -11,21 +11,32 @@
 
   </div>
 
+  <br>
+
   <div class="box juices">
     <% Juice.active.each do |j| %>
-        <div class="box img">
-            <%= image_tag( j.image.url )%>
+        <div class="juice-detail">
+          <div class="box img">
+            <%= image_tag(j.image.url(:medium)) %>
+          </div>
+
+          <div class="box desc">
+            <%= j.description %>
+          </div>
+          <div class="box quantity">
+            <div class="value">0</div>
+            <br>
+            <i class="fa fa-arrow-left button minus"></i>
+            <i class="fa fa-arrow-right button plus"></i>
+          </div>
         </div>
-
-        <div class="box desc">
-          <%= j.description %>
-        </div>
-
-        <div class="box quantity">
-
-        </div>
-
     <% end %>
   </div>
 
+  <div class="clearfix"></div>
+
 </div>
+
+<script>
+
+</script>

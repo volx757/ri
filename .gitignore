@@ -6,3 +6,4 @@
 /tmp
 /.idea
 /x-certs
+/config/defaults/development.yml
