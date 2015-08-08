@@ -253,6 +253,10 @@ GEM
       tilt (~> 1.1)
     secure_headers (2.2.2)
       user_agent_parser
+    sendgrid-ruby (0.0.3)
+      rest-client
+      smtpapi
+    smtpapi (0.1.0)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -328,6 +332,7 @@ DEPENDENCIES
   roo
   sass-rails
   secure_headers
+  sendgrid-ruby
   sprockets
   stripe-rails
   uglifier

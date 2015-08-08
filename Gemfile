@@ -28,6 +28,7 @@ gem 'mail'
 gem 'premailer-rails'
 gem 'nokogiri'
 gem 'honeybadger', '~> 2.0'
+gem 'sendgrid-ruby'
 
 group :production do
   gem 'rails_12factor'
