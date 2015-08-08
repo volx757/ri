@@ -6,8 +6,8 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    @user = current_user if guest?
-    @cart = current_user.active_cart
+   # @user = current_user
+   # @cart = current_user.active_cart
   end
 
   def create_payment
