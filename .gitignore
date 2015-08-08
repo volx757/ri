@@ -8,3 +8,5 @@
 /x-certs/*
 /config/defaults/development.yml
 .DS_Store
+config/secrets.yml
+config/newrelic.yml
