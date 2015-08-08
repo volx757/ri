@@ -76,6 +76,7 @@ $(document).ready(function () {
                         $('#landing-container').find('h2').removeClass("invert-button").off();
                         $('.slide-container .button').css('cursor', 'default')
                         formShowing = false
+                        $('.slide-container h2').html('Welcome to the Fam')
                     });
 
                     setTimeout(function () {
@@ -83,6 +84,7 @@ $(document).ready(function () {
                         $('#landing-container').find('h2').removeClass("invert-button").off();
                         $('.slide-container .button').css('cursor', 'default')
                         formShowing = false
+                        $('.slide-container h2').html('Welcome to the Fam')
                     }, 4000)
                 }
             });
