@@ -152,6 +152,10 @@ hr {
   color: #a4a4a4;
 }
 
+.nopoint {
+  pointer-events: none;
+}
+
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -594,46 +598,50 @@ hr {
       font-size: 1.3em;
     }
   }
-}
-
-#notification-box {
-  display: none;
-  position: fixed;
-  top: 125px;
-  left: 80px;
-  width: 280px;
-  height: 100px;
-  z-index: 900;
-  background: silver;
-  opacity: 0.9;
-  border-radius: 5px;
-  padding: 13px;
-  text-transform: uppercase;
-  .login-notice {
-    display: inline-block;
-    position: fixed;
-    line-height: 1.2em;
-    color: black;
-    font-weight: 800;
-    width: 280px;
-    font-family: "Open Sans", sans-serif;
-
+  #logthefuckin {
+    top: 0 !important;
+    width: 100px;
   }
-}
 
-#signup-box {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  .signup {
-    margin: 60px auto 50px;
-    width: 45%;
-    background: #F5F5F5;
-    top: 50px;
-    position: relative;
-    padding-top: 40px;
-    border-radius: 10px;
-    height: 1350px;
+  #notification-box {
+    display: none;
+    position: fixed;
+    top: 125px;
+    left: 80px;
+    width: 280px;
+    height: 100px;
+    z-index: 900;
+    background: silver;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 13px;
+    text-transform: uppercase;
+    .login-notice {
+      display: inline-block;
+      position: fixed;
+      line-height: 1.2em;
+      color: black;
+      font-weight: 800;
+      width: 280px;
+      font-family: "Open Sans", sans-serif;
+
+    }
+  }
+
+  #signup-box {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    .signup {
+      margin: 60px auto 50px;
+      width: 45%;
+      background: #F5F5F5;
+      top: 50px;
+      position: relative;
+      padding-top: 40px;
+      border-radius: 10px;
+      height: 1350px;
+    }
   }
 }

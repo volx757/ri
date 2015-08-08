@@ -25,9 +25,10 @@ gem 'newrelic_rpm'
 gem 'aws-sdk'
 gem 'devise'
 gem 'mail'
-gem 'sendgrid'
 gem 'premailer-rails'
 gem 'nokogiri'
+gem 'honeybadger', '~> 2.0'
+gem 'sendgrid'
 
 group :production do
   gem 'rails_12factor'

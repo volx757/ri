@@ -13,11 +13,11 @@
  *= require_self
  *= require default
  *= require reset
- *= require index
  *= require font-awesome
- *= require contact
- *= require night
- *= require products
- *= require dropkick
+ *= require variables
+ *= require default
  *= require landing
+ *= require index
+ *= require products
+ *= require contact
  */

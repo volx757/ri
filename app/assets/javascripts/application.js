@@ -15,9 +15,9 @@
 //= require lib/jquery.localScroll.min
 //= require lib/jquery.scrollTo.min
 //= require lib/dropkick.min
+//= require main
 //= require animations
 //= require dynamic_lists
 //= require sessions
 //= require notifications
 //= require carts
-//= require main

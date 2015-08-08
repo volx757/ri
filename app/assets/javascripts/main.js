@@ -142,6 +142,37 @@ function activateNightPage() {
     })
 }
 
+function initLoginForm() {
+
+    bindLoginButton()
+
+    $('#hide-login').on('click', function () {
+        $('#login-container').fadeOut(200)
+        bindLoginButton()
+    })
+
+    $('#logout-button').on('click', function(){
+        $.post( "log_out", function( data ) {
+
+        });
+    })
+
+}
+function lockScroll() {
+    $('body').css('overflow', 'hidden')
+}
+
+    function unlockScroll(){
+        $('body').css('overflow', 'inherit')
+    }
+
+function bindLoginButton() {
+    $('#login-button').on('click', function () {
+        $('#login-container').fadeIn(300)
+        $('#login-button').off('click')
+    })
+}
+
 function landingAnimation() {
     $(window).scroll(function () {
         if (!hasScrolled) {
@@ -151,10 +182,3 @@ function landingAnimation() {
     })
 }
 
-function lockScroll(){
-    $('body').css('overflow', 'hidden')
-}
-
-function unlockScroll(){
-    $('body').css('overflow', 'inherit')
-}

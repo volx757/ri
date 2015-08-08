@@ -135,6 +135,7 @@ GEM
       multi_json (~> 1.8)
     highline (1.6.21)
     hike (1.2.3)
+    honeybadger (2.1.3)
     htmlentities (4.3.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -252,9 +253,10 @@ GEM
       tilt (~> 1.1)
     secure_headers (2.2.2)
       user_agent_parser
-    sendgrid (1.2.0)
-      json
-      json
+    sendgrid-ruby (0.0.3)
+      rest-client
+      smtpapi
+    smtpapi (0.1.0)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -308,6 +310,7 @@ DEPENDENCIES
   foreigner
   foreman
   heroku-api
+  honeybadger (~> 2.0)
   immigrant
   instagram
   jquery-rails
@@ -329,7 +332,7 @@ DEPENDENCIES
   roo
   sass-rails
   secure_headers
-  sendgrid
+  sendgrid-ruby
   sprockets
   stripe-rails
   uglifier
