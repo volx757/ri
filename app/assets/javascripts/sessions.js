@@ -6,6 +6,23 @@ function initLoginForm() {
     setupForm()
 }
 
+function initLoginForm() {
+
+    bindLoginButton()
+
+    $('#hide-login').on('click', function () {
+        $('#login-container').fadeOut(200)
+        bindLoginButton()
+    })
+
+    $('#logout-button').on('click', function () {
+        $.post("log_out", function (data) {
+
+        });
+    })
+
+}
+
 function bindLoginButton() {
 
     $('#login-button').on('click', function () {

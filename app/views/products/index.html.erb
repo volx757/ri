@@ -16,25 +16,16 @@
     </div>
   </div>
 
+
+  <div class="container purchase">
+    <%= render 'build_a_pack' %>
+  </div>
+
   <% if current_user != nil && current_user.active_cart != nil %>
       <a href="/cart">CART</a>
   <% end %>
 
-  <div class="container pack">
-    <div class="size-select">
-      <div class="button">12-PACK</div>
-      <div class="button">24-PACK</div>
-    </div>
-
-    <div class="product-box">
-      <% Product.all.each do |p| %>
-          <% @product = p %>
-          <%= render 'build_a_pack', :locals => @p %>
-      <% end %>
-    </div>
-
-    <div class="checkout"></div>
-
-  </div>
 
 </div>
+
+

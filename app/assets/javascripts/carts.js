@@ -15,7 +15,6 @@ $(document).ready(function () {
 
     });
 
-
     $('form.edit_guest').submit(function() {
         if (!validateFormOne())
             return false

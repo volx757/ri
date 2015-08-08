@@ -4,13 +4,14 @@ class Product < ActiveRecord::Base
 
   PACK_PRODUCT_ID = 6
 
-  attr_accessible :name, :description, :price, :image, :type
+  attr_accessible :name, :description, :price, :image, :type, :active
 
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
 
   scope :juices, -> { where(type: 'Juice') }
+  scope :active, -> { where(:active => true) }
   scope :cleanses, -> { where(type: 'Cleanse') }
 
   def self.types

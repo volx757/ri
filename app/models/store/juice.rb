@@ -1,7 +1,12 @@
 class Juice < Product
 
+  before_create :set_type
+
   belongs_to :pack
 
-  attr_accessible :pack
+
+  def set_type
+    self.type = 'Juice'
+  end
 
 end

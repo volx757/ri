@@ -1,13 +1,31 @@
-<div class="product-detail">
-  <img src="<% @product.image %>">
-  <div class="description">
-    <% @product.description %>
-  </div>
-  <div class="quantity-select">
+<div id="build-a-pack">
+
+  <div class="box sizes">
+
+    <div class="button">
+      12 Pack
+    </div>
+    <div class="button">
+      24 Pack
+    </div>
 
   </div>
+
+  <div class="box juices">
+    <% Juice.active.each do |j| %>
+        <div class="box img">
+            <%= image_tag( j.image.url )%>
+        </div>
+
+        <div class="box desc">
+          <%= j.description %>
+        </div>
+
+        <div class="box quantity">
+
+        </div>
+
+    <% end %>
+  </div>
+
 </div>
-
-<script>
-    $('select').dropkick();
-</script>
