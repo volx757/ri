@@ -102,11 +102,13 @@ $(document).ready(function () {
             if (clicked) {
                 $('#signupform').removeClass('push-signup-down')
                 $(this).removeClass("invert-button");
+                $('#social-container').css('z-index', '200')
                 clicked = false
                 formShowing = false
             } else {
                 $('#signupform').addClass('push-signup-down')
                 $(this).addClass("invert-button");
+                $('#social-container').css('z-index', '1')
                 clicked = true
                 formShowing = true
             }
@@ -119,7 +121,6 @@ $(document).ready(function () {
                console.log($('#social-container').position().top)
             })
         }
-
 
         function isMobile() {
             return !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
