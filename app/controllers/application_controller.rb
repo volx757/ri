@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  #before_filter :instagram
+  before_filter :instagram
 
 
   protect_from_forgery with: :exception

@@ -1,84 +1,46 @@
 @import 'variables';
 
-.push-shit {
-  position: relative;
-  top: 100px;
-  margin-bottom: 100px;
-}
-
-
-.transition-all {
-  transition-duration: 0.15s;
-  transition-timing-function: ease-in;
-}
-
-.transition-med {
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
-.half-opaque {
-  opacity: 0.5;
-}
-
-.force-p {
-  color: #919191;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0em;
-  text-transform: none;
-  line-height: 21px;
-  -webkit-font-smoothing: antialiased;
-}
-
 html, body {
   width: 100%;
-  height: auto;
   background-color: #fff;
 }
 
 body {
   overflow-x: hidden;
-  width: auto;
   max-width: 1700px;
   margin: auto;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Dosis';
+h1, h2, h3 {
   text-transform: uppercase;
-  letter-spacing: 0.4em;
-  font-size: 18px;
-  font-weight: 700;
   color: #181818;
-  line-height: 21px;
+  font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
+
+h1 {
+  text-align: center;
+  letter-spacing: 0.4em;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
 h2 {
-  font-family: 'Dosis';
-  text-transform: uppercase;
-  color: #181818;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.2em;
   line-height: 21px;
-  -webkit-font-smoothing: antialiased;
 }
 
 h3 {
-  font-family: 'Dosis';
-  text-transform: uppercase;
-  color: #181818;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.18em;
   line-height: 18px;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -103,10 +65,6 @@ hr {
 
 .clearfix {
   clear: both;
-}
-
-.small-hr {
-  width: 10%;
 }
 
 .button {
@@ -146,8 +104,11 @@ hr {
   max-width: 1141px;
 }
 
+
+
+//global elements
 #site-wrapper {
-  box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
 
 #header-float {
@@ -157,8 +118,8 @@ hr {
   max-width: 1700px;
   width: 100%;
   z-index: 3;
-  font-family: 'Dosis';
-  top: 0px;
+  font-family: 'Dosis', sans-serif;
+  top: 0;
   .content {
     text-align: center;
     .nav-item {
@@ -277,7 +238,6 @@ hr {
     }
   }
   ul li {
-    // width: 105px;
     text-align: left;
     line-height: 30px;
     display: inline-block;
@@ -304,7 +264,7 @@ hr {
   text-align: center;
   background-size: 100% 100%;
   min-height: 500px;
-  font-family: Dosis;
+  font-family: Dosis, sans-serif;
   overflow-x: hidden;
   @media all and (max-width: $phoneLarge) {
     height: 1000px;
@@ -469,7 +429,7 @@ hr {
   letter-spacing: 1px;
   font-size: 14px;
   text-align: center;
-  font-family: Dosis;
+  font-family: Dosis, sans-serif;
   @media all and (max-width: $phoneLarge) {
     font-size: 12px;
   }
@@ -624,4 +584,36 @@ hr {
     border-radius: 10px;
     height: 1350px;
   }
+}
+
+.push-shit {
+  position: relative;
+  top: 100px;
+  margin-bottom: 100px;
+}
+
+
+.transition-all {
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+}
+
+.transition-med {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.half-opaque {
+  opacity: 0.5;
+}
+
+.force-p {
+  color: #919191;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 21px;
+  -webkit-font-smoothing: antialiased;
 }

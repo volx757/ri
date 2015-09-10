@@ -10,3 +10,4 @@
 .DS_Store
 config/secrets.yml
 config/newrelic.yml
+config/dev.yml
