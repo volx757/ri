@@ -1,0 +1,381 @@
+/* line 6, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* line 12, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+body {
+  width: auto;
+  max-width: 1700px;
+  margin: auto;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 45, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+.text-shadow {
+  -webkit-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -moz-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -o-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -ms-transition: text-shadow 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: text-shadow 4s ease-in-out;
+  text-shadow: 10px 10px 2px gold;
+}
+
+/* line 55, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#site-wrapper {
+  height: 100%;
+  box-shadow: none;
+}
+
+/* line 60, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  min-height: 760px;
+  max-height: 790px;
+  position: relative;
+}
+/* line 67, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+}
+/* line 72, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome {
+  height: 100%;
+  background: url(/assets/index/header_bg-f8356b5c38aa3085095624d19276e56e.jpg);
+  background-size: 100% 100%;
+}
+@media screen and (max-width: 1440px) {
+  /* line 72, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container .container.welcome {
+    background-size: 1440px 100%;
+    background-position: 50% 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* line 72, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container .container.welcome {
+    top: -90px;
+  }
+}
+/* line 83, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome .wrapper {
+  top: 110px;
+}
+@media screen and (max-width: 650px) {
+  /* line 83, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container .container.welcome .wrapper {
+    top: 140px;
+  }
+}
+/* line 89, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome h3 {
+  position: relative;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 14px;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 2.2s;
+  -moz-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+}
+@media screen and (max-width: 650px) {
+  /* line 89, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container .container.welcome h3 {
+    top: 15px;
+  }
+}
+/* line 114, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome h3:hover {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  color: #FFD700;
+}
+/* line 120, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome h1 {
+  color: white;
+}
+/* line 123, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome img {
+  position: relative;
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 160px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+@media screen and (max-width: 650px) {
+  /* line 123, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container .container.welcome img {
+    width: 250px;
+  }
+}
+/* line 133, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .container.welcome img.gold-shadow {
+  transition-duration: 3s;
+  transition-timing-function: ease-in;
+  box-shadow: 0 0 3em gold inset;
+}
+/* line 140, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container h2 {
+  font-size: 18px;
+  font-weight: 800;
+  position: relative;
+  width: 285px;
+  margin: 0 auto;
+  border: none;
+  background: white;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier;
+}
+@media screen and (max-width: 650px) {
+  /* line 140, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container h2 {
+    width: 100%;
+  }
+}
+/* line 153, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container h2:hover {
+  background: black;
+  color: white;
+}
+/* line 158, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .invert-button {
+  color: gold;
+  background: black;
+}
+/* line 162, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .slide-container {
+  overflow: hidden;
+  height: 420px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  -moz-transform: translate(-50%, 0px);
+  -ms-transform: translate(-50%, 0px);
+  -webkit-transform: translate(-50%, 0px);
+  width: 302px;
+  padding: 0 10px;
+  z-index: 10;
+}
+@media screen and (max-width: 650px) {
+  /* line 162, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container .slide-container {
+    width: 100%;
+    top: 0;
+  }
+}
+/* line 178, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .slide-container .button {
+  cursor: pointer;
+}
+/* line 182, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container #signupform {
+  width: 286px;
+  height: 440px;
+  position: fixed;
+  background: silver;
+  top: -420px;
+  padding: 9px;
+  text-transform: uppercase;
+  font-family: "Dosis", sans-serif;
+  z-index: -1;
+  opacity: 0.95;
+  border: none;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier;
+  background: -webkit-linear-gradient(#FFFFA9, #C0C0C0);
+  background: -o-linear-gradient(#FFFFA9, #C0C0C0);
+  background: -moz-linear-gradient(#FFFFA9, #C0C0C0);
+  background: linear-gradient(#FFFFA9, #C0C0C0);
+}
+/* line 200, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container #signupform.op-out {
+  -webkit-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -moz-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -o-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -ms-transition: opacity 4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: opacity 4s ease-in-out;
+  opacity: 0.6;
+}
+@media screen and (max-width: 650px) {
+  /* line 182, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container #signupform {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 213, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container #signupform h3 {
+  position: relative;
+  top: 100px;
+  font-weight: 800;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 5px;
+}
+@media screen and (max-width: 650px) {
+  /* line 213, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #landing-container #signupform h3 {
+    padding: 0 50px !important;
+  }
+}
+/* line 224, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container #signupform form {
+  position: relative;
+  top: 100px;
+}
+/* line 227, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container #signupform form input {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 235, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container #signupform form .button {
+  position: relative;
+  top: 10px;
+  width: 220px;
+  height: 2em;
+  text-transform: uppercase;
+}
+/* line 244, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#landing-container .push-signup-down {
+  top: -35px !important;
+}
+
+/* line 249, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container {
+  position: absolute;
+  width: 60px;
+  border-radius: 5px;
+  height: 315px;
+  background: white none repeat scroll 0% 0%;
+  z-index: 200;
+  opacity: 0.4;
+  top: 100px;
+  left: 20px;
+}
+@media screen and (max-width: 650px) {
+  /* line 249, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #social-container {
+    top: 550px;
+    height: 60px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+  }
+}
+/* line 267, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container:hover {
+  opacity: 0.7;
+}
+/* line 270, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container .icons {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 274, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container .icons a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+@media screen and (max-width: 650px) {
+  /* line 274, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #social-container .icons a {
+    width: 40px;
+    display: inline-block;
+  }
+}
+/* line 282, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container .icons a i {
+  font-size: 2em;
+  display: block;
+  margin: 30% auto;
+}
+/* line 286, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container .icons a i:hover {
+  color: #FFD700;
+}
+@media screen and (min-width: 1000px) {
+  /* line 289, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+  #social-container .icons a i:hover ~ #span-sur {
+    display: inline-block;
+    background: white;
+  }
+}
+/* line 297, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#social-container .icons a span:hover {
+  color: silver;
+  display: block;
+  background: white;
+}
+
+/* line 307, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#span-sur {
+  display: none;
+  position: relative;
+  top: -60px;
+  left: 60px;
+  width: 115px;
+  height: 50px;
+  line-height: 3em;
+}
+/* line 315, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#span-sur:hover {
+  display: block;
+}
+
+/* line 320, /Users/volx757/Sites/ri/app/assets/stylesheets/landing.css.scss */
+#error-box {
+  position: relative;
+  top: 100px;
+  line-height: 1em;
+  color: #DADAB8;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
