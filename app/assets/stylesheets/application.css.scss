@@ -1,8 +1,5 @@
-/*
- *= require_self
- *= require font-awesome
- */
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import 'reset.css.scss';
 @import 'default.css.scss';
 @import 'landing.css.scss';
