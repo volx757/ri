@@ -1,7 +1,8 @@
 var items;
 
 var totalJuices = 12,
-    currentJuices = 0;
+    currentJuices = 0,
+    currentId = 0;
 
 var _cart = (function () {
 
@@ -42,14 +43,15 @@ var _cart = (function () {
                 }
 
             })
-            $('.remove-item').on('click', function () {
-                removeItem($(this))
-            })
+
 
         },
         addItem: function (name, value, quantity) {
-            console.log(name, value, quantity)
+            var id = currentId
+
+            console.log(id, name, value, quantity)
             items.push({
+                'id': id,
                 'name': name,
                 'value': value,
                 'quantity': quantity
@@ -57,13 +59,27 @@ var _cart = (function () {
 
         },
         writeItemToCart: function () {
-            $('#items').append('<div class="pack-box"><div class="pack-size">' + totalJuices + ' PACK</div><div class="remove-item">X</div>')
 
-            for(var i = 0; i < items.length;i++){
-                $('#items').append('<div class="quantity">--' + items[i]['name'] + '</div><div class="name">----' + items[i]['value'] + '</div>')
+            var string = ''
+
+            string += ('<hr><div class="pack-box"><div class="pack-size">' + totalJuices + ' PACK</div><div class="remove-item" data-val="' + currentId + '"><i class="fa fa-times"></i></div>')
+
+            for (var i = 0; i < items.length; i++) {
+                string += ('<div class="quantity">--' + items[i]['name'] + '</div><div class="name">----' + items[i]['value'] + '</div>')
             }
 
-            $('#items').append('</div>')
+            string += ('</div>')
+
+            $('#items').append(string)
+
+
+
+            $('.remove-item').off('click').on('click', function () {
+                var id = $(this).data('val')
+                console.log(id)
+                $(this).parent().remove()
+                items.splice(id, 1)
+            })
         }
     };
 
@@ -76,12 +92,9 @@ var _cart = (function () {
         })
 
         _cart.writeItemToCart()
+
+        currentId++
     }
-
-    function removeItem() {
-
-    }
-
 
     return execute;
 

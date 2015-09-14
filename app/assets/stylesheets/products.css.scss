@@ -92,7 +92,7 @@ $phoneSmall: 375px;
   width: 75%;
   height: auto;
   position: relative;
-
+  background-color: #EAEAEA;
   border: 1px solid black;
   padding: 2%;
   .button{
@@ -153,5 +153,9 @@ $phoneSmall: 375px;
   .remove-item{
     cursor: pointer;
     border: 1px solid black;
+    border-radius: 2px;
+    i{
+      padding: 5px;
+    }
   }
 }
