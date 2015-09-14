@@ -62,7 +62,7 @@ var _cart = (function () {
 
             var string = ''
 
-            string += ('<hr><div class="pack-box"><div class="pack-size">' + totalJuices + ' PACK</div><div class="remove-item" data-val="' + currentId + '"><i class="fa fa-times"></i></div>')
+            string += ('<div class="pack-box"><hr><div class="pack-size">' + totalJuices + ' PACK</div><div class="remove-item" data-val="' + currentId + '"><i class="fa fa-times"></i></div>')
 
             for (var i = 0; i < items.length; i++) {
                 string += ('<div class="quantity">--' + items[i]['name'] + '</div><div class="name">----' + items[i]['value'] + '</div>')
