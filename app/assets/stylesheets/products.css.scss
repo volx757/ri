@@ -64,37 +64,49 @@ $phoneSmall: 375px;
     position: relative;
     margin-bottom: 50px;
 
-    .intro {
-
+    &.intro {
+      width: 75%;
     }
 
-    .purchase {
+    &.purchase {
 
+      #add-to-cart{
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      #checkout{
+        margin: 0px auto;
+        bottom: 50px;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 
 }
 
 #build-a-pack {
-  width: 90%;
+  width: 75%;
   height: auto;
   position: relative;
-  margin: 0 auto;
+
   border: 1px solid black;
-  padding: 50px;
+  padding: 2%;
   .button{
     cursor: pointer;
   }
   .box {
     text-align: center;
-    border: 1px solid silver;
     &.sizes{
       padding: 5px;
       .button {
         display: inline-block;
         width: 40%;
         height: 30px;
-        margin: 0px 2%;
+        margin: 0 2%;
       }
     }
 
@@ -102,12 +114,44 @@ $phoneSmall: 375px;
 
       .juice-detail{
         float: left;
-        width: 300px;
+        width: 32%;
         margin: 5px;
         .quantity{
 
         }
       }
     }
+  }
+}
+
+#product-cart{
+  position: fixed;
+  right: 0;
+  border: 1px solid black;
+  height: 100%;
+  background: white;
+  width: 21%;
+  top: 50px;
+  z-index: 30;
+  overflow: scroll;
+  h2{
+    padding: 10px;
+  }
+  #items{
+    padding: 10px;
+  }
+  .pack-size{
+    font-size: 1.5em;
+    width: 80%;
+  }
+  .quantity, .name{
+    margin-left: 5px;
+  }
+  .pack-size, .remove-item{
+    display: inline-block;
+  }
+  .remove-item{
+    cursor: pointer;
+    border: 1px solid black;
   }
 }

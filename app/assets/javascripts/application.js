@@ -22,3 +22,4 @@
 //= require notifications
 //= require carts
 //= require contact
+//= require animations

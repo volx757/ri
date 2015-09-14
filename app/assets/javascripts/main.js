@@ -28,6 +28,8 @@ $(document).ready(function () {
     initLoginForm()
     initSignupForm()
     landingAnimation()
+
+
 });
 
 function handleMobileNav() {

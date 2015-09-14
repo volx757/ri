@@ -1,6 +1,98 @@
+var items;
+
+var totalJuices = 12,
+    currentJuices = 0;
+
+var _cart = (function () {
+
+    var execute = {
+        init: function () {
+            items = []
+
+            $('#add-to-cart').on('click', function () {
+                if (currentJuices == totalJuices) {
+                    gatherItems()
+                    currentJuices = 0
+                    $('.juice-detail .value').each(function () {
+                        $(this).html(0)
+                    })
+                }
+                else
+                    alert('you must fill your pack')
+            })
+            $('#12pack').on('click', function () {
+                totalJuices = 12
+                clearSelection()
+            })
+            $('#24pack').on('click', function () {
+                totalJuices = 24
+                clearSelection()
+            })
+            $('.fa.minus').on('click', function () {
+                if (currentJuices > 0) {
+                    removeJuice($(this).parent().find('.value'))
+                    currentJuices--
+                }
+
+            })
+            $('.fa.plus').on('click', function () {
+                if (currentJuices < totalJuices) {
+                    addJuice($(this).parent().find('.value'))
+                    currentJuices++
+                }
+
+            })
+            $('.remove-item').on('click', function () {
+                removeItem($(this))
+            })
+
+        },
+        addItem: function (name, value, quantity) {
+            console.log(name, value, quantity)
+            items.push({
+                'name': name,
+                'value': value,
+                'quantity': quantity
+            })
+
+        },
+        writeItemToCart: function () {
+            $('#items').append('<div class="pack-box"><div class="pack-size">' + totalJuices + ' PACK</div><div class="remove-item">X</div>')
+
+            for(var i = 0; i < items.length;i++){
+                $('#items').append('<div class="quantity">--' + items[i]['name'] + '</div><div class="name">----' + items[i]['value'] + '</div>')
+            }
+
+            $('#items').append('</div>')
+        }
+    };
+
+    function gatherItems() {
+        $('.juice-detail').each(function () {
+            if ($(this).find('.quantity .value').html() != '0') {
+                console.log(($(this).find('.quantity .value').html()));
+                _cart.addItem($(this).data('name'), $(this).find('.quantity .value').html(), $(this).data('id'));
+            }
+        })
+
+        _cart.writeItemToCart()
+    }
+
+    function removeItem() {
+
+    }
+
+
+    return execute;
+
+})();
+
+
 $(document).ready(function () {
 
-    Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
+    _cart.init()
+
+    //Stripe.setPublishableKey('pk_test_BcvYOHT22B1zZQfF1VONpaHE');
 
     $("#card-details").submit(function (e) {
         e.preventDefault()
@@ -15,7 +107,7 @@ $(document).ready(function () {
 
     });
 
-    $('form.edit_guest').submit(function() {
+    $('form.edit_guest').submit(function () {
         if (!validateFormOne())
             return false
         var valuesToSubmit = $(this).serialize();
@@ -25,10 +117,10 @@ $(document).ready(function () {
             url: $(this).attr('action'),
             data: valuesToSubmit,
             dataType: "text"
-        }).success(function(json){
+        }).success(function (json) {
 
-           // alert(json)
-        }).error(function(error, string){
+            // alert(json)
+        }).error(function (error, string) {
 
             alert(string)
 
@@ -42,32 +134,52 @@ $(document).ready(function () {
 
 })
 
+function clearSelection() {
+    if (currentJuices > totalJuices) {
+        currentJuices = 0
+        $('.juice-detail .value').each(function () {
+            $(this).html(0)
+        })
+    }
+}
+
+function addJuice(juicePos) {
+    var val = parseInt(juicePos.html())
+    val++
+    juicePos.html(val)
+}
+
+function removeJuice(juicePos) {
+    var val = parseInt(juicePos.html())
+    val--
+    juicePos.html(val)
+}
 
 
-function advanceToFormTwo(){
+function advanceToFormTwo() {
     $('#form-step-1').fadeOut(200)
     $('#form-step-2').fadeIn(200)
 }
 
-function advanceToFormThree(){
+function advanceToFormThree() {
     $('#form-step-2').fadeOut(200)
     $('#form-step-3').fadeIn(200)
 }
 
-function validateFormOne(){
+function validateFormOne() {
 
     //if invalid return false
 
     return true
 }
 
-function validateFormTwo(){
+function validateFormTwo() {
     //if invalid return false
 
     return true
 }
 
-function validateFormThree(){
+function validateFormThree() {
     //if invalid return false
 
     return true
@@ -87,11 +199,11 @@ function processPackOrder() {
         type: "POST",
         url: '/products',
         data: 'p=' + juice_ids,
-        error: function() {
+        error: function () {
             alert('errsdsor')
         },
-        success: function(data) {
-           alert(data);
+        success: function (data) {
+            alert(data);
         }
     });
 

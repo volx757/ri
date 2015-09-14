@@ -19,6 +19,10 @@ class Product < ActiveRecord::Base
   end
 
   def self.process(product)
+
+
+
+
     if is_pack?(product)
       assemble_pack(product)
       return PACK_PRODUCT_ID

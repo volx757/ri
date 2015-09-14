@@ -266,6 +266,9 @@ hr {
   min-height: 500px;
   font-family: Dosis, sans-serif;
   overflow-x: hidden;
+  &.product{
+    width: 79%;
+  }
   @media all and (max-width: $phoneLarge) {
     height: 1000px;
   }

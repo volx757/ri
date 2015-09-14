@@ -15,7 +15,7 @@
 
   <div class="box juices">
     <% Juice.active.each do |j| %>
-        <div class="juice-detail">
+        <div class="juice-detail" data-id="<%= j.id %>" data-name="<%= j.name %>">
           <div class="box img">
             <%= image_tag(j.image.url(:medium)) %>
           </div>
@@ -30,67 +30,53 @@
             <i class="fa fa-arrow-right button plus"></i>
           </div>
         </div>
+        <!-- extras -->
+        <div class="juice-detail" data-id="<%= j.id %>">
+          <div class="box img">
+            <%= image_tag(j.image.url(:medium)) %>
+          </div>
+
+          <div class="box desc">
+            <%= j.description %>
+          </div>
+          <div class="box quantity">
+            <div class="value">0</div>
+            <br>
+            <i class="fa fa-arrow-left button minus"></i>
+            <i class="fa fa-arrow-right button plus"></i>
+          </div>
+        </div>
+
+        <div class="juice-detail" data-id="<%= j.id %>">
+          <div class="box img">
+            <%= image_tag(j.image.url(:medium)) %>
+          </div>
+
+          <div class="box desc">
+            <%= j.description %>
+          </div>
+          <div class="box quantity">
+            <div class="value">0</div>
+            <br>
+            <i class="fa fa-arrow-left button minus"></i>
+            <i class="fa fa-arrow-right button plus"></i>
+          </div>
+        </div>
+        <!-- end -->
     <% end %>
   </div>
 
   <div class="clearfix"></div>
 
-  <div class="box checkout">
-   <a href="/checkout"><div id="checkout" class="button">Checkout</div></a>
-  </div>
+  <div id="add-to-cart" class="button">ADD TO CART</div>
+
 
 </div>
 
+<%= render 'cart' %>
+
 <script>
 
-    var totalJuices = 12,
-            currentJuices = 0;
-
-    $('#12pack').on('click', function () {
-        totalJuices = 12
-        clearSelection()
-    })
-    $('#24pack').on('click', function () {
-        totalJuices = 24
-        clearSelection()
-    })
-
-    $('.fa.minus').on('click', function () {
-        if (currentJuices > 0){
-            removeJuice($(this).parent().find('.value'))
-            currentJuices--
-        }
-
-    })
-    $('.fa.plus').on('click', function () {
-        if (currentJuices < totalJuices){
-            addJuice($(this).parent().find('.value'))
-            currentJuices++
-        }
-
-    })
-
-
-    function clearSelection() {
-        if (currentJuices > totalJuices) {
-            currentJuices = 0
-            $('.juice-detail .value').each(function(){
-                $(this).html(0)
-            })
-        }
-
-    }
-
-    function addJuice(juicePos) {
-        var val = parseInt(juicePos.html())
-        val++
-        juicePos.html(val)
-    }
-
-    function removeJuice(juicePos) {
-        var val = parseInt(juicePos.html())
-        val--
-        juicePos.html(val)
-    }
+  $('#footer').addClass('product')
 
 </script>

@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def add_to_cart
 
-    create_guest unless logged_in? || guest?
+    create_guest unless logged_in?
 
     create_cart unless current_user.active_cart
 
@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
   def create_guest
     guest_key = DateTime.now.to_s
     session[:guest_key] = guest_key
-    Guest.create(:session_id => guest_key)
+    Guest.create!(:session_id => guest_key)
   end
 
   def create_cart
