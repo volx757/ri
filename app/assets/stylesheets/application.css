@@ -3,9 +3,9 @@
  *= require font-awesome
  */
 
-@import 'reset.css';
-@import 'default.css';
-@import 'landing.css';
-@import 'index.css';
-@import 'products.css';
-@import 'contact.css';
+@import 'reset.css.scss';
+@import 'default.css.scss';
+@import 'landing.css.scss';
+@import 'index.css.scss';
+@import 'products.css.scss';
+@import 'contact.css.scss';
