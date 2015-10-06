@@ -2,17 +2,15 @@ class User < ActiveRecord::Base
 
   before_create :encrypt_password
 
-
-  has_many :invoices
-
-  attr_accessible :email, :password, :password_confirmation, :address, :address_two, :city, :state, :phone
+  attr_accessible :email, :password, :address, :address_two, :city, :state, :phone
   attr_accessor :password
 
+  validates_presence_of :email, :phone
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
-  validates_presence_of :email
   validates_uniqueness_of :email
-  validates_presence_of :phone
+
+  has_many :delivery_methods
 
 
   def self.authenticate(email, password)
@@ -23,7 +21,6 @@ class User < ActiveRecord::Base
       nil
     end
   end
-
 
   def do_deposit_transaction(amount, stripe_token, user)
     Stripe.api_key = "sk_test_2jPsvi0qQfguqpV1SjkQOq84"

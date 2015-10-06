@@ -104,6 +104,20 @@ hr {
   }
 }
 
+.fade-in {
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
 .little-ital {
   font-style: italic;
 }

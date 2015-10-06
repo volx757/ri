@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require lib/jquery.localScroll.min
 //= require lib/jquery.scrollTo.min
-//= require lib/dropkick.min
 //= require utils
 //= require main
 //= require sessions

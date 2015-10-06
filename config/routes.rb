@@ -9,15 +9,16 @@ Rails.application.routes.draw do
   get 'market' => 'main#market'
   get 'contact' => 'main#contact'
 
-  post 'contact' => 'main#contact', as: 'contact_post'
+  post 'purchase' => 'main#purchase'
+  post 'contact' => 'main#contact'
 
   # sessions
   post 'login' => 'sessions#create'
-  post 'log_out' => 'sessions#destroy', :as => 'log_out'
+  post 'log_out' => 'sessions#destroy'
 
   #users
-  get 'register' => 'users#new', :as => 'register'
-  post 'sign_up' => 'users#create', :as => 'sign_up'
+  get 'register' => 'users#new'
+  post 'sign_up' => 'users#create'
 
 
 end
