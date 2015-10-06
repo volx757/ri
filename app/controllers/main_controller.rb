@@ -7,9 +7,7 @@ class MainController < ApplicationController
     @message = Message.new(contact_params).save
   end
 
-
   private
-
 
   def contact_params
     params.permit(:name, :email, :subject, :content)

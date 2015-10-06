@@ -1,17 +1,13 @@
-
 function limitTextInput() {
     var max = 800;
     $('#content').keypress(function (e) {
-        if (e.which < 0x20) {
-            // e.which < 0x20, then it's not a printable character
-            // e.which === 0 - Not a character
+        if (e.which < 0x20)
             return;
-        }
-        if ($(this).value.length == max) {
+
+        if ($(this).value.length === max) {
             e.preventDefault();
         } else if ($(this).value.length > max) {
             $(this).value = $(this).value.substring(0, max);
-
             $('#content').css({
                 'box-shadow': '0px 0px 0px #444',
                 '-moz-box-shadow': '0px 0px 0px #444',

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root to: 'main#index'
-  get 'js' => 'application#js'
 
   get 'about' => 'main#about'
   get 'market' => 'main#market'

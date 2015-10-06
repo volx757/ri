@@ -9,7 +9,7 @@
     <div class="nav-item "><a href="/faq" class="nav-category">FAQ</a></div>
   </div>
 
-  <% if logged_in? %>
+  <% if current_user.present? %>
       <div class="button session" id="logout-button">Logout</div>
   <% else %>
       <div class="button" id="login-button">Login</div>

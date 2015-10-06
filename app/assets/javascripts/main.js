@@ -3,18 +3,11 @@ var hasScrolled = false,
 
 $(document).ready(function () {
 
-    if (window.pageYOffset >= 30) {
-        $('.fa-angle-down').hide()
-    }
-    $(document).scroll(function () {
-        fadeOutDownArrow()
-    });
     setupContactNavUnderline()
     contactForm();
     handleMobileNav();
     limitTextInput();
     activeContactMap();
-
 
     initLoginForm()
     initSignupForm()
@@ -24,6 +17,19 @@ $(document).ready(function () {
     landingAnimation()
 
 });
+
+
+var _nav = (function () {
+
+    var execute = {
+        init: function () {
+
+        }
+    };
+
+    return execute;
+
+})();
 
 function handleMobileNav() {
     if (isMobile()) {
@@ -47,12 +53,4 @@ function landingAnimation() {
             hasScrolled = true
         }
     })
-}
-
-function fadeOutDownArrow() {
-    var arrow = $('.fa-angle-down')
-
-    if ($(window).scrollTop() >= 30) {
-        arrow.fadeOut(500)
-    }
 }

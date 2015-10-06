@@ -62,6 +62,25 @@ hr {
   width: 90%;
 }
 
+.transition-all {
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.transition-med {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.transition-slow {
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.half-opaque {
+  opacity: 0.5;
+}
+
 .clearfix {
   clear: both;
 }
@@ -107,8 +126,6 @@ hr {
 #site-wrapper {
   box-shadow: 0 0 10px #ccc;
 }
-
-
 
 #footer {
   background-color: #181818;
@@ -291,8 +308,6 @@ hr {
   }
 }
 
-
-
 .container.signup {
   .island-lord {
     text-align: center;
@@ -389,40 +404,4 @@ hr {
     border-radius: 10px;
     height: 1350px;
   }
-}
-
-.push-shit {
-  position: relative;
-  top: 100px;
-  margin-bottom: 100px;
-}
-
-.transition-all {
-  transition-duration: 0.15s;
-  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.transition-med {
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.transition-slow {
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out;
-}
-
-.half-opaque {
-  opacity: 0.5;
-}
-
-.force-p {
-  color: #919191;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  line-height: 21px;
-  -webkit-font-smoothing: antialiased;
 }

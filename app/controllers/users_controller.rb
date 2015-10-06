@@ -21,38 +21,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_contact
-    user = current_user
-    user.add_contact_info(params[:user])
-
-
-    if user.save!
-      respond_to do |format|
-        format.js
-      end
-    else
-      respond_to do |format|
-        format.json { render :json => {:error_message => user.errors.full_messages}, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  def add_credit
-    user = current_user
-    user.add_credit_info(params[:user])
-
-    if user.save!
-      respond_to do |format|
-        format.js
-      end
-    else
-      respond_to do |format|
-        format.json { render :json => {:error_message => user.errors.full_messages}, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-
   private
 
   def sign_user_in(params)
