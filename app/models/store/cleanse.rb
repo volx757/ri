@@ -1,6 +1,0 @@
-class Cleanse < Product
-
-
-
-
-end

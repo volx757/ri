@@ -40,7 +40,7 @@ module Ri
     config.assets.initialize_on_precompile = false
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
-    config.autoload_paths += Dir["#{config.root}/app/models/**/"]
+   # config.autoload_paths += Dir["#{config.root}/app/models/**/"]
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'dev.yml')

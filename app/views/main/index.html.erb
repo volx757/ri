@@ -2,18 +2,14 @@
 
   <div class="container welcome white fade-in">
     <div class="wrapper">
-    <%= image_tag 'header_logo@2x.png' %>
-    <h1>WELCOME TO RIJUICE</h1>
+      <%= image_tag 'header_logo@2x.png' %>
+      <h1>WELCOME TO RIJUICE</h1>
 
-    <h3>Life begins from within.</h3>
-    <%= link_to 'Find Your Juice', '/products', :class => 'button' %>
+      <h3>Life begins from within.</h3>
+      <%= link_to 'Find Your Juice', '/products', :class => 'button' %>
     </div>
-
-    <i class="fa fa-angle-down"></i>
-
   </div>
 
-  <a name="juice"></a>
   <div class="container juice">
     <div class="wrapper">
       <h1>HIGH FREQUENCY LIVING FOOD</h1>
@@ -33,93 +29,14 @@
     <div class="index-product-container">
       <%= render 'product' %>
     </div>
+    <div class="index-product-container">
+      <%= render 'product' %>
+    </div>
 
-    <!-- <div class="jump-products"><i class="fa fa-plus-circle"></i> <%#= link_to 'VIEW ALL PRODUCTS', '/products' %></div>-->
+    <div class="button">ENTER ACCOUNT #</div>
+    <div class="button">SIGN UP</div>
   </div>
 
-
-  <a name="whoweare"></a>
-  <div class="container who-we-are white">
-    <div class="wrapper">
-      <%= image_tag 'title_icon_white.png' %>
-      <h1>Who We Are</h1>
-
-      <p>Born in Lancaster, Pennsylvania - we are the county's original cold-pressed juice company. We strive to bring
-        health to our community
-        by sourcing the finest product our local farmers have to offer.</p>
-      <%= link_to 'Our Locations', '/contact#retail', :class => 'button' %>
-    </div>
-  </div>
-
-  <a name="inside"></a>
-  <div class="container whats-inside">
-    <div class="wrapper">
-      <%= image_tag 'title_icon.png' %>
-      <h1>WHAT'S IN RIJUICE?</h1>
-
-      <h3 class="grey">OUR VARIETIES</h3>
-
-      <div class="index-ingredients left">
-        <h2>FARM TO BOTTLE AS QUICKLY AS POSSIBLE.</h2>
-        <hr>
-        <h3 class="big" style="margin-top: 30px;">ALL OF OUR JUICES ARE 100% VEGAN AND 100% GLUTEN-FREE.</h3>
-
-        <p class="small">Click through to learn more about each flavor.</p>
-
-        <!--<p class="big">LEARN MORE ABOUT THE BENEFITS OF EACH INGREDIENT</p>-->
-      </div>
-      <div class="index-ingredients right">
-        <%= render 'whats_inside' %>
-      </div>
-    </div>
-    <div class="fill-in" style="background: #F7F7F7;"></div>
-  </div>
-
-  <a name="stats"></a>
-  <div class="container stats">
-    <%= render 'stats' %>
-  </div>
-
-  <a name="faq"></a>
-  <div class="container faq">
-    <div class="wrapper">
-    <%= image_tag 'title_icon.png' %>
-    <h1>All the answers in one place</h1>
-
-    <h3>Frequent Questions</h3>
-
-    <div class="index-faq left">
-      <h2>CHOOSE A TOPIC</h2>
-      <hr>
-      <ul id="faq-categories">
-        <li data-category="juices">JUICES <span> > </span></li>
-        <li data-category="cleanses">CLEANSES <span> > </span></li>
-        <li data-category="orders">ORDERS & DELIVERY <span> > </span></li>
-        <li data-category="other">OTHER <span> > </span></li>
-      </ul>
-    </div>
-
-    <div class="index-faq right">
-      <%= render 'faq' %>
-    </div>
-    </div>
-  </div>
-
-  <div class="container contact">
-    <div class="wrapper">
-    <div class="index-contact left">
-      <h2>What's on your mind?</h2>
-      <hr>
-      <p>Still have a question? Send it through and we'll get back to you as soon as we can.</p>
-    </div>
-    <div class="index-contact right">
-      <%= render 'inquiry' %>
-    </div>
-    <div class="clearfix"></div>
-    </div>
-
-    <div class="pre-footer"></div>
-  </div>
-
+  <%= render 'store' %>
 
 </div>

@@ -9,26 +9,19 @@ $(document).ready(function () {
     $(document).scroll(function () {
         fadeOutDownArrow()
     });
-
-    $('.nav-item').localScroll({duration: 300});
-
-    bindFaqCategories();
-    writeFaqQuestions(0);
-    initializeFaq();
-    initializeIngredients()
     setupContactNavUnderline()
-    bindShowAllQuestions()
-
-    inquiryForm();
     contactForm();
-
     handleMobileNav();
     limitTextInput();
     activeContactMap();
+
+
     initLoginForm()
     initSignupForm()
-    landingAnimation()
 
+
+
+    landingAnimation()
 
 });
 
@@ -46,29 +39,6 @@ function handleMobileNav() {
     }
 }
 
-function inquiryForm() {
-    $('#inquiry_form').on('submit', function () {
-
-        var email = $('#email'),
-            content = $('#content')
-
-        if (email.val().length < 1) {
-            email.attr('placeholder', 'ENTER YOUR EMAIL ADDRESS')
-            email.css('color', 'green')
-            return false;
-        }
-        if (content.val().length < 1) {
-            content.attr('placeholder', 'DO YOU HAVE A QUESTION?')
-            content.css('color', 'green')
-            return false;
-        }
-
-        $(this).fadeOut(500, function () {
-            $('.inquiry-successful').fadeIn();
-        });
-
-    })
-}
 
 function landingAnimation() {
     $(window).scroll(function () {

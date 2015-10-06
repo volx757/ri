@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150808014219) do
+ActiveRecord::Schema.define(version: 20151006033801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,65 +49,13 @@ ActiveRecord::Schema.define(version: 20150808014219) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "carts", force: true do |t|
-    t.integer  "user_id"
-    t.datetime "purchased_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.decimal  "total_cost"
-    t.boolean  "active"
-  end
-
-  create_table "contacts", force: true do |t|
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "guests", force: true do |t|
-    t.string   "email"
-    t.string   "address"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "inquiries", force: true do |t|
+  create_table "delivery_methods", force: true do |t|
     t.string   "name"
-    t.string   "email"
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "answered"
-  end
-
-  create_table "invoices", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "cart_id"
-    t.string   "date"
-    t.text     "products"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "address_one"
     t.string   "address_two"
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.string   "phone"
-  end
-
-  create_table "line_items", force: true do |t|
-    t.integer  "cart_id"
-    t.integer  "product_id"
-    t.decimal  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "locations", force: true do |t|
-    t.string   "name"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.boolean  "gmaps"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -131,45 +79,15 @@ ActiveRecord::Schema.define(version: 20150808014219) do
   end
 
   create_table "packs", force: true do |t|
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "customer_id"
-    t.integer  "cart_id"
-  end
-
-  create_table "payment_methods", force: true do |t|
-    t.integer  "user_id"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "name"
-    t.string   "number"
-    t.string   "date"
-    t.string   "ccv"
-  end
-
-  create_table "payments", force: true do |t|
-    t.integer  "customer_id"
-    t.integer  "cart_id"
-    t.decimal  "amount"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "products", force: true do |t|
-    t.string   "name"
-    t.decimal  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "type"
     t.string   "description"
+    t.integer  "quantity"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "pack_id"
-    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -186,8 +104,6 @@ ActiveRecord::Schema.define(version: 20150808014219) do
     t.string   "session_id"
     t.string   "phone"
     t.string   "address_one"
-    t.boolean  "has_contact_info"
-    t.boolean  "has_credit_info"
   end
 
   Foreigner.load

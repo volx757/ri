@@ -1,0 +1,33 @@
+
+<div class="container who-we-are white">
+  <div class="wrapper">
+    <%= image_tag 'title_icon_white.png' %>
+    <h1>Who We Are</h1>
+
+    <p>Born in Lancaster, Pennsylvania - we are the county's original cold-pressed juice company. We strive to bring
+      health to our community
+      by sourcing the finest product our local farmers have to offer.</p>
+    <%= link_to 'Our Locations', '/contact#retail', :class => 'button' %>
+  </div>
+</div>
+
+<div class="container whats-inside">
+  <div class="wrapper">
+    <%= image_tag 'title_icon.png' %>
+    <h1>WHAT'S IN RIJUICE?</h1>
+
+    <h3 class="grey">OUR VARIETIES</h3>
+
+    <div class="index-ingredients left">
+      <h2>FARM TO BOTTLE AS QUICKLY AS POSSIBLE.</h2>
+      <hr>
+      <h3 class="big" style="margin-top: 30px;">ALL OF OUR JUICES ARE 100% VEGAN AND 100% GLUTEN-FREE.</h3>
+
+      <p class="small">Click through to learn more about each flavor.</p>
+    </div>
+    <div class="index-ingredients right">
+      <%= render 'whats_inside' %>
+    </div>
+  </div>
+  <div class="fill-in" style="background: #F7F7F7;"></div>
+</div>

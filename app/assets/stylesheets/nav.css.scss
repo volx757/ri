@@ -1,0 +1,107 @@
+#header-float {
+  position: fixed;
+  height: 60px;
+  background: whitesmoke;
+  max-width: 1700px;
+  width: 100%;
+  z-index: 3;
+  font-family: 'Dosis', sans-serif;
+  top: 0;
+  .center-box {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+  }
+  .nav-item {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 50px;
+    &.logo {
+      left: 10px;
+      top: 6px;
+      margin: 0;
+      img {
+        width: 150px;
+        margin-right: 40%;
+      }
+    }
+    a {
+      padding: 2px 5px;
+      border-radius: 2px;
+    }
+    .nav-category:hover {
+      color: #fff;
+      background: #939393;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in;
+    }
+  }
+  .button {
+    display: inline-block;
+    width: 115px;
+    height: 15px;
+    text-align: center;
+    line-height: 1em;
+    top: 6px;
+    position: relative;
+    float: right;
+    right: 3%;
+  }
+
+  #login-container {
+    position: relative;
+    display: none;
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+    opacity: 0.98;
+    background: linear-gradient(270deg, white, silver);
+    background: -webkit-linear-gradient(270deg, white, silver);
+    background: -o-linear-gradient(270deg, white, silver);
+    background: -moz-linear-gradient(270deg, white, silver);
+    top: 15px;
+    height: 60px;
+    p {
+      display: inline-block;
+    }
+    .button {
+      display: inline-block;
+      width: 46px;
+      float: right;
+      top: 10px;
+      right: 100px;
+      position: relative;
+      padding: 5px 20px;
+    }
+    #logthefuckin {
+      width: 112px;
+    }
+    form {
+      display: inline-block;
+      width: 820px;
+      position: relative;
+      left: 8%;
+    }
+    label {
+      margin-right: 2px;
+    }
+    input {
+      margin-right: 20px;
+    }
+    .login {
+      width: 100px;
+    }
+    #hide-login {
+      width: 75px;
+      right: -82px;
+    }
+    #register-button {
+      right: 90px;
+      width: 74px;
+    }
+  }
+}

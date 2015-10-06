@@ -1,14 +1,9 @@
 var loginShowing = false
 
 function initLoginForm() {
-    bindLoginButton()
-    bindLogoutButton()
-    setupForm()
-}
-
-function initLoginForm() {
 
     bindLoginButton()
+    bindRegisterButton()
 
     $('#hide-login').on('click', function () {
         $('#login-container').fadeOut(200)
@@ -20,12 +15,16 @@ function initLoginForm() {
 
         });
     })
+}
 
+function bindRegisterButton() {
+    $('#register-button').click(function () {
+        showSignupForm()
+    })
 }
 
 function bindLoginButton() {
-
-    $('#login-button').on('click', function () {
+    $('#login-button').click(function () {
         if (loginShowing) {
             hideLoginContainer()
         } else if (!loginShowing) {
@@ -58,6 +57,9 @@ function bindLogoutButton() {
         });
     })
 }
+
+
+/////////////////////////
 
 function setupForm() {
 

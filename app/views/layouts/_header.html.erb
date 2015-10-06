@@ -1,32 +1,20 @@
 <div id="header-float">
-  <div class="content">
-    <div class="nav-item logo"><a href="/"><%= image_tag('nav_logo@2x.png') %></a></div>
-    <div class="nav-item home">
-      <a href="/" class="nav-category">HOME &#9662;</a>
-      <ul>
-        <% if @page_title == 'index' %>
-            <li style="width: 60px;"><a href="#juice">JUICE</a></li>
-            <li><a href="#whoweare">WHO WE ARE</a></li>
-            <li><a href="#inside">WHAT'S INSIDE</a></li>
-            <li style="width: 60px;"><a href="#stats">STATS</a></li>
-            <li style="width: 60px;"><a href="#faq">FAQ</a></li>
-        <% else %>
-            <li style="width: 60px;"><a href="/home#juice">JUICE</a></li>
-            <li><a href="/home#whoweare">WHO WE ARE</a></li>
-            <li><a href="/home#inside">WHAT'S INSIDE</a></li>
-            <li style="width: 60px;"><a href="/home#stats">STATS</a></li>
-            <li style="width: 60px;"><a href="/home#faq">FAQ</a></li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="nav-item purchase"> <%= link_to 'PURCHASE', '/products', :class => 'nav-category' %></div>
-    <div class="nav-item contact"> <%= link_to 'CONTACT', '/contact', :class => 'nav-category' %></div>
 
-    <% if logged_in? %>
-        <div class="button session" id="logout-button">Logout</div>
-    <% else %>
-        <div class="button" id="login-button">Login</div>
-    <% end %>
+  <div class="nav-item logo"><a href="/"><%= image_tag('nav_logo@2x.png') %></a></div>
+
+  <div class="center-box">
+    <div class="nav-item "><a href="/about" class="nav-category">ABOUT</a></div>
+    <div class="nav-item "><a href="/market" class="nav-category">MARKET</a></div>
+    <div class="nav-item "><a href="/contact" class="nav-category">CONTACT</a></div>
+    <div class="nav-item "><a href="/faq" class="nav-category">FAQ</a></div>
   </div>
+
+  <% if logged_in? %>
+      <div class="button session" id="logout-button">Logout</div>
+  <% else %>
+      <div class="button" id="login-button">Login</div>
+  <% end %>
+
   <%= render 'sessions/login' %>
+
 </div>

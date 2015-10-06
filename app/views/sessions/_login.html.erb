@@ -14,12 +14,6 @@
       <%= submit_tag 'Login', :class => 'button', :id => 'logthefuckin', :onclick => 'clearFlashNotice()' %>
   <% end %>
 
-  <div class="button" id="register-button" onclick="showSignupForm()">Join Us</div>
+  <div class="button" id="register-button">Join Us</div>
 
 </div>
-
-<script>
-  function clearFlashNotice(){
-      $('.login-notice').remove()
-  }
-</script>

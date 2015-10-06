@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
         format.js { flash.now[:notice] = "Invalid email or password" }
       end
     end
-
   end
 
   def destroy
@@ -25,5 +24,3 @@ class SessionsController < ApplicationController
   end
 
 end
-
-

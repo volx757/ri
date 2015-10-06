@@ -17,7 +17,6 @@
 //= require lib/dropkick.min
 //= require utils
 //= require main
-//= require dynamic_lists
 //= require sessions
 //= require notifications
 //= require carts

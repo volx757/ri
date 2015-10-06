@@ -20,7 +20,6 @@ h1, h2, h3 {
   -webkit-font-smoothing: antialiased;
 }
 
-
 h1 {
   text-align: center;
   letter-spacing: 0.4em;
@@ -104,158 +103,12 @@ hr {
   max-width: 1141px;
 }
 
-
-
 //global elements
 #site-wrapper {
   box-shadow: 0 0 10px #ccc;
 }
 
-#header-float {
-  position: fixed;
-  height: 50px;
-  background: whitesmoke;
-  max-width: 1700px;
-  width: 100%;
-  z-index: 3;
-  font-family: 'Dosis', sans-serif;
-  top: 0;
-  .content {
-    text-align: center;
-    .nav-item {
-      display: inline-block;
-      position: absolute;
-      top: 20px;
-      margin-right: 40px;
-      font-size: 16px;
-      text-align: left;
-      padding: 0 10px 10px 10px;
-      font-weight: 800;
-      line-height: 0.6em;
-      @media screen and (max-width: $phone) {
-        top: 13px;
-      }
-      a {
-        padding: 2px 5px;
-        border-radius: 2px;
-      }
-      .nav-category:hover {
-        color: #fff;
-        background: #939393;
-        transition-duration: 0.1s;
-        transition-timing-function: ease-in;
-      }
-      &.home {
-        @media screen and (max-width: $tablet) {
-          left: 32%;
-        }
-        @media screen and (max-width: $phoneLarge) {
-          top: 15px;
-        }
-        @media screen and (max-width: $phoneSmall) {
-          top: 13px;
-          left: 31%;
-        }
-      }
-      &.purchase {
-        right: 33%;
-        @media screen and (max-width: 1200px) {
-          right: 31%;
-        }
-        @media screen and (max-width: $tablet) {
-          display: block;
-          left: 45%;
-          right: 0;
-        }
-        @media screen and (max-width: $phoneLarge) {
-          top: 15px
-        }
-      }
-      &.contact {
-        right: 22%;
-        @media screen and (max-width: 1200px) {
-          right: 24%;
-        }
-        @media screen and (max-width: $tablet) {
-          display: block;
-          left: 65%;
-          right: 0;
-        }
-        @media screen and (max-width: $phoneLarge) {
-          top: 15px
-        }
-      }
-    }
-    .nav-item.logo {
-      float: left;
-      left: 50px;
-      top: 6px;
-      @media screen and (max-width: $tablet) {
-        left: 0;
-      }
-      @media screen and (max-width: $phone) {
-        width: 0;
-      }
-      img {
-        width: 150px;
-        margin-right: 40%;
-        @media screen and (max-width: $phone) {
-          width: 90px;
-          margin-top: 8px;
-        }
-      }
-    }
-    .nav-item.purchase {
-      @media screen and (max-width: $phone) {
-        left: 47%;
-      }
-    }
-    .nav-item.contact {
-      @media screen and (max-width: $phone) {
-        left: 70%;
-      }
-    }
-    .button {
-      float: right;
-      margin-top: 10px;
-      right: 90px;
-      position: relative;
-      padding: 5px 20px;
-    }
-  }
-  ul {
-    height: 50px;
-    padding: 0;
-    list-style: none;
-    background: lightgray;
-    position: relative;
-    top: 4.5px;
-    left: -7px;
-    width: 505px;
-    @media screen and (max-width: $tablet) {
-      width: 250px;
-      height: 150px;
-    }
-  }
-  ul li {
-    text-align: left;
-    line-height: 30px;
-    display: inline-block;
-    padding: 10px;
-    box-shadow: 0px 0px 0em black inset;
-    a:hover {
-      box-shadow: 0px 30px 0.011em black inset;
-      transition-duration: 0.2s;
-      transition-timing-function: ease-in;
-    }
-  }
-  ul {
-    display: none;
-  }
-  .nav-item:hover ul {
-    display: block;
-  }
-}
+
 
 #footer {
   background-color: #181818;
@@ -266,7 +119,7 @@ hr {
   min-height: 500px;
   font-family: Dosis, sans-serif;
   overflow-x: hidden;
-  &.product{
+  &.product {
     width: 79%;
   }
   @media all and (max-width: $phoneLarge) {
@@ -438,58 +291,7 @@ hr {
   }
 }
 
-#login-container {
-  position: relative;
-  display: none;
-  width: 100%;
-  text-align: center;
-  overflow-x: hidden;
-  opacity: 0.98;
-  background: linear-gradient(270deg, white, silver);
-  background: -webkit-linear-gradient(270deg, white, silver);
-  background: -o-linear-gradient(270deg, white, silver);
-  background: -moz-linear-gradient(270deg, white, silver);
-  top: 10px;
-  height: 60px;
-  p {
-    display: inline-block;
-  }
-  .button {
-    display: inline-block;
-    width: 46px;
-    float: right;
-    top: 10px;
-    right: 100px;
-    position: relative;
-    padding: 5px 20px;
-  }
-  #logthefuckin {
-    width: 112px;
-  }
-  form {
-    display: inline-block;
-    width: 820px;
-    position: relative;
-    left: 8%;
-  }
-  label {
-    margin-right: 2px;
-  }
-  input {
-    margin-right: 20px;
-  }
-  .login {
-    width: 100px;
-  }
-  #hide-login {
-    width: 75px;
-    right: -82px;
-  }
-  #register-button {
-    right: 90px;
-    width: 74px;
-  }
-}
+
 
 .container.signup {
   .island-lord {
@@ -595,14 +397,18 @@ hr {
   margin-bottom: 100px;
 }
 
-
 .transition-all {
   transition-duration: 0.15s;
-  transition-timing-function: ease-in;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .transition-med {
   transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.transition-slow {
+  transition-duration: 2s;
   transition-timing-function: ease-in-out;
 }
 
